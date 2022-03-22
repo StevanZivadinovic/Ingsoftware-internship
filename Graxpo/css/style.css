@@ -1,7 +1,40 @@
+.img {
+  width: 100%;
+  height: 64.3rem;
+  background-image: url("./../images/above.png"), url("./../images/under.png");
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.img .text {
+  text-transform: uppercase;
+  margin-top: 22rem;
+  position: relative;
+}
+.img .text h1 {
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+.img .text p {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.img .text .crollDown {
+  position: absolute;
+  bottom: 5.6rem;
+  width: 100%;
+}
+.img .text .crollDown p {
+  text-transform: uppercase;
+  color: #f64b44;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 .mainHeader {
@@ -14,8 +47,22 @@
 }
 .mainHeader .nav h1 {
   color: #f64b44;
+  font-size: 3rem;
+}
+.mainHeader .nav nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
 }
 .mainHeader .nav nav ul {
   display: flex;
   list-style-type: none;
+  justify-content: space-around;
+}
+.mainHeader .nav nav ul li {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #2a2b2d;
+  font-weight: 200;
 }

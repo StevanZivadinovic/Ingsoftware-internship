@@ -1,7 +1,12 @@
+@use '_header';
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 .mainHeader {
@@ -14,13 +19,27 @@
 
       h1{
           color: rgb(246, 75, 68);
+          font-size: 3rem; 
       }
 
       nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 35%;
           ul{
               display: flex;
               list-style-type: none;
+              justify-content: space-around;
+              li{
+                font-size: 1rem; 
+                text-transform: uppercase;
+                color: rgb(42, 43, 45);
+                font-weight: 200;
+              }
+
           }
       }
   }
+ 
 }
