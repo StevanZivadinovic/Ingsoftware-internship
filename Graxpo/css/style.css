@@ -1,5 +1,21 @@
-body {
-  background-color: red;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainHeader {
+  background-color: #e1e1e1;
   font-weight: 700;
+}
+.mainHeader .nav {
+  display: flex;
+  justify-content: space-around;
+}
+.mainHeader .nav h1 {
+  color: #f64b44;
+}
+.mainHeader .nav nav ul {
+  display: flex;
+  list-style-type: none;
 }
