@@ -1,0 +1,59 @@
+.redBlock{
+    display: flex;
+    justify-content: center;
+    background: url('./../../images/street.png');
+    height: 40vh;
+    position: relative;
+    
+    .coverColor{
+        position: absolute;
+        background-color: rgba(232, 76, 61, .7);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__mainContainer{
+        z-index: 1;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+
+        .card__redBlock{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+
+            .imgNumber{
+
+                margin-bottom: 2rem;
+                i{
+                    font-size: 4rem;
+                    color: #FFFFFF;
+                }
+                span{
+                    font-size: 3rem;
+                    font-family: 'Roboto', sans-serif;
+                    color: #FFFFFF;
+                }
+            }
+            h4{
+                font-size: 1.6rem;
+                font-family: 'Roboto', sans-serif;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-bottom: 1.5rem;
+                font-weight: 100;
+            }
+            hr{
+                width: 3.7rem;
+                height: .3vh;
+                background-color: #FFFFFF;
+                // margin: 0 auto;
+                margin-bottom: 2rem;
+                border: none;
+            }
+        }
+
+    }
+}

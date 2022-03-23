@@ -235,6 +235,59 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.redBlock {
+  display: flex;
+  justify-content: center;
+  background: url("./../../images/street.png");
+  height: 40vh;
+  position: relative;
+}
+.redBlock .coverColor {
+  position: absolute;
+  background-color: rgba(232, 76, 61, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.redBlock__mainContainer {
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.redBlock__mainContainer .card__redBlock {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.redBlock__mainContainer .card__redBlock .imgNumber {
+  margin-bottom: 2rem;
+}
+.redBlock__mainContainer .card__redBlock .imgNumber i {
+  font-size: 4rem;
+  color: #FFFFFF;
+}
+.redBlock__mainContainer .card__redBlock .imgNumber span {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+}
+.redBlock__mainContainer .card__redBlock h4 {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  font-weight: 100;
+}
+.redBlock__mainContainer .card__redBlock hr {
+  width: 3.7rem;
+  height: 0.3vh;
+  background-color: #FFFFFF;
+  margin-bottom: 2rem;
+  border: none;
+}
+
 * {
   margin: 0;
   padding: 0;
