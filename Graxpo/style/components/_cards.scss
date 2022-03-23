@@ -1,0 +1,48 @@
+.cards{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+
+    .card{
+        display: flex;
+        // justify-content: center;
+        width: 45%;
+        height: 23.8rem;
+        .imgContainer{
+            width: 30%;
+            height: 100%;
+            .imgCircle{
+                background-color: rgba(232, 76, 61, 1);
+                height: 10.9rem;
+                width: 10.9rem;
+                border: 1px solid black;
+
+                i{
+                    width: 100%;
+                    height: 100%;
+                    font-size: 2.4rem;
+                    color: #FFFFFF;
+                  
+                }
+            }
+        }
+        .contentCards{
+            h3{
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #81868E;
+            }
+            hr.hrCard{
+            width: 3.7rem;
+            height: .3vh;
+            background-color: rgba(215, 215, 215, 1);
+            // margin: 0 auto;
+            margin-bottom: 2.5rem;
+            }
+        }
+    }
+}

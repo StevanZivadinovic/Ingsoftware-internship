@@ -1,3 +1,6 @@
+@use './cards';
+
+
 .about{
     display: flex;
     justify-content: center;
@@ -47,3 +50,38 @@
 
     }
 }
+
+.mainWhatWeDo{
+    background-color: rgb(243, 243, 243);
+
+    div.whatWeDo{ 
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10vh;
+
+        h2{
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-family: 'Roboto', sans-serif;
+            color: #333B46;
+            letter-spacing: .5rem;
+            margin-bottom: 2rem;
+        }
+        hr{
+            width: 5.2rem;
+            height: .5vh;
+            background-color: rgba(0,0,0,1);
+            margin: 0 auto;
+            margin-bottom: 2.5rem;
+
+        }
+        p{
+            color: #81868E;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.4rem;
+        }
+    }
+
+    
+} 
