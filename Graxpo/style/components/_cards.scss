@@ -3,13 +3,42 @@
     width: 90%;
     margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: space-around;
     // justify-content: space-between;
 
     .card{
         display: flex;
         // justify-content: center;
-        width: 45%;
+        width: 48%;
         height: 23.8rem;
+        border: .3rem solid rgba(215, 215, 215, .5);
+        border-radius: 1rem;
+        margin-bottom: 2%;
+
+        &:hover{
+            cursor: pointer;
+            border: .3rem solid rgba(232, 76, 61, 1);
+            background-color: rgba(232, 76, 61, 1);
+
+        
+        }
+
+        &:hover div.imgCircle{
+            background-color: white;
+           
+        }
+        &:hover i{
+            color: rgba(232, 76, 61, 1) !important;
+           
+        }
+
+        &:hover .contentCards h3, &:hover .contentCards hr.hrCard, &:hover .contentCards p{
+            color: #FFFFFF;
+           
+        }
+        &:hover .contentCards hr.hrCard{
+            background-color: #FFFFFF !important;
+        }
         .imgContainer{
             width: 30%;
             height: 100%;
@@ -17,31 +46,49 @@
                 background-color: rgba(232, 76, 61, 1);
                 height: 10.9rem;
                 width: 10.9rem;
-                border: 1px solid black;
+                border-radius: 50%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 3rem;
+                z-index: 2;
+
+                
 
                 i{
-                    width: 100%;
-                    height: 100%;
-                    font-size: 2.4rem;
+                    font-size: 4rem;
                     color: #FFFFFF;
-                  
+                    
                 }
             }
         }
         .contentCards{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 3rem;
+
             h3{
                 font-family: 'Roboto', sans-serif;
                 font-size: 1.6rem;
                 font-weight: bold;
                 text-transform: uppercase;
                 color: #81868E;
+                margin-bottom: 2rem;
             }
             hr.hrCard{
             width: 3.7rem;
             height: .3vh;
             background-color: rgba(215, 215, 215, 1);
             // margin: 0 auto;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
+            border: none;
+            }
+            p{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.4rem;
+                color: #81868E;
             }
         }
     }
