@@ -1,6 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+.mainHeader {
+  background-color: #e1e1e1;
+  font-weight: 700;
+  height: 100vh;
+}
+.mainHeader .nav {
+  display: flex;
+  justify-content: space-around;
+}
+.mainHeader .nav h1 {
+  color: #e84c3d;
+  font-size: 2.8rem;
+  font-family: "Leckerli One", cursive;
+  font-weight: 100;
+}
+.mainHeader .nav nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+}
+.mainHeader .nav nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+.mainHeader .nav nav ul li {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #333b46;
+  font-weight: 200;
+  font-family: "Open Sans", sans-serif;
+}
+
 .img {
   width: 100%;
   height: 100vh;
@@ -21,13 +55,13 @@
   font-size: 3.5rem;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
-  color: #333B46;
+  color: #333b46;
 }
 .img .text p {
   font-size: 1.6rem;
   font-weight: 100;
   font-family: "Open Sans", sans-serif;
-  color: #81868E;
+  color: #81868e;
 }
 .img .text .crollDown {
   position: absolute;
@@ -40,7 +74,7 @@
 }
 .img .text .crollDown p {
   text-transform: uppercase;
-  color: #E84C3D;
+  color: #e84c3d;
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
 }
@@ -96,38 +130,4 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
-}
-
-.mainHeader {
-  background-color: #e1e1e1;
-  font-weight: 700;
-  height: 100vh;
-}
-.mainHeader .nav {
-  display: flex;
-  justify-content: space-around;
-}
-.mainHeader .nav h1 {
-  color: #E84C3D;
-  font-size: 2.8rem;
-  font-family: "Leckerli One", cursive;
-  font-weight: 100;
-}
-.mainHeader .nav nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 35%;
-}
-.mainHeader .nav nav ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-around;
-}
-.mainHeader .nav nav ul li {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  color: #333B46;
-  font-weight: 200;
-  font-family: "Open Sans", sans-serif;
 }
