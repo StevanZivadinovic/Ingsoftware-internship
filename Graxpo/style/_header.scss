@@ -3,7 +3,8 @@
     .img{
         width: 100%;
         height: 64.3rem;
-        background-image: url('./../images/above.png'),url('./../images/under.png'),;
+        background-image: url('./../images/above.png'),url('./../images/under.png');
+        background-repeat: no-repeat;
         background-size: contain;
         display: flex;
         justify-content: center;
@@ -14,22 +15,35 @@
            margin-top: 22rem;
            position: relative;
           h1{
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+            color: #333B46;
           }
           p{
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 100;
-
+            font-family: 'Open Sans', sans-serif;
+            color: #81868E;
           }
 
           .crollDown{
               position: absolute;
               bottom: 5.6rem;
               width: 100%;
+
+              &:hover{
+                transform: scaleX(1.1) scaleY(1.1);
+                cursor: pointer;
+              }
+
               p{
                   text-transform: uppercase;
-                  color: rgb(246, 75, 68);
+                  color: #E84C3D;
+                  font-size: 1.2rem;
+                  font-family: 'Open Sans', sans-serif;
+
+
               }
           }
         }

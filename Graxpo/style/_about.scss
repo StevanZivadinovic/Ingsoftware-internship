@@ -1,0 +1,49 @@
+.about{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+
+    .content{
+        width: 45%;
+        margin: 10vh 0;
+        h2{
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 2vh;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        hr{
+            width: 5.2rem;
+            height: .5vh;
+            background-color: rgb(137, 137, 137);
+            margin-bottom: 2.5vh;
+        }
+        p{
+            margin-bottom: 2.5vh;
+            font-size: 1.4rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        button{
+            text-transform: uppercase;
+            padding: 1.6rem 1.8rem 1.5rem 1.8rem;
+            font-size: 1.3rem;
+            border: none;
+            background-color: rgba(232, 76, 61, 1);
+            color: #FFFFFF;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            border-radius: .3rem;
+        }
+    }
+
+    .img{
+        background-image: none;
+        width: 45%;
+        height: 30vh;
+        margin: 10vh 0;
+
+    }
+}
