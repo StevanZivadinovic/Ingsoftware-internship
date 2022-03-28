@@ -170,16 +170,16 @@
   margin: 10vh 0;
 }
 
-.mainWhatWeDo, .mainCircles, .mainFeatured {
+.mainWhatWeDo, .mainCircles, .mainFeatured, .ourBestService {
   background-color: #f3f3f3;
 }
-.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo {
+.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .ourBestService div.whatWeDo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: 10vh;
 }
-.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2 {
+.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .ourBestService div.whatWeDo h2 {
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -187,14 +187,14 @@
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
 }
-.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr {
+.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .ourBestService div.whatWeDo hr {
   width: 5.2rem;
   height: 0.5vh;
   background-color: #898989;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p {
+.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .ourBestService div.whatWeDo p {
   color: #81868E;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
@@ -373,6 +373,44 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.serviceSection .row {
+  display: flex;
+}
+.serviceSection .row .imgWork img {
+  height: 100%;
+}
+.serviceSection .row .contentWork {
+  background-color: #e84c3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.serviceSection .row .contentWork__main {
+  margin: 0 auto;
+  width: 70%;
+}
+.serviceSection .row .contentWork__main h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.serviceSection .row .contentWork__main hr {
+  margin: 2rem 0;
+  width: 4.2rem;
+  height: 0.3vh;
+  background-color: #ffffff;
+  border: none;
+}
+.serviceSection .row .contentWork__main p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+}
+.serviceSection .row:nth-child(odd) {
+  flex-direction: row-reverse;
 }
 
 * {

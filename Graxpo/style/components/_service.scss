@@ -1,0 +1,44 @@
+.serviceSection {
+  .row {
+    display: flex;
+
+    .imgWork{
+      img{
+        height: 100%;
+    
+      }
+    }
+    .contentWork {
+      background-color: rgba(232, 76, 61, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__main {
+        margin: 0 auto;
+        width: 70%;
+        h2 {
+          font-family: "Roboto", sans-serif;
+          font-size: 1.6rem;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+        hr{
+            margin: 2rem 0;
+            width: 4.2rem;
+            height: .3vh;
+            background-color: #ffffff;
+            border: none;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.4rem;
+            color: #FFFFFF;
+        }
+      }
+    }
+  }
+  .row:nth-child(odd){
+    flex-direction: row-reverse;
+    
+  }
+}
