@@ -452,6 +452,29 @@
   margin-bottom: "";
 }
 
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+}
+.categories .content {
+  display: flex;
+  justify-content: space-between;
+}
+.categories .content p, .categories .content span {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: #383737;
+}
+.categories hr {
+  margin: 2rem 0;
+  width: 4.2rem;
+  height: 0.5vh;
+  background-color: #898989;
+}
+
 * {
   margin: 0;
   padding: 0;

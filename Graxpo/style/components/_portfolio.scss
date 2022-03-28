@@ -1,0 +1,23 @@
+.categories{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+    .content{
+        display: flex;
+        justify-content: space-between;
+        p,span{
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.6rem;
+            color: #383737;
+        }
+    }
+    hr{
+        margin: 2rem 0;
+        width: 4.2rem;
+        height: .5vh;
+        background-color: rgb(137, 137, 137);
+        
+    }
+}
