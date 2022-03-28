@@ -170,16 +170,16 @@
   margin: 10vh 0;
 }
 
-.mainWhatWeDo, .mainCircles {
+.mainWhatWeDo, .mainCircles, .mainFeatured {
   background-color: #f3f3f3;
 }
-.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo {
+.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: 10vh;
 }
-.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2 {
+.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2 {
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -187,14 +187,14 @@
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
 }
-.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr {
+.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr {
   width: 5.2rem;
   height: 0.5vh;
   background-color: #898989;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p {
+.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p {
   color: #81868E;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
@@ -334,6 +334,13 @@
   color: #81868E;
   width: 80%;
   margin-top: 2rem;
+}
+
+.mainFeatured .imageGalery {
+  display: flex;
+}
+.mainFeatured .imageGalery .imgFeatured img {
+  width: 100%;
 }
 
 * {
