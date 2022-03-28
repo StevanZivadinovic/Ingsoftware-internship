@@ -170,16 +170,16 @@
   margin: 10vh 0;
 }
 
-.mainWhatWeDo, .mainCircles, .mainFeatured, .ourBestService, .portfolio {
+.mainWhatWeDo, .mainCircles, .mainFeatured, .ourBestService, .portfolio, .meetCrew {
   background-color: #f3f3f3;
 }
-.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .ourBestService div.whatWeDo, .portfolio div.whatWeDo {
+.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .ourBestService div.whatWeDo, .portfolio div.whatWeDo, .meetCrew div.whatWeDo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: 10vh;
 }
-.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .ourBestService div.whatWeDo h2, .portfolio div.whatWeDo h2 {
+.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .ourBestService div.whatWeDo h2, .portfolio div.whatWeDo h2, .meetCrew div.whatWeDo h2 {
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -187,14 +187,14 @@
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
 }
-.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .ourBestService div.whatWeDo hr, .portfolio div.whatWeDo hr {
+.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .ourBestService div.whatWeDo hr, .portfolio div.whatWeDo hr, .meetCrew div.whatWeDo hr {
   width: 5.2rem;
   height: 0.5vh;
   background-color: #898989;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .ourBestService div.whatWeDo p, .portfolio div.whatWeDo p {
+.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .ourBestService div.whatWeDo p, .portfolio div.whatWeDo p, .meetCrew div.whatWeDo p {
   color: #81868E;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
@@ -634,6 +634,103 @@
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+}
+
+.crew {
+  padding-bottom: 8rem;
+}
+.crew .crewCards {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  height: 40vh;
+  justify-content: space-between;
+}
+.crew .crewCards .cardCrewMain {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+}
+.crew .crewCards .cardCrewMain:hover .cardCrew .content {
+  display: block;
+  cursor: pointer;
+}
+.crew .crewCards .cardCrewMain .namePosition h3 {
+  font-size: 1.7rem;
+  color: #333B46;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  margin: 1rem 0;
+}
+.crew .crewCards .cardCrewMain .namePosition p {
+  font-size: 1.2rem;
+  color: #333B46;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+.crew .crewCards .cardCrew {
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.crew .crewCards .cardCrew .content {
+  background-color: #e22b1b;
+  height: 40%;
+  width: 90%;
+  margin: 0 auto 1rem auto;
+  display: none;
+}
+.crew .crewCards .cardCrew .content p {
+  width: 80%;
+  margin: 0 auto;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 2vh;
+}
+.crew .crewCards .cardCrew .content .social {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin: 0.5rem auto 0.5rem auto;
+}
+.crew .crewCards .cardCrew .content .social .fb, .crew .crewCards .cardCrew .content .social .linkedin {
+  border: 0.1rem solid #FFFFFF;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.crew .crewCards .cardCrew .content .social i {
+  font-size: 1.5vh;
+  color: white;
+}
+.crew .crewCards .cardCrewMain:nth-child(1) .cardCrew {
+  background-image: url("./../../images/ibanHasan.png");
+  background-size: cover;
+  background-position: center;
+}
+.crew .crewCards .cardCrewMain:nth-child(2) .cardCrew {
+  background-image: url("./../../images/radRedwan.png");
+  background-size: cover;
+  background-position: center;
+}
+.crew .crewCards .cardCrewMain:nth-child(3) .cardCrew {
+  background-image: url("./../../images/bariOwalarMeye.png");
+  background-size: cover;
+  background-position: center;
+}
+.crew .crewCards .cardCrewMain:nth-child(4) .cardCrew {
+  background-image: url("./../../images/tofailAhmed.png");
+  background-size: cover;
+  background-position: center;
 }
 
 * {
