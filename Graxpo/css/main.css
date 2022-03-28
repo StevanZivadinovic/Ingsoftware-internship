@@ -296,6 +296,7 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  margin-top: 4rem;
 }
 .mainCircles .circles .boxCircle {
   background-image: none;
@@ -319,6 +320,20 @@
 .mainCircles .circles .boxCircle .imgBox i {
   font-size: 3.5rem;
   color: #E84C3D;
+}
+.mainCircles .circles .boxCircle h3 {
+  font-size: 1.6rem;
+  color: #333B46;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  margin-top: 3rem;
+}
+.mainCircles .circles .boxCircle p {
+  font-size: 1.4rem;
+  color: #81868E;
+  width: 80%;
+  margin-top: 2rem;
 }
 
 * {
