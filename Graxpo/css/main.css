@@ -170,16 +170,16 @@
   margin: 10vh 0;
 }
 
-.mainWhatWeDo {
+.mainWhatWeDo, .mainCircles {
   background-color: #f3f3f3;
 }
-.mainWhatWeDo div.whatWeDo {
+.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: 10vh;
 }
-.mainWhatWeDo div.whatWeDo h2 {
+.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2 {
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -187,14 +187,14 @@
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
 }
-.mainWhatWeDo div.whatWeDo hr {
+.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr {
   width: 5.2rem;
   height: 0.5vh;
   background-color: #898989;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-.mainWhatWeDo div.whatWeDo p {
+.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p {
   color: #81868E;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
@@ -286,6 +286,39 @@
   background-color: #FFFFFF;
   margin-bottom: 2rem;
   border: none;
+}
+
+.mainCircles {
+  width: 100%;
+  margin: 0 auto;
+}
+.mainCircles .circles {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.mainCircles .circles .boxCircle {
+  background-image: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.mainCircles .circles .boxCircle .imgBox {
+  width: 8.4rem;
+  height: 8.4rem;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  outline: 1px solid #cccccc;
+  outline-offset: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainCircles .circles .boxCircle .imgBox i {
+  font-size: 3.5rem;
+  color: #E84C3D;
 }
 
 * {

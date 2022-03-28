@@ -1,0 +1,34 @@
+.mainCircles{
+    width: 100%;
+    margin: 0 auto;
+
+    .circles{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        .boxCircle{
+            background-image: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            .imgBox{
+                width: 8.4rem;
+                height: 8.4rem;
+                background-color: rgba(230, 230, 230, 1);
+                border-radius: 50%;
+                outline: 1px solid rgba(204, 204, 204, 1);
+                outline-offset: .7rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                i{
+                    font-size: 3.5rem;
+                    color: #E84C3D;
+                }
+            }
+        }
+    }
+}
