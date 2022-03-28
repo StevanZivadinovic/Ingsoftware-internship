@@ -480,7 +480,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 22.7rem 22.7rem 22.7rem 22.7rem 22.7rem;
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 .gallery_item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -488,6 +488,25 @@
   padding: 20px;
   font-size: 30px;
   text-align: center;
+}
+.gallery .item1, .gallery .item2, .gallery .item3, .gallery .item4, .gallery .item5_child1, .gallery .item5_child2, .gallery .item6, .gallery .item7, .gallery .item8, .gallery .item9, .gallery .item10, .gallery .item11, .gallery .item12 {
+  position: relative;
+}
+.gallery .item1:hover .hoverGallery, .gallery .item2:hover .hoverGallery, .gallery .item3:hover .hoverGallery, .gallery .item4:hover .hoverGallery, .gallery .item5_child1:hover .hoverGallery, .gallery .item5_child2:hover .hoverGallery, .gallery .item6:hover .hoverGallery, .gallery .item7:hover .hoverGallery, .gallery .item8:hover .hoverGallery, .gallery .item9:hover .hoverGallery, .gallery .item10:hover .hoverGallery, .gallery .item11:hover .hoverGallery, .gallery .item12:hover .hoverGallery {
+  display: block;
+  cursor: pointer;
+}
+.gallery .hoverGallery {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(232, 76, 61, 0.7);
+  transform: translateX(5%) translateY(5%);
+  display: none;
 }
 .gallery .item1 {
   background-image: url("./../../images/featured1.png");
@@ -502,6 +521,40 @@
 .gallery .item4 {
   grid-row-start: span 2;
   background-image: url("./../../images/p-img2.png");
+}
+.gallery .item5 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.gallery .item5_child1 {
+  background-image: url("./../../images/p-img6.png");
+}
+.gallery .item5_child2 {
+  background-image: url("./../../images/p-img7.png");
+}
+.gallery .item6 {
+  background-image: url("./../../images/p-img4.png");
+}
+.gallery .item7 {
+  background-image: url("./../../images/p-img8.png");
+}
+.gallery .item8 {
+  background-image: url("./../../images/p-img9.png");
+  background-size: cover;
+}
+.gallery .item9 {
+  grid-row-start: span 2;
+  background-image: url("./../../images/p-img11.png");
+  background-size: cover;
+}
+.gallery .item10 {
+  grid-row-start: span 2;
+  background-image: url("./../../images/p-img12.png");
+  background-size: cover;
+}
+.gallery .item11 {
+  background-image: url("./../../images/p-img10.png");
+  background-size: cover;
 }
 
 * {
