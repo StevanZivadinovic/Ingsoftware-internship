@@ -413,6 +413,45 @@
   flex-direction: row-reverse;
 }
 
+.createMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("./../../images/cta.png");
+  padding: 2rem 0;
+}
+.createMain .contentCreate {
+  width: 80%;
+  margin: 3rem auto;
+  text-align: center;
+}
+.createMain .contentCreate h2 {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-weight: 100;
+  margin-bottom: "";
+}
+.createMain .contentCreate p {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+.createMain .contentCreate button {
+  background-color: #e84c3d;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-weight: 100;
+  margin-bottom: "";
+}
+
 * {
   margin: 0;
   padding: 0;

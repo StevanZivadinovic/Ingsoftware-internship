@@ -1,0 +1,39 @@
+@mixin robotoText($margin) {
+    font-family: "Roboto", sans-serif;
+            color: #FFFFFF;
+            font-weight: 100;
+            margin-bottom: $margin;
+}
+
+.createMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./../../images/cta.png');
+    padding: 2rem 0;
+
+    .contentCreate{
+        width: 80%;
+        margin: 3rem auto;
+        text-align: center;
+        h2{
+            font-size: 3rem;
+            @include robotoText('')
+        }
+        p{
+            font-size: 2rem;
+            @include robotoText(2rem)
+
+
+        }
+        button{
+            background-color: rgba(232, 76, 61, 1);
+            border: none;
+            outline: none;
+            border-radius: .5rem;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            @include robotoText('');
+        }
+    }
+}
