@@ -1,0 +1,82 @@
+.subscribe{
+    position: relative;
+    background-image: url('./../../images/subscribeBG.png');
+    padding: 2rem auto;
+    .hoverSubscribe{
+        display: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(232, 76, 61, .7);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url();
+    }
+    .mainSubscribe{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 70%;
+
+        .subscribeContent{
+            margin: 5vh 0;
+            h2{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                color: #FFFFFF;
+                font-weight: 100;
+            }
+            hr{
+            width: 5.2rem;
+            height: .2vh;
+            background-color: #FFFFFF;
+            margin-bottom: 2.5vh;
+            margin: 2rem 0;
+            border: none;
+            }
+            p{
+                font-size: 1.3rem;
+                width: 70%;
+                font-family: 'Open Sans', sans-serif;
+                color: #FFFFFF;
+            }
+        }
+        .inputSubscribe{
+            margin: 5vh 0;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            align-self: center;
+
+            input{
+                background-color: transparent;
+                outline: none;
+                padding: 1rem 3rem;
+                border: none;
+                border: .1rem solid #FFFFFF;
+                &::placeholder{
+                    font-family: 'Roboto', sans-serif;
+                    color: #FFFFFF;
+                    opacity: .5;
+                   
+
+                }
+            }
+            button{
+                background-color: transparent;
+                outline: none;
+                padding: 1rem 3rem;
+                border: none;
+                border: .1rem solid #FFFFFF;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.0rem;
+            }
+        }
+    }
+}
