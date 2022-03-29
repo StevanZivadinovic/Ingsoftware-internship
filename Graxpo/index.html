@@ -510,5 +510,111 @@
         </div>
       </div>
     </section>
+    <section class="testimonials slide1">
+      <div class="mainTestimonials">
+        <div class="headerTestimonials">
+          <h2>Testimonials 1</h2>
+          <hr />
+          <h3>What our client say</h3>
+        </div>
+        <div class="imgTestimonials">
+          <img src="./images/testimonialPic.png" alt="" />
+        </div>
+        <div class="contentTestimonials">
+          <p class="textTestimonilas">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam,m quia.
+          </p>
+          <p class="nameTestimonials">Raf redwan</p>
+          <div class="slider">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials slide2">
+      <div class="mainTestimonials">
+        <div class="headerTestimonials">
+          <h2>Testimonials 2</h2>
+          <hr />
+          <h3>What our client say</h3>
+        </div>
+        <div class="imgTestimonials">
+          <img src="./images/testimonialPic.png" alt="" />
+        </div>
+        <div class="contentTestimonials">
+          <p class="textTestimonilas">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam,m quia.
+          </p>
+          <p class="nameTestimonials">Raf redwan</p>
+          <div class="slider">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials slide3">
+      <div class="mainTestimonials">
+        <div class="headerTestimonials">
+          <h2>Testimonials 3</h2>
+          <hr />
+          <h3>What our client say</h3>
+        </div>
+        <div class="imgTestimonials">
+          <img src="./images/testimonialPic.png" alt="" />
+        </div>
+        <div class="contentTestimonials">
+          <p class="textTestimonilas">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam,m quia.
+          </p>
+          <p class="nameTestimonials">Raf redwan</p>
+          <div class="slider">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("testimonials");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
   </body>
 </html>
