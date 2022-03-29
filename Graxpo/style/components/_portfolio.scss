@@ -52,13 +52,43 @@
     position: relative;
 
     &:hover .hoverGallery{
-      display: block;
+      display: flex;
       cursor: pointer;
     }
   }
 
   .hoverGallery{
-    @include hover()
+    @include hover();
+    flex-direction: column;
+    justify-content: end;
+    // .mainHoverGallery{
+      h4,p,hr{
+        margin-left: 2rem;
+      }
+      h4{
+        font-size: 2rem;
+        color: #FFFFFF;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: .3rem;
+      }
+      p{
+        font-size: 1.6rem;
+        color: #FFFFFF;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+  
+      }
+      hr{
+        width: 3rem;
+        height: .3vh;
+        background-color: rgb(137, 137, 137);
+        margin-bottom: 2.5vh;
+        border: none;
+      }
+    // }
   }
 
   .item1 {

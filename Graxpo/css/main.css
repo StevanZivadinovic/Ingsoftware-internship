@@ -386,6 +386,7 @@
 }
 .serviceSection .row .imgWork img {
   height: 100%;
+  max-width: 100%;
 }
 .serviceSection .row .contentWork {
   background-color: #e84c3d;
@@ -415,7 +416,7 @@
   font-size: 1.4rem;
   color: #FFFFFF;
 }
-.serviceSection .row:nth-child(odd) {
+.serviceSection .row:nth-child(even) {
   flex-direction: row-reverse;
 }
 
@@ -499,7 +500,7 @@
   position: relative;
 }
 .gallery .item1:hover .hoverGallery, .gallery .item2:hover .hoverGallery, .gallery .item3:hover .hoverGallery, .gallery .item4:hover .hoverGallery, .gallery .item5_child1:hover .hoverGallery, .gallery .item5_child2:hover .hoverGallery, .gallery .item6:hover .hoverGallery, .gallery .item7:hover .hoverGallery, .gallery .item8:hover .hoverGallery, .gallery .item9:hover .hoverGallery, .gallery .item10:hover .hoverGallery, .gallery .item11:hover .hoverGallery, .gallery .item12:hover .hoverGallery {
-  display: block;
+  display: flex;
   cursor: pointer;
 }
 .gallery .hoverGallery {
@@ -513,6 +514,33 @@
   background-color: rgba(232, 76, 61, 0.7);
   transform: translateX(5%) translateY(5%);
   display: none;
+  flex-direction: column;
+  justify-content: end;
+}
+.gallery .hoverGallery h4, .gallery .hoverGallery p, .gallery .hoverGallery hr {
+  margin-left: 2rem;
+}
+.gallery .hoverGallery h4 {
+  font-size: 2rem;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.gallery .hoverGallery p {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.gallery .hoverGallery hr {
+  width: 3rem;
+  height: 0.3vh;
+  background-color: #898989;
+  margin-bottom: 2.5vh;
+  border: none;
 }
 .gallery .item1 {
   background-image: url("./../../images/featured1.png");

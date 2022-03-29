@@ -1,10 +1,11 @@
 .serviceSection {
   .row {
     display: flex;
-
+    
     .imgWork{
       img{
         height: 100%;
+        max-width: 100%;
     
       }
     }
@@ -37,7 +38,7 @@
       }
     }
   }
-  .row:nth-child(odd){
+  .row:nth-child(even){
     flex-direction: row-reverse;
     
   }
