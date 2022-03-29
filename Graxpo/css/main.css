@@ -929,6 +929,59 @@
   color: white;
 }
 
+.mainGetInTach {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.mainGetInTach form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.mainGetInTach form .input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.mainGetInTach form .input input {
+  height: 4vh;
+  width: 49%;
+  font-size: 1.4rem;
+  color: #81868E;
+  font-family: "Open Sans", sans-serif;
+  border: 0.1rem solid #81868E;
+}
+.mainGetInTach form .input input::placeholder {
+  font-size: 1.4rem;
+  color: #81868E;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 1rem;
+}
+.mainGetInTach form textarea {
+  border: 0.1rem solid #81868E;
+  color: #81868E;
+}
+.mainGetInTach form textarea::placeholder {
+  font-size: 1.4rem;
+  color: #81868E;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 1rem;
+}
+.mainGetInTach form button {
+  width: 50%;
+  padding: 1.2rem 3.6rem;
+  background-color: #e84c3d;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  margin-top: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
