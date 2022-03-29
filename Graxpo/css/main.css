@@ -981,6 +981,28 @@
   color: #FFFFFF;
   margin-top: 2rem;
 }
+.mainGetInTach .contentGetInTach {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainGetInTach .contentGetInTach .adress, .mainGetInTach .contentGetInTach .email, .mainGetInTach .contentGetInTach .phone {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.mainGetInTach .contentGetInTach .adress span, .mainGetInTach .contentGetInTach .email span, .mainGetInTach .contentGetInTach .phone span {
+  margin-right: 0.5rem;
+}
+.mainGetInTach .contentGetInTach .adress span i, .mainGetInTach .contentGetInTach .email span i, .mainGetInTach .contentGetInTach .phone span i {
+  color: #E84C3D;
+  font-size: 1.6rem;
+}
+.mainGetInTach .contentGetInTach .adress p, .mainGetInTach .contentGetInTach .email p, .mainGetInTach .contentGetInTach .phone p {
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  color: #81868E;
+}
 
 * {
   margin: 0;
