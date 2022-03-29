@@ -170,16 +170,16 @@
   margin: 10vh 0;
 }
 
-.mainWhatWeDo, .mainCircles, .mainFeatured, .ourBestService, .portfolio, .meetCrew, .lattestBlog {
+.mainWhatWeDo, .mainCircles, .mainFeatured, .ourBestService, .portfolio, .meetCrew, .lattestBlog, .pricing {
   background-color: #f3f3f3;
 }
-.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .ourBestService div.whatWeDo, .portfolio div.whatWeDo, .meetCrew div.whatWeDo, .lattestBlog div.whatWeDo {
+.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .ourBestService div.whatWeDo, .portfolio div.whatWeDo, .meetCrew div.whatWeDo, .lattestBlog div.whatWeDo, .pricing div.whatWeDo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: 10vh;
 }
-.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .ourBestService div.whatWeDo h2, .portfolio div.whatWeDo h2, .meetCrew div.whatWeDo h2, .lattestBlog div.whatWeDo h2 {
+.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .ourBestService div.whatWeDo h2, .portfolio div.whatWeDo h2, .meetCrew div.whatWeDo h2, .lattestBlog div.whatWeDo h2, .pricing div.whatWeDo h2 {
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -187,14 +187,14 @@
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
 }
-.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .ourBestService div.whatWeDo hr, .portfolio div.whatWeDo hr, .meetCrew div.whatWeDo hr, .lattestBlog div.whatWeDo hr {
+.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .ourBestService div.whatWeDo hr, .portfolio div.whatWeDo hr, .meetCrew div.whatWeDo hr, .lattestBlog div.whatWeDo hr, .pricing div.whatWeDo hr {
   width: 5.2rem;
   height: 0.5vh;
   background-color: #898989;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .ourBestService div.whatWeDo p, .portfolio div.whatWeDo p, .meetCrew div.whatWeDo p, .lattestBlog div.whatWeDo p {
+.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .ourBestService div.whatWeDo p, .portfolio div.whatWeDo p, .meetCrew div.whatWeDo p, .lattestBlog div.whatWeDo p, .pricing div.whatWeDo p {
   color: #81868E;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
@@ -799,29 +799,68 @@
   background-color: #e84c3d;
 }
 
+.lattestBlog {
+  padding-bottom: 3vh;
+}
 .lattestBlog .blogs {
   display: flex;
+  height: 40vh;
+  margin: 0 auto;
+  width: 80%;
 }
 .lattestBlog .blogs .blog1, .lattestBlog .blogs .blog2 {
   width: 50%;
 }
 .lattestBlog .blogs .blog1 .content, .lattestBlog .blogs .blog2 .content {
+  height: 100%;
   width: 50%;
   float: right;
   background-color: #e84c3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.lattestBlog .blogs .blog1 .content hr, .lattestBlog .blogs .blog2 .content hr {
-  width: 5.2rem;
-  height: 0.5vh;
-  background-color: #898989;
+.lattestBlog .blogs .blog1 .content .mainContent, .lattestBlog .blogs .blog2 .content .mainContent {
+  width: 90%;
   margin: 0 auto;
-  margin-bottom: 2.5rem;
+}
+.lattestBlog .blogs .blog1 .content .mainContent hr, .lattestBlog .blogs .blog2 .content .mainContent hr {
+  width: 5.2rem;
+  height: 0.3vh;
+  background-color: #FFFFFF;
+  margin: 2.5rem 0;
+  border: none;
+}
+.lattestBlog .blogs .blog1 .content .mainContent h3, .lattestBlog .blogs .blog2 .content .mainContent h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.lattestBlog .blogs .blog1 .content .mainContent .nameBlog, .lattestBlog .blogs .blog2 .content .mainContent .nameBlog {
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+}
+.lattestBlog .blogs .blog1 .content .mainContent .contentTextBlog, .lattestBlog .blogs .blog2 .content .mainContent .contentTextBlog {
+  font-family: "Open Sans", sans-serif;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+.lattestBlog .blogs .blog1 .content .mainContent .calendar, .lattestBlog .blogs .blog2 .content .mainContent .calendar {
+  font-family: "Open Sans", sans-serif;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
 }
 .lattestBlog .blogs .blog1 {
-  background-image: url("./../../images/blog1.png");
+  background-image: url("./../../images/blog2.png");
+  background-size: cover;
 }
 .lattestBlog .blogs .blog2 {
-  background-image: url("./../../images/blog2.png");
+  background-image: url("./../../images/blog1.png");
+  background-size: cover;
 }
 
 * {
