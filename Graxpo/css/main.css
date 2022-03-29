@@ -170,16 +170,16 @@
   margin: 10vh 0;
 }
 
-.mainWhatWeDo, .mainCircles, .mainFeatured, .ourBestService, .portfolio, .meetCrew {
+.mainWhatWeDo, .mainCircles, .mainFeatured, .ourBestService, .portfolio, .meetCrew, .lattestBlog {
   background-color: #f3f3f3;
 }
-.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .ourBestService div.whatWeDo, .portfolio div.whatWeDo, .meetCrew div.whatWeDo {
+.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .ourBestService div.whatWeDo, .portfolio div.whatWeDo, .meetCrew div.whatWeDo, .lattestBlog div.whatWeDo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: 10vh;
 }
-.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .ourBestService div.whatWeDo h2, .portfolio div.whatWeDo h2, .meetCrew div.whatWeDo h2 {
+.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .ourBestService div.whatWeDo h2, .portfolio div.whatWeDo h2, .meetCrew div.whatWeDo h2, .lattestBlog div.whatWeDo h2 {
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -187,14 +187,14 @@
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
 }
-.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .ourBestService div.whatWeDo hr, .portfolio div.whatWeDo hr, .meetCrew div.whatWeDo hr {
+.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .ourBestService div.whatWeDo hr, .portfolio div.whatWeDo hr, .meetCrew div.whatWeDo hr, .lattestBlog div.whatWeDo hr {
   width: 5.2rem;
   height: 0.5vh;
   background-color: #898989;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .ourBestService div.whatWeDo p, .portfolio div.whatWeDo p, .meetCrew div.whatWeDo p {
+.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .ourBestService div.whatWeDo p, .portfolio div.whatWeDo p, .meetCrew div.whatWeDo p, .lattestBlog div.whatWeDo p {
   color: #81868E;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
@@ -797,6 +797,31 @@
 }
 .testimonials .mainTestimonials .contentTestimonials .slider .active, .testimonials .mainTestimonials .contentTestimonials .slider .dot:hover {
   background-color: #e84c3d;
+}
+
+.lattestBlog .blogs {
+  display: flex;
+}
+.lattestBlog .blogs .blog1, .lattestBlog .blogs .blog2 {
+  width: 50%;
+}
+.lattestBlog .blogs .blog1 .content, .lattestBlog .blogs .blog2 .content {
+  width: 50%;
+  float: right;
+  background-color: #e84c3d;
+}
+.lattestBlog .blogs .blog1 .content hr, .lattestBlog .blogs .blog2 .content hr {
+  width: 5.2rem;
+  height: 0.5vh;
+  background-color: #898989;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+.lattestBlog .blogs .blog1 {
+  background-image: url("./../../images/blog1.png");
+}
+.lattestBlog .blogs .blog2 {
+  background-image: url("./../../images/blog2.png");
 }
 
 * {

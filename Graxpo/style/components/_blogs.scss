@@ -1,0 +1,26 @@
+.lattestBlog{
+    .blogs{
+        display: flex;
+        .blog1, .blog2{
+            width: 50%;
+            .content{
+                width: 50%;
+                float: right;
+                background-color: rgba(232, 76, 61, 1);
+                hr{
+                    width: 5.2rem;
+                    height: .5vh;
+                    background-color: rgb(137, 137, 137);
+                    margin: 0 auto;
+                    margin-bottom: 2.5rem;
+                }
+            }
+        }
+        .blog1{
+            background-image: url('./../../images/blog1.png');
+        }
+        .blog2{
+            background-image: url('./../../images/blog2.png');
+        }
+    }
+}
