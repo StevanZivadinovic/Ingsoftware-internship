@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Leckerli+One&display=swap");
+.nav h1 {
+  cursor: pointer;
+}
+.nav nav ul li {
+  cursor: pointer;
+}
+
 .img {
   width: 100%;
   height: 100vh;
@@ -163,6 +170,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 .about .img {
   background-image: none;
@@ -457,6 +465,7 @@
   color: #FFFFFF;
   font-weight: 100;
   margin-bottom: "";
+  cursor: pointer;
 }
 
 .categories {
@@ -668,6 +677,7 @@
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .crew {
@@ -1013,6 +1023,7 @@
   font-size: 1.4rem;
   color: #FFFFFF;
   margin-top: 2rem;
+  cursor: pointer;
 }
 .mainGetInTach .contentGetInTach {
   width: 45%;

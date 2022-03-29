@@ -1,6 +1,17 @@
 
 ////////////////////////////
-
+.nav{
+  h1{
+    cursor: pointer;
+  }
+  nav{
+    ul{
+      li{
+        cursor: pointer;
+      }
+    }
+  }
+}
 .img {
   width: 100%;
   height: 100vh;
