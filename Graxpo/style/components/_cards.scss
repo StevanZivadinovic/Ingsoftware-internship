@@ -70,11 +70,9 @@
             margin-left: 3rem;
 
             h3{
-                font-family: 'Roboto', sans-serif;
-                font-size: 1.6rem;
+                @include setTextPara('Roboto', sans-serif, 1.6rem, #81868E);
                 font-weight: bold;
                 text-transform: uppercase;
-                color: #81868E;
                 margin-bottom: 2rem;
             }
             hr.hrCard{
@@ -86,9 +84,7 @@
             border: none;
             }
             p{
-                font-family: 'Open Sans', sans-serif;
-                font-size: 1.4rem;
-                color: #81868E;
+                @include setTextPara('Open Sans', sans-serif,1.4rem,#81868E);
             }
         }
     }

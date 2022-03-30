@@ -11,11 +11,11 @@
         width: 45%;
         margin: 10vh 0;
         h2{
-            font-size: 1.6rem;
+            @include setTextPara('Roboto', sans-serif, 1.6rem);
             text-transform: uppercase;
             font-weight: 300;
             margin-bottom: 2vh;
-            font-family: 'Roboto', sans-serif;
+           
         }
 
         hr{
