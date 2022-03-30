@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 .subscribe{
     position: relative;
     background-image: url('./../../images/subscribeBG.png');
@@ -11,7 +14,6 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-image: url();
     }
     .mainSubscribe{
         display: flex;
@@ -21,11 +23,9 @@
 
         .subscribeContent{
             margin: 5vh 0;
-            h2{
-                font-size: 1.8rem;
+            h2{ 
+                @include mixins.setTextPara(variables.$roboto, 1.8rem, #FFFFFF);
                 text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
-                color: #FFFFFF;
                 font-weight: 100;
             }
             hr{
@@ -37,10 +37,8 @@
             border: none;
             }
             p{
-                font-size: 1.3rem;
+                @include mixins.setTextPara(variables.$sans, 1.3rem, #FFFFFF);     
                 width: 70%;
-                font-family: 'Open Sans', sans-serif;
-                color: #FFFFFF;
             }
         }
         .inputSubscribe{
@@ -71,11 +69,9 @@
                 outline: none;
                 padding: 1rem 3rem;
                 border: none;
-                border: .1rem solid #FFFFFF;
-                color: #FFFFFF;
+                border: .1rem solid #FFFFFF;  
                 text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
-                font-size: 1.0rem;
+                @include mixins.setTextPara(variables.$roboto, 1rem, #FFFFFF);
                 cursor: pointer;
             }
         }

@@ -1,15 +1,5 @@
-@mixin hover() {
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(232, 76, 61, .7);
-  transform: translateX(5%) translateY(5%);
-  display: none;
-}
+@use './../mixins.scss';
+@use './../variables.scss';
 
 .categories {
   display: flex;
@@ -22,9 +12,7 @@
     justify-content: space-between;
     p,
     span {
-      font-family: "Roboto", sans-serif;
-      font-size: 1.6rem;
-      color: #383737;
+      @include mixins.setTextPara(variables.$roboto, 1.6rem, #383737);
     }
   }
   hr {
@@ -58,7 +46,7 @@
   }
 
   .hoverGallery{
-    @include hover();
+    @include mixins.hover();
     flex-direction: column;
     justify-content: end;
     // .mainHoverGallery{
@@ -66,16 +54,12 @@
         margin-left: 2rem;
       }
       h4{
-        font-size: 2rem;
-        color: #FFFFFF;
-        font-family: "Roboto", sans-serif;
+        @include mixins.setTextPara(variables.$roboto, 2rem, #FFFFFF);
         text-transform: uppercase;
         margin-bottom: .3rem;
       }
       p{
-        font-size: 1.6rem;
-        color: #FFFFFF;
-        font-family: "Roboto", sans-serif;
+        @include mixins.setTextPara(variables.$roboto, 1.6rem, #FFFFFF);
         font-weight: 100;
         text-transform: uppercase;
         margin-bottom: 1.2rem;

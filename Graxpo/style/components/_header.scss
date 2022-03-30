@@ -1,5 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
 
-////////////////////////////
 .nav{
   h1{
     cursor: pointer;
@@ -23,7 +24,6 @@
   background-image: url("./../images/above.png"), url("./../images/under.png");
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position: bottom;
   background-position-y: -10rem;
   display: flex;
   justify-content: center;
@@ -34,16 +34,12 @@
     margin-top: 22rem;
     position: relative;
     h1 {
-      font-size: 3.5rem;
+      @include mixins.setTextPara(variables.$roboto, 3.5rem, #333b46);
       font-weight: 300;
-      font-family: "Roboto", sans-serif;
-      color: #333b46;
     }
     p {
-      font-size: 1.6rem;
+      @include mixins.setTextPara(variables.$sans, 1.6rem, #81868e);
       font-weight: 100;
-      font-family: "Open Sans", sans-serif;
-      color: #81868e;
     }
 
     .crollDown {
@@ -58,9 +54,8 @@
 
       p {
         text-transform: uppercase;
-        color: #e84c3d;
-        font-size: 1.2rem;
-        font-family: "Open Sans", sans-serif;
+        @include mixins.setTextPara(variables.$sans, 1.2rem, #e84c3d);
+        
       }
     }
   }

@@ -1,8 +1,10 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 @mixin fontStyle() {
-    color: #333B46;
+    @include mixins.setTextPara(variables.$roboto, '', #333B46);
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
 }
 
 .crew{

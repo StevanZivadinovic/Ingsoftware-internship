@@ -1,9 +1,5 @@
-@mixin robotoText($margin) {
-    font-family: "Roboto", sans-serif;
-            color: #FFFFFF;
-            font-weight: 100;
-            margin-bottom: $margin;
-}
+@use './../mixins.scss';
+@use './../variables.scss';
 
 .createMain{
     display: flex;
@@ -17,12 +13,13 @@
         margin: 3rem auto;
         text-align: center;
         h2{
-            font-size: 3rem;
-            @include robotoText('')
+            @include mixins.setTextPara(variables.$roboto, 3rem, #FFFFFF);
+            font-weight: 100;
         }
         p{
-            font-size: 2rem;
-            @include robotoText(2rem)
+            @include mixins.setTextPara(variables.$roboto, 2rem, #FFFFFF);
+            font-weight: 100;
+            margin: 2rem 0;
 
 
         }
@@ -33,7 +30,8 @@
             border-radius: .5rem;
             padding: 1rem 2rem;
             text-transform: uppercase;
-            @include robotoText('');
+            @include mixins.setTextPara(variables.$roboto, 1.2rem, #FFFFFF);
+            font-weight: 100;
             cursor: pointer;
         }
     }

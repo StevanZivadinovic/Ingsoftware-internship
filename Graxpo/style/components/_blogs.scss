@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables';
+
 .lattestBlog{
     padding-bottom: 3vh;
     .blogs{
@@ -27,26 +30,18 @@
                         border: none;
                     }
                     h3{
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 1.6rem;
-                        color: #FFFFFF;
+                        @include mixins.setTextPara(variables.$roboto, 1.6rem, #FFFFFF);
                         text-transform: uppercase;
                         font-weight: 100;
                     }
                     .nameBlog{
-                        font-family: 'Roboto', sans-serif;
-                        color: #FFFFFF;
-                        font-size: 1.4rem;
+                        @include mixins.setTextPara(variables.$roboto, 1.4rem, #FFFFFF);
                     }
                     .contentTextBlog{
-                        font-family: 'Open Sans', sans-serif;
-                        color: #FFFFFF;
-                        font-size: 1.2rem;
+                        @include mixins.setTextPara(variables.$sans, 1.2rem, #FFFFFF);
                     }
                     .calendar{
-                        font-family: 'Open Sans', sans-serif;
-                        color: #FFFFFF;
-                        font-size: 1.2rem;
+                        @include mixins.setTextPara(variables.$sans, 1.2rem, #FFFFFF);
                         margin: 1.5rem 0;
                     }
                 }

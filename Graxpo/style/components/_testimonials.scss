@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 .testimonials{
     background-image: url('./../../images/testimonialsBg.png');
     .mainTestimonials{
@@ -11,9 +14,7 @@
 
         .headerTestimonials{
             h2{
-                font-size: 2rem;
-                font-family: 'Roboto', sans-serif;
-                color: #FFFFFF;
+                @include mixins.setTextPara(variables.$roboto, 2rem, #FFFFFF);
                 text-transform: uppercase;
                 margin: 2vh 0;
             }
@@ -26,10 +27,8 @@
             border: none;
             }
             h3{
-                font-size: 1.8rem;
+                @include mixins.setTextPara(variables.$sans, 1.8rem, #FFFFFF);
                 text-transform: uppercase;
-                font-family: 'Open Sans', sans-serif;
-                color:#FFFFFF;
                 font-weight: 100;
             }
         }
@@ -38,15 +37,12 @@
         }
         .contentTestimonials{
             .textTestimonilas{
-                font-family: 'Open Sans', sans-serif;
+                @include mixins.setTextPara(variables.$sans, 1.6rem, #FFFFFF);
                 font-style: italic;
-                color: #FFFFFF;
-                font-size: 1.6rem;
+               
             }
             .nameTestimonials{
-                color: #E84C3D;
-                font-size: 2rem;
-                font-family: 'Roboto', sans-serif;
+                @include mixins.setTextPara(variables.$roboto, 2rem, #E84C3D);
                 text-transform: uppercase;
                 margin: 4vh 0;
 
@@ -68,10 +64,6 @@
                       .active, .dot:hover {
                           background-color: rgba(232, 76, 61, 1);
                         }
-
-                        // .active .dot{
-                        //     background-color: rgba(232, 76, 61, 1);
-                        // }
             }
         }
     }

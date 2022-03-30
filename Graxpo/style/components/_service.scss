@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 .serviceSection {
   .row {
     display: flex;
@@ -18,9 +21,7 @@
         margin: 0 auto;
         width: 70%;
         h2 {
-          font-family: "Roboto", sans-serif;
-          font-size: 1.6rem;
-          color: #ffffff;
+          @include mixins.setTextPara(variables.$roboto, 1.6rem, #FFFFFF);
           text-transform: uppercase;
         }
         hr{
@@ -31,9 +32,7 @@
             border: none;
         }
         p{
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.4rem;
-            color: #FFFFFF;
+          @include mixins.setTextPara(variables.$sans, 1.4rem, #FFFFFF);
            
         }
       }

@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 .mainCircles{
     width: 100%;
     margin: 0 auto;
@@ -31,16 +34,13 @@
                 }
             }
             h3{
-                font-size: 1.6rem;
-                color: #333B46;
+                @include mixins.setTextPara(variables.$roboto, 1.6rem, #333B46);
                 text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
                 font-weight: 200;
                 margin-top: 3rem;
             }
             p{
-                font-size: 1.4rem;
-                color: #81868E;
+                @include mixins.setTextPara(variables.$roboto, 1.4rem, #81868E);
                 width: 80%;
                 margin-top: 2rem;
             }

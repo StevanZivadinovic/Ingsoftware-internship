@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 .getInTouch{
 
     background-color: rgb(243, 243, 243);
@@ -23,14 +26,10 @@
             input{
                 height: 4vh;
                 width: 49%;
-                font-size: 1.4rem;
-                color: #81868E;
-                font-family: 'Open Sans', sans-serif;
+                @include mixins.setTextPara(variables.$sans, 1.4rem, #81868E);
                 border: .1rem solid #81868E;
                 &::placeholder{
-                    font-size: 1.4rem;
-                    color: #81868E;
-                    font-family: 'Open Sans', sans-serif;
+                    @include mixins.setTextPara(variables.$sans, 1.4rem, #81868E);
                     padding-left: 1rem;
                 }
             }
@@ -40,9 +39,7 @@
             color: #81868E;
 
             &::placeholder{
-                font-size: 1.4rem;
-                color: #81868E;
-                font-family: 'Open Sans', sans-serif;
+                @include mixins.setTextPara(variables.$sans, 1.4rem, #81868E);
                 padding-left: 1rem;
             }
         }
@@ -50,11 +47,9 @@
             width: 50%;
             padding: 1.2rem 3.6rem;
             background-color: rgba(232, 76, 61, 1);
-            font-family: 'Open Sans', sans-serif;
+            @include mixins.setTextPara(variables.$sans, 1.4rem, #FFFFFF);
             text-transform: uppercase;
             border: none;
-            font-size: 1.4rem;
-            color: #FFFFFF;
             margin-top: 2rem;
             cursor: pointer;
         }
@@ -78,9 +73,7 @@
                 }
             }
             p{
-                font-size: 1.4rem;
-                font-family: 'Open Sans', sans-serif;
-                color: #81868E;
+                @include mixins.setTextPara(variables.$sans, 1.4rem, #81868E);
             }
         }
     }

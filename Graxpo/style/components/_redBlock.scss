@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 .redBlock{
     display: flex;
     justify-content: center;
@@ -32,16 +35,12 @@
                     color: #FFFFFF;
                 }
                 span{
-                    font-size: 3rem;
-                    font-family: 'Roboto', sans-serif;
-                    color: #FFFFFF;
+                    @include mixins.setTextPara(variables.$roboto, 3rem, #FFFFFF);
                 }
             }
             h4{
-                font-size: 1.6rem;
-                font-family: 'Roboto', sans-serif;
+                @include mixins.setTextPara(variables.$roboto, 1.6rem, #FFFFFF);
                 text-transform: uppercase;
-                color: #FFFFFF;
                 margin-bottom: 1.5rem;
                 font-weight: 100;
             }
@@ -49,7 +48,6 @@
                 width: 3.7rem;
                 height: .3vh;
                 background-color: #FFFFFF;
-                // margin: 0 auto;
                 margin-bottom: 2rem;
                 border: none;
             }

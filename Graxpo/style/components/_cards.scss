@@ -1,3 +1,6 @@
+@use './../mixins.scss';
+@use './../variables.scss';
+
 .cards{
     display: flex;
     width: 90%;
@@ -70,7 +73,7 @@
             margin-left: 3rem;
 
             h3{
-                @include setTextPara('Roboto', sans-serif, 1.6rem, #81868E);
+                @include mixins.setTextPara(variables.$roboto, 1.6rem, #81868E);
                 font-weight: bold;
                 text-transform: uppercase;
                 margin-bottom: 2rem;
@@ -84,7 +87,7 @@
             border: none;
             }
             p{
-                @include setTextPara('Open Sans', sans-serif,1.4rem,#81868E);
+                @include mixins.setTextPara(variables.$sans,1.4rem,#81868E);
             }
         }
     }
