@@ -497,6 +497,9 @@
   display: flex;
   justify-content: space-between;
 }
+.categories .content p {
+  cursor: pointer;
+}
 .categories .content p,
 .categories .content span {
   font-family: "Roboto", sans-serif;
