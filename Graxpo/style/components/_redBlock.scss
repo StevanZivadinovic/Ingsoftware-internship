@@ -12,14 +12,14 @@
         height: 100%;
     }
 
-    &__mainContainer{
+    &MainContainer{
         z-index: 1;
         width: 80%;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
 
-        .card__redBlock{
+        .cardRedBlock{
             display: flex;
             flex-direction: column;
             align-self: center;
