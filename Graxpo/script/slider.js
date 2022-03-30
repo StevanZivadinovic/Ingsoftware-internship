@@ -24,3 +24,25 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+
+//add smooth connection for anchor tag with section
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+var pageHeight = window.innerHeight;
+document.querySelector('.crollDown').addEventListener('click',e=>{
+
+  window.scrollTo({
+    top: window.innerHeight,
+    left: 0,
+    behavior: 'smooth'
+  });
+})
