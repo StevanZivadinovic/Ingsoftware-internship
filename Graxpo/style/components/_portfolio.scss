@@ -151,8 +151,43 @@
 .grid-item{
   min-width: 20%;
   max-width: 50%;
-  width: 33.2%;
+  width: 33%;
   position: relative;
+
+
+  .hoverGallery{
+    @include mixins.hover();
+    flex-direction: column;
+    justify-content: end;
+    // .mainHoverGallery{
+      h4,p,hr{
+        margin-left: 2rem;
+      }
+      h4{
+        @include mixins.setTextPara(variables.$roboto, 2rem, #FFFFFF);
+        text-transform: uppercase;
+        margin-bottom: .3rem;
+      }
+      p{
+        @include mixins.setTextPara(variables.$roboto, 1.6rem, #FFFFFF);
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+  
+      }
+      hr{
+        width: 3rem;
+        height: .3vh;
+        background-color: rgb(137, 137, 137);
+        margin-bottom: 2.5vh;
+        border: none;
+      }
+    }
+
+    &:hover .hoverGallery{
+      display: flex;
+      cursor: pointer;
+    }
   img{
     width: 100%;
   }

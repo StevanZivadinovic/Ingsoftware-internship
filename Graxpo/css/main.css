@@ -627,8 +627,51 @@
 .gridA .grid-item {
   min-width: 20%;
   max-width: 50%;
-  width: 33.2%;
+  width: 33%;
   position: relative;
+}
+.gridA .grid-item .hoverGallery {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(232, 76, 61, 0.7);
+  transform: translateX(5%) translateY(5%);
+  display: none;
+  flex-direction: column;
+  justify-content: end;
+}
+.gridA .grid-item .hoverGallery h4, .gridA .grid-item .hoverGallery p, .gridA .grid-item .hoverGallery hr {
+  margin-left: 2rem;
+}
+.gridA .grid-item .hoverGallery h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.gridA .grid-item .hoverGallery p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.gridA .grid-item .hoverGallery hr {
+  width: 3rem;
+  height: 0.3vh;
+  background-color: #898989;
+  margin-bottom: 2.5vh;
+  border: none;
+}
+.gridA .grid-item:hover .hoverGallery {
+  display: flex;
+  cursor: pointer;
 }
 .gridA .grid-item img {
   width: 100%;

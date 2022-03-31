@@ -17,6 +17,7 @@ document.querySelector(".allCategories").addEventListener("click", (e) => {
       itemSelector: ".grid-item",
       gutter:2
     });
+    msnry.on( 'layoutComplete', console.log('gotovo'));
   });
 });
 
@@ -33,6 +34,7 @@ let showFuntion = (elements, elementsMasonry)=>{
               gutter:2
               // columnWidth: 100 
             });
+            msnry.on( 'layoutComplete', console.log('gotovo'));
           } else {
             a.style.display = "none";
           }
