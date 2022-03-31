@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Leckerli+One&display=swap");
-.nav h1 {
+.mainHeader .nav h1 {
   cursor: pointer;
 }
-.nav nav ul li a {
+.mainHeader .nav nav ul li a {
   cursor: pointer;
   font-size: 1.4rem;
   text-decoration: none;
-  color: #333B46;
+  color: #333b46;
 }
 
 .img {
@@ -56,6 +56,42 @@
   color: #e84c3d;
 }
 
+@media screen and (max-width: 768px) {
+  .mainHeader .nav {
+    display: flex;
+    justify-content: start;
+  }
+  .mainHeader .nav nav {
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+    text-align: center;
+  }
+  .mainHeader .nav nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHeader .nav nav ul li:hover {
+    background-color: #81868e;
+  }
+  .mainHeader .img {
+    background-size: cover;
+    background-position-y: -10rem;
+  }
+  .mainHeader .img .text h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    color: #ffffff;
+    font-weight: 300;
+  }
+  .mainHeader .img .text p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 100;
+  }
+}
 .cards {
   display: flex;
   width: 90%;
@@ -516,7 +552,7 @@
 .gallery {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 22.7rem 22.7rem 22.7rem 22.7rem 22.7rem;
+  grid-template-rows: repeat(5, 22.7rem);
   background-color: #2196f3;
 }
 .gallery_item {

@@ -22,7 +22,7 @@ let timer = (redBlockSpan)=>{
       }
     },
     { threshold: [1] }
-  ); //kad stavis vrednost 1 umesto nule okida se funkcija samo kada je ceo zeljeni objekat vidljiv
+  ); //when you set the value to 1 instead of zero, the function is triggered only when the entire desired object is visible
   
   observer.observe(document.querySelector(".redBlock"));
 }

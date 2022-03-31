@@ -29,7 +29,7 @@
 .gallery {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 22.7rem 22.7rem 22.7rem 22.7rem 22.7rem;
+  grid-template-rows: repeat(5,22.7rem);
   background-color: #2196f3;
 
   &_item {

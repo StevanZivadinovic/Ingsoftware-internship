@@ -1,23 +1,26 @@
-@use './../mixins.scss';
-@use './../variables.scss';
-
-.nav{
-  h1{
-    cursor: pointer;
-  }
-  nav{
-    ul{
-      li{
-        a{
-          cursor: pointer;
-          font-size: 1.4rem;
-          text-decoration: none;
-          color: #333B46;
+@use "./../mixins.scss";
+@use "./../variables.scss";
+.mainHeader {
+ 
+  .nav {
+    h1 {
+      cursor: pointer;
+    }
+    nav {
+      ul {
+        li {
+          a {
+            cursor: pointer;
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: #333b46;
+          }
         }
       }
     }
   }
 }
+
 .img {
   width: 100%;
   height: 100vh;
@@ -55,7 +58,49 @@
       p {
         text-transform: uppercase;
         @include mixins.setTextPara(variables.$sans, 1.2rem, #e84c3d);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainHeader {
+  
+    .nav {
+      display: flex;
+      justify-content: start;
+      nav {
+        position: absolute;
+        top: 10vh;
+        right: 10vh;
+        text-align: center;
         
+        ul {
+          display: flex;
+          flex-direction: column;
+          li{
+            &:hover{
+              background-color: #81868e;
+            }
+          }
+        }
+      }
+    }
+
+    .img {
+      background-size: cover;
+      background-position-y: -10rem;
+
+      .text {
+        h1 {
+          @include mixins.setTextPara(variables.$roboto, 2.5rem, #ffffff);
+          color: #ffffff;
+          font-weight: 300;
+        }
+        p {
+          @include mixins.setTextPara(variables.$sans, 1.5rem, #ffffff);
+          font-weight: 100;
+        }
       }
     }
   }
