@@ -621,6 +621,16 @@
   background-size: cover;
 }
 
+.gridA {
+  width: 100%;
+}
+.gridA .grid-item {
+  width: 33.33%;
+}
+.gridA .grid-item img {
+  width: 100%;
+}
+
 .subscribe {
   position: relative;
   background-image: url("./../../images/subscribeBG.png");
