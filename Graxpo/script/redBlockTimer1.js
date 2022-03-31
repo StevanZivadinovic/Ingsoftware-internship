@@ -1,28 +1,34 @@
-let value1 = document.querySelector(".redBlockSpan1").innerHTML;
+let timer = (redBlockSpan)=>{
 
-let valueParsed1 = parseInt(value1);
+  let value = document.querySelector(redBlockSpan).innerHTML;
+  let valueParsed1 = parseInt(value);
+  var interval1;
+  
+  var observer = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting === true) {
+        let value = 0;
+  
+        interval1 = setInterval(() => {
+          if (value < valueParsed1) {
+            value += 1;
+            document.querySelector(redBlockSpan).innerHTML = value;
+          }
+        }, 1);
+      } else {
+        document.querySelector(redBlockSpan).innerHTML = valueParsed1;
+  
+        clearInterval(interval1);
+      }
+    },
+    { threshold: [1] }
+  ); //kad stavis vrednost 1 umesto nule okida se funkcija samo kada je ceo zeljeni objekat vidljiv
+  
+  observer.observe(document.querySelector(".redBlock"));
+}
 
-var interval1;
 
-var observer = new IntersectionObserver(
-  function (entries) {
-    if (entries[0].isIntersecting === true) {
-      let value1 = 0;
-
-      interval1 = setInterval(() => {
-        if (value1 < valueParsed1) {
-          // console.log(value1<valueParsed1)
-          value1 += 1;
-          document.querySelector(".redBlockSpan1").innerHTML = value1;
-        }
-      }, 1);
-    } else {
-      document.querySelector(".redBlockSpan1").innerHTML = valueParsed1;
-
-      clearInterval(interval1);
-    }
-  },
-  { threshold: [1] }
-); //kad stavis vrednost 1 umesto nule okida se funkcija samo kada je ceo zeljeni objekat vidljiv
-
-observer.observe(document.querySelector(".redBlock"));
+timer(".redBlockSpan1");
+timer(".redBlockSpan2");
+timer(".redBlockSpan3");
+timer(".redBlockSpan4");
