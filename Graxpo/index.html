@@ -11,8 +11,6 @@
       src="https://kit.fontawesome.com/8203228926.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
   </head>
   <body>
     <section class="mainHeader" id="mainHeader">
@@ -34,9 +32,9 @@
         <div class="text">
           <h1 class="mainText">Hello, We're prothemers</h1>
           <p>Fresh premium quality psd template</p>
-          <div class="crollDown" >
+          <div class="crollDown">
             <img src="./images/icon-scroll.png" alt="" srcset="" />
-            <p class="scroll" >scroll down</p>
+            <p class="scroll">scroll down</p>
           </div>
         </div>
       </div>
@@ -140,7 +138,8 @@
       <div class="redBlockMainContainer">
         <div class="cardRedBlock">
           <div class="imgNumber">
-            <i class="fa-regular fa-thumbs-up"></i><span class="redBlockSpan1"> 1580</span>
+            <i class="fa-regular fa-thumbs-up"></i
+            ><span class="redBlockSpan1"> 1580</span>
           </div>
           <h4>Project completed</h4>
           <hr class="hrCardRed" />
@@ -148,7 +147,8 @@
 
         <div class="cardRedBlock">
           <div class="imgNumber">
-            <i class="fa-regular fa-heart"></i><span class="redBlockSpan2"> 2850</span>
+            <i class="fa-regular fa-heart"></i
+            ><span class="redBlockSpan2"> 2850</span>
           </div>
           <h4>People loved</h4>
           <hr class="hrCardRed" />
@@ -156,7 +156,8 @@
 
         <div class="cardRedBlock">
           <div class="imgNumber">
-            <i class="fa-regular fa-star"></i><span class="redBlockSpan3"> 1500</span>
+            <i class="fa-regular fa-star"></i
+            ><span class="redBlockSpan3"> 1500</span>
           </div>
           <h4>Identify earn</h4>
           <hr class="hrCardRed" />
@@ -164,7 +165,8 @@
 
         <div class="cardRedBlock">
           <div class="imgNumber">
-            <i class="fa-solid fa-bullseye"></i><span class="redBlockSpan4"> 1430</span>
+            <i class="fa-solid fa-bullseye"></i
+            ><span class="redBlockSpan4"> 1430</span>
           </div>
           <h4>Busines donor</h4>
           <hr class="hrCardRed" />
@@ -185,7 +187,7 @@
         <div class="boxCircle">
           <div class="imgBox">
             <i class="fa-solid fa-mobile-screen"></i>
-            <hr/>
+            <hr />
           </div>
           <h3>Integer veneatis</h3>
           <p>
@@ -327,7 +329,7 @@
       </div>
       <div class="categories">
         <div class="content">
-          <p onclick="allCategories()">All Categories</p>
+          <p class="allCategories">All Categories</p>
           <span>/</span>
           <p>Print</p>
           <span>/</span>
@@ -340,7 +342,7 @@
         <hr />
       </div>
 
-      <div class="gallery">
+      <!-- <div class="gallery">
         <div class="galery_item item1 grid-item'">
           <div class="hoverGallery">
             <h4>The winter tail's</h4>
@@ -427,6 +429,53 @@
             <hr />
           </div>
         </div>
+      </div> -->
+
+      <div
+      class="gridA js-masonry"
+      data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 100 }'>
+      >
+        <div class="grid-item">
+          <img src="./images/featured1.png" alt="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img3.png" alt="" srcset="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img5.png" alt="" srcset="" />
+        </div>
+
+        <div class="grid-item">
+          <img src="./images/p-img2.png" alt="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img6.png" alt="" srcset="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img7.png" alt="" srcset="" />
+        </div>
+
+        <div class="grid-item">
+          <img src="./images/p-img4.png" alt="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img8.png" alt="" srcset="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img9.png" alt="" srcset="" />
+        </div>
+
+        <div class="grid-item">
+          <img src="./images/p-img11.png" alt="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img12.png" alt="" srcset="" />
+        </div>
+        <div class="grid-item">
+          <img src="./images/p-img10.png" alt="" srcset="" />
+        </div>
+       
+        
       </div>
     </section>
 
@@ -453,7 +502,7 @@
       </div>
     </section>
 
-    <section class="meetCrew"id='meetCrew'>
+    <section class="meetCrew" id="meetCrew">
       <div class="whatWeDo repeatDivBox3">
         <h2>Meet our crew</h2>
         <hr />
@@ -746,7 +795,7 @@
       </div>
     </section>
 
-    <section class="getInTouch" id='getInTouch'>
+    <section class="getInTouch" id="getInTouch">
       <div class="whatWeDo">
         <h2>Get in touch with us</h2>
         <hr />
@@ -792,6 +841,9 @@
     <footer>
       <p>Copyright Redwan . All Rights Reserved</p>
     </footer>
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
     <script src="./script/sliderNavScroll.js"></script>
     <script src="./script/redBlockTimer1.js"></script>
     <script src="./script/redBlockTimer2.js"></script>

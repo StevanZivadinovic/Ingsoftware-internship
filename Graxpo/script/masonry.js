@@ -1,23 +1,12 @@
-import Masonry from 'masonry-layout';
+// import Masonry from 'masonry-layout';
+// var elem = document.querySelector('.gridA');
+//   var msnry = new Masonry( elem, {
+//     // options
+//     itemSelector: '.grid-item',
+//     columnWidth: 100
+//   });
 
 
-let allCategories = ()=>{
-    console.log('haj')
-
-    document.querySelector('.gallery').style.display='grid';
-}
-
-
-var elem = document.querySelector('.gallery');
-var msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: 200
-});
-console.log(msnry)
-
-// element argument can be a selector string
-//   for an individual element
-var msnry = new Masonry( '.grid', {
-  // options
-});
+document.querySelector('.allCategories').addEventListener('click',e=>{
+    document.querySelector('.gridA').style.display='grid';
+})
