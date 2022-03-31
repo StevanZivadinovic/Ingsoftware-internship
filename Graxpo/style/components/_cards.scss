@@ -92,3 +92,30 @@
         }
     }
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .cards{
+        flex-direction: column;
+        align-content: center;
+
+        .card{
+            width: 90%;
+
+            .contentCards{
+                h3{
+                    @include mixins.setTextPara(variables.$roboto, 1.3rem, #81868E);
+                    margin-bottom: 1.3rem;
+                }
+                p{
+
+                    @include mixins.setTextPara(variables.$sans,1.1rem,#81868E);
+                }
+                hr.hrCard{
+                    margin-bottom: 1.3rem;
+                }
+            }
+        }
+    }
+}

@@ -1,96 +1,126 @@
-@use './cards';
-@use './../mixins.scss';
-@use './../variables';
+@use "./cards";
+@use "./../mixins.scss";
+@use "./../variables";
 
 // 320px — 480px: Mobile devices.
 // 481px — 768px: iPads, Tablets.
 
-@media screen and (max-width: 768px) {
-   
+.about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+
+  .content {
+    width: 45%;
+    margin: 10vh 0;
+    h2 {
+      @include mixins.setTextPara(variables.$roboto, 1.6rem, #333b46);
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-bottom: 2vh;
+    }
+
+    hr {
+      width: 5.2rem;
+      height: 0.5vh;
+      background-color: rgb(137, 137, 137);
+      margin-bottom: 2.5vh;
+    }
+    p {
+      @include mixins.setTextPara(variables.$sans, 1.4rem, #81868e);
+      margin-bottom: 2.5vh;
+      color: #81868e;
+    }
+    button {
+      @include mixins.setTextPara(variables.$roboto, 1.3rem, #ffffff);
+      text-transform: uppercase;
+      padding: 1.6rem 1.8rem 1.5rem 1.8rem;
+      border: none;
+      background-color: rgba(232, 76, 61, 1);
+      font-weight: 100;
+      border-radius: 0.3rem;
+      cursor: pointer;
+    }
   }
-.about{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: rgb(243, 243, 243);
 
-    .content{
-        width: 45%;
-        margin: 10vh 0;
-        h2{
-            @include mixins.setTextPara(variables.$roboto, 1.6rem, #333B46);
-            text-transform: uppercase;
-            font-weight: 300;
-            margin-bottom: 2vh;
-           
-        }
-
-        hr{
-            width: 5.2rem;
-            height: .5vh;
-            background-color: rgb(137, 137, 137);
-            margin-bottom: 2.5vh;
-        }
-        p{
-            @include mixins.setTextPara(variables.$sans, 1.4rem, #81868E );
-            margin-bottom: 2.5vh;
-            color: #81868E ;
-            
-        }
-        button{
-            @include mixins.setTextPara(variables.$roboto, 1.3rem, #FFFFFF );
-            text-transform: uppercase;
-            padding: 1.6rem 1.8rem 1.5rem 1.8rem;
-            border: none;
-            background-color: rgba(232, 76, 61, 1);
-            font-weight: 100;
-            border-radius: .3rem;
-            cursor: pointer;
-        }
-    }
-
-    .img{
-        background-image: none;
-        width: 45%;
-        height: 30vh;
-        margin: 10vh 0;
-
-    }
+  .img {
+    background-image: none;
+    width: 45%;
+    height: 30vh;
+    margin: 10vh 0;
+  }
 }
 
-.mainWhatWeDo,.mainCircles,.mainFeatured,.serviceSection, 
-.portfolio,.meetCrew, .lattestBlog, .pricing,.getInTouch{
-    background-color: rgb(243, 243, 243);
-   
-    div.whatWeDo{ 
-        width: 50%;
-        margin: 0 auto;
+.mainWhatWeDo,
+.mainCircles,
+.mainFeatured,
+.serviceSection,
+.portfolio,
+.meetCrew,
+.lattestBlog,
+.pricing,
+.getInTouch {
+  background-color: rgb(243, 243, 243);
+
+  div.whatWeDo {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10vh;
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      margin-bottom: 2rem;
+      @include mixins.setTextPara(variables.$roboto, 2rem, #333b46);
+    }
+    hr {
+      width: 5.2rem;
+      height: 0.5vh;
+      background-color: rgb(137, 137, 137);
+      margin: 0 auto;
+      margin-bottom: 2.5rem;
+    }
+    p {
+      @include mixins.setTextPara(variables.$sans, 1.4rem, #81868e);
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      margin-top: 2rem !important;
+
+      h2 {
         text-align: center;
-        padding-top: 10vh;
+      }
+      hr {
+        align-self: center;
+      }
+      button {
+        margin: 0 auto;
+        display: inline-block;
+      }
+    }
+    .img{
+       width: 60%;
+       margin-top: 0;
+   
+        img{
 
-        h2{
-            text-transform: uppercase;
-            letter-spacing: .5rem;
-            margin-bottom: 2rem;
-            @include mixins.setTextPara(variables.$roboto, 2rem, #333B46 );
-        }
-        hr{
-            width: 5.2rem;
-            height: .5vh;
-            background-color: rgb(137, 137, 137);
-            margin: 0 auto;
-            margin-bottom: 2.5rem;
-
-        }
-        p{
-            @include mixins.setTextPara(variables.$sans, 1.4rem, #81868E );
-            padding-bottom: 3rem;
+            max-width: 100%;
         }
     }
-
-    
-} 
-
-
-
-
+  }
+}

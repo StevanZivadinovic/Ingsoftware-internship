@@ -171,6 +171,29 @@
   color: #81868E;
 }
 
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-content: center;
+  }
+  .cards .card {
+    width: 90%;
+  }
+  .cards .card .contentCards h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    color: #81868E;
+    margin-bottom: 1.3rem;
+  }
+  .cards .card .contentCards p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    color: #81868E;
+  }
+  .cards .card .contentCards hr.hrCard {
+    margin-bottom: 1.3rem;
+  }
+}
 .about {
   display: flex;
   justify-content: center;
@@ -184,7 +207,7 @@
 .about .content h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  color: #333B46;
+  color: #333b46;
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 2vh;
@@ -198,14 +221,14 @@
 .about .content p {
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
-  color: #81868E;
+  color: #81868e;
   margin-bottom: 2.5vh;
-  color: #81868E;
+  color: #81868e;
 }
 .about .content button {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
   padding: 1.6rem 1.8rem 1.5rem 1.8rem;
   border: none;
@@ -221,42 +244,109 @@
   margin: 10vh 0;
 }
 
-.mainWhatWeDo, .mainCircles, .mainFeatured, .serviceSection,
-.portfolio, .meetCrew, .lattestBlog, .pricing, .getInTouch {
+.mainWhatWeDo,
+.mainCircles,
+.mainFeatured,
+.serviceSection,
+.portfolio,
+.meetCrew,
+.lattestBlog,
+.pricing,
+.getInTouch {
   background-color: #f3f3f3;
 }
-.mainWhatWeDo div.whatWeDo, .mainCircles div.whatWeDo, .mainFeatured div.whatWeDo, .serviceSection div.whatWeDo,
-.portfolio div.whatWeDo, .meetCrew div.whatWeDo, .lattestBlog div.whatWeDo, .pricing div.whatWeDo, .getInTouch div.whatWeDo {
+.mainWhatWeDo div.whatWeDo,
+.mainCircles div.whatWeDo,
+.mainFeatured div.whatWeDo,
+.serviceSection div.whatWeDo,
+.portfolio div.whatWeDo,
+.meetCrew div.whatWeDo,
+.lattestBlog div.whatWeDo,
+.pricing div.whatWeDo,
+.getInTouch div.whatWeDo {
   width: 50%;
   margin: 0 auto;
   text-align: center;
   padding-top: 10vh;
 }
-.mainWhatWeDo div.whatWeDo h2, .mainCircles div.whatWeDo h2, .mainFeatured div.whatWeDo h2, .serviceSection div.whatWeDo h2,
-.portfolio div.whatWeDo h2, .meetCrew div.whatWeDo h2, .lattestBlog div.whatWeDo h2, .pricing div.whatWeDo h2, .getInTouch div.whatWeDo h2 {
+.mainWhatWeDo div.whatWeDo h2,
+.mainCircles div.whatWeDo h2,
+.mainFeatured div.whatWeDo h2,
+.serviceSection div.whatWeDo h2,
+.portfolio div.whatWeDo h2,
+.meetCrew div.whatWeDo h2,
+.lattestBlog div.whatWeDo h2,
+.pricing div.whatWeDo h2,
+.getInTouch div.whatWeDo h2 {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   margin-bottom: 2rem;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
-  color: #333B46;
+  color: #333b46;
 }
-.mainWhatWeDo div.whatWeDo hr, .mainCircles div.whatWeDo hr, .mainFeatured div.whatWeDo hr, .serviceSection div.whatWeDo hr,
-.portfolio div.whatWeDo hr, .meetCrew div.whatWeDo hr, .lattestBlog div.whatWeDo hr, .pricing div.whatWeDo hr, .getInTouch div.whatWeDo hr {
+.mainWhatWeDo div.whatWeDo hr,
+.mainCircles div.whatWeDo hr,
+.mainFeatured div.whatWeDo hr,
+.serviceSection div.whatWeDo hr,
+.portfolio div.whatWeDo hr,
+.meetCrew div.whatWeDo hr,
+.lattestBlog div.whatWeDo hr,
+.pricing div.whatWeDo hr,
+.getInTouch div.whatWeDo hr {
   width: 5.2rem;
   height: 0.5vh;
   background-color: #898989;
   margin: 0 auto;
   margin-bottom: 2.5rem;
 }
-.mainWhatWeDo div.whatWeDo p, .mainCircles div.whatWeDo p, .mainFeatured div.whatWeDo p, .serviceSection div.whatWeDo p,
-.portfolio div.whatWeDo p, .meetCrew div.whatWeDo p, .lattestBlog div.whatWeDo p, .pricing div.whatWeDo p, .getInTouch div.whatWeDo p {
+.mainWhatWeDo div.whatWeDo p,
+.mainCircles div.whatWeDo p,
+.mainFeatured div.whatWeDo p,
+.serviceSection div.whatWeDo p,
+.portfolio div.whatWeDo p,
+.meetCrew div.whatWeDo p,
+.lattestBlog div.whatWeDo p,
+.pricing div.whatWeDo p,
+.getInTouch div.whatWeDo p {
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
-  color: #81868E;
+  color: #81868e;
   padding-bottom: 3rem;
 }
 
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+  }
+  .about .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-top: 2rem !important;
+  }
+  .about .content h2 {
+    text-align: center;
+  }
+  .about .content hr {
+    align-self: center;
+  }
+  .about .content button {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .about .img {
+    width: 60%;
+    margin-top: 0;
+  }
+  .about .img img {
+    max-width: 100%;
+  }
+}
 .mainHeader {
   background-color: #e1e1e1;
   font-weight: 700;
