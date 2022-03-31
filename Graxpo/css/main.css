@@ -207,6 +207,9 @@
   .cards .card .contentCards hr.hrCard {
     margin-bottom: 1.3rem;
   }
+  .cards .card:last-child {
+    margin-bottom: 6vh;
+  }
 }
 .about {
   display: flex;
@@ -353,12 +356,44 @@
     margin: 0 auto;
     display: inline-block;
   }
+  .about .content p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #81868e;
+    padding-bottom: 3rem;
+  }
   .about .img {
     width: 60%;
     margin-top: 0;
   }
   .about .img img {
     max-width: 100%;
+  }
+
+  .mainWhatWeDo div.whatWeDo h2,
+.mainCircles div.whatWeDo h2,
+.mainFeatured div.whatWeDo h2,
+.serviceSection div.whatWeDo h2,
+.portfolio div.whatWeDo h2,
+.meetCrew div.whatWeDo h2,
+.lattestBlog div.whatWeDo h2,
+.pricing div.whatWeDo h2,
+.getInTouch div.whatWeDo h2 {
+    font-size: 1.5rem;
+  }
+  .mainWhatWeDo div.whatWeDo p,
+.mainCircles div.whatWeDo p,
+.mainFeatured div.whatWeDo p,
+.serviceSection div.whatWeDo p,
+.portfolio div.whatWeDo p,
+.meetCrew div.whatWeDo p,
+.lattestBlog div.whatWeDo p,
+.pricing div.whatWeDo p,
+.getInTouch div.whatWeDo p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #81868e;
+    padding-bottom: 3rem;
   }
 }
 .mainHeader {
@@ -448,6 +483,45 @@
   border: none;
 }
 
+@media screen and (max-width: 768px) {
+  .redBlock {
+    height: 60vh;
+    background-repeat: no-repeat;
+  }
+  .redBlock .redBlockMainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .redBlock .redBlockMainContainer .cardRedBlock {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .redBlock .redBlockMainContainer .cardRedBlock .imgNumber {
+    margin-bottom: 0.5rem;
+  }
+  .redBlock .redBlockMainContainer .cardRedBlock .imgNumber i {
+    font-size: 2rem;
+  }
+  .redBlock .redBlockMainContainer .cardRedBlock .imgNumber span {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+  }
+  .redBlock .redBlockMainContainer .cardRedBlock h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+  }
+  .redBlock .redBlockMainContainer .cardRedBlock hr {
+    text-align: center;
+    align-self: center;
+    align-content: center;
+  }
+}
 .mainCircles {
   width: 100%;
   margin: 0 auto;
@@ -508,6 +582,31 @@
   margin-top: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .mainCircles .circles {
+    flex-direction: column;
+  }
+  .mainCircles .circles .boxCircle {
+    margin-bottom: 5vh;
+  }
+  .mainCircles .circles .boxCircle .imgBox {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+  .mainCircles .circles .boxCircle .imgBox i {
+    font-size: 2rem;
+  }
+  .mainCircles .circles .boxCircle .imgBox hr {
+    display: none;
+  }
+  .mainCircles .circles .boxCircle h3 {
+    margin-top: 1vh;
+  }
+  .mainCircles .circles .boxCircle p {
+    margin-top: 1vh;
+  }
+}
 .mainFeatured .imageGalery {
   display: flex;
 }

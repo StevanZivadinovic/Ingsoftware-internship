@@ -55,3 +55,51 @@
 
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .redBlock{
+        height: 60vh;
+        background-repeat: no-repeat;
+       
+            .redBlockMainContainer{
+                display: flex;
+                flex-direction: column;
+        
+                .cardRedBlock{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    text-align: center;
+
+                    .imgNumber{
+                        margin-bottom: .5rem;
+                        i{
+                            font-size: 2rem;
+                        }
+                        span{
+
+                            @include mixins.setTextPara(variables.$roboto, 1.5rem, #FFFFFF);
+                        }
+                    }
+                    h4{
+                        @include mixins.setTextPara(variables.$roboto, 1.2rem, #FFFFFF);
+                        margin-bottom: .5rem;
+                    }
+        
+                    hr{
+                        text-align: center;
+                        align-self: center;
+                        align-content: center;
+        
+                    }
+                }
+            }
+
+        
+
+    }
+    
+
+}

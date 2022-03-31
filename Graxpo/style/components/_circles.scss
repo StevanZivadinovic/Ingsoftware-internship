@@ -61,3 +61,34 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .mainCircles{
+        .circles{
+            flex-direction: column;
+            .boxCircle{
+                margin-bottom: 5vh;
+                .imgBox{
+                    width: 4rem;
+                    height: 4rem;
+                    margin-bottom: 2rem;
+
+                    i{
+                        font-size: 2rem;
+                    }
+                    hr{
+                       display: none;
+                    }
+                }
+                h3{
+                    margin-top: 1vh;
+                }
+                p{
+                    margin-top: 1vh;
+                }
+            }
+
+        }
+    }
+
+}

@@ -112,6 +112,10 @@
         margin: 0 auto;
         display: inline-block;
       }
+      p {
+        @include mixins.setTextPara(variables.$sans, 1.2rem, #81868e);
+        padding-bottom: 3rem;
+      }
     }
     .img{
        width: 60%;
@@ -123,4 +127,26 @@
         }
     }
   }
+
+
+
+.mainWhatWeDo,
+.mainCircles,
+.mainFeatured,
+.serviceSection,
+.portfolio,
+.meetCrew,
+.lattestBlog,
+.pricing,
+.getInTouch {
+  div.whatWeDo {
+    h2 {
+      font-size: 1.5rem;
+    }
+  p {
+    @include mixins.setTextPara(variables.$sans, 1.2rem, #81868e);
+    padding-bottom: 3rem;
+  }
+}
+}
 }
