@@ -625,7 +625,10 @@
   width: 100%;
 }
 .gridA .grid-item {
-  width: 33.33%;
+  min-width: 20%;
+  max-width: 50%;
+  width: 33.2%;
+  position: relative;
 }
 .gridA .grid-item img {
   width: 100%;
