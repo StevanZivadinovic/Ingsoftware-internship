@@ -178,6 +178,20 @@
   }
   .cards .card {
     width: 90%;
+    height: 15rem;
+  }
+  .cards .card .imgContainer {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cards .card .imgContainer .imgCircle {
+    height: 8rem;
+    width: 8rem;
+  }
+  .cards .card .imgContainer .imgCircle i {
+    font-size: 3rem;
   }
   .cards .card .contentCards h3 {
     font-family: "Roboto", sans-serif;
