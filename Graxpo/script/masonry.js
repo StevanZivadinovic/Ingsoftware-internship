@@ -31,7 +31,7 @@ let showFuntion = (elements, elementsMasonry)=>{
               // options
               itemSelector: elementsMasonry,
               gutter:2
-              // columnWidth: 100
+              // columnWidth: 100 
             });
           } else {
             a.style.display = "none";
