@@ -94,8 +94,8 @@
            .blog1, .blog2{
             .content{
                 width: 100%;
+                transition:all .5s ease ;
                 &:hover{
-                    transition: .3s ease all;
                     transform: translateX(200px);
                     opacity: 0;
                 }

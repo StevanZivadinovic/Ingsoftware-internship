@@ -1415,9 +1415,9 @@
 @media screen and (max-width: 480px) {
   .lattestBlog .blogs .blog1 .content, .lattestBlog .blogs .blog2 .content {
     width: 100%;
+    transition: all 0.5s ease;
   }
   .lattestBlog .blogs .blog1 .content:hover, .lattestBlog .blogs .blog2 .content:hover {
-    transition: 0.3s ease all;
     transform: translateX(200px);
     opacity: 0;
   }
