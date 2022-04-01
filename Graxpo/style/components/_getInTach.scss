@@ -111,3 +111,20 @@
     }
 
 }
+
+@media screen and (max-width: 480px) {
+    .getInTouch{
+        .mainGetInTach{
+            
+            form{
+                .input{
+                    flex-direction: column;
+                    input{
+                        width: 100%;
+                        margin-bottom: 1vh;
+                    }
+                }
+            }
+        }
+    }
+}

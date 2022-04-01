@@ -87,3 +87,21 @@
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .lattestBlog{
+        .blogs{
+           .blog1, .blog2{
+            .content{
+                width: 100%;
+                &:hover{
+                    transition: .3s ease all;
+                    transform: translateX(200px);
+                    opacity: 0;
+                }
+            }
+     
+           }
+        }
+    }
+}

@@ -98,6 +98,32 @@
                     text-align: center;
                 }
             }
+
+            .inputSubscribe{
+                flex-direction: column;
+                input,span{
+                    width: 100%;
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .subscribe{
+        .mainSubscribe{ 
+            .subscribeContent{
+               
+                h2{
+                    @include mixins.setTextPara(variables.$roboto, 1.4rem, #FFFFFF);
+                }
+                p{
+                    @include mixins.setTextPara(variables.$sans, 1rem, #FFFFFF);
+                }
+            }
         }
     }
 }

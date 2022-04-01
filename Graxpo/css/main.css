@@ -992,7 +992,7 @@
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .categories {
     width: 100%;
     display: flex;
@@ -1103,6 +1103,27 @@
   }
   .subscribe .mainSubscribe .subscribeContent p {
     text-align: center;
+  }
+  .subscribe .mainSubscribe .inputSubscribe {
+    flex-direction: column;
+  }
+  .subscribe .mainSubscribe .inputSubscribe input, .subscribe .mainSubscribe .inputSubscribe span {
+    width: 100%;
+  }
+  .subscribe .mainSubscribe .inputSubscribe input button, .subscribe .mainSubscribe .inputSubscribe span button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subscribe .mainSubscribe .subscribeContent h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+  }
+  .subscribe .mainSubscribe .subscribeContent p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF;
   }
 }
 .crew {
@@ -1230,6 +1251,13 @@
   .crew .crewCards .cardCrewMain .namePosition h3 {
     font-size: 1.3rem;
     margin: 0.5rem 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .crew .crewCards {
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
   }
 }
 .testimonials {
@@ -1384,6 +1412,16 @@
     margin: 1rem 0 !important;
   }
 }
+@media screen and (max-width: 480px) {
+  .lattestBlog .blogs .blog1 .content, .lattestBlog .blogs .blog2 .content {
+    width: 100%;
+  }
+  .lattestBlog .blogs .blog1 .content:hover, .lattestBlog .blogs .blog2 .content:hover {
+    transition: 0.3s ease all;
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
 .pricingMain {
   display: flex;
   margin: 0 auto;
@@ -1452,6 +1490,11 @@
     align-self: center;
     margin-bottom: 2vh;
     width: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pricingMain .cardPricing {
+    width: 70%;
   }
 }
 .getInTouch {
@@ -1566,6 +1609,15 @@
   }
   .getInTouch .mainGetInTach .contentGetInTach .adress p, .getInTouch .mainGetInTach .contentGetInTach .email p, .getInTouch .mainGetInTach .contentGetInTach .phone p {
     text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .getInTouch .mainGetInTach form .input {
+    flex-direction: column;
+  }
+  .getInTouch .mainGetInTach form .input input {
+    width: 100%;
+    margin-bottom: 1vh;
   }
 }
 footer {
