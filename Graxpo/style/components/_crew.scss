@@ -56,10 +56,10 @@
                     width: 80%;
                     margin: 0 auto;
                     color: #FFFFFF;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     font-family: 'Roboto', sans-serif;
                     text-align: center;
-                    margin-top: 2vh;
+                    margin-top: .5vh;
                 }
 
                 .social{
@@ -120,12 +120,29 @@
         .crewCards{  
             display: grid;
             grid-template-columns: 1fr 1fr;
-            height: 50vh;
+            height: 60vh;
 
             .cardCrewMain{
                 width: 70%;
-                height: 30vh;
-                align-items: center;
+                height: 35vh;
+                margin: 0 auto;
+
+                .cardCrew{
+                    .content {
+                        p.crewPara{
+                
+                            font-size: .8rem !important;
+                        }
+                        
+                    }
+                }
+              .namePosition{
+                  p{
+                      padding-bottom: 2vh;
+                  }
+              }
+
+              
                 
             }
             
@@ -133,3 +150,4 @@
 
     }
 }
+

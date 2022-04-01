@@ -1069,10 +1069,10 @@
   width: 80%;
   margin: 0 auto;
   color: #FFFFFF;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  margin-top: 2vh;
+  margin-top: 0.5vh;
 }
 .crew .crewCards .cardCrew .content .social {
   display: flex;
@@ -1119,12 +1119,18 @@
   .crew .crewCards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 50vh;
+    height: 60vh;
   }
   .crew .crewCards .cardCrewMain {
     width: 70%;
-    height: 30vh;
-    align-items: center;
+    height: 35vh;
+    margin: 0 auto;
+  }
+  .crew .crewCards .cardCrewMain .cardCrew .content p.crewPara {
+    font-size: 0.8rem !important;
+  }
+  .crew .crewCards .cardCrewMain .namePosition p {
+    padding-bottom: 2vh;
   }
 }
 .testimonials {
