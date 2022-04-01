@@ -36,3 +36,23 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .createMain{
+        .contentCreate{
+            h2{
+                @include mixins.setTextPara(variables.$roboto, 2.5rem, #FFFFFF);
+            }
+            p{
+                @include mixins.setTextPara(variables.$roboto, 1.8rem, #FFFFFF);
+                font-weight: 100;
+                margin: 1rem 0;
+    
+            }
+            button{
+                padding: .8rem 1.6rem;
+                @include mixins.setTextPara(variables.$roboto, 1rem, #FFFFFF);
+            }
+        }
+    }
+}

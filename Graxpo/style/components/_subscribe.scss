@@ -77,3 +77,27 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .subscribe{
+        .mainSubscribe{
+            flex-direction: column;
+
+            .subscribeContent{
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                h2{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

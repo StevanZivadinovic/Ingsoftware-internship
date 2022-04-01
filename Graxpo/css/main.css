@@ -742,6 +742,26 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .createMain .contentCreate h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+  }
+  .createMain .contentCreate p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    font-weight: 100;
+    margin: 1rem 0;
+  }
+  .createMain .contentCreate button {
+    padding: 0.8rem 1.6rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+  }
+}
 .categories {
   display: flex;
   justify-content: center;
@@ -885,6 +905,19 @@
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .categories .content p, .categories .content span {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #383737;
+  }
+  .categories hr {
+    width: 3rem;
+    height: 0.3vh;
+    margin: 1rem 0;
+    margin-bottom: 3vh;
+  }
+}
 .subscribe {
   position: relative;
   background-image: url("./../../images/subscribeBG.png");
@@ -964,6 +997,25 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .subscribe .mainSubscribe {
+    flex-direction: column;
+  }
+  .subscribe .mainSubscribe .subscribeContent {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe .mainSubscribe .subscribeContent h2 {
+    text-align: center;
+  }
+  .subscribe .mainSubscribe .subscribeContent p {
+    text-align: center;
+  }
+}
 .crew {
   padding-bottom: 8rem;
 }
