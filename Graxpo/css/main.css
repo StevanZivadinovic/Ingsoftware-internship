@@ -917,6 +917,13 @@
     margin: 1rem 0;
     margin-bottom: 3vh;
   }
+
+  .gridA .grid-item .hoverGallery h4 {
+    font-size: 1.1rem;
+  }
+  .gridA .grid-item .hoverGallery p {
+    font-size: 0.9rem;
+  }
 }
 .subscribe {
   position: relative;
@@ -1032,7 +1039,7 @@
   width: 24%;
 }
 .crew .crewCards .cardCrewMain:hover .cardCrew .content {
-  display: block;
+  display: flex;
   cursor: pointer;
 }
 .crew .crewCards .cardCrewMain .namePosition h3 {
@@ -1122,15 +1129,25 @@
     height: 60vh;
   }
   .crew .crewCards .cardCrewMain {
-    width: 70%;
+    width: 80%;
     height: 35vh;
     margin: 0 auto;
+  }
+  .crew .crewCards .cardCrewMain .cardCrew .content {
+    flex-direction: column;
+    justify-content: center;
+    height: 45%;
   }
   .crew .crewCards .cardCrewMain .cardCrew .content p.crewPara {
     font-size: 0.8rem !important;
   }
   .crew .crewCards .cardCrewMain .namePosition p {
     padding-bottom: 2vh;
+    font-size: 1rem;
+  }
+  .crew .crewCards .cardCrewMain .namePosition h3 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
   }
 }
 .testimonials {
@@ -1270,6 +1287,11 @@
     align-items: center;
     justify-content: space-between;
   }
+  .lattestBlog .blogs .blog1, .lattestBlog .blogs .blog2 {
+    width: 70%;
+    margin-bottom: 1vh;
+    height: 48%;
+  }
   .lattestBlog .blogs .content .mainContent h3 {
     font-family: "Roboto", sans-serif;
     font-size: 1.2rem;
@@ -1340,6 +1362,16 @@
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .pricingMain {
+    flex-direction: column;
+  }
+  .pricingMain .cardPricing {
+    align-self: center;
+    margin-bottom: 2vh;
+    width: 45%;
+  }
+}
 .getInTouch {
   background-color: #f3f3f3;
   padding-bottom: 12vh;
@@ -1387,7 +1419,7 @@
   padding-left: 1rem;
 }
 .mainGetInTach form button {
-  width: 50%;
+  width: 60%;
   padding: 1.2rem 3.6rem;
   background-color: #e84c3d;
   font-family: "Open Sans", sans-serif;
@@ -1421,6 +1453,39 @@
   color: #81868E;
 }
 
+@media screen and (max-width: 768px) {
+  .getInTouch {
+    padding-bottom: 6vh;
+  }
+  .getInTouch .mainGetInTach {
+    flex-direction: column;
+    align-items: center;
+  }
+  .getInTouch .mainGetInTach form {
+    width: 70%;
+  }
+  .getInTouch .mainGetInTach form button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+  .getInTouch .mainGetInTach .contentGetInTach {
+    width: 70%;
+    display: flex;
+    margin-top: 5vh;
+  }
+  .getInTouch .mainGetInTach .contentGetInTach .adress, .getInTouch .mainGetInTach .contentGetInTach .email, .getInTouch .mainGetInTach .contentGetInTach .phone {
+    font-size: 0.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .getInTouch .mainGetInTach .contentGetInTach .adress p, .getInTouch .mainGetInTach .contentGetInTach .email p, .getInTouch .mainGetInTach .contentGetInTach .phone p {
+    text-align: center;
+  }
+}
 footer {
   width: 100%;
   height: 10vh;

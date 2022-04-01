@@ -22,7 +22,7 @@
             width: 24%;
 
             &:hover .cardCrew .content{
-                display: block;
+                display: flex;
                 cursor: pointer;
             }
 
@@ -123,12 +123,16 @@
             height: 60vh;
 
             .cardCrewMain{
-                width: 70%;
+                width: 80%;
                 height: 35vh;
                 margin: 0 auto;
 
                 .cardCrew{
                     .content {
+                        
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 45%;
                         p.crewPara{
                 
                             font-size: .8rem !important;
@@ -139,6 +143,11 @@
               .namePosition{
                   p{
                       padding-bottom: 2vh;
+                      font-size: 1rem;
+                  }
+                  h3{
+                      font-size: 1.3rem;
+                      margin: .5rem 0;
                   }
               }
 

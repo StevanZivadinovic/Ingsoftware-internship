@@ -44,7 +44,7 @@
             }
         }
         button{
-            width: 50%;
+            width: 60%;
             padding: 1.2rem 3.6rem;
             background-color: rgba(232, 76, 61, 1);
             @include mixins.setTextPara(variables.$sans, 1.4rem, #FFFFFF);
@@ -77,4 +77,37 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .getInTouch{
+        padding-bottom: 6vh;
+        .mainGetInTach{
+            flex-direction: column;
+            align-items: center;
+            form{
+                width: 70%;
+                button{
+                    @include mixins.setTextPara(variables.$sans, 1.1rem, #FFFFFF);
+                    padding: 1rem 2rem;
+                    width: 100%;
+                }
+            }
+            .contentGetInTach{
+                width: 70%;
+                display: flex;
+                margin-top: 5vh;
+                .adress, .email,.phone{
+                    font-size: .5rem;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
 }
