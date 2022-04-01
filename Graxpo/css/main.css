@@ -686,6 +686,23 @@
   flex-direction: row-reverse;
 }
 
+@media screen and (max-width: 768px) {
+  .serviceSection .row .contentWorkMain h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    padding-top: 1vh;
+  }
+  .serviceSection .row .contentWorkMain hr {
+    margin: 0.5rem 0;
+  }
+  .serviceSection .row .contentWorkMain p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    padding-bottom: 1vh;
+  }
+}
 .createMain {
   display: flex;
   flex-direction: column;

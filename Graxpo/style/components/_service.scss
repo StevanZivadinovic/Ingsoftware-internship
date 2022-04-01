@@ -43,3 +43,29 @@
     
   }
 }
+
+@media screen and (max-width: 768px) {
+  .serviceSection {
+    .row {
+
+      .contentWork {
+      
+        &Main {
+
+          h2 {
+            @include mixins.setTextPara(variables.$roboto, 1.4rem, #FFFFFF);
+            padding-top: 1vh;
+          }
+          hr{
+            margin: .5rem 0;
+          }
+          p{
+            @include mixins.setTextPara(variables.$sans, 1.2rem, #FFFFFF);
+            padding-bottom: 1vh;
+          }
+        }
+      }
+    }
+  }
+
+}
