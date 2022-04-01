@@ -58,3 +58,27 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .lattestBlog{
+        .blogs{
+            height: 70vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .content{
+                .mainContent{
+                    h3{
+                        @include mixins.setTextPara(variables.$roboto, 1.2rem, #FFFFFF);
+                        padding-top: 2vh;
+                       
+                    }
+                    hr{
+                        margin: 1rem 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
