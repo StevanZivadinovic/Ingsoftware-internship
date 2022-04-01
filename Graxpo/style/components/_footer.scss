@@ -14,3 +14,14 @@ footer{
         text-align: center;
     }
 }
+
+
+
+@media screen and (max-width: 480px) {
+    footer{
+        
+        p{
+            @include mixins.setTextPara(variables.$sans, 1.2rem, #FFFFFF);
+        }
+    }
+}

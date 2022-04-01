@@ -1607,6 +1607,11 @@
     justify-content: center;
     margin-bottom: 1rem;
   }
+  .getInTouch .mainGetInTach .contentGetInTach .adress span, .getInTouch .mainGetInTach .contentGetInTach .email span, .getInTouch .mainGetInTach .contentGetInTach .phone span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .getInTouch .mainGetInTach .contentGetInTach .adress p, .getInTouch .mainGetInTach .contentGetInTach .email p, .getInTouch .mainGetInTach .contentGetInTach .phone p {
     text-align: center;
   }
@@ -1633,6 +1638,13 @@ footer p {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  footer p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+  }
+}
 * {
   margin: 0;
   padding: 0;

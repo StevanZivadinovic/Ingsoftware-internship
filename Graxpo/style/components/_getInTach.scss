@@ -102,6 +102,11 @@
                     display: flex;
                     justify-content: center;
                     margin-bottom: 1rem;
+                    span{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
                     p{
                         text-align: center;
                     }
@@ -125,6 +130,8 @@
                     }
                 }
             }
+
+           
         }
     }
 }
