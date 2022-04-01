@@ -113,3 +113,23 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .crew{
+      
+        .crewCards{  
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 50vh;
+
+            .cardCrewMain{
+                width: 70%;
+                height: 30vh;
+                align-items: center;
+                
+            }
+            
+        }
+
+    }
+}
