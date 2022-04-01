@@ -139,3 +139,20 @@
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    .card{
+        .imgContainer{
+            #imgCircle{
+                height: 5rem;
+                width: 5rem;
+                margin-left: 2rem;
+                i{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+}

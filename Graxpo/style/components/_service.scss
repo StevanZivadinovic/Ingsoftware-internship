@@ -69,3 +69,13 @@
   }
 
 }
+
+
+@media screen and (max-width: 768px) {
+  .serviceSection {
+    #row {
+      flex-direction: column;
+    }
+    
+  }
+}

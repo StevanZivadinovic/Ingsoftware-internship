@@ -74,6 +74,7 @@
         top: 10vh;
         right: 10vh;
         text-align: center;
+      
         
         ul {
           display: flex;
@@ -101,6 +102,48 @@
           @include mixins.setTextPara(variables.$sans, 1.5rem, #ffffff);
           font-weight: 100;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainHeader {
+    .nav{
+      display: flex;
+      flex-direction: column;
+      h1{
+        text-align: center;
+      }
+      nav{
+        position: static;
+        margin-top: 5vh;
+        ul{
+          width: 100vw;
+          display: flex;
+          flex-direction: row;
+          li{
+            a{
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .img{
+    // height: 50vh;
+    background-image: url("./../images/above.png");
+    .text{
+      margin-top: 10vh;
+      p{
+        margin: .5vh 0 5vh 0;
+      }
+
+      .crollDown{
+        position: static;
+        margin-top: 35vh;
       }
     }
   }

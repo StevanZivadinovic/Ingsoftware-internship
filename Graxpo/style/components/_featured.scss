@@ -43,3 +43,40 @@
       }
   }
 }
+
+@media screen and (max-width: 768px) {
+
+    .mainFeatured {
+        .imageGalery {
+            .imgFeatured{
+                .hoverFeatured{
+                    button{
+                        width: 40%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .mainFeatured {
+        .imageGalery {
+            flex-direction: column;
+            .imgFeatured{
+                .hoverFeatured{
+                    button{
+                        width: 40%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+}

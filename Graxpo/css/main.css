@@ -92,6 +92,41 @@
     font-weight: 100;
   }
 }
+@media screen and (max-width: 480px) {
+  .mainHeader .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHeader .nav h1 {
+    text-align: center;
+  }
+  .mainHeader .nav nav {
+    position: static;
+    margin-top: 5vh;
+  }
+  .mainHeader .nav nav ul {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+  }
+  .mainHeader .nav nav ul li a {
+    font-size: 1rem;
+  }
+
+  .img {
+    background-image: url("./../images/above.png");
+  }
+  .img .text {
+    margin-top: 10vh;
+  }
+  .img .text p {
+    margin: 0.5vh 0 5vh 0;
+  }
+  .img .text .crollDown {
+    position: static;
+    margin-top: 35vh;
+  }
+}
 .cards {
   display: flex;
   width: 90%;
@@ -209,6 +244,16 @@
   }
   .cards .card:last-child {
     margin-bottom: 6vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card .imgContainer #imgCircle {
+    height: 5rem;
+    width: 5rem;
+    margin-left: 2rem;
+  }
+  .card .imgContainer #imgCircle i {
+    font-size: 2rem;
   }
 }
 .about {
@@ -647,6 +692,23 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .mainFeatured .imageGalery .imgFeatured .hoverFeatured button {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mainFeatured .imageGalery {
+    flex-direction: column;
+  }
+  .mainFeatured .imageGalery .imgFeatured .hoverFeatured button {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+}
 .serviceSection .row {
   display: flex;
 }
@@ -701,6 +763,11 @@
     font-size: 1.2rem;
     color: #FFFFFF;
     padding-bottom: 1vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .serviceSection #row {
+    flex-direction: column;
   }
 }
 .createMain {
@@ -923,6 +990,21 @@
   }
   .gridA .grid-item .hoverGallery p {
     font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .categories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .categories #content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .categories hr {
+    margin: 1rem auto 2rem auto;
   }
 }
 .subscribe {
