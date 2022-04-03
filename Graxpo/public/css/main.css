@@ -1217,7 +1217,7 @@
   color: white;
 }
 .crew .crewCards .cardCrewMain:nth-child(1) .cardCrew {
-  background: url("./../../../newImages/ibanHasan.png"), url("./../../images/ibanHasan.png");
+  background: url("./../../../newImages/ibanHasan.PNG"), url("/images/ibanHasan.PNG");
   background-size: cover;
   background-position: center;
 }
