@@ -71,10 +71,21 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .serviceSection {
     #row {
       flex-direction: column;
+      .contentWork{
+        .contentWorkMain{
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          hr{
+            align-self: center;
+          }
+        }
+      }
     }
     
   }

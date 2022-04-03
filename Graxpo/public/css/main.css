@@ -765,16 +765,25 @@
     padding-bottom: 1vh;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .serviceSection #row {
     flex-direction: column;
+  }
+  .serviceSection #row .contentWork .contentWorkMain {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .serviceSection #row .contentWork .contentWorkMain hr {
+    align-self: center;
   }
 }
 .createMain {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("./../../images/cta.png");
+  background-image: url("./../../../newImages/cta.png");
   padding: 3rem 0;
 }
 .createMain .contentCreate {
@@ -1009,7 +1018,7 @@
 }
 .subscribe {
   position: relative;
-  background-image: url("./../../images/subscribeBG.png");
+  background-image: url("./../../../newImages/subscribeBG.png");
   padding: 2rem auto;
 }
 .subscribe .hoverSubscribe {
@@ -1206,22 +1215,22 @@
   color: white;
 }
 .crew .crewCards .cardCrewMain:nth-child(1) .cardCrew {
-  background-image: url("./../../images/ibanHasan.png");
+  background-image: url("./../../../newImages/ibanHasan.png");
   background-size: cover;
   background-position: center;
 }
 .crew .crewCards .cardCrewMain:nth-child(2) .cardCrew {
-  background-image: url("./../../images/radRedwan.png");
+  background-image: url("./../../../newImages/radRedwan.png");
   background-size: cover;
   background-position: center;
 }
 .crew .crewCards .cardCrewMain:nth-child(3) .cardCrew {
-  background-image: url("./../../images/bariOwalarMeye.png");
+  background-image: url("./../../../newImages/bariOwalarMeye.png");
   background-size: cover;
   background-position: center;
 }
 .crew .crewCards .cardCrewMain:nth-child(4) .cardCrew {
-  background-image: url("./../../images/tofailAhmed.png");
+  background-image: url("./../../../newImages/tofailAhmed.png");
   background-size: cover;
   background-position: center;
 }
@@ -1262,7 +1271,7 @@
   }
 }
 .testimonials {
-  background-image: url("./../../images/testimonialsBg.png");
+  background-image: url("./../../../newImages/testimonialsBg.png");
 }
 .testimonials .mainTestimonials {
   margin: 0 auto;
@@ -1383,11 +1392,11 @@
   margin: 1.5rem 0;
 }
 .lattestBlog .blogs .blog1 {
-  background-image: url("./../../images/blog2.png");
+  background-image: url("./../../../newImages/blog2.png");
   background-size: cover;
 }
 .lattestBlog .blogs .blog2 {
-  background-image: url("./../../images/blog1.png");
+  background-image: url("./../../../newImages/blog1.png");
   background-size: cover;
 }
 
