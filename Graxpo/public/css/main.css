@@ -705,6 +705,9 @@
   .mainFeatured .imageGalery {
     flex-direction: column;
   }
+  .mainFeatured .imageGalery .imgFeatured {
+    width: 100% !important;
+  }
   .mainFeatured .imageGalery .imgFeatured .hoverFeatured button {
     width: 40%;
     display: flex;

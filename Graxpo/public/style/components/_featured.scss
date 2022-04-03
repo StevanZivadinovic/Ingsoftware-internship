@@ -70,6 +70,7 @@
         .imageGalery {
             flex-direction: column;
             .imgFeatured{
+                width: 100% !important;
                 .hoverFeatured{
                     button{
                         width: 40%;
