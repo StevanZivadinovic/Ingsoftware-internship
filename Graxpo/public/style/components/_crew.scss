@@ -46,6 +46,7 @@
             flex-direction: column;
             justify-content: end;
             .content{
+                flex-direction: column;
                 background-color: rgb(226, 43, 27);
                 height: 40%;
                 width: 90%;
@@ -93,7 +94,7 @@
            
         }
         .cardCrewMain:nth-child(2) .cardCrew{
-            background-image: url('./../../images/radRedwan.png');
+            background-image: url('./../../images/radRedwan.png'); 
             background-size: cover;
             background-position: center;
            

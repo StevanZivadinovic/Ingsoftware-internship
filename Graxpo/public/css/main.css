@@ -1169,6 +1169,7 @@
   justify-content: end;
 }
 .crew .crewCards .cardCrew .content {
+  flex-direction: column;
   background-color: #e22b1b;
   height: 40%;
   width: 90%;

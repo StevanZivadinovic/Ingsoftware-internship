@@ -14,6 +14,7 @@
     "sass": "^1.49.9"
   },
   "dependencies": {
+    "firebase": "^9.6.10",
     "gulp-watch": "^5.0.1",
     "masonry-layout": "^4.2.2"
   }

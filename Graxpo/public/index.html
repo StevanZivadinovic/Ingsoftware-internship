@@ -817,5 +817,30 @@
     <script src="./script/sliderNavScroll.js"></script>
     <script src="./script/redBlockTimer1.js"></script>
     <script src="./script/masonry.js"></script>
+
+
+<script>
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyBrV0sLGBrd6ZDjdycmRpGMOzpwT03-WWg",
+authDomain: "graxpo-6c872.firebaseapp.com",
+projectId: "graxpo-6c872",
+storageBucket: "graxpo-6c872.appspot.com",
+messagingSenderId: "1046383703574",
+appId: "1:1046383703574:web:0933c25e3ffcea01b56737",
+measurementId: "G-65FQF4MEB5"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
   </body>
 </html>
