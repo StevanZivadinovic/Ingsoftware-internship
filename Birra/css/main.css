@@ -1,3 +1,11 @@
+.primaryHeader {
+  background-color: rgb(68, 50, 44);
+}
+
+.prba {
+  color: red;
+}
+
 * {
   margin: 0;
   padding: 0;
