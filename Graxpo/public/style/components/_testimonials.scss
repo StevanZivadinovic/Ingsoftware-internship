@@ -2,7 +2,7 @@
 @use './../variables.scss';
 
 .testimonials{
-    background-image: url('./../../../newImages/testimonialsBg.png');
+    background-image: url('./../../../newImages/testimonialsBg.png'), url('./../../images/testimonialsBg.png');
     .mainTestimonials{
         margin: 0 auto;
         width: 80%;
