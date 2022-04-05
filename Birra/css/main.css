@@ -4,7 +4,7 @@
   background-color: rgb(68, 50, 44);
 }
 .primaryHeader .row .mainContent {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 .primaryHeader .row .mainContent .workTime {
@@ -56,7 +56,7 @@
   height: 8.25rem;
 }
 .middleHeader .row .mainContainMidlleHeader {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 .middleHeader .row .mainContainMidlleHeader .birraLogo {
@@ -98,7 +98,7 @@
   background-color: #E3CFAB;
 }
 .bottomHeader .mainContainBottomHeader {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   height: 7rem;
 }
@@ -127,6 +127,56 @@
 .bottomHeader .mainContainBottomHeader .localNavigation:hover {
   color: #BF431F;
   cursor: pointer;
+}
+
+.bigImageSection {
+  background-color: #F4E8CE;
+}
+.bigImageSection .mainContentBigImageSection {
+  height: 80vh;
+  background-image: url("./../../assets/jumbo.jpg");
+  background-size: cover;
+  margin: 8.75rem 0;
+  width: 80%;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection {
+  width: 85%;
+  align-self: center;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection h2 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 6.4rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.2rem;
+  color: #eee2c8;
+  text-align: center;
+  margin-top: 1.1rem;
+  padding-bottom: 0.2rem;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection .buttonDivBigImage {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection .buttonDivBigImage .buttonBigImage {
+  width: 100%;
+  margin: 4.7rem auto 1.6rem auto;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #f4e8ce;
+  padding: 1.35rem 6.15rem;
+  background-color: #BF431F;
+  border: none;
+  outline: none;
+  transition: all 0.4s ease;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection .buttonDivBigImage .buttonBigImage:hover {
+  background-color: #793319;
 }
 
 * {

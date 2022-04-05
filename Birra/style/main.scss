@@ -1,9 +1,14 @@
 @use './leyout/header';
+@use './components/bigImageSection';
+@use './components/gallery';
+
+
 @use './mixins';
 @use './variables';
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+
 
 *{
     margin: 0;
