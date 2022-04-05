@@ -1,26 +1,26 @@
+@use './../mixins';
+@use './../variables';
+
 .primaryHeader{
     background-color: rgb(68,50,44);
   
     .row{
     .mainContent{
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
      
         .workTime{
             text-transform: uppercase;
-            font-size: 1.2rem;
-            color: #e1a03a;
             margin: 0 1.5em;
-            font-family: 'Fira Sans', sans-serif;
             line-height: 100%;
             display: flex;
             align-items: center;
+            @include mixins.setTextPara(variables.$fira, 1.2rem, #e1a03a);
            
         }
         .social{
             font-size: 1.2rem;
             color: #e1a03a;
-            // line-height: 4rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -63,13 +63,83 @@
 }
 
 .middleHeader{
-    .mainContainMidlleHeader{
-        width: 80%;
+    background-color: #BF431F;
+    height: 8.25rem;
+    .row{
+        
+        .mainContainMidlleHeader{
+            width: 90%;
+            margin: 0 auto;
+            .birraLogo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                // height: 8.25rem;
+               
+            }
+            nav{
+                width: 67rem;
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-around;
+                    padding: none;
+                    li{
+                        width: 100%;
+                        height: 100%;
+                        height: 8.25rem;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        color: #F1E8CE;
+                        padding: 0 1.5rem;
+                        &:hover{
+                            
+                            background-color: #793319;
+                            cursor: pointer;
+                            color: #e1a03a;
+                        }
+                       
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+.bottomHeader{
+    height: 7.0rem;
+    background-color: #E3CFAB;
+    .mainContainBottomHeader{
+        width: 90%;
         margin: 0 auto;
-        nav{
-            ul{
-                list-style-type: none;
-                
+        height: 7.0rem;
+        .shop{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+
+            h2{
+                text-transform: uppercase;
+                @include mixins.setTextPara(variables.$alegria, 2.4rem, #d57f2c);
+            }
+        }
+        .localNavigation{
+            text-align: end;
+            text-transform: uppercase;
+            @include mixins.setTextPara(variables.$fira, 1.5rem, #44322C);
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &:hover{
+                color: #BF431F;
+                cursor: pointer;
             }
         }
     }

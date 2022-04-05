@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap");
 .primaryHeader {
   background-color: rgb(68, 50, 44);
 }
 .primaryHeader .row .mainContent {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 .primaryHeader .row .mainContent .workTime {
   text-transform: uppercase;
-  font-size: 1.2rem;
-  color: #e1a03a;
   margin: 0 1.5em;
-  font-family: "Fira Sans", sans-serif;
   line-height: 100%;
   display: flex;
   align-items: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #e1a03a;
 }
 .primaryHeader .row .mainContent .social {
   font-size: 1.2rem;
@@ -50,12 +51,82 @@
   font-size: 0.9rem;
 }
 
-.middleHeader .mainContainMidlleHeader {
-  width: 80%;
+.middleHeader {
+  background-color: #BF431F;
+  height: 8.25rem;
+}
+.middleHeader .row .mainContainMidlleHeader {
+  width: 90%;
   margin: 0 auto;
 }
-.middleHeader .mainContainMidlleHeader nav ul {
+.middleHeader .row .mainContainMidlleHeader .birraLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.middleHeader .row .mainContainMidlleHeader nav {
+  width: 67rem;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul {
   list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: none;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul li {
+  width: 100%;
+  height: 100%;
+  height: 8.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #F1E8CE;
+  padding: 0 1.5rem;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul li:hover {
+  background-color: #793319;
+  cursor: pointer;
+  color: #e1a03a;
+}
+
+.bottomHeader {
+  height: 7rem;
+  background-color: #E3CFAB;
+}
+.bottomHeader .mainContainBottomHeader {
+  width: 90%;
+  margin: 0 auto;
+  height: 7rem;
+}
+.bottomHeader .mainContainBottomHeader .shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bottomHeader .mainContainBottomHeader .shop h2 {
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.4rem;
+  color: #d57f2c;
+}
+.bottomHeader .mainContainBottomHeader .localNavigation {
+  text-align: end;
+  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #44322C;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bottomHeader .mainContainBottomHeader .localNavigation:hover {
+  color: #BF431F;
+  cursor: pointer;
 }
 
 * {
