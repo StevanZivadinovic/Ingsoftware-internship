@@ -1,2 +1,34 @@
 @use './../mixins';
 @use './../variables';
+
+.gallerySection{
+    background-color: #F4E8CE;
+    .mainGallerySection{
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 2.5%;
+        .categories{
+            background-color: #E3CFAB;
+            height: 36rem;
+            .mainCategories{
+                margin: 5vh 0;
+                h3{
+                    @include mixins.setTextPara(variables.$alegria, 1.8rem, #bf431f);
+                    text-transform: uppercase;
+                }
+                ul{
+                    list-style-type: none;
+                   
+                }
+            }
+        }
+    }
+
+}
+
+span#brokenBrackets{
+    @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
+    font-weight: 500;
+}

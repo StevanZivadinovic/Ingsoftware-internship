@@ -179,6 +179,40 @@
   background-color: #793319;
 }
 
+.gallerySection {
+  background-color: #F4E8CE;
+}
+.gallerySection .mainGallerySection {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2.5%;
+}
+.gallerySection .mainGallerySection .categories {
+  background-color: #E3CFAB;
+  height: 36rem;
+}
+.gallerySection .mainGallerySection .categories .mainCategories {
+  margin: 5vh 0;
+}
+.gallerySection .mainGallerySection .categories .mainCategories h3 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #bf431f;
+  text-transform: uppercase;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul {
+  list-style-type: none;
+}
+
+span#brokenBrackets {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 500;
+}
+
 * {
   margin: 0;
   padding: 0;
