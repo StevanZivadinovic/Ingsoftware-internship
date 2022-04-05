@@ -62,6 +62,15 @@
     }
 }
 
-.prba{
-    color: red;
+.middleHeader{
+    .mainContainMidlleHeader{
+        width: 80%;
+        margin: 0 auto;
+        nav{
+            ul{
+                list-style-type: none;
+                
+            }
+        }
+    }
 }

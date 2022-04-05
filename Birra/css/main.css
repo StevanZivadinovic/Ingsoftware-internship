@@ -50,8 +50,12 @@
   font-size: 0.9rem;
 }
 
-.prba {
-  color: red;
+.middleHeader .mainContainMidlleHeader {
+  width: 80%;
+  margin: 0 auto;
+}
+.middleHeader .mainContainMidlleHeader nav ul {
+  list-style-type: none;
 }
 
 * {
