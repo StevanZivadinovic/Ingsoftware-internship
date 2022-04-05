@@ -1,35 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 .primaryHeader {
   background-color: rgb(68, 50, 44);
-  height: 4rem;
 }
 .primaryHeader .row .mainContent {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 .primaryHeader .row .mainContent .workTime {
   text-transform: uppercase;
   font-size: 1.2rem;
   color: #e1a03a;
-  line-height: 4rem;
+  margin: 0 1.5em;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
 }
 .primaryHeader .row .mainContent .social {
   font-size: 1.2rem;
   color: #e1a03a;
-  line-height: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0.85em 1.4em;
 }
 .primaryHeader .row .mainContent .social .mainSocial {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   line-height: 4rem;
 }
 .primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon {
   line-height: 4rem;
-  width: 2.2rem;
+  width: 2.4rem;
   height: 2.4rem;
   background-color: #30211B;
   align-items: center;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon:hover {
+  background-color: #e1a03a;
+  cursor: pointer;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon:hover i {
+  color: #30211B;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon i {
+  font-size: 0.9rem;
 }
 
 .prba {
