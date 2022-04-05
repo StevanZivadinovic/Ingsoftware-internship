@@ -1,5 +1,35 @@
 .primaryHeader {
   background-color: rgb(68, 50, 44);
+  height: 4rem;
+}
+.primaryHeader .row .mainContent {
+  width: 90%;
+  margin: 0 auto;
+}
+.primaryHeader .row .mainContent .workTime {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #e1a03a;
+  line-height: 4rem;
+}
+.primaryHeader .row .mainContent .social {
+  font-size: 1.2rem;
+  color: #e1a03a;
+  line-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.85em 1.4em;
+}
+.primaryHeader .row .mainContent .social .mainSocial {
+  line-height: 4rem;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon {
+  line-height: 4rem;
+  width: 2.2rem;
+  height: 2.4rem;
+  background-color: #30211B;
+  align-items: center;
 }
 
 .prba {
@@ -10,4 +40,5 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
