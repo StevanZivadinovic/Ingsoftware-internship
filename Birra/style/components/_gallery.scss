@@ -1,6 +1,7 @@
 @use "./../mixins";
 @use "./../variables";
 
+
 .gallerySection {
   background-color: #f4e8ce;
   .mainGallerySection {
@@ -124,6 +125,36 @@
                   }
               }
           }
+      }
+      .bottomNavGallery{
+        div{
+          @include mixins.setTextPara(variables.$alegria, 2.1rem, #BF431F);
+          cursor: pointer;
+          a{
+            @include mixins.setTextPara(variables.$alegria, 2.1rem, #BF431F);
+            text-decoration: none;
+            padding: .735rem 1.26rem;
+            
+            &:hover{
+              background-color:#BF431F;
+              color: #F4E8CE;
+            }
+          }
+          .currentlyClicked{
+            background-color:#BF431F;
+            color: #F4E8CE;
+          }
+          i{
+            padding: .735rem 1.26rem;
+            font-size: 1.5rem;
+
+          }
+          &:nth-child(3){
+              margin-left: 1.26rem;
+          }
+        }
+
+
       }
     }
   }

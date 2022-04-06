@@ -302,6 +302,34 @@
   background-color: #CC6626;
   cursor: pointer;
 }
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.1rem;
+  color: #BF431F;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div a {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.1rem;
+  color: #BF431F;
+  text-decoration: none;
+  padding: 0.735rem 1.26rem;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div a:hover {
+  background-color: #BF431F;
+  color: #F4E8CE;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div .currentlyClicked {
+  background-color: #BF431F;
+  color: #F4E8CE;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div i {
+  padding: 0.735rem 1.26rem;
+  font-size: 1.5rem;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div:nth-child(3) {
+  margin-left: 1.26rem;
+}
 
 * {
   margin: 0;
