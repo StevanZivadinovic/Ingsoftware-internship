@@ -8,7 +8,6 @@ footer{
 
     .top{
         width: 80%;
-        height: 30vh;
         padding-top: 10.4rem;
         padding-bottom: 5.6rem;
         margin: 0 auto;
@@ -61,5 +60,49 @@ footer{
               
             }
         }
+
+        .topLinks, .topBlog{
+            width: 25%;
+            margin-bottom: 2.1rem;
+            h3{
+                margin: 2.1rem auto 4.2rem auto;
+                text-transform: uppercase;
+                @include mixins.setTextPara(variables.$alegria, 2.1rem, #e1a03a);
+            }
+            ul{
+                list-style-type: none;
+                li{
+                    a{
+
+                        text-transform: uppercase;
+                        @include mixins.setTextPara(variables.$fira, 1.4rem, #f4e8ce);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .topBlog{
+            ul{
+              padding: 0;
+                li:nth-child(1){
+                    margin-bottom: 1em;
+                    a{
+                        text-transform: none;
+
+                    }
+                }
+                li:nth-child(2){
+                 
+                    margin-bottom: 1em;
+                    margin-top: 3.2rem;
+                    a{
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+
+       
     }
 }
