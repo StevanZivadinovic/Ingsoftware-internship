@@ -180,7 +180,7 @@
 }
 
 .gallerySection {
-  background-color: #F4E8CE;
+  background-color: #f4e8ce;
 }
 .gallerySection .mainGallerySection {
   width: 80%;
@@ -190,7 +190,7 @@
   gap: 2.5%;
 }
 .gallerySection .mainGallerySection .categories {
-  background-color: #E3CFAB;
+  background-color: #e3cfab;
   height: 36rem;
 }
 .gallerySection .mainGallerySection .categories .mainCategories {
@@ -210,7 +210,7 @@
 .gallerySection .mainGallerySection .categories .mainCategories ul li {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
-  color: #44322C;
+  color: #44322c;
   margin-bottom: 1rem;
   font-weight: 800;
 }
@@ -219,19 +219,21 @@
   cursor: pointer;
 }
 .gallerySection .mainGallerySection .categories .mainCategories ul li span i {
-  color: #E1A03A;
+  color: #e1a03a;
 }
-.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list, .gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid {
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list,
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid {
   margin-left: 0.5rem;
 }
-.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list i, .gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid i {
-  color: #BF431F;
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list i,
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid i {
+  color: #bf431f;
   font-size: 2.4rem;
 }
 .gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft div {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.3rem;
-  color: #44322C;
+  color: #44322c;
   font-weight: 800;
   margin-bottom: 1.3rem;
   margin-left: 1rem;
@@ -239,8 +241,8 @@
 .gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
-  color: #44322C;
-  border: 0.1rem solid #E5D2AF;
+  color: #44322c;
+  border: 0.1rem solid #e5d2af;
   background-color: transparent;
   padding: 1.3rem;
   border-radius: 0.3rem;
@@ -248,8 +250,12 @@
 .gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select option {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
-  color: #44322C;
-  background-color: #F4E8CE;
+  color: #44322c;
+  background-color: #f4e8ce;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery img {
+  width: 33%;
+  background-color: #E3CFAB;
 }
 
 * {
