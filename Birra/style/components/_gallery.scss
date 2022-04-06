@@ -47,16 +47,23 @@
           .list,
           .grid {
             margin-left: 0.5rem;
+            max-height: 2.4rem;
             i {
               color: #bf431f;
               font-size: 2.4rem;
+              cursor: pointer;
+              &:hover{
+                  color: #793319;
+              }
             }
           }
           div {
-            @include mixins.setTextPara(variables.$fira, 1.3rem, #44322c);
+            max-height: 2.4rem;
+            @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
             font-weight: 800;
             margin-bottom: 1.3rem;
             margin-left: 1rem;
+            line-height: 2.4rem;
           }
         }
         .navGalleryRight {
@@ -64,21 +71,58 @@
             @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
             border: 0.1rem solid #e5d2af;
             background-color: transparent;
-            padding: 1.3rem;
+            padding: 1.3rem 2.6rem;
             border-radius: 0.3rem;
+            margin-bottom: 5.6rem;
+            &:hover{
+                border: 0.1rem solid #CF6F2C;
+            }
+            &:focus{
+                outline: none;
+            }
             option {
               @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
               background-color: #f4e8ce;
+
             }
           }
         }
       }
 
       .galleryGallery{
-          
-          img{
-              width: 33%;
-              background-color: #E3CFAB;
+          gap: 2rem;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          grid-template-rows: repeat(3,46rem);
+          .galleryItem{
+
+              .img{
+                background-position: center;
+                background-size: cover;
+                background-color: #E3CFAB;
+                background-image: url('./../../assets/beer.png');
+                height: 40rem;
+                transition: all .3s ease;
+                &:hover{
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+              }
+              &Content{
+                  height: 6rem;
+                  background-color: #D57F2C;
+                  text-align: center;
+                  line-height: 6rem;
+                  @include mixins.setTextPara(variables.$alegria, 1.7rem, #f4e8ce);
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  transition: all .3s ease;
+
+                  &:hover{
+                      background-color: #CC6626;
+                      cursor: pointer;
+                  }
+              }
           }
       }
     }
