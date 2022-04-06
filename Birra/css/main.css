@@ -221,6 +221,9 @@
 .gallerySection .mainGallerySection .categories .mainCategories ul li span i {
   color: #e1a03a;
 }
+.gallerySection .mainGallerySection .gallery {
+  padding-bottom: 8.5rem;
+}
 .gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list,
 .gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid {
   margin-left: 0.5rem;
@@ -272,19 +275,48 @@
   gap: 2rem;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: repeat(3, 46rem);
+  grid-template-rows: repeat(3, 48rem);
 }
-.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .img {
-  background-position: center;
-  background-size: cover;
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice {
   background-color: #E3CFAB;
-  background-image: url("./../../assets/beer.png");
-  height: 40rem;
-  transition: all 0.3s ease;
 }
-.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .img:hover {
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice:hover {
   background-color: transparent;
   cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../../assets/beer.png");
+  height: 38rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  text-align: center;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img:hover i {
+  transition: all 0.5s ease;
+  opacity: 1;
+  transform: translateY(-20rem);
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img i {
+  font-size: 3rem;
+  color: #ffffff;
+  opacity: 0;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPrice {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #bf431f;
+  font-weight: 800;
+  padding-bottom: 2rem;
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItemContent {
   height: 6rem;
@@ -326,6 +358,9 @@
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div i {
   padding: 0.735rem 1.26rem;
   font-size: 1.5rem;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div i:hover {
+  color: #793319;
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div:nth-child(3) {
   margin-left: 1.26rem;

@@ -43,6 +43,7 @@
     }
 
     .gallery {
+      padding-bottom: 8.5rem;
       .navGallery {
         .navGalleryLeft {
           .list,
@@ -94,21 +95,55 @@
           gap: 2rem;
           display: grid;
           grid-template-columns: auto auto auto;
-          grid-template-rows: repeat(3,46rem);
+          grid-template-rows: repeat(3,48rem);
           .galleryItem{
+           .imgAndPrice{
+             background-color: #E3CFAB;
+             &:hover{
+              background-color: transparent;
+              cursor: pointer;
+          }
+             .img{
+               background-position: center;
+               background-size: cover;
+               background-image: url('./../../assets/beer.png');
+               height: 38rem;
+               transition: all .3s ease;
+               position: relative;
+               display: flex;
+               justify-content: end;
+               flex-direction: column;
+               text-align: center;
+               
+               &:hover i{
+                 transition: all .5s ease;
+                 opacity: 1;
+                 transform: translateY(-20rem);
+               }
+  
+               
+               i{
+                 font-size: 3rem;
+                 color: #ffffff;
+                 opacity: 0;
+               }
+               &:hover{
+                   background-color: transparent;
+                   cursor: pointer;
+               }
+             }
+             .galleryItemPrice{
+               text-align: center;
+               
+               @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
+               font-weight: 800;
+               padding-bottom: 2rem;
+               
+  
+              
+             }
+           }
 
-              .img{
-                background-position: center;
-                background-size: cover;
-                background-color: #E3CFAB;
-                background-image: url('./../../assets/beer.png');
-                height: 40rem;
-                transition: all .3s ease;
-                &:hover{
-                    background-color: transparent;
-                    cursor: pointer;
-                }
-              }
               &Content{
                   height: 6rem;
                   background-color: #D57F2C;
@@ -147,6 +182,10 @@
           i{
             padding: .735rem 1.26rem;
             font-size: 1.5rem;
+
+            &:hover{
+              color: #793319;
+            }
 
           }
           &:nth-child(3){
