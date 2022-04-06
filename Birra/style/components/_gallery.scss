@@ -17,18 +17,59 @@
                 h3{
                     @include mixins.setTextPara(variables.$alegria, 1.8rem, #bf431f);
                     text-transform: uppercase;
+                    margin-top: 2.4rem;
+                    margin-bottom: 2.6rem;
                 }
                 ul{
                     list-style-type: none;
-                   
+                   li{
+                    @include mixins.setTextPara(variables.$fira, 1.4rem, #44322C);
+                    margin-bottom: 1rem;
+                    font-weight: 800;
+
+                    &:hover{
+                        color: #e1a03a;
+                        cursor: pointer;
+                    }
+                       span{
+                        
+                           i{
+                                   color: #E1A03A;
+                                   
+                                   
+                           }
+                       }
+                   }
                 }
             }
+        }
+
+
+
+        .gallery{
+
+        .navGallery{
+            .navGalleryLeft{
+                
+                .list, .grid{
+                    margin-left: .5rem;
+                    i{
+                        color: #BF431F;
+                        font-size: 2.4rem;
+                    }
+                }
+                div{
+                    @include mixins.setTextPara(variables.$fira, 1.3rem, #44322C);
+                    font-weight: 800;
+                    margin-bottom: 1.3rem;
+                    margin-left: 1rem;
+                    
+                }
+                
+            }
+        }
         }
     }
 
 }
 
-span#brokenBrackets{
-    @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
-    font-weight: 500;
-}
