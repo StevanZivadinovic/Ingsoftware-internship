@@ -1,0 +1,65 @@
+@use "./../mixins";
+@use "./../variables";
+
+
+footer{
+    height: 85vh;
+    background-image: url('./../../assets/footer.jpg');
+
+    .top{
+        width: 80%;
+        height: 30vh;
+        padding-top: 10.4rem;
+        padding-bottom: 5.6rem;
+        margin: 0 auto;
+        .topFirst{
+            width: 25%;
+            .logoTopFirst{
+                margin-bottom: 2.24rem;
+            }
+            p{
+                @include mixins.setTextPara(variables.$fira, 1.4rem, #f4e8ce);
+                margin-bottom: 3.64rem;
+            }
+
+            .social{
+                font-size: 1.2rem;
+                color: #e1a03a;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 1.4em 0;
+               
+                
+                .mainSocial{
+                    display: flex;
+                    line-height: 4rem;
+                   
+                    .aweosmeIcon{
+                        line-height: 4rem;
+                        width: 3.7rem;
+                        height: 3.7rem;
+                        background-color: #30211B;
+                        align-items: center;
+                        border-radius: 50%;
+                        margin-right: .5rem;
+    
+                        &:hover{
+                            background-color: #e1a03a;
+                            cursor: pointer;
+                        }
+                        &:hover i{
+                            color: #30211B;
+                        }
+                        i{
+                            font-size: 1.5rem;
+                        }
+        
+                    }
+                }
+    
+              
+            }
+        }
+    }
+}
