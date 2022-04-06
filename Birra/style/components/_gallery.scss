@@ -67,6 +67,20 @@
                 }
                 
             }
+            .navGalleryRight{
+                select{
+                   
+                    @include mixins.setTextPara(variables.$fira, 1.4rem, #44322C);
+                    border: .1rem solid #E5D2AF;
+                    background-color: transparent;
+                    padding: 1.3rem;
+                    border-radius: .3rem;
+                    option{
+                        @include mixins.setTextPara(variables.$fira, 1.4rem, #44322C);
+                        background-color: #F4E8CE;
+                    }
+                }
+            }
         }
         }
     }

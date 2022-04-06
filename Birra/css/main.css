@@ -236,6 +236,21 @@
   margin-bottom: 1.3rem;
   margin-left: 1rem;
 }
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322C;
+  border: 0.1rem solid #E5D2AF;
+  background-color: transparent;
+  padding: 1.3rem;
+  border-radius: 0.3rem;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select option {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322C;
+  background-color: #F4E8CE;
+}
 
 * {
   margin: 0;
