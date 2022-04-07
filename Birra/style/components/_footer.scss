@@ -61,7 +61,7 @@ footer{
             }
         }
 
-        .topLinks, .topBlog{
+        .topLinks, .topBlog, .topContacts{
             width: 25%;
             margin-bottom: 2.1rem;
             h3{
@@ -103,6 +103,31 @@ footer{
             }
         }
 
+        .topContacts{
+           p{
+            @include mixins.setTextPara(variables.$fira, 1.4rem, #f4e8ce);
+            margin-bottom: 2.1rem;
+               span{
+                @include mixins.setTextPara(variables.$fira, 1.4rem, #d19f45);
+                font-weight: 700;
+               }
+           }
+        }
+
+
+
        
+    }
+    .bottom{
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 3.5rem;
+        padding-bottom: 12.6rem;
+        p, span{
+            @include mixins.setTextPara(variables.$fira, 1.4rem, rgba(244, 232, 206, 0.6));
+        }
+        span{
+            color: #f4e8ce;
+        }
     }
 }

@@ -419,21 +419,21 @@ footer .top .topFirst .social .mainSocial .aweosmeIcon:hover i {
 footer .top .topFirst .social .mainSocial .aweosmeIcon i {
   font-size: 1.5rem;
 }
-footer .top .topLinks, footer .top .topBlog {
+footer .top .topLinks, footer .top .topBlog, footer .top .topContacts {
   width: 25%;
   margin-bottom: 2.1rem;
 }
-footer .top .topLinks h3, footer .top .topBlog h3 {
+footer .top .topLinks h3, footer .top .topBlog h3, footer .top .topContacts h3 {
   margin: 2.1rem auto 4.2rem auto;
   text-transform: uppercase;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 2.1rem;
   color: #e1a03a;
 }
-footer .top .topLinks ul, footer .top .topBlog ul {
+footer .top .topLinks ul, footer .top .topBlog ul, footer .top .topContacts ul {
   list-style-type: none;
 }
-footer .top .topLinks ul li a, footer .top .topBlog ul li a {
+footer .top .topLinks ul li a, footer .top .topBlog ul li a, footer .top .topContacts ul li a {
   text-transform: uppercase;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
@@ -455,6 +455,32 @@ footer .top .topBlog ul li:nth-child(2) {
 }
 footer .top .topBlog ul li:nth-child(2) a {
   text-transform: none;
+}
+footer .top .topContacts p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f4e8ce;
+  margin-bottom: 2.1rem;
+}
+footer .top .topContacts p span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #d19f45;
+  font-weight: 700;
+}
+footer .bottom {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 3.5rem;
+  padding-bottom: 12.6rem;
+}
+footer .bottom p, footer .bottom span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: rgba(244, 232, 206, 0.6);
+}
+footer .bottom span {
+  color: #f4e8ce;
 }
 
 * {
