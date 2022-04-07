@@ -31,7 +31,6 @@
                 
                 .buttonBigImage{
                     width: 100%;
-                   
                     margin: 4.7rem auto 1.6rem auto;
                     text-transform: uppercase;
                     @include mixins.setTextPara(variables.$alegria, 1.7rem, #f4e8ce);

@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap");
-header {
-  z-index: 1;
-}
-
 .primaryHeader {
   background-color: rgb(68, 50, 44);
 }
@@ -110,6 +106,10 @@ header {
   opacity: 1;
   top: 83px;
   transition: all 0.5s ease;
+  pointer-events: auto;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi:hover ul.sub li {
+  pointer-events: auto;
 }
 .middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul {
   background-color: #793319;
@@ -129,6 +129,7 @@ header {
   color: #F1E8CE;
   font-weight: 800;
   position: relative;
+  pointer-events: none;
 }
 .middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi:hover {
   background-color: #793319;
@@ -137,12 +138,14 @@ header {
 }
 .middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi:hover .subSub {
   opacity: 1;
+  pointer-events: auto;
 }
 .middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi .subSub {
   position: absolute;
   top: 0;
   left: -112%;
   opacity: 0;
+  pointer-events: none;
 }
 
 .bottomHeader {
@@ -234,6 +237,7 @@ header {
 
 .gallerySection {
   background-color: #f4e8ce;
+  z-index: -1;
 }
 .gallerySection .mainGallerySection {
   width: 80%;

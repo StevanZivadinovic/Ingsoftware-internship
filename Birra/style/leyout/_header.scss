@@ -1,9 +1,9 @@
 @use './../mixins';
 @use './../variables';
 
-header{
-    z-index: 1;
-}
+// header{
+//     z-index: 1;
+// }
 
 .primaryHeader{
     background-color: rgb(68,50,44);
@@ -76,6 +76,7 @@ header{
     position: sticky;
     top: 0px;
     z-index: 1;
+    
     .row{
         
         .mainContainMidlleHeader{
@@ -85,8 +86,6 @@ header{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                // height: 8.25rem;
-               
             }
             nav{
                
@@ -126,6 +125,10 @@ header{
                             opacity: 1;
                             top: 83px;
                             transition: all .5s ease;
+                            pointer-events: auto;
+                            li{
+                                pointer-events: auto;
+                            }
                         }
                         ul{
                             
@@ -147,6 +150,7 @@ header{
                                 @include mixins.setTextPara(variables.$fira, 1.3rem, #F1E8CE);
                                 font-weight: 800;
                                 position: relative;
+                                pointer-events: none;
                                 
                                 &:hover{
                                     background-color: #793319;
@@ -156,6 +160,8 @@ header{
 
                                 &:hover .subSub{
                                     opacity: 1;
+                                    pointer-events: auto;
+                                   
                                 }
                                 
                                 .subSub{
@@ -163,6 +169,7 @@ header{
                                     top: 0;
                                     left:-112%;
                                     opacity: 0;
+                                    pointer-events: none;
                                     
                                     
                                 }
