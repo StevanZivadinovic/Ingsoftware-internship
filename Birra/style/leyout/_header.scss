@@ -9,7 +9,7 @@
         width: 80%;
         margin: 0 auto;
      
-        .workTime{
+        .workTime, .cart{
             text-transform: uppercase;
             margin: 0 1.5em;
             line-height: 100%;
@@ -17,6 +17,10 @@
             align-items: center;
             @include mixins.setTextPara(variables.$fira, 1.2rem, #e1a03a);
            
+        }
+        .cart{
+            color: #E3CFAB;
+            cursor: pointer;
         }
         .social{
             font-size: 1.2rem;
@@ -97,11 +101,36 @@
                         font-weight: 500;
                         color: #F1E8CE;
                         padding: 0 1.5rem;
+                        position: relative;
                         &:hover{
                             
                             background-color: #793319;
                             cursor: pointer;
                             color: #e1a03a;
+                        }
+                        &:hover ul{
+                            display: flex;
+                            flex-direction: column;
+                            opacity: 1;
+                            top: 83px;
+                            transition: all .5s ease;
+                        }
+                        ul{
+                            background-color: #793319;
+                            position: absolute;
+                            width: 25rem;
+                            top: 163px;
+                            opacity: 0;
+                            left: 0px;
+                            
+                            
+                            li{
+                                height: auto;
+                                text-align: left;
+                                @include mixins.setTextPara(variables.$fira, 1.3rem, '');
+                                font-weight: 800;
+
+                            }
                         }
                        
                     }
