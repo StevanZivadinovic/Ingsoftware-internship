@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <title>Products - Brewery & pub</title>
   <script src="https://kit.fontawesome.com/8203228926.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -367,7 +368,7 @@
 
 <script src="./script/paginationGallery.js"></script>
 <script>
-const Handlebars = require("handlebars");
+// const Handlebars = require("handlebars");
   // data={
   //   list:[
   //     {name:'Apatinsko'},
@@ -380,7 +381,7 @@ const Handlebars = require("handlebars");
   // var template = Handlebars.compile(source);
   // var filled = template(data);
   // document.querySelector('.galleryGallery').innerHTML = filled;
-
+console.log(Handlebars)
   var source = document.getElementById("entry-template").innerHTML;
   var template = Handlebars.compile(source);
 
