@@ -14,6 +14,35 @@
 </head>
 
 <body>
+  <!-- <script  id="entry-template" type="text/x-handlebars-template">
+
+    {{#each list}}
+  <div class="galleryItem">
+    <div class="imgAndPrice">
+
+      <div class="img">
+        <i class="fa-solid fa-link"></i>
+      </div>
+      <div class="galleryItemPrice">$195.00</div>
+    </div>
+    <div class="galleryItemContent">
+      Add to cart
+    </div>
+  </div>
+  {{/each}}
+  </script> -->
+
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>{{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+</script>
+
+  
+
   <header>
     <div class="container-fluid primaryHeader">
       <div class="row">
@@ -171,7 +200,8 @@
           </div>
         </div>
         <div class="galleryGallery">
-          <div class="galleryItem">
+          
+          <!-- <div class="galleryItem">
             <div class="imgAndPrice">
 
               <div class="img">
@@ -266,19 +296,7 @@
             <div class="galleryItemContent">
               Add to cart
             </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
+          </div> -->
 
         </div>
         <div class="bottomNavGallery d-flex py-5 justify-content-center" onclick="addClass()">
@@ -348,5 +366,26 @@
   </footer>
 
 <script src="./script/paginationGallery.js"></script>
-<script src="./script/sticky.js"></script>
+<script>
+const Handlebars = require("handlebars");
+  // data={
+  //   list:[
+  //     {name:'Apatinsko'},
+  //     {name:'Apatinsko'},
+  //     {name:'Apatinsko'},
+  //     {name:'Apatinsko'},
+  //   ]
+  // }
+  // var source = document.getElementById("entry-template").innerHTML;
+  // var template = Handlebars.compile(source);
+  // var filled = template(data);
+  // document.querySelector('.galleryGallery').innerHTML = filled;
+
+  var source = document.getElementById("entry-template").innerHTML;
+  var template = Handlebars.compile(source);
+
+  var context = { title: "My New Post", body: "This is my first post!" };
+  var html = template(context);
+</script>
+
 </html>
