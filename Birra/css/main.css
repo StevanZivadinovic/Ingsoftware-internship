@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap");
+header {
+  z-index: 1;
+}
+
 .primaryHeader {
   background-color: rgb(68, 50, 44);
 }
@@ -58,6 +62,9 @@
 .middleHeader {
   background-color: #BF431F;
   height: 8.25rem;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 .middleHeader .row .mainContainMidlleHeader {
   width: 80%;
@@ -71,13 +78,13 @@
 .middleHeader .row .mainContainMidlleHeader nav {
   width: 67rem;
 }
-.middleHeader .row .mainContainMidlleHeader nav ul {
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   padding: none;
 }
-.middleHeader .row .mainContainMidlleHeader nav ul li {
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi {
   width: 100%;
   height: 100%;
   height: 8.25rem;
@@ -92,33 +99,50 @@
   padding: 0 1.5rem;
   position: relative;
 }
-.middleHeader .row .mainContainMidlleHeader nav ul li:hover {
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi:hover {
   background-color: #793319;
   cursor: pointer;
   color: #e1a03a;
 }
-.middleHeader .row .mainContainMidlleHeader nav ul li:hover ul {
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi:hover ul.sub {
   display: flex;
   flex-direction: column;
   opacity: 1;
   top: 83px;
   transition: all 0.5s ease;
 }
-.middleHeader .row .mainContainMidlleHeader nav ul li ul {
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul {
   background-color: #793319;
   position: absolute;
   width: 25rem;
   top: 163px;
   opacity: 0;
   left: 0px;
+  pointer-events: none;
 }
-.middleHeader .row .mainContainMidlleHeader nav ul li ul li {
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi {
+  list-style-type: none;
   height: auto;
   text-align: left;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.3rem;
-  color: "";
+  color: #F1E8CE;
   font-weight: 800;
+  position: relative;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi:hover {
+  background-color: #793319;
+  cursor: pointer;
+  color: #e1a03a;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi:hover .subSub {
+  opacity: 1;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi .subSub {
+  position: absolute;
+  top: 0;
+  left: -112%;
+  opacity: 0;
 }
 
 .bottomHeader {
@@ -159,6 +183,7 @@
 
 .bigImageSection {
   background-color: #F4E8CE;
+  z-index: 2;
 }
 .bigImageSection .mainContentBigImageSection {
   height: 80vh;

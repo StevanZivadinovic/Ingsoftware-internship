@@ -1,9 +1,13 @@
 @use './../mixins';
 @use './../variables';
 
+header{
+    z-index: 1;
+}
+
 .primaryHeader{
     background-color: rgb(68,50,44);
-  
+    
     .row{
     .mainContent{
         width: 80%;
@@ -69,6 +73,9 @@
 .middleHeader{
     background-color: #BF431F;
     height: 8.25rem;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
     .row{
         
         .mainContainMidlleHeader{
@@ -82,13 +89,17 @@
                
             }
             nav{
+               
                 width: 67rem;
-                ul{
+                ul.mainUl{
                     list-style-type: none;
                     display: flex;
                     justify-content: space-around;
                     padding: none;
-                    li{
+                    
+
+                    li.mainLi{
+                        
                         width: 100%;
                         height: 100%;
                         height: 8.25rem;
@@ -108,7 +119,8 @@
                             cursor: pointer;
                             color: #e1a03a;
                         }
-                        &:hover ul{
+                        &:hover ul.sub{
+                            
                             display: flex;
                             flex-direction: column;
                             opacity: 1;
@@ -116,19 +128,46 @@
                             transition: all .5s ease;
                         }
                         ul{
+                            
                             background-color: #793319;
                             position: absolute;
                             width: 25rem;
                             top: 163px;
                             opacity: 0;
                             left: 0px;
+                            pointer-events: none;
                             
                             
-                            li{
+                            
+                            li.subLi{
+                              
+                                list-style-type: none;
                                 height: auto;
                                 text-align: left;
-                                @include mixins.setTextPara(variables.$fira, 1.3rem, '');
+                                @include mixins.setTextPara(variables.$fira, 1.3rem, #F1E8CE);
                                 font-weight: 800;
+                                position: relative;
+                                
+                                &:hover{
+                                    background-color: #793319;
+                                    cursor: pointer;
+                                    color: #e1a03a;
+                                }
+
+                                &:hover .subSub{
+                                    opacity: 1;
+                                }
+                                
+                                .subSub{
+                                    position: absolute;
+                                    top: 0;
+                                    left:-112%;
+                                    opacity: 0;
+                                    
+                                    
+                                }
+
+
 
                             }
                         }
