@@ -20,7 +20,7 @@ function style(){ //v4
 exports.style = style;
 
 gulp.task('watch', function(){ //v3 gulp
-  gulp.watch('./style/**/*.scss', gulp.series('style')); //ovo style u gulp.series() je funkcija style() definisana iznad
+  gulp.watch('./style/**/*.scss', gulp.series('style')); //this style in gulp.series() is funkction style() define above
   // Other watchers
 })
 
