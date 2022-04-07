@@ -59,7 +59,7 @@
   background-color: #BF431F;
   height: 8.25rem;
   position: sticky;
-  top: 0px;
+  top: -1px;
   z-index: 1;
 }
 .middleHeader .row .mainContainMidlleHeader {
