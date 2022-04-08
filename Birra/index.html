@@ -12,6 +12,7 @@
   <title>Products - Brewery & pub</title>
   <script src="https://kit.fontawesome.com/8203228926.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
 </head>
 
 <body>
@@ -26,16 +27,13 @@
       </div>
       <div class="galleryItemPrice">{{galleryItemPrice}}</div>
     </div>
-    <div class="galleryItemContent">
+    <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#myFirstModal">
      {{buttonText}}
-    </div>
+    </button>
+   
   </div>
   {{/each}}
   </script>
-
-
-
-  
 
   <header>
     <div class="container-fluid primaryHeader">
@@ -194,104 +192,6 @@
           </div>
         </div>
         <div class="galleryGallery">
-          
-          <!-- <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div>
-          <div class="galleryItem">
-            <div class="imgAndPrice">
-
-              <div class="img">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div class="galleryItemPrice">$195.00</div>
-            </div>
-            <div class="galleryItemContent">
-              Add to cart
-            </div>
-          </div> -->
-
         </div>
         <div class="bottomNavGallery d-flex py-5 justify-content-center" onclick="addClass()">
             <div><a class="paginationLink currentlyClicked" >1</a></div>
@@ -359,8 +259,44 @@
     <div class="bottom"><p><span>AncoraThemes</span> © 2022. All rights reserved. <span>Terms of Use</span> and <span>Privacy Policy</span></p></div>
   </footer>
 
+    <!-- Modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script src="./script/paginationGallery.js"></script>
-<script src="./script/handlebarsPluginSet.js">
+<script src="./script/handlebarsPluginSet.js"></script>
+<script>
+  // document.querySelectorAll('.galleryItemContent').forEach(a=>{
+  //   a.addEventListener('click',e=>{
+  //     document.querySelector('#myFirstModal').style.
+  //   })
+  // })
+
 </script>
+  
+</body>
 
 </html>

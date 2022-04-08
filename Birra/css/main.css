@@ -184,6 +184,10 @@
   cursor: pointer;
 }
 
+#myFirstModal {
+  z-index: 999999;
+}
+
 .bigImageSection {
   background-color: #F4E8CE;
   z-index: 2;
@@ -347,7 +351,6 @@
   background-image: url("./../../assets/beer.png");
   height: 38rem;
   transition: all 0.3s ease;
-  position: relative;
   display: flex;
   justify-content: end;
   flex-direction: column;
@@ -386,6 +389,9 @@
   text-transform: uppercase;
   font-weight: 700;
   transition: all 0.3s ease;
+  width: 100%;
+  outline: none;
+  border: none;
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItemContent:hover {
   background-color: #CC6626;

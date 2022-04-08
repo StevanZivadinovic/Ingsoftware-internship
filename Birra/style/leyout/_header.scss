@@ -1,10 +1,6 @@
 @use './../mixins';
 @use './../variables';
 
-// header{
-//     z-index: 1;
-// }
-
 .primaryHeader{
     background-color: rgb(68,50,44);
     
@@ -218,4 +214,8 @@
             }
         }
     }
+}
+
+#myFirstModal{
+    z-index: 999999;
 }

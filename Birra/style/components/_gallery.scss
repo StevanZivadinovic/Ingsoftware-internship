@@ -110,7 +110,7 @@
                background-image: url('./../../assets/beer.png');
                height: 38rem;
                transition: all .3s ease;
-               position: relative;
+              //  position: relative;
                display: flex;
                justify-content: end;
                flex-direction: column;
@@ -140,7 +140,7 @@
                font-weight: 800;
                padding-bottom: 2rem;
                
-  
+   
               
              }
            }
@@ -154,6 +154,9 @@
                   text-transform: uppercase;
                   font-weight: 700;
                   transition: all .3s ease;
+                  width: 100%;
+                  outline: none;
+                  border: none;
 
                   &:hover{
                       background-color: #CC6626;
