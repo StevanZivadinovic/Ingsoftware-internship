@@ -285,21 +285,40 @@
 
 
 <!-- Modal bigger -->
-<div class="modal fade" id="myBiggerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog d-flex">
+<div class="modal fade " id="myBiggerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog d-flex" style="max-width: 38%; min-width: 60rem">
     
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title mx-auto text-center" id="exampleModalLabel">AB:07</h3>
+        <h3 class="modal-title" id="exampleModalLabel">AB:07</h3>
         <p>Whisky Cask-Aged Scotch Ale.</p>
       </div>
-      <div class="modal-body text-center mx-auto">
-        <h3>AB:07</h3>
-        <span>Quantity: </span><input type="text" class="border-bottom border-0 border-dark w-25">
+      <div class="modal-body w-100">
+          <div class="firstBody d-flex flex-column">
+            <p><span>With us since: </span> 03/2010</p>
+            <p>Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways.
+            Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.
+            </p>
+          </div>
+
+          <div class="secondBody">
+            <p><span>It goes great with: </span></p>
+            <p>Kedgeree, Scotch broth with sourdough bread, Clootie dumpling
+            </p>
+          </div>
+
       </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn text-center mx-auto smallModalBtn rounded-0" data-bs-dismiss="modal">Buy!</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      <div class="modal-footer d-flex">
+        <div class="firstFooter d-flex flex-column">
+          <p><span>Abv: </span></p>
+          <p>12.5
+          </p>
+        </div>
+
+        <div class="secondFooter">
+          <p><span>And our tip: </span>Authetic heather honey adds a beautiful floral top note that is unachievable any other way.</p>
+         
+        </div>
       </div>
     </div>
     <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal" aria-label="Close"></button>

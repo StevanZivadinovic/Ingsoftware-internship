@@ -60,3 +60,55 @@
         }
 }
 }
+
+#myBiggerModal{
+    .modal-dialog{
+        .modal-content{
+            .modal-header{
+                h3{
+                    @include mixins.setTextPara(variables.$rail, 2rem, #bf431f);
+                    text-transform: uppercase;
+                    font-weight: 900;
+                }
+                p{
+                    @include mixins.setTextPara(variables.$fira, 1.2rem, #bf431f);
+                    font-style: italic;
+                    // font-weight: 900;
+                    margin: 0;
+                    
+                }
+            }
+
+            .modal-body{
+                .firstBody, .secondBody{
+                    p{
+                        @include mixins.setTextPara(variables.$fira, 1.2rem, '');                     
+
+                        span{
+                            @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
+        
+                            }
+                    }
+                }
+            }
+
+            .modal-footer{
+                display: flex;
+               .firstFooter, .secondFooter{
+                   width: 13%;
+                   p{
+                    @include mixins.setTextPara(variables.$fira, 1.2rem, '');
+                    margin: 0;
+                       span{
+                        @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
+                        font-weight: 900;
+                       }
+                   }
+               }
+               .secondFooter{
+                   width: 83%;
+               }
+            }
+        }
+    }
+}
