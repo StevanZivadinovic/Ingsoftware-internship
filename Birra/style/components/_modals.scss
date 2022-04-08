@@ -1,0 +1,62 @@
+@use './../mixins';
+@use './../variables';
+
+// @include mixins.setTextPara(variables.$alegria, 2.1rem, #e1a03a);
+//D57F2C
+
+.modal{
+
+    &-dialog{
+        background-color: transparent;
+        padding: 2rem 3rem;   
+        
+
+        .modal-content{
+            background-color: #e3cfab;
+
+            .modal-header{
+                h5{
+                    @include mixins.setTextPara(variables.$fira, 2.2rem, '');
+                }
+            }
+
+            .modal-body{
+                width: 35%;
+                h3{
+                    @include mixins.setTextPara(variables.$fira, 2rem, #bf431f);
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+                span{
+                    @include mixins.setTextPara(variables.$fira, 1.4rem, #bf431f);
+                    font-weight: 700;
+                }
+                input{
+                    background-color: transparent;
+                    
+                    transition: all .3s ease;
+                    &:focus{
+                        outline: none;
+                        border: none;
+                        border-bottom: solid .2rem #bf431f !important;
+                    }
+                }
+            }
+            .smallModalBtn{
+                background-color: #d57f2c;
+                @include mixins.setTextPara(variables.$alegria, 1.4rem, #e3cfab);
+                font-weight: 400;
+                
+            }
+        }
+
+        .btn-close, .buttonClose{
+            color: white;
+            opacity: 1;
+            padding-left: 5rem;
+            @include mixins.setTextPara(variables.$alegria, 1rem, #e3cfab);
+            font-weight: 900;
+            
+        }
+}
+}

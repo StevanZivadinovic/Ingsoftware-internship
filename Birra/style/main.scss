@@ -2,6 +2,7 @@
 @use './components/bigImageSection';
 @use './components/gallery';
 @use './components/footer';
+@use './components/modals';
 
 
 @use './mixins';
@@ -9,6 +10,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 
 *{

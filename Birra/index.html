@@ -24,7 +24,8 @@
     <div class="imgAndPrice">
 
       <div class="img">
-        <i class="fa-solid fa-link"></i>
+        
+        <i class="fa-solid fa-link" data-bs-toggle="modal" data-bs-target="#myBiggerModal"></i>
       </div>
       <div class="galleryItemPrice">{{galleryItemPrice}}</div>
     </div>
@@ -261,22 +262,47 @@
   </footer>
 
 
-<!-- Modal -->
+<!-- Modal small -->
 <div class="modal fade" id="myFirstModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog d-flex">
+    
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title mx-auto text-center" id="exampleModalLabel">My cart</h5>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body text-center mx-auto">
+        <h3>AB:07</h3>
+        <span>Quantity: </span><input type="text" class="border-bottom border-0 border-dark w-25">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn text-center mx-auto smallModalBtn rounded-0" data-bs-dismiss="modal">Buy!</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
+    <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+</div>
+
+
+<!-- Modal bigger -->
+<div class="modal fade" id="myBiggerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog d-flex">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title mx-auto text-center" id="exampleModalLabel">AB:07</h3>
+        <p>Whisky Cask-Aged Scotch Ale.</p>
+      </div>
+      <div class="modal-body text-center mx-auto">
+        <h3>AB:07</h3>
+        <span>Quantity: </span><input type="text" class="border-bottom border-0 border-dark w-25">
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn text-center mx-auto smallModalBtn rounded-0" data-bs-dismiss="modal">Buy!</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+    <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
 </div>
 

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 .primaryHeader {
   background-color: rgb(68, 50, 44);
 }
@@ -544,6 +545,60 @@ footer .bottom p, footer .bottom span {
 }
 footer .bottom span {
   color: #f4e8ce;
+}
+
+.modal-dialog {
+  background-color: transparent;
+  padding: 2rem 3rem;
+}
+.modal-dialog .modal-content {
+  background-color: #e3cfab;
+}
+.modal-dialog .modal-content .modal-header h5 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.2rem;
+  color: "";
+}
+.modal-dialog .modal-content .modal-body {
+  width: 35%;
+}
+.modal-dialog .modal-content .modal-body h3 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2rem;
+  color: #bf431f;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.modal-dialog .modal-content .modal-body span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #bf431f;
+  font-weight: 700;
+}
+.modal-dialog .modal-content .modal-body input {
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.modal-dialog .modal-content .modal-body input:focus {
+  outline: none;
+  border: none;
+  border-bottom: solid 0.2rem #bf431f !important;
+}
+.modal-dialog .modal-content .smallModalBtn {
+  background-color: #d57f2c;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #e3cfab;
+  font-weight: 400;
+}
+.modal-dialog .btn-close, .modal-dialog .buttonClose {
+  color: white;
+  opacity: 1;
+  padding-left: 5rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1rem;
+  color: #e3cfab;
+  font-weight: 900;
 }
 
 * {
