@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <!-- <script  id="entry-template" type="text/x-handlebars-template">
+  <script  id="entry-template" type="text/x-handlebars-template">
 
     {{#each list}}
   <div class="galleryItem">
@@ -24,23 +24,16 @@
       <div class="img">
         <i class="fa-solid fa-link"></i>
       </div>
-      <div class="galleryItemPrice">$195.00</div>
+      <div class="galleryItemPrice">{{galleryItemPrice}}</div>
     </div>
     <div class="galleryItemContent">
-      Add to cart
+     {{buttonText}}
     </div>
   </div>
   {{/each}}
-  </script> -->
+  </script>
 
-<script id="entry-template" type="text/x-handlebars-template">
-  <div class="entry">
-    <h1>{{title}}</h1>
-    <div class="body">
-      {{body}}
-    </div>
-  </div>
-</script>
+
 
   
 
@@ -367,26 +360,7 @@
   </footer>
 
 <script src="./script/paginationGallery.js"></script>
-<script>
-// const Handlebars = require("handlebars");
-  // data={
-  //   list:[
-  //     {name:'Apatinsko'},
-  //     {name:'Apatinsko'},
-  //     {name:'Apatinsko'},
-  //     {name:'Apatinsko'},
-  //   ]
-  // }
-  // var source = document.getElementById("entry-template").innerHTML;
-  // var template = Handlebars.compile(source);
-  // var filled = template(data);
-  // document.querySelector('.galleryGallery').innerHTML = filled;
-console.log(Handlebars)
-  var source = document.getElementById("entry-template").innerHTML;
-  var template = Handlebars.compile(source);
-
-  var context = { title: "My New Post", body: "This is my first post!" };
-  var html = template(context);
+<script src="./script/handlebarsPluginSet.js">
 </script>
 
 </html>
