@@ -1,6 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.pageUpButton {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: #BF431F;
+  text-align: center;
+  line-height: 4rem;
+  color: #E3CFAB;
+}
+
 .primaryHeader {
   background-color: rgb(68, 50, 44);
 }
@@ -503,6 +515,9 @@ footer .top .topLinks ul li a, footer .top .topBlog ul li a, footer .top .topCon
   font-size: 1.4rem;
   color: #f4e8ce;
   text-decoration: none;
+}
+footer .top .topBlog {
+  padding-right: 3rem;
 }
 footer .top .topBlog ul {
   padding: 0;

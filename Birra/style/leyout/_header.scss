@@ -1,6 +1,18 @@
 @use './../mixins';
 @use './../variables';
 
+.pageUpButton{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    height: 4rem;
+    width: 4rem;
+    background-color: #BF431F;
+    text-align: center;
+    line-height: 4rem;
+    color: #E3CFAB;
+}
+
 .primaryHeader{
     background-color: rgb(68,50,44);
     

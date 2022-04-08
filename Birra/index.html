@@ -17,6 +17,10 @@
 </head>
 
 <body>
+
+  <div class="pageUpButton">
+    <i class="fa-solid fa-chevron-up"></i>
+  </div>
   <script  id="entry-template" type="text/x-handlebars-template">
 
     {{#each list}}
@@ -46,7 +50,7 @@
           <div class=" workTime">
             Monday - Saturday: 11am to midnight
           </div>
-          <div class="cart">Your cart: 0 items</div>
+          <div class="cart"> <i class="fa-solid fa-cart-shopping" style="padding-right: .5rem;"></i> Your cart: 0 items</div>
           <div class=" social d-flex flex-column">
             <div class="mainSocial d-flex">
               <div class="twitter aweosmeIcon d-flex flex-column justify-content-center">
@@ -196,7 +200,7 @@
         <div class="galleryGallery">
         </div>
         <div class="bottomNavGallery d-flex py-5 justify-content-center" onclick="addClass()">
-            <div><a class="paginationLink currentlyClicked" >1</a></div>
+            <div  class="mx-1"><a class="paginationLink currentlyClicked" >1</a></div>
             <div><a class="paginationLink">2</a></div>
             <div><i class="fa-solid fa-chevron-right"></i></div>
             <div><i class="fa-solid fa-chevron-right"></i></div>
