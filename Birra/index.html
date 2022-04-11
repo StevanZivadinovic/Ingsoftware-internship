@@ -22,13 +22,12 @@
     <i class="fa-solid fa-chevron-up"></i>
   </div>
   <script  id="entry-template" type="text/x-handlebars-template">
-
     {{#each list}}
   <div class="galleryItem">
     <div class="imgAndPrice">
 
-      <div class="img">
-        
+      <div class="img" style="background-image: url({{imgLink}});">
+
         <i class="fa-solid fa-link" data-bs-toggle="modal" data-bs-target="#myBiggerModal"></i>
       </div>
       <div class="galleryItemPrice">{{galleryItemPrice}}</div>
@@ -199,7 +198,7 @@
         </div>
         <div class="galleryGallery">
         </div>
-        <div class="bottomNavGallery d-flex py-5 justify-content-center" onclick="addClass()">
+        <div class="bottomNavGallery d-flex py-5 justify-content-center" onclick="addClassNameToPaginationButton()">
             <div  class="mx-1"><a class="paginationLink currentlyClicked" >1</a></div>
             <div><a class="paginationLink">2</a></div>
             <div><i class="fa-solid fa-chevron-right"></i></div>

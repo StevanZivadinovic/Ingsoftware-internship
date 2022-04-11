@@ -106,8 +106,9 @@
           }
              .img{
                background-position: center;
-               background-size: cover;
-               background-image: url('./../../assets/beer.png');
+               background-size: contain;
+               background-repeat: no-repeat;
+              //  background-image: url('./../../assets/beer.png'); 
                height: 38rem;
                transition: all .3s ease;
               //  position: relative;
@@ -138,7 +139,7 @@
                
                @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
                font-weight: 800;
-               padding-bottom: 2rem;
+               padding: 1rem 0;
                
    
               
