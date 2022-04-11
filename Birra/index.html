@@ -8,12 +8,14 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="./css/main.css">
   <title>Products - Brewery & pub</title>
-  
-  
+
+
 </head>
 
 <body>
@@ -21,7 +23,7 @@
   <div class="pageUpButton">
     <i class="fa-solid fa-chevron-up"></i>
   </div>
-  <script  id="entry-template" type="text/x-handlebars-template">
+  <script id="entry-template" type="text/x-handlebars-template">
     {{#each list}}
   <div class="galleryItem">
     <div class="imgAndPrice">
@@ -30,11 +32,18 @@
 
         <i class="fa-solid fa-link" data-bs-toggle="modal" data-bs-target="#myBiggerModal"></i>
       </div>
-      <div class="galleryItemPrice">{{galleryItemPrice}}</div>
+      <div class="galleryItemPriceFirst">{{galleryItemPrice}}</div>
     </div>
-    <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#myFirstModal">
-     {{buttonText}}
-    </button>
+
+    <div class="galleryCardSecondColumn">
+      <div class="galleryItemPriceFirst" style="display: none;">{{galleryItemPrice}}</div>
+      <p class="cardText" style="display: none;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic fugit ipsum voluptatum at mollitia 
+        ea quos assumenda, blanditiis necessitatibus porro distinctio harum corrupti sed dignissimos eligendi,
+         expedita commodi reiciendis. Ab!</p>
+      <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#myFirstModal">
+       {{buttonText}}
+      </button>
+    </div>
    
   </div>
   {{/each}}
@@ -49,7 +58,8 @@
           <div class=" workTime">
             Monday - Saturday: 11am to midnight
           </div>
-          <div class="cart"> <i class="fa-solid fa-cart-shopping" style="padding-right: .5rem;"></i> Your cart: 0 items</div>
+          <div class="cart"> <i class="fa-solid fa-cart-shopping" style="padding-right: .5rem;"></i> Your cart: 0 items
+          </div>
           <div class=" social d-flex flex-column">
             <div class="mainSocial d-flex">
               <div class="twitter aweosmeIcon d-flex flex-column justify-content-center">
@@ -101,14 +111,15 @@
                 <li class="subLi">Shop</li>
                 <li class="subLi d-flex justify-content-between">Gallery
                   <span><i class="fa-solid fa-chevron-right"></i></span>
-                
+
                   <ul class="px-3 py-4 subSub">
                     <li class="subLi">Home1</li>
                     <li class="subLi">Home2 boxed</li>
                     <li class="subLi">Home3</lmainLii>
                   </ul>
                 </li>
-                <li class="subLi d-flex justify-content-between">Pages <span><i class="fa-solid fa-chevron-right"></i></span>
+                <li class="subLi d-flex justify-content-between">Pages <span><i
+                      class="fa-solid fa-chevron-right"></i></span>
                   <ul class="px-3 py-4 subSub">
                     <li class="subLi">Home1</li>
                     <li class="subLi">Home2 boxed</li>
@@ -187,7 +198,7 @@
             <div>Showing 1-9 of 10 results</div>
           </div>
           <div class="navGalleryRight">
-            <select class="sorting" onchange="sorting(type)">
+            <select class="sorting">
               <option value="Show 10">Show 10</option>
               <option value="Show 20">Show 20</option>
               <option value="Show all">Show all</option>
@@ -199,10 +210,10 @@
         <div class="galleryGallery">
         </div>
         <div class="bottomNavGallery d-flex py-5 justify-content-center" onclick="addClassNameToPaginationButton()">
-            <div  class="mx-1"><a class="paginationLink currentlyClicked" >1</a></div>
-            <div><a class="paginationLink">2</a></div>
-            <div><i class="fa-solid fa-chevron-right"></i></div>
-            <div><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="mx-1"><a class="paginationLink currentlyClicked">1</a></div>
+          <div><a class="paginationLink">2</a></div>
+          <div><i class="fa-solid fa-chevron-right"></i></div>
+          <div><i class="fa-solid fa-chevron-right"></i></div>
         </div>
       </div>
     </div>
@@ -215,7 +226,7 @@
           <img src="./assets/logo2.png" alt="" srcset="">
         </div>
         <p>We are the first modern day brewery. Our success has
-           been built through the development of quality beers.
+          been built through the development of quality beers.
         </p>
         <div class=" social d-flex flex-column">
           <div class="mainSocial d-flex">
@@ -261,46 +272,52 @@
       </div>
 
     </div>
-    <div class="bottom"><p><span>AncoraThemes</span> © 2022. All rights reserved. <span>Terms of Use</span> and <span>Privacy Policy</span></p></div>
+    <div class="bottom">
+      <p><span>AncoraThemes</span> © 2022. All rights reserved. <span>Terms of Use</span> and <span>Privacy
+          Policy</span></p>
+    </div>
   </footer>
 
 
-<!-- Modal small -->
-<div class="modal fade" id="myFirstModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog d-flex">
-    
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title mx-auto text-center" id="exampleModalLabel">My cart</h5>
+  <!-- Modal small -->
+  <div class="modal fade" id="myFirstModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title mx-auto text-center" id="exampleModalLabel">My cart</h5>
+        </div>
+        <div class="modal-body text-center mx-auto">
+          <h3>AB:07</h3>
+          <span>Quantity: </span><input type="text" class="border-bottom border-0 border-dark w-25">
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn text-center mx-auto smallModalBtn rounded-0"
+            data-bs-dismiss="modal">Buy!</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
       </div>
-      <div class="modal-body text-center mx-auto">
-        <h3>AB:07</h3>
-        <span>Quantity: </span><input type="text" class="border-bottom border-0 border-dark w-25">
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn text-center mx-auto smallModalBtn rounded-0" data-bs-dismiss="modal">Buy!</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
+      <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal"
+        aria-label="Close"></button>
     </div>
-    <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
-</div>
 
 
-<!-- Modal bigger -->
-<div class="modal fade " id="myBiggerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog d-flex" style="max-width: 38%; min-width: 60rem">
-    
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">AB:07</h3>
-        <p>Whisky Cask-Aged Scotch Ale.</p>
-      </div>
-      <div class="modal-body w-100">
+  <!-- Modal bigger -->
+  <div class="modal fade " id="myBiggerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex" style="max-width: 38%; min-width: 60rem">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">AB:07</h3>
+          <p>Whisky Cask-Aged Scotch Ale.</p>
+        </div>
+        <div class="modal-body w-100">
           <div class="firstBody d-flex flex-column">
             <p><span>With us since: </span> 03/2010</p>
             <p>Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways.
-            Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the Scottish chill.
+              Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the
+              Scottish chill.
             </p>
           </div>
 
@@ -310,39 +327,44 @@
             </p>
           </div>
 
-      </div>
-      <div class="modal-footer d-flex">
-        <div class="firstFooter d-flex flex-column">
-          <p><span>Abv: </span></p>
-          <p>12.5
-          </p>
         </div>
+        <div class="modal-footer d-flex">
+          <div class="firstFooter d-flex flex-column">
+            <p><span>Abv: </span></p>
+            <p>12.5
+            </p>
+          </div>
 
-        <div class="secondFooter">
-          <p><span>And our tip: </span>Authetic heather honey adds a beautiful floral top note that is unachievable any other way.</p>
-         
+          <div class="secondFooter">
+            <p><span>And our tip: </span>Authetic heather honey adds a beautiful floral top note that is unachievable
+              any other way.</p>
+
+          </div>
         </div>
       </div>
+      <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal"
+        aria-label="Close"></button>
     </div>
-    <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
-</div>
 
 
 
-<script src="./script/paginationGallery.js"></script>
-<script src="./script/handlebarsPluginSet.js"></script>
-<script src="./script/pageUpButton.js"></script>
-<script>
+  <script src="./script/paginationGallery.js"></script>
+  <script src="./script/handlebarsPluginSet.js"></script>
+  <script src="./script/pageUpButton.js"></script>
+  <script src="./script/gallerySortingStyle.js"></script>
+  <script>
   // document.querySelectorAll('.galleryItemContent').forEach(a=>{
   //   a.addEventListener('click',e=>{
   //     document.querySelector('#myFirstModal').style.
   //   })
   // })
 
-</script>
-<script src="https://kit.fontawesome.com/8203228926.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </script>
+  <script src="https://kit.fontawesome.com/8203228926.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

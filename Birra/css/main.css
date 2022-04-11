@@ -386,7 +386,7 @@
   background-color: transparent;
   cursor: pointer;
 }
-.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPrice {
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPriceFirst, .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPriceSecond {
   text-align: center;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.3rem;
@@ -412,6 +412,10 @@
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItemContent:hover {
   background-color: #CC6626;
   cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .listGallery {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 48rem);
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div {
   font-family: "Alegreya Sans", sans-serif;

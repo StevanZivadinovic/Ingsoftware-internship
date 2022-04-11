@@ -91,7 +91,7 @@
           }
         }
       }
-
+      
       .galleryGallery{
           gap: 2rem;
           display: grid;
@@ -134,9 +134,8 @@
                    cursor: pointer;
                }
              }
-             .galleryItemPrice{
+             .galleryItemPriceFirst, .galleryItemPriceSecond{
                text-align: center;
-               
                @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
                font-weight: 800;
                padding: 1rem 0;
@@ -165,6 +164,13 @@
                   }
               }
           }
+      }
+      .listGallery{
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(3,48rem);
+        // .galleryItem{
+        //   display: flex;
+        // }
       }
       .bottomNavGallery{
         div{
