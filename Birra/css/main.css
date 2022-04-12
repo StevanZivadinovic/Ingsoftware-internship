@@ -337,7 +337,7 @@
   margin-bottom: 5.6rem;
 }
 .gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select:hover {
-  border: 0.1rem solid #CF6F2C;
+  border: 0.1rem solid #cf6f2c;
 }
 .gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select:focus {
   outline: none;
@@ -355,7 +355,7 @@
   grid-template-rows: repeat(3, 48rem);
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice {
-  background-color: #E3CFAB;
+  background-color: #e3cfab;
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice:hover {
   background-color: transparent;
@@ -386,7 +386,15 @@
   background-color: transparent;
   cursor: pointer;
 }
-.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPriceFirst, .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPriceSecond {
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPriceFirst {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #bf431f;
+  font-weight: 800;
+  padding: 1rem 0;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
   text-align: center;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.3rem;
@@ -396,7 +404,7 @@
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItemContent {
   height: 6rem;
-  background-color: #D57F2C;
+  background-color: #d57f2c;
   text-align: center;
   line-height: 6rem;
   font-family: "Alegreya Sans", sans-serif;
@@ -410,33 +418,63 @@
   border: none;
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItemContent:hover {
-  background-color: #CC6626;
+  background-color: #cc6626;
   cursor: pointer;
 }
 .gallerySection .mainGallerySection .gallery .listGallery {
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 48rem);
+  grid-template-rows: repeat(3, 36.5rem);
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem {
+  display: flex;
+  background-color: #E3CFAB;
+  align-items: center;
+  justify-content: space-between;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .imgAndPrice {
+  max-height: 36.5rem;
+  width: 30%;
+  background-color: #E3CFAB;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .imgAndPrice .img {
+  max-height: 32rem;
+  background-size: contain;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn {
+  width: 65%;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardName {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 3.4rem;
+  color: #793319;
+  font-weight: 700;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 700;
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div {
   font-family: "Alegreya Sans", sans-serif;
   font-size: 2.1rem;
-  color: #BF431F;
+  color: #bf431f;
   cursor: pointer;
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div a {
   font-family: "Alegreya Sans", sans-serif;
   font-size: 2.1rem;
-  color: #BF431F;
+  color: #bf431f;
   text-decoration: none;
   padding: 0.735rem 1.26rem;
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div a:hover {
-  background-color: #BF431F;
-  color: #F4E8CE;
+  background-color: #bf431f;
+  color: #f4e8ce;
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div .currentlyClicked {
-  background-color: #BF431F;
-  color: #F4E8CE;
+  background-color: #bf431f;
+  color: #f4e8ce;
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div i {
   padding: 0.735rem 1.26rem;

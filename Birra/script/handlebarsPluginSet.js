@@ -15,10 +15,12 @@ fetch("https://api.punkapi.com/v2/beers?per_page=10")
     beers = [...data];
 
     beers.forEach((a) => {
+   
       context.list.push({
         buttonText: "Add to Cart",
         galleryItemPrice: `${a.attenuation_level}$`,
         imgLink: a.image_url,
+        name:a.name
       });
       var html = template(context);
       document.querySelector(".galleryGallery").innerHTML = html;
@@ -83,7 +85,7 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
 
   if (selectValue == "Show all") {
     context.list = [];
-    fetch("https://api.punkapi.com/v2/beers?per_page=80")
+    fetch("https://api.punkapi.com/v2/beers?per_page=35")
       .then((data) => {
         return data.json();
       })

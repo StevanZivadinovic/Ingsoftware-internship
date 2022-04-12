@@ -1,7 +1,6 @@
 @use "./../mixins";
 @use "./../variables";
 
-
 .gallerySection {
   background-color: #f4e8ce;
   z-index: -1;
@@ -55,8 +54,8 @@
               color: #bf431f;
               font-size: 2.4rem;
               cursor: pointer;
-              &:hover{
-                  color: #793319;
+              &:hover {
+                color: #793319;
               }
             }
           }
@@ -77,134 +76,169 @@
             padding: 1.3rem 2.6rem;
             border-radius: 0.3rem;
             margin-bottom: 5.6rem;
-            &:hover{
-                border: 0.1rem solid #CF6F2C;
+            &:hover {
+              border: 0.1rem solid #cf6f2c;
             }
-            &:focus{
-                outline: none;
+            &:focus {
+              outline: none;
             }
             option {
               @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
               background-color: #f4e8ce;
-
             }
           }
         }
       }
-      
-      .galleryGallery{
-          gap: 2rem;
-          display: grid;
-          grid-template-columns: auto auto auto;
-          grid-template-rows: repeat(3,48rem);
-          .galleryItem{
-           .imgAndPrice{
-             background-color: #E3CFAB;
-             &:hover{
+
+      .galleryGallery {
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: repeat(3, 48rem);
+        .galleryItem {
+          .imgAndPrice {
+            background-color: #e3cfab;
+            &:hover {
               background-color: transparent;
               cursor: pointer;
-          }
-             .img{
-               background-position: center;
-               background-size: contain;
-               background-repeat: no-repeat;
-              //  background-image: url('./../../assets/beer.png'); 
-               height: 38rem;
-               transition: all .3s ease;
+            }
+            .img {
+              background-position: center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              //  background-image: url('./../../assets/beer.png');
+              height: 38rem;
+              transition: all 0.3s ease;
               //  position: relative;
-               display: flex;
-               justify-content: end;
-               flex-direction: column;
-               text-align: center;
-               
-               &:hover i{
-                 transition: all .5s ease;
-                 opacity: 1;
-                 transform: translateY(-20rem);
-               }
-  
-               
-               i{
-                 font-size: 3rem;
-                 color: #ffffff;
-                 opacity: 0;
-               }
-               &:hover{
-                   background-color: transparent;
-                   cursor: pointer;
-               }
-             }
-             .galleryItemPriceFirst, .galleryItemPriceSecond{
-               text-align: center;
-               @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
-               font-weight: 800;
-               padding: 1rem 0;
-               
-   
-              
-             }
-           }
+              display: flex;
+              justify-content: end;
+              flex-direction: column;
+              text-align: center;
 
-              &Content{
-                  height: 6rem;
-                  background-color: #D57F2C;
-                  text-align: center;
-                  line-height: 6rem;
-                  @include mixins.setTextPara(variables.$alegria, 1.7rem, #f4e8ce);
-                  text-transform: uppercase;
-                  font-weight: 700;
-                  transition: all .3s ease;
-                  width: 100%;
-                  outline: none;
-                  border: none;
-
-                  &:hover{
-                      background-color: #CC6626;
-                      cursor: pointer;
-                  }
+              &:hover i {
+                transition: all 0.5s ease;
+                opacity: 1;
+                transform: translateY(-20rem);
               }
+
+              i {
+                font-size: 3rem;
+                color: #ffffff;
+                opacity: 0;
+              }
+              &:hover {
+                background-color: transparent;
+                cursor: pointer;
+              }
+            }
+            .galleryItemPriceFirst {
+              text-align: center;
+              @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
+              font-weight: 800;
+              padding: 1rem 0;
+            }
           }
-      }
-      .listGallery{
-        grid-template-columns:1fr;
-        grid-template-rows: repeat(3,48rem);
-        // .galleryItem{
-        //   display: flex;
-        // }
-      }
-      .bottomNavGallery{
-        div{
-          @include mixins.setTextPara(variables.$alegria, 2.1rem, #BF431F);
-          cursor: pointer;
-          a{
-            @include mixins.setTextPara(variables.$alegria, 2.1rem, #BF431F);
-            text-decoration: none;
-            padding: .735rem 1.26rem;
+
+          .galleryCardSecondColumn{
             
-            &:hover{
-              background-color:#BF431F;
-              color: #F4E8CE;
+            .galleryItemPriceSecond{
+              
+              text-align: center;
+              @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
+              font-weight: 800;
+              padding: 1rem 0;
             }
           }
-          .currentlyClicked{
-            background-color:#BF431F;
-            color: #F4E8CE;
-          }
-          i{
-            padding: .735rem 1.26rem;
-            font-size: 1.5rem;
 
-            &:hover{
-              color: #793319;
+          &Content {
+            height: 6rem;
+            background-color: #d57f2c;
+            text-align: center;
+            line-height: 6rem;
+            @include mixins.setTextPara(variables.$alegria, 1.7rem, #f4e8ce);
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            width: 100%;
+            outline: none;
+            border: none;
+
+            &:hover {
+              background-color: #cc6626;
+              cursor: pointer;
             }
-
-          }
-          &:nth-child(3){
-              margin-left: 1.26rem;
           }
         }
 
+        // .galleryListGallery{
+        //   display: flex;
+        //   height: 15rem;
+         
+        // }
+      }
+      .listGallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 36.5rem);
+        .galleryItem{
+          display: flex;
+          background-color: #E3CFAB;
+          align-items: center;
+          justify-content: space-between;
+          .imgAndPrice{
+            max-height: 36.5rem;
+            width: 30%;
+            background-color: #E3CFAB;
+           
+            .img{
+              max-height: 32rem;
+              background-size: contain;
+              
+            }
+          }
 
+          .galleryCardSecondColumn{
+            width: 65%;
+            .cardName{
+              @include mixins.setTextPara(variables.$alegria, 3.4rem, #793319);
+              font-weight: 700;
+            }
+            p{
+              @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
+              font-weight: 700;
+            }
+          }
+        }
+      }
+      .bottomNavGallery {
+        div {
+          @include mixins.setTextPara(variables.$alegria, 2.1rem, #bf431f);
+          cursor: pointer;
+          a {
+            @include mixins.setTextPara(variables.$alegria, 2.1rem, #bf431f);
+            text-decoration: none;
+            padding: 0.735rem 1.26rem;
+
+            &:hover {
+              background-color: #bf431f;
+              color: #f4e8ce;
+            }
+          }
+          .currentlyClicked {
+            background-color: #bf431f;
+            color: #f4e8ce;
+          }
+          i {
+            padding: 0.735rem 1.26rem;
+            font-size: 1.5rem;
+
+            &:hover {
+              color: #793319;
+            }
+          }
+          &:nth-child(3) {
+            margin-left: 1.26rem;
+          }
+        }
       }
     }
   }
