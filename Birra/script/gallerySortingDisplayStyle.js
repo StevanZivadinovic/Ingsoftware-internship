@@ -22,3 +22,4 @@ document.querySelector('.grid').addEventListener('click',e=>{
     });
    
 })
+

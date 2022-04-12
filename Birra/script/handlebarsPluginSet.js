@@ -133,4 +133,3 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
   }
 });
 
-let sorting = () => {};
