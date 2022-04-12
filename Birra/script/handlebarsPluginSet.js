@@ -15,12 +15,13 @@ fetch("https://api.punkapi.com/v2/beers?per_page=10")
     beers = [...data];
 
     beers.forEach((a) => {
-   
+   console.log(a);
       context.list.push({
         buttonText: "Add to Cart",
         galleryItemPrice: `$${a.attenuation_level}`,
         imgLink: a.image_url,
-        name:a.name
+        name:a.name,
+        textAboutBeer:a.description
       });
       var html = template(context);
       document.querySelector(".galleryGallery").innerHTML = html;
@@ -43,7 +44,7 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
 
     document.querySelectorAll('.galleryItemPriceFirst').forEach(a => {
       a.style.display = 'none';
-  });
+  }, 100);
 
     }
     else{
@@ -54,7 +55,7 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
       a.style.display = 'block';
   });
     }
-  },50)
+  },100)
   
   if (selectValue == "Show 10") {
     fetch("https://api.punkapi.com/v2/beers?per_page=10")
@@ -69,7 +70,8 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
             buttonText: "Add to Cart",
             galleryItemPrice: `$${a.attenuation_level}`,
             imgLink: a.image_url,
-            name:a.name
+            name:a.name,
+            textAboutBeer:a.description
           });
           var html = template(context);
           document.querySelector(".galleryGallery").innerHTML = html;
@@ -95,11 +97,12 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
             buttonText: "Add to Cart",
             galleryItemPrice: `$${a.attenuation_level}`,
             imgLink: a.image_url,
-            name:a.name
+            name:a.name,
+            textAboutBeer:a.description
           });
           var html = template(context);
-
-          document.querySelector(".galleryGallery").innerHTML = html;
+            document.querySelector(".galleryGallery").innerHTML = html;
+        
         });
       })
       .catch((err) => {
@@ -121,7 +124,8 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
             buttonText: "Add to Cart",
             galleryItemPrice: `$${a.attenuation_level}`,
             imgLink: a.image_url,
-            name:a.name
+            name:a.name,
+            textAboutBeer:a.description
           });
           var html = template(context);
           document.querySelector(".galleryGallery").innerHTML = html;
