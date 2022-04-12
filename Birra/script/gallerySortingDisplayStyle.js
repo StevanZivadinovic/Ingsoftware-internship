@@ -5,15 +5,9 @@ document.querySelector('.list').addEventListener('click',e=>{
     document.querySelectorAll('.galleryItemPriceFirst').forEach(a=>{
         a.style.display = 'none';
     })
-    document.querySelectorAll('.galleryItemPriceSecond').forEach(a=>{
+    document.querySelectorAll('.galleryItemPriceSecond, .cardText, .cardName' ).forEach(a=>{
         a.style.display = 'block'
     })
-    document.querySelectorAll('.cardText').forEach(a => {
-        a.style.display = 'block';
-    });
-    document.querySelectorAll('.cardName').forEach(a => {
-        a.style.display = 'block';
-    });
 });
 
 
@@ -23,13 +17,8 @@ document.querySelector('.grid').addEventListener('click',e=>{
     document.querySelectorAll('.galleryItemPriceFirst').forEach(a=>{
         a.style.display = 'block';
     })
-    document.querySelectorAll('.galleryItemPriceSecond').forEach(a=>{
+    document.querySelectorAll('.galleryItemPriceSecond, .cardText, .cardName' ).forEach(a=>{
         a.style.display = 'none'
     });
-    document.querySelectorAll('.cardText').forEach(a => {
-        a.style.display = 'none';
-    });
-    document.querySelectorAll('.cardName').forEach(a => {
-        a.style.display = 'none';
-    });
+   
 })

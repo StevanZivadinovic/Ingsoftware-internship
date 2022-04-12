@@ -443,9 +443,6 @@
 }
 .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn {
   width: 65%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardName {
   font-family: "Alegreya Sans", sans-serif;
@@ -460,7 +457,7 @@
   color: #44322c;
   font-weight: 700;
   padding-right: 2.8rem;
-  margin-bottom: 2.1rem;
+  margin-bottom: 1rem;
 }
 .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
   text-align: left;
@@ -468,10 +465,10 @@
   font-size: 1.4rem;
   color: #44322c;
   font-weight: 700;
-  margin-bottom: 2.1rem;
+  margin-bottom: 1rem;
 }
 .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent {
-  margin-bottom: 1.7rem;
+  margin-bottom: 8rem;
   display: inline-block;
   min-width: 35%;
   max-width: 20rem;
