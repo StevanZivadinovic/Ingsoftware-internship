@@ -644,14 +644,15 @@ footer .bottom span {
   color: "";
 }
 .modal-dialog .modal-content .modal-body {
-  width: 35%;
+  width: 70%;
 }
 .modal-dialog .modal-content .modal-body h3 {
   font-family: "Fira Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #bf431f;
   text-transform: uppercase;
   font-weight: 700;
+  width: 100%;
 }
 .modal-dialog .modal-content .modal-body span {
   font-family: "Fira Sans", sans-serif;
@@ -685,50 +686,48 @@ footer .bottom span {
   font-weight: 900;
 }
 
-#myBiggerModal .modal-dialog .modal-content .modal-header h3 {
+.myBiggerModal .modal-dialog .modal-content .modal-header h3 {
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
   color: #bf431f;
   text-transform: uppercase;
   font-weight: 900;
 }
-#myBiggerModal .modal-dialog .modal-content .modal-header p {
+.myBiggerModal .modal-dialog .modal-content .modal-header p {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.2rem;
   color: #bf431f;
   font-style: italic;
   margin: 0;
 }
-#myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p, #myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p {
+.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p, .myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.2rem;
   color: "";
 }
-#myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p span, #myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p span {
+.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p span, .myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p span {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   color: #bf431f;
 }
-#myBiggerModal .modal-dialog .modal-content .modal-footer {
+.myBiggerModal .modal-dialog .modal-content .modal-footer {
   display: flex;
+  justify-content: space-between;
 }
-#myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter, #myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter {
-  width: 13%;
-}
-#myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p, #myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p {
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p, .myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.2rem;
   color: "";
   margin: 0;
 }
-#myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p span, #myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p span {
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p span, .myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p span {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   color: #bf431f;
   font-weight: 900;
 }
-#myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter {
-  width: 83%;
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter .firstFooter, .myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter .firstFooter {
+  width: 13%;
 }
 
 * {

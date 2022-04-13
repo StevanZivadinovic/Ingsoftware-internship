@@ -18,14 +18,20 @@ let fetchingForSorting = (dataPerPage)=>{
   .then((data) => {
     beers = [...data];
 
-    beers.forEach((a) => {
-  //  console.log(a);
+    beers.forEach((a, i) => {
+   console.log(a);
       context.list.push({
         buttonText: "Add to Cart",
         galleryItemPrice: `$${a.attenuation_level}`,
         imgLink: a.image_url,
         name:a.name,
-        textAboutBeer:a.description
+        textAboutBeer:a.description,
+        id1:`id1${a.id}`,
+        id2:`id2${a.id}`,
+        food:a.food_pairing,
+        withUs:a.first_brewed,
+        tips:a.brewers_tips,
+        abv:a.abv
       });
       var html = template(context);
       document.querySelector(".galleryGallery").innerHTML = html;
@@ -53,7 +59,13 @@ let paginationFetching = (pageNumber, dataPerPage) =>{
             galleryItemPrice: `$${a.attenuation_level}`,
             imgLink: a.image_url,
             name:a.name,
-            textAboutBeer:a.description
+            textAboutBeer:a.description,
+            id1:`id${a.id}`,
+            id2:`id2${a.id}`,
+            food:a.food_pairing,
+            withUs:a.first_brewed,
+            tips:a.brewers_tips,
+            abv:a.abv
           });
           var html = template(context);
           document.querySelector(".galleryGallery").innerHTML = html;
@@ -64,17 +76,9 @@ let paginationFetching = (pageNumber, dataPerPage) =>{
       });
 }
 
+//toggle style
 
-
-
-//default api call
-
-fetchingForSorting(10);
-
-//sorting api
-document.querySelector(".sorting").addEventListener("change", (e) => {
-  let selectValue = document.querySelector(".sorting").value;
-  context.list = [];
+let toggleStyle = ()=>{
   setTimeout(()=>{
     if(document.querySelector('.galleryGallery').classList.contains('listGallery')){
       console.log('haj');
@@ -96,6 +100,20 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
   });
     }
   },100)
+}
+
+
+
+
+//default api call
+
+fetchingForSorting(10);
+
+//sorting api
+document.querySelector(".sorting").addEventListener("change", (e) => {
+  let selectValue = document.querySelector(".sorting").value;
+  context.list = [];
+  toggleStyle();
   
   if (selectValue == "Show 10") {
    fetchingForSorting(10);
@@ -114,21 +132,23 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
 //pagination fetch 
 document.querySelectorAll('.paginationLink').forEach((a,i)=>{
   a.addEventListener('click',e=>{
+    toggleStyle();
     let selectValue = document.querySelector(".sorting").value;
    console.log(selectValue);
    
   if(selectValue=='Show 10'){
     console.log('okinuto 20');
-    
+    toggleStyle();
     paginationFetching(i+1, 10)
   }
   if(selectValue=='Show 20'){
     console.log('okinuto 20');
-   
+    toggleStyle();
     paginationFetching(i+1, 20)
   }
  if(selectValue=='Show all'){
   console.log('okinuto all');
+  toggleStyle();
   paginationFetching(i+1, 35)
   }
  })

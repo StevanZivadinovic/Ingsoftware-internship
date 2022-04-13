@@ -21,11 +21,12 @@
             }
 
             .modal-body{
-                width: 35%;
+                width: 70%;
                 h3{
-                    @include mixins.setTextPara(variables.$fira, 2rem, #bf431f);
+                    @include mixins.setTextPara(variables.$fira, 1.6rem, #bf431f);
                     text-transform: uppercase;
                     font-weight: 700;
+                    width: 100%;
                 }
                 span{
                     @include mixins.setTextPara(variables.$fira, 1.4rem, #bf431f);
@@ -56,12 +57,12 @@
             padding-left: 5rem;
             @include mixins.setTextPara(variables.$alegria, 1rem, #e3cfab);
             font-weight: 900;
-            
+
         }
 }
 }
 
-#myBiggerModal{
+.myBiggerModal{
     .modal-dialog{
         .modal-content{
             .modal-header{
@@ -94,21 +95,40 @@
 
             .modal-footer{
                 display: flex;
+                justify-content: space-between;  
                .firstFooter, .secondFooter{
-                   width: 13%;
+                
                    p{
                     @include mixins.setTextPara(variables.$fira, 1.2rem, '');
                     margin: 0;
-                       span{
+                    span{
                         @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
                         font-weight: 900;
-                       }
-                   }
-               }
-               .secondFooter{
-                   width: 83%;
-               }
+                    }
+                }
+                .firstFooter{
+                    width: 13%;
+                }
+                // #secondFooter{
+                //     width: 80%;
+                // }
+                // .secondFooter{   
+                //     width: 80%;
+                //     display: flex;
+                //     p{
+                //     width: 80%;
+
+                //         @include mixins.setTextPara(variables.$fira, 1.2rem, '');
+                //         margin: 0;
+                //         span{
+                //             @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
+                //             font-weight: 900;
+                //         }
+                //     }
+                   
+                // }
             }
+        }
         }
     }
 }

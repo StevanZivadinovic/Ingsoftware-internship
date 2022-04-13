@@ -30,7 +30,7 @@
 
       <div class="img" style="background-image: url({{imgLink}});">
 
-        <i class="fa-solid fa-link" data-bs-toggle="modal" data-bs-target="#myBiggerModal"></i>
+        <i class="fa-solid fa-link" data-bs-toggle="modal" data-bs-target="#{{id2}}"></i>
       </div>
       <div class="galleryItemPriceFirst">{{galleryItemPrice}}</div>
     </div>
@@ -39,7 +39,7 @@
       <h3 class="cardName" style="display: none;">{{name}}</h3>
       <p class="cardText" style="display: none;">{{textAboutBeer}}</p>
         <div class="galleryItemPriceSecond" style="display: none;">{{galleryItemPrice}}</div>
-      <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#myFirstModal">
+      <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#{{id1}}">
        {{buttonText}}
       </button>
     </div>
@@ -47,7 +47,8 @@
   </div>
   
   <!-- Modal small -->
-  <div class="modal fade" id="myFirstModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- id cannot contain spaces in bootstrap modal -->
+  <div class="modal fade" id="{{id1}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
    <div class="modal-dialog d-flex">
   
      <div class="modal-content">
@@ -69,6 +70,48 @@
    </div>
   </div>
   <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+
+
+  <!-- Modal bigger -->
+  <div class="modal fade myBiggerModal" id="{{id2}}"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex" style="max-width: 38%; min-width: 60rem">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">{{name}}</h3>
+          <p>Whisky Cask-Aged Scotch Ale.</p>
+        </div>
+        <div class="modal-body w-100">
+          <div class="firstBody d-flex flex-column">
+            <p><span>With us since: </span> {{withUs}}</p>
+            <p>{{textAboutBeer}}
+            </p>
+          </div>
+
+          <div class="secondBody">
+            <p><span>It goes great with: </span></p>
+            <p>{{food}}
+            </p>
+          </div>
+
+        </div>
+        <div class="modal-footer d-flex">
+          <div class="firstFooter d-flex flex-column">
+            <p><span>Abv: </span></p>
+            <p>{{abv}}
+            </p>
+          </div>
+
+          <div class="secondFooter" id="secondFooter" style="width: 85%;">
+            <p><span>And our tip: </span>{{tips}}</p>
+
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal"
+        aria-label="Close"></button>
+    </div>
+  </div>
   {{/each}}
 </script>
 
@@ -303,51 +346,8 @@
   </footer>
 
 
- 
 
-  <!-- Modal bigger -->
-  <div class="modal fade " id="myBiggerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog d-flex" style="max-width: 38%; min-width: 60rem">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="exampleModalLabel">AB:07</h3>
-          <p>Whisky Cask-Aged Scotch Ale.</p>
-        </div>
-        <div class="modal-body w-100">
-          <div class="firstBody d-flex flex-column">
-            <p><span>With us since: </span> 03/2010</p>
-            <p>Whisky cask-aged imperial scotch ale. Beer perfect for when the rain is coming sideways.
-              Liquorice, plum and raisin temper the warming alcohol, producing a beer capable of holding back the
-              Scottish chill.
-            </p>
-          </div>
-
-          <div class="secondBody">
-            <p><span>It goes great with: </span></p>
-            <p>Kedgeree, Scotch broth with sourdough bread, Clootie dumpling
-            </p>
-          </div>
-
-        </div>
-        <div class="modal-footer d-flex">
-          <div class="firstFooter d-flex flex-column">
-            <p><span>Abv: </span></p>
-            <p>12.5
-            </p>
-          </div>
-
-          <div class="secondFooter">
-            <p><span>And our tip: </span>Authetic heather honey adds a beautiful floral top note that is unachievable
-              any other way.</p>
-
-          </div>
-        </div>
-      </div>
-      <button type="button" class="btn btn-close buttonClose btn-close-white fw-900" data-bs-dismiss="modal"
-        aria-label="Close"></button>
-    </div>
-  </div>
+  
 
 
 

@@ -12,75 +12,40 @@ function addClassNameToPaginationButton() {
     })
   }
 
-
+let linksStyle = (link1, link2, link3, leftChevron, rightChevron)=>{
+  setTimeout(()=>{
+    document.querySelector('.link1').style.display = link1;
+    document.querySelector('.link2').style.display = link2;
+    document.querySelector('.link3').style.display = link3;
+  document.querySelectorAll('.firstChevronLeft, .secondChevronLeft').forEach(a=>{
+    a.style.display = leftChevron
+  })
+  document.querySelectorAll('.firstChevronRight, .secondChevronRight').forEach(a=>{
+    a.style.display = rightChevron
+  })
+},100)
+}
 
 Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>{
   // console.log(a,i);
   a.addEventListener('click',e=>{
     if(e.target.classList.contains('firstChevronRight')){
-      document.querySelector('.link1').style.display = 'none';
-      document.querySelector('.link2').style.display = 'inline';
-      document.querySelector('.link3').style.display = 'inline';
-      setTimeout(()=>{
-      document.querySelectorAll('.firstChevronLeft, .secondChevronLeft').forEach(a=>{
-        a.style.display = 'inline'
-      })
-      document.querySelectorAll('.firstChevronRight, .secondChevronRight').forEach(a=>{
-        a.style.display = 'none'
-      })
-    },100)
+      linksStyle('none', 'inline', 'inline', 'inline', 'none');
 
     }
     if(e.target.classList.contains('firstChevronLeft')){
-    
-      setTimeout(()=>{
-        document.querySelector('.link1').style.display = 'inline';
-      document.querySelector('.link2').style.display = 'inline';
-      document.querySelector('.link3').style.display = 'none';
-      document.querySelectorAll('.firstChevronLeft, .secondChevronLeft').forEach(a=>{
-        a.style.display = 'none'
-      })
-      document.querySelectorAll('.firstChevronRight, .secondChevronRight').forEach(a=>{
-        a.style.display = 'inline'
-      })
-    },100)
+      linksStyle('inline', 'inline', 'none', 'none', 'inline');
     
     }
 
     if(e.target.classList.contains('secondChevronRight')){
-      document.querySelector('.link1').style.display = 'none';
-      document.querySelector('.link2').style.display = 'inline';
-      document.querySelector('.link3').style.display = 'inline';
-      setTimeout(()=>{
-
-        document.querySelectorAll('.firstChevronLeft, .secondChevronLeft').forEach(a=>{
-          a.style.display = 'inline'
-        })
-        document.querySelectorAll('.firstChevronRight, .secondChevronRight').forEach(a=>{
-          a.style.display = 'none'
-        });
-        document.querySelector('.link1').classList.remove('currentlyClicked');
-        document.querySelector('.link3').classList.add('currentlyClicked');
-      },100)
+      linksStyle('none', 'inline', 'inline', 'inline', 'none');
 
     }
 
     if(e.target.classList.contains('secondChevronLeft')){
-      document.querySelector('.link1').style.display = 'inline';
-      document.querySelector('.link2').style.display = 'inline';
-      document.querySelector('.link3').style.display = 'none';
-      setTimeout(()=>{
-      document.querySelectorAll('.firstChevronLeft, .secondChevronLeft').forEach(a=>{
-        a.style.display = 'none'
-      })
-      document.querySelectorAll('.firstChevronRight, .secondChevronRight').forEach(a=>{
-        a.style.display = 'inline'
-      });
-      document.querySelector('.link1').classList.add('currentlyClicked');
-      document.querySelector('.link3').classList.remove('currentlyClicked');
-    },100)
-
-
+      linksStyle('inline', 'inline', 'none', 'none', 'inline');
+     
     }
   })
 })
