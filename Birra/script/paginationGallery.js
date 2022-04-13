@@ -30,6 +30,9 @@ let linksStyle = (link1, link2, link3, leftChevron, rightChevron, link4)=>{
 Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>{
   // console.log(a,i);
   a.addEventListener('click',e=>{
+    if(e.target.tagName=='A'){
+      e.target.classList.add('currentlyClicked');
+    }
     if(e.target.classList.contains('firstChevronRight')){
       linksStyle('none', 'none', 'inline', 'inline', 'none', 'inline');
 
