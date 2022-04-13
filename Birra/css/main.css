@@ -352,7 +352,7 @@
   gap: 2rem;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: repeat(3, 48rem);
+  grid-template-rows: repeat(1, 48rem);
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice {
   background-color: #e3cfab;
@@ -423,7 +423,7 @@
 }
 .gallerySection .mainGallerySection .gallery .listGallery {
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 36.5rem);
+  grid-template-rows: repeat(1, 36.5rem);
 }
 .gallerySection .mainGallerySection .gallery .listGallery .galleryItem {
   display: flex;
@@ -507,7 +507,7 @@
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div i:hover {
   color: #793319;
 }
-.gallerySection .mainGallerySection .gallery .bottomNavGallery div:nth-child(4) {
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div:nth-child(5) {
   margin-left: 1.26rem;
 }
 

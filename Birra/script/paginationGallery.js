@@ -12,11 +12,12 @@ function addClassNameToPaginationButton() {
     })
   }
 
-let linksStyle = (link1, link2, link3, leftChevron, rightChevron)=>{
+let linksStyle = (link1, link2, link3, leftChevron, rightChevron, link4)=>{
   setTimeout(()=>{
     document.querySelector('.link1').style.display = link1;
     document.querySelector('.link2').style.display = link2;
     document.querySelector('.link3').style.display = link3;
+    document.querySelector('.link4').style.display = link4;
   document.querySelectorAll('.firstChevronLeft, .secondChevronLeft').forEach(a=>{
     a.style.display = leftChevron
   })
@@ -30,21 +31,21 @@ Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>
   // console.log(a,i);
   a.addEventListener('click',e=>{
     if(e.target.classList.contains('firstChevronRight')){
-      linksStyle('none', 'inline', 'inline', 'inline', 'none');
+      linksStyle('none', 'none', 'inline', 'inline', 'none', 'inline');
 
     }
     if(e.target.classList.contains('firstChevronLeft')){
-      linksStyle('inline', 'inline', 'none', 'none', 'inline');
+      linksStyle('inline', 'inline', 'none', 'none', 'inline','none');
     
     }
 
     if(e.target.classList.contains('secondChevronRight')){
-      linksStyle('none', 'inline', 'inline', 'inline', 'none');
+      linksStyle('none', 'none', 'inline', 'inline', 'none', 'inline');
 
     }
 
     if(e.target.classList.contains('secondChevronLeft')){
-      linksStyle('inline', 'inline', 'none', 'none', 'inline');
+      linksStyle('inline', 'inline', 'none', 'none', 'inline', 'none');
      
     }
   })

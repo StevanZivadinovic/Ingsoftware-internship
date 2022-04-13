@@ -94,7 +94,7 @@
         gap: 2rem;
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-template-rows: repeat(3, 48rem);
+        grid-template-rows: repeat(1, 48rem);
         .galleryItem {
           .imgAndPrice {
             background-color: #e3cfab;
@@ -178,7 +178,7 @@
       }
       .listGallery {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 36.5rem);
+        grid-template-rows: repeat(1, 36.5rem);
         .galleryItem{
           display: flex;
           background-color: #E3CFAB;
@@ -262,7 +262,7 @@
               color: #793319;
             }
           }
-          &:nth-child(4) {
+          &:nth-child(5) {
             margin-left: 1.26rem;
           }
         }
