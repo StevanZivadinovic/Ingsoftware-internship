@@ -34,35 +34,30 @@ let toggleStyle = ()=>{
   },300)
 }
 
-//default fetch function for sorting data
 
-let fetchingForSorting = (dataPerPage)=>{
-  context.list = [];
-  fetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`)
-  .then((data) => {
+
+//mainCodeInFetch
+let mainCodeFetch=(main)=>{
+  fetch(main).then((data) => {
     return data.json();
   })
   .then((data) => {
     beers = [...data];
-
-    beers.forEach((a, i) => {
-   console.log(i);
-  
-
-     context.list.push({
-       buttonText: "Add to Cart",
-       galleryItemPrice: `$${a.attenuation_level}`,
-       imgLink: a.image_url,
-       name:a.name,
-       textAboutBeer:a.description,
-       id1:`id1${a.id}`,
-       id2:`id2${a.id}`,
-       food:a.food_pairing,
-       withUs:a.first_brewed,
-       tips:a.brewers_tips,
-       abv:a.abv
-     });
-     toggleStyle();
+    beers.forEach((a) => {
+      context.list.push({
+        buttonText: "Add to Cart",
+        galleryItemPrice: `$${a.attenuation_level}`,
+        imgLink: a.image_url,
+        name:a.name,
+        textAboutBeer:a.description,
+        id1:`id${a.id}`,
+        id2:`id2${a.id}`,
+        food:a.food_pairing,
+        withUs:a.first_brewed,
+        tips:a.brewers_tips,
+        abv:a.abv
+      });
+      toggleStyle();
       var html = template(context);
       document.querySelector(".galleryGallery").innerHTML = html;
     });
@@ -72,39 +67,20 @@ let fetchingForSorting = (dataPerPage)=>{
   });
 }
 
+
+
+//default fetch function for sorting data
+
+let fetchingForSorting = (dataPerPage)=>{
+  context.list = [];
+mainCodeFetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`)
+}
+
 //default fetch function for pagination fetching
 
 let paginationFetching = (pageNumber, dataPerPage) =>{
   context.list = [];
-  fetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}`)
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        beers = [...data];
-
-        beers.forEach((a) => {
-          context.list.push({
-            buttonText: "Add to Cart",
-            galleryItemPrice: `$${a.attenuation_level}`,
-            imgLink: a.image_url,
-            name:a.name,
-            textAboutBeer:a.description,
-            id1:`id${a.id}`,
-            id2:`id2${a.id}`,
-            food:a.food_pairing,
-            withUs:a.first_brewed,
-            tips:a.brewers_tips,
-            abv:a.abv
-          });
-          toggleStyle();
-          var html = template(context);
-          document.querySelector(".galleryGallery").innerHTML = html;
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}`)
 }
 
 
@@ -124,7 +100,7 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
   if (selectValue == "Show 10") {
     fetchingForSorting(10);
  
-   document.querySelectorAll('.link1, .link3, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
+   document.querySelectorAll('.link1, .link2, .firstChevronRight, .secondChevronRight').forEach(a=>{
     a.style.display = 'inline';
   });
   }
@@ -132,7 +108,7 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
   if (selectValue == "Show 20") {
     fetchingForSorting(20);
     
-    document.querySelectorAll('.link3, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
+    document.querySelectorAll('.link3, .link4, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
       a.style.display = 'none';
     });
       document.querySelector('.link1').style.display = 'inline';
@@ -195,18 +171,18 @@ Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>
     let selectValue = document.querySelector(".sorting").value;
     if(e.target.classList.contains('secondChevronRight')){
       if(selectValue=='Show 10'){
-        paginationFetching(3, 10);
+        paginationFetching(4, 5);
        
       }
 
-      if(selectValue=='Show 20'){
-        paginationFetching(3, 20)
-      }
+      // if(selectValue=='Show 20'){
+      //   paginationFetching(3, 20)
+      // }
 
-      if(selectValue=='Show all'){
-        paginationFetching(3, 35);
+      // if(selectValue=='Show all'){
+      //   paginationFetching(3, 35);
        
-      }
+      // }
     }
 
 
