@@ -9,8 +9,9 @@ var context = {
 
 //default fetch function for sorting data
 
-let fetchingForSorting = ()=>{
-  fetch("https://api.punkapi.com/v2/beers?per_page=10")
+let fetchingForSorting = (dataPerPage)=>{
+  context.list = [];
+  fetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`)
   .then((data) => {
     return data.json();
   })
@@ -35,31 +36,40 @@ let fetchingForSorting = ()=>{
   });
 }
 
+//default fetch function for pagination fetching
+
+let paginationFetching = (pageNumber, dataPerPage) =>{
+  context.list = [];
+  fetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}`)
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        beers = [...data];
+
+        beers.forEach((a) => {
+          context.list.push({
+            buttonText: "Add to Cart",
+            galleryItemPrice: `$${a.attenuation_level}`,
+            imgLink: a.image_url,
+            name:a.name,
+            textAboutBeer:a.description
+          });
+          var html = template(context);
+          document.querySelector(".galleryGallery").innerHTML = html;
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+}
+
+
+
+
 //default api call
 
-fetch("https://api.punkapi.com/v2/beers?per_page=10")
-  .then((data) => {
-    return data.json();
-  })
-  .then((data) => {
-    beers = [...data];
-
-    beers.forEach((a) => {
-  //  console.log(a);
-      context.list.push({
-        buttonText: "Add to Cart",
-        galleryItemPrice: `$${a.attenuation_level}`,
-        imgLink: a.image_url,
-        name:a.name,
-        textAboutBeer:a.description
-      });
-      var html = template(context);
-      document.querySelector(".galleryGallery").innerHTML = html;
-    });
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+fetchingForSorting(10);
 
 //sorting api
 document.querySelector(".sorting").addEventListener("change", (e) => {
@@ -88,82 +98,15 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
   },100)
   
   if (selectValue == "Show 10") {
-    fetch("https://api.punkapi.com/v2/beers?per_page=10")
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        beers = [...data];
-
-        beers.forEach((a) => {
-          context.list.push({
-            buttonText: "Add to Cart",
-            galleryItemPrice: `$${a.attenuation_level}`,
-            imgLink: a.image_url,
-            name:a.name,
-            textAboutBeer:a.description
-          });
-          var html = template(context);
-          document.querySelector(".galleryGallery").innerHTML = html;
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+   fetchingForSorting(10);
   }
 
   if (selectValue == "Show 20") {
-    context.list = [];
-    console.log("opet fetch");
-    fetch("https://api.punkapi.com/v2/beers?per_page=20")
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        beers = [...data];
-
-        beers.forEach((a) => {
-          context.list.push({
-            buttonText: "Add to Cart",
-            galleryItemPrice: `$${a.attenuation_level}`,
-            imgLink: a.image_url,
-            name:a.name,
-            textAboutBeer:a.description
-          });
-          var html = template(context);
-            document.querySelector(".galleryGallery").innerHTML = html;
-        
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    fetchingForSorting(20);
   }
 
   if (selectValue == "Show all") {
-    context.list = [];
-    fetch("https://api.punkapi.com/v2/beers?per_page=35")
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        beers = [...data];
-
-        beers.forEach((a) => {
-          context.list.push({
-            buttonText: "Add to Cart",
-            galleryItemPrice: `$${a.attenuation_level}`,
-            imgLink: a.image_url,
-            name:a.name,
-            textAboutBeer:a.description
-          });
-          var html = template(context);
-          document.querySelector(".galleryGallery").innerHTML = html;
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+   fetchingForSorting(35);
   }
 });
 
@@ -175,83 +118,18 @@ document.querySelectorAll('.paginationLink').forEach((a,i)=>{
    console.log(selectValue);
    
   if(selectValue=='Show 10'){
-    console.log('okinuto 10');
-    context.list = [];
-    console.log(i);
-    fetch(`https://api.punkapi.com/v2/beers?page=${i+1}&per_page=10`)
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        beers = [...data];
-
-        beers.forEach((a) => {
-          context.list.push({
-            buttonText: "Add to Cart",
-            galleryItemPrice: `$${a.attenuation_level}`,
-            imgLink: a.image_url,
-            name:a.name,
-            textAboutBeer:a.description
-          });
-          var html = template(context);
-          document.querySelector(".galleryGallery").innerHTML = html;
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    console.log('okinuto 20');
+    
+    paginationFetching(i+1, 10)
   }
   if(selectValue=='Show 20'){
     console.log('okinuto 20');
-    context.list = [];
-    fetch(`https://api.punkapi.com/v2/beers?page=${i+1}&per_page=20`)
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        beers = [...data];
-
-        beers.forEach((a) => {
-          context.list.push({
-            buttonText: "Add to Cart",
-            galleryItemPrice: `$${a.attenuation_level}`,
-            imgLink: a.image_url,
-            name:a.name,
-            textAboutBeer:a.description
-          });
-          var html = template(context);
-          document.querySelector(".galleryGallery").innerHTML = html;
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+   
+    paginationFetching(i+1, 20)
   }
  if(selectValue=='Show all'){
   console.log('okinuto all');
-    context.list = [];
-    fetch(`https://api.punkapi.com/v2/beers?page=${i+1}&per_page=35`)
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        beers = [...data];
-
-        beers.forEach((a) => {
-          context.list.push({
-            buttonText: "Add to Cart",
-            galleryItemPrice: `$${a.attenuation_level}`,
-            imgLink: a.image_url,
-            name:a.name,
-            textAboutBeer:a.description
-          });
-          var html = template(context);
-          document.querySelector(".galleryGallery").innerHTML = html;
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  paginationFetching(i+1, 35)
   }
  })
 });
@@ -264,81 +142,30 @@ Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>
     let selectValue = document.querySelector(".sorting").value;
     if(e.target.classList.contains('secondChevronRight')){
       if(selectValue=='Show 10'){
-        context.list = [];
-        fetch(`https://api.punkapi.com/v2/beers?page=3&per_page=10`)
-          .then((data) => {
-            return data.json();
-          })
-          .then((data) => {
-            beers = [...data];
-    
-            beers.forEach((a) => {
-              context.list.push({
-                buttonText: "Add to Cart",
-                galleryItemPrice: `$${a.attenuation_level}`,
-                imgLink: a.image_url,
-                name:a.name,
-                textAboutBeer:a.description
-              });
-              var html = template(context);
-              document.querySelector(".galleryGallery").innerHTML = html;
-            });
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        paginationFetching(3, 10)
       }
 
       if(selectValue=='Show 20'){
-        context.list = [];
-        fetch(`https://api.punkapi.com/v2/beers?page=3&per_page=20`)
-          .then((data) => {
-            return data.json();
-          })
-          .then((data) => {
-            beers = [...data];
-    
-            beers.forEach((a) => {
-              context.list.push({
-                buttonText: "Add to Cart",
-                galleryItemPrice: `$${a.attenuation_level}`,
-                imgLink: a.image_url,
-                name:a.name,
-                textAboutBeer:a.description
-              });
-              var html = template(context);
-              document.querySelector(".galleryGallery").innerHTML = html;
-            });
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        paginationFetching(3, 20)
       }
 
       if(selectValue=='Show all'){
-        context.list = [];
-        fetch(`https://api.punkapi.com/v2/beers?page=3&per_page=35`)
-          .then((data) => {
-            return data.json();
-          })
-          .then((data) => {
-            beers = [...data];
-    
-            beers.forEach((a) => {
-              context.list.push({
-                buttonText: "Add to Cart",
-                galleryItemPrice: `$${a.attenuation_level}`,
-                imgLink: a.image_url,
-                name:a.name,
-                textAboutBeer:a.description
-              });
-              var html = template(context);
-              document.querySelector(".galleryGallery").innerHTML = html;
-            });
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        paginationFetching(3, 35);
+      }
+    }
+
+
+    if(e.target.classList.contains('secondChevronLeft')){
+      if(selectValue=='Show 10'){
+        paginationFetching(1, 10)
+      }
+
+      if(selectValue=='Show 20'){
+        paginationFetching(1, 20)
+      }
+
+      if(selectValue=='Show all'){
+        paginationFetching(1, 35);
       }
     }
   })
