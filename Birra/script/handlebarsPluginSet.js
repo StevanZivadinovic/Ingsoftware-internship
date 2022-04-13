@@ -39,6 +39,7 @@ let toggleStyle = ()=>{
 //mainCodeInFetch
 let mainCodeFetch=(main)=>{
   fetch(main).then((data) => {
+    document.querySelector('.waitDiv').style.display='flex';
     return data.json();
   })
   .then((data) => {
@@ -60,6 +61,8 @@ let mainCodeFetch=(main)=>{
       toggleStyle();
       var html = template(context);
       document.querySelector(".galleryGallery").innerHTML = html;
+      document.querySelector('.waitDiv').style.display='none';
+      
     });
   })
   .catch((err) => {
@@ -80,7 +83,7 @@ mainCodeFetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`)
 
 let paginationFetching = (pageNumber, dataPerPage) =>{
   context.list = [];
-mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}`)
+mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}-`)
 }
 
 
