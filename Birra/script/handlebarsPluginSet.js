@@ -1,3 +1,5 @@
+import { addToCart } from "./addToCart.js";
+
 let beers = [];
 var source = document.getElementById("entry-template").innerHTML;
 var template = Handlebars.compile(source);
@@ -7,13 +9,12 @@ var context = {
 
 
 
-
 //toggle style
 
 let toggleStyle = ()=>{
   setTimeout(()=>{
     if(document.querySelector('.galleryGallery').classList.contains('listGallery')){
-      console.log('haj');
+     
       document.querySelectorAll('.galleryItemPriceSecond, .cardText, .cardName' ).forEach(a=>{
         a.style.display = 'block'
     })
@@ -64,6 +65,7 @@ let mainCodeFetch=(main)=>{
       document.querySelector('.waitDivMain').style.display='none';
       
     });
+    addToCart();
   })
   .catch((err) => {
     console.log(err);
@@ -76,14 +78,16 @@ let mainCodeFetch=(main)=>{
 
 let fetchingForSorting = (dataPerPage)=>{
   context.list = [];
-mainCodeFetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`)
+mainCodeFetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`);
+
 }
 
 //default fetch function for pagination fetching
 
 let paginationFetching = (pageNumber, dataPerPage) =>{
   context.list = [];
-mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}-`)
+mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}`);
+
 }
 
 
@@ -93,16 +97,17 @@ mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${da
 //default api call
 
 fetchingForSorting(10, -1, 10);
+// addToCart();
 
 //sorting api
 document.querySelector(".sorting").addEventListener("change", (e) => {
   let selectValue = document.querySelector(".sorting").value;
-  // context.list = [];
-  // toggleStyle();
+ 
   
   if (selectValue == "Show 10") {
     fetchingForSorting(10);
- 
+    // addToCart();
+  
    document.querySelectorAll('.link1, .link2, .firstChevronRight, .secondChevronRight').forEach(a=>{
     a.style.display = 'inline';
   });
@@ -110,18 +115,18 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
 
   if (selectValue == "Show 20") {
     fetchingForSorting(20);
-    
+    // addToCart();
     document.querySelectorAll('.link3, .link4, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
       a.style.display = 'none';
     });
-      document.querySelector('.link1').style.display = 'inline';
+      document.querySelector('.link1, .link2').style.display = 'inline';
    
 
   }
 
   if (selectValue == "Show all") {
     fetchingForSorting(35);
-    
+    // addToCart();
    document.querySelectorAll('.link2, .link3, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
      a.style.display = 'none';
    })
@@ -133,8 +138,9 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
 document.querySelectorAll('.paginationLink').forEach((a,i)=>{
   a.addEventListener('click',e=>{
     toggleStyle();
+    addToCart();
     let selectValue = document.querySelector(".sorting").value;
-   console.log(selectValue);
+  //  console.log(selectValue);
    
   if(selectValue=='Show 10'){
     console.log('okinuto 10');
@@ -171,25 +177,27 @@ document.querySelectorAll('.paginationLink').forEach((a,i)=>{
 Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>{
   // console.log(a,i);
   a.addEventListener('click',e=>{
+    addToCart();
     let selectValue = document.querySelector(".sorting").value;
     if(e.target.classList.contains('secondChevronRight')){
+
+      setTimeout(()=>{
+        document.querySelector('.link4').classList.add('currentlyClicked');
+      },300);
+
       if(selectValue=='Show 10'){
         paginationFetching(4, 5);
+        
        
       }
 
-      // if(selectValue=='Show 20'){
-      //   paginationFetching(3, 20)
-      // }
-
-      // if(selectValue=='Show all'){
-      //   paginationFetching(3, 35);
-       
-      // }
     }
 
 
     if(e.target.classList.contains('secondChevronLeft')){
+      setTimeout(()=>{
+        document.querySelector('.link1').classList.add('currentlyClicked');
+      },300);
       if(selectValue=='Show 10'){
         paginationFetching(1, 10)
        

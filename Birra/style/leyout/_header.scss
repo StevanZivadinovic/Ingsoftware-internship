@@ -18,15 +18,15 @@
         position: relative;
         .content{
             position: fixed;
-            top: 30%;
-            left: 40%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
             i{
                 font-size: 30rem;
                 animation-name: changewidth;
                 animation-iteration-count: infinite;
                 animation-duration: 1s;
                 color: #e1a03a;
-                // transform: translateY(-50%) translateX(-50%);
             }
             p{
                 @include mixins.setTextPara(variables.$fira,4rem, #f0c175);
@@ -80,8 +80,16 @@
            
         }
         .cart{
+            text-transform: none;
             color: #E3CFAB;
             cursor: pointer;
+            span{
+                @include mixins.setTextPara(variables.$fira, 1.2rem, #E3CFAB);
+                margin: 0 .4rem;
+            }
+            .spanTextCart{
+                font-weight: bold;
+            }
         }
         .social{
             font-size: 1.2rem;

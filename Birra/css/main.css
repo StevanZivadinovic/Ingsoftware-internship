@@ -19,8 +19,9 @@
 }
 .waitDivMain .waitDiv .content {
   position: fixed;
-  top: 30%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 .waitDivMain .waitDiv .content i {
   font-size: 30rem;
@@ -77,8 +78,18 @@
   color: #e1a03a;
 }
 .primaryHeader .row .mainContent .cart {
+  text-transform: none;
   color: #E3CFAB;
   cursor: pointer;
+}
+.primaryHeader .row .mainContent .cart span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #E3CFAB;
+  margin: 0 0.4rem;
+}
+.primaryHeader .row .mainContent .cart .spanTextCart {
+  font-weight: bold;
 }
 .primaryHeader .row .mainContent .social {
   font-size: 1.2rem;

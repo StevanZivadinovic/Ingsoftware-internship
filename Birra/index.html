@@ -66,7 +66,7 @@
        </div>
        <div class="modal-body text-center mx-auto">
          <h3>{{name}}</h3>
-         <span>Quantity: </span><input type="text" class="border-bottom border-0 border-dark w-25">
+         <span>Quantity: </span><input type="number" oninput="validity.valid||(value='');" min="0" class="border-bottom border-0 border-dark w-25 smallModalInput">
        </div>
        <div class="modal-footer border-0">
          <button type="button" class="btn text-center mx-auto smallModalBtn rounded-0"
@@ -133,7 +133,7 @@
           <div class=" workTime">
             Monday - Saturday: 11am to midnight
           </div>
-          <div class="cart"> <i class="fa-solid fa-cart-shopping" style="padding-right: .5rem;"></i> Your cart: 0 items
+          <div class="cart"> <i class="fa-solid fa-cart-shopping" style="padding-right: .5rem;"></i><span class="spanTextCart">Your cart:</span>  <span class="spanCart"> 0 </span> Items
           </div>
           <div class=" social d-flex flex-column">
             <div class="mainSocial d-flex">
@@ -361,13 +361,12 @@
 
 
 
-
-
-
   <script src="./script/paginationGallery.js"></script>
-  <script src="./script/handlebarsPluginSet.js"></script>
+  <script src="./script/handlebarsPluginSet.js" type="module"></script>
   <script src="./script/pageUpButton.js"></script>
   <script src="./script/gallerySortingDisplayStyle.js"></script>
+  <script src="./script/addToCart.js" type="module"></script>
+
   <script>
 
   </script>
