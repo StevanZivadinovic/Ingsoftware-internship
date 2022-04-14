@@ -156,6 +156,7 @@ document.querySelectorAll('.paginationLink').forEach((a,i)=>{
   }
   if(selectValue=='Show 20'){
     console.log('okinuto 20');
+    document.querySelector('.link1, .link2').style.display = 'inline';
     toggleStyle();
     if(i+1 == 2){
       paginationFetching(i+1, 15);
@@ -205,6 +206,7 @@ Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>
 
       if(selectValue=='Show 20'){
         paginationFetching(1, 20)
+        document.querySelector('.link1, .link2').style.display = 'inline';
       
       }
 

@@ -8,6 +8,20 @@ let hendler = (e) => {
   console.log(cartValue, inputValue);
   cartValue += inputValue;
   document.querySelector(".spanCart").innerHTML = cartValue;
+
+
+  document.querySelector('.cartListMain').innerHTML+=`<li>
+  <div class="listCart">
+    <div class="nameList">
+      <h4>Name</h4>
+      <p>Quantity: <span class="spanList">2</span> </p>
+    </div>
+    <div class="contentList">
+      <img src="" alt="" srcset="" style="width: 3rem;">
+      <button>X</button>
+    </div>
+  </div>
+</li>`
 };
 
 export let addToCart = () => {

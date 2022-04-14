@@ -82,6 +82,7 @@
         .cart{
             text-transform: none;
             color: #E3CFAB;
+            position: relative;
             cursor: pointer;
             span{
                 @include mixins.setTextPara(variables.$fira, 1.2rem, #E3CFAB);
@@ -89,6 +90,49 @@
             }
             .spanTextCart{
                 font-weight: bold;
+            }
+
+            .cartListMain{
+                position: absolute;
+                top: 4.5rem;
+                left: -30%;
+                list-style-type: none;
+                background-color: #F4E8CE;
+                z-index: 100;
+                width: 180%;
+                padding: 0rem 2rem;
+                border-radius: 1rem;
+                li{
+                    border-bottom: solid .1rem #bf431f;
+                    .listCart{
+                        text-align: center;
+                        margin: 1rem 0;
+                        .nameList{
+                            h4{
+                                @include mixins.setTextPara(variables.$fira, 1.8rem, #bf431f);
+                                
+                            }
+                            p{
+                                @include mixins.setTextPara(variables.$fira, 1.4rem, #bf431f);
+                                span{
+                                @include mixins.setTextPara(variables.$fira, 1.4rem, #bf431f);
+
+                                }
+                            }
+                        }
+                        .contentList{
+                            button{
+                                border: none;
+                                outline: none;
+                                background-color: #D57F2C;
+                                padding: 1rem 1rem;
+                                @include mixins.setTextPara(variables.$fira, 1.4rem, #E3CFAB);
+                                font-weight: bolder;
+
+                            }
+                        }
+                    }
+                }
             }
         }
         .social{

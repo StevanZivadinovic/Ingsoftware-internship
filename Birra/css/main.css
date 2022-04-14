@@ -80,6 +80,7 @@
 .primaryHeader .row .mainContent .cart {
   text-transform: none;
   color: #E3CFAB;
+  position: relative;
   cursor: pointer;
 }
 .primaryHeader .row .mainContent .cart span {
@@ -90,6 +91,49 @@
 }
 .primaryHeader .row .mainContent .cart .spanTextCart {
   font-weight: bold;
+}
+.primaryHeader .row .mainContent .cart .cartListMain {
+  position: absolute;
+  top: 4.5rem;
+  left: -30%;
+  list-style-type: none;
+  background-color: #F4E8CE;
+  z-index: 100;
+  width: 180%;
+  padding: 0rem 2rem;
+  border-radius: 1rem;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li {
+  border-bottom: solid 0.1rem #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart {
+  text-align: center;
+  margin: 1rem 0;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .nameList h4 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .nameList p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .nameList p span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .contentList button {
+  border: none;
+  outline: none;
+  background-color: #D57F2C;
+  padding: 1rem 1rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #E3CFAB;
+  font-weight: bolder;
 }
 .primaryHeader .row .mainContent .social {
   font-size: 1.2rem;
