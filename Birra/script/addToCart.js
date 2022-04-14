@@ -1,4 +1,4 @@
-let hendler = (e) => {
+let getNumberOfBeers = (e) => {
   inputValue = 0;
   console.log("evo me");
   let cartValue = parseInt(document.querySelector(".spanCart").innerHTML);
@@ -9,7 +9,13 @@ let hendler = (e) => {
   cartValue += inputValue;
   document.querySelector(".spanCart").innerHTML = cartValue;
 
+};
 
+
+
+let getBeersDetails = ()=>{
+
+  console.log('moj moj')
   document.querySelector('.cartListMain').innerHTML+=`<li>
   <div class="listCart">
     <div class="nameList">
@@ -21,13 +27,13 @@ let hendler = (e) => {
       <button>X</button>
     </div>
   </div>
-</li>`
-};
+  </li>`
+}
 
 export let addToCart = () => {
   setTimeout(() => {
     document.querySelectorAll(".smallModalBtn").forEach((a) => {
-      a.addEventListener("click", hendler);
+      a.addEventListener("click", (getNumberOfBeers, getBeersDetails()), false);
     });
   }, 100);
 };
