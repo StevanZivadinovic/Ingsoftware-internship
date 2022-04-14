@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-.waitDiv {
+.waitDivMain {
   position: absolute;
   z-index: 100;
   height: 100%;
@@ -9,18 +9,31 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-color: rgba(191, 67, 31, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  background-color: rgba(121, 51, 25, 0.8);
 }
-.waitDiv i {
+.waitDivMain .waitDiv {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.waitDivMain .waitDiv .content {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+}
+.waitDivMain .waitDiv .content i {
   font-size: 30rem;
-  transform: rotate(360deg);
   animation-name: changewidth;
   animation-iteration-count: infinite;
   animation-duration: 1s;
+  color: #e1a03a;
+}
+.waitDivMain .waitDiv .content p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 4rem;
+  color: #f0c175;
+  width: 100%;
 }
 
 @keyframes changewidth {

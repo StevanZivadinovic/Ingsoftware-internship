@@ -39,7 +39,7 @@ let toggleStyle = ()=>{
 //mainCodeInFetch
 let mainCodeFetch=(main)=>{
   fetch(main).then((data) => {
-    document.querySelector('.waitDiv').style.display='flex';
+    document.querySelector('.waitDivMain').style.display='flex';
     return data.json();
   })
   .then((data) => {
@@ -61,7 +61,7 @@ let mainCodeFetch=(main)=>{
       toggleStyle();
       var html = template(context);
       document.querySelector(".galleryGallery").innerHTML = html;
-      document.querySelector('.waitDiv').style.display='none';
+      document.querySelector('.waitDivMain').style.display='none';
       
     });
   })
