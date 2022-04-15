@@ -1,4 +1,4 @@
-import { addToCart } from "./addToCart.js";
+import { addToCart, removeListener } from "./addToCart.js";
 
 let beers = [];
 var source = document.getElementById("entry-template").innerHTML;
@@ -39,6 +39,7 @@ let toggleStyle = ()=>{
 
 //mainCodeInFetch
 let mainCodeFetch=(main)=>{
+  removeListener();
   fetch(main).then((data) => {
     document.querySelector('.waitDivMain').style.display='flex';
     return data.json();

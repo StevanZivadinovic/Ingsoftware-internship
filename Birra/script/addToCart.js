@@ -14,13 +14,10 @@ let getNumberOfBeers = (e) => {
 
 
 let getBeersDetails = (e)=>{
- let beer =  e.parentElement.parentElement.parentElement.parentElement.previousElementSibling;
+ let beer =  e.target.parentElement.parentElement.parentElement.parentElement.previousElementSibling;
   let imgURL = beer.children[0].children[0].style.backgroundImage.replace(/(url\(|\)|")/g, '');
  let name = beer.children[1].children[0].innerHTML;
- let quantity = e.parentElement.parentElement.children[1].children[2].value;
- console.log(quantity);
-
-
+ let quantity = e.target.parentElement.parentElement.children[1].children[2].value;
   document.querySelector('.cartListMain').innerHTML+=`<li>
   <div class="listCart">
     <div class="nameList">
@@ -34,24 +31,36 @@ let getBeersDetails = (e)=>{
   </div>
   </li>`;
 
-  
+  console.log('dodatno')
 }
 let removeBeer = (e)=>{
 
-  
     if(e.target.classList.contains('listBtnRemove')){
       console.log(e.target.parentElement);
       e.target.parentElement.parentElement.remove();
     }
-   
 }
+
 document.querySelector('.cartListMain').addEventListener('click', removeBeer)
 
 export let addToCart = () => {
   setTimeout(() => {
     document.querySelectorAll(".smallModalBtn").forEach((a) => {
-      a.addEventListener("click", ()=>{getBeersDetails(a)});
-      a.addEventListener("click", getNumberOfBeers);
+      a.addEventListener("click", getBeersDetails, false);
+      a.addEventListener("click", getNumberOfBeers), false;
     });
   }, 100);
+};
+
+export let removeListener = () => {
+
+    // document.querySelectorAll(".smallModalBtn").forEach((a) => {
+    //   a.removeEventListener("click",getBeersDetails);
+    //   a.removeEventListener("click", getNumberOfBeers);
+    // });
+  
+    // document.querySelector('.link1').removeEventListeners('click',()=>{getBeersDetails(a)});
+    // document.querySelector('.link1').removeEventListeners('click',getNumberOfBeers);
+    
+  
 };
