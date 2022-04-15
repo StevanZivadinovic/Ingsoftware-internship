@@ -101,7 +101,7 @@
   background-color: #F4E8CE;
   z-index: 100;
   width: 180%;
-  padding: 0rem 2rem 1rem 2rem;
+  padding: 0rem 2rem 0rem 2rem;
   border-radius: 1rem;
 }
 .primaryHeader .row .mainContent .cart .cartListMain li {
@@ -141,6 +141,9 @@
   color: #E3CFAB;
   font-weight: bolder;
   margin: 0 2rem;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li:last-child {
+  margin: 1rem;
 }
 .primaryHeader .row .mainContent .cart:hover .cartListMain {
   display: block;

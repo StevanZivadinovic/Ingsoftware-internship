@@ -36,8 +36,12 @@ let getBeersDetails = (e)=>{
 let removeBeer = (e)=>{
 
     if(e.target.classList.contains('listBtnRemove')){
-      console.log(e.target.parentElement);
-      e.target.parentElement.parentElement.remove();
+      let numOfBeersToDelete = parseInt(e.target.parentElement.parentElement.children[0].children[1].children[0].innerHTML);
+      let cartValue = parseInt(document.querySelector(".spanCart").innerHTML);
+      cartValue = cartValue - numOfBeersToDelete;
+      document.querySelector(".spanCart").innerHTML = cartValue;
+      e.target.parentElement.parentElement.parentElement.remove();
+     
     }
 }
 

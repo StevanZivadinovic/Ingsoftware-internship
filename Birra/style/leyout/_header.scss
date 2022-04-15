@@ -103,7 +103,7 @@
                 background-color: #F4E8CE;
                 z-index: 100;
                 width: 180%;
-                padding: 0rem 2rem 1rem 2rem;
+                padding: 0rem 2rem 0rem 2rem;
                 border-radius: 1rem;
                 li{
                     border-bottom: solid .1rem #bf431f;
@@ -138,6 +138,10 @@
 
                             }
                         }
+                    }
+
+                    &:last-child{
+                        margin: 1rem;
                     }
                 }
             }
