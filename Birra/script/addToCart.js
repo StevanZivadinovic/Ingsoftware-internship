@@ -1,3 +1,20 @@
+
+let getLocalStorageItems = ()=>{
+  for (var i = 0; i < localStorage.length; i++){
+    document.querySelector('.cartListMain').innerHTML+=localStorage.getItem(localStorage.key(i));
+  }
+  let sum = 0;
+  Array.from(document.querySelector('.cartListMain').children).forEach(a=>{
+   let quantityLiLocalStorage = parseInt(a.children[0].children[0].children[1].children[0].innerHTML);
+  sum+=quantityLiLocalStorage;
+
+ })
+ document.querySelector(".spanCart").innerHTML =sum;
+}
+
+getLocalStorageItems();
+
+
 let getNumberOfBeers = (e) => {
   inputValue = 0;
   console.log('pozdrav');
@@ -18,18 +35,21 @@ let getBeersDetails = (e)=>{
   let imgURL = beer.children[0].children[0].style.backgroundImage.replace(/(url\(|\)|")/g, '');
  let name = beer.children[1].children[0].innerHTML;
  let quantity = e.target.parentElement.parentElement.children[1].children[2].value;
-  document.querySelector('.cartListMain').innerHTML+=`<li>
-  <div class="listCart">
-    <div class="nameList">
-      <h4>${name}</h4>
-      <p>Quantity: <span class="spanList">${quantity}</span> </p>
-    </div>
-    <div class="contentList">
-      <img src="${imgURL}" alt="" srcset="" style="width: 2rem;">
-      <button class='listBtnRemove'>X</button>
-    </div>
-  </div>
-  </li>`;
+ let liTag = `<li>
+ <div class="listCart">
+   <div class="nameList">
+     <h4>${name}</h4>
+     <p>Quantity: <span class="spanList">${quantity}</span> </p>
+   </div>
+   <div class="contentList">
+     <img src="${imgURL}" alt="" srcset="" style="width: 2rem;">
+     <button class='listBtnRemove'>X</button>
+   </div>
+ </div>
+ </li>`;
+  document.querySelector('.cartListMain').innerHTML+=liTag;
+  let arrayOfLocalStorageItems = [];
+  localStorage.setItem(`${name}`, liTag);
 
   console.log('dodatno')
 }
@@ -41,6 +61,9 @@ let removeBeer = (e)=>{
       cartValue = cartValue - numOfBeersToDelete;
       document.querySelector(".spanCart").innerHTML = cartValue;
       e.target.parentElement.parentElement.parentElement.remove();
+      let nameOfLi = e.target.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML;
+      console.log(nameOfLi);
+      localStorage.removeItem(`${nameOfLi}`);
      
     }
 }
@@ -54,17 +77,4 @@ export let addToCart = () => {
       a.addEventListener("click", getNumberOfBeers), false;
     });
   }, 100);
-};
-
-export let removeListener = () => {
-
-    // document.querySelectorAll(".smallModalBtn").forEach((a) => {
-    //   a.removeEventListener("click",getBeersDetails);
-    //   a.removeEventListener("click", getNumberOfBeers);
-    // });
-  
-    // document.querySelector('.link1').removeEventListeners('click',()=>{getBeersDetails(a)});
-    // document.querySelector('.link1').removeEventListeners('click',getNumberOfBeers);
-    
-  
 };
