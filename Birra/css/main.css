@@ -93,6 +93,7 @@
   font-weight: bold;
 }
 .primaryHeader .row .mainContent .cart .cartListMain {
+  display: none;
   position: absolute;
   top: 4.5rem;
   left: -30%;
@@ -125,6 +126,11 @@
   font-size: 1.4rem;
   color: #bf431f;
 }
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .contentList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .primaryHeader .row .mainContent .cart .cartListMain li .listCart .contentList button {
   border: none;
   outline: none;
@@ -134,6 +140,10 @@
   font-size: 1.4rem;
   color: #E3CFAB;
   font-weight: bolder;
+  margin: 0 2rem;
+}
+.primaryHeader .row .mainContent .cart:hover .cartListMain {
+  display: block;
 }
 .primaryHeader .row .mainContent .social {
   font-size: 1.2rem;
