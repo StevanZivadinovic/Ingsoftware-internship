@@ -380,7 +380,7 @@
 }
 .gallerySection .mainGallerySection .categories {
   background-color: #e3cfab;
-  height: 84rem;
+  height: 95rem;
 }
 .gallerySection .mainGallerySection .categories .mainCategories {
   margin: 5vh 0;
@@ -403,6 +403,9 @@
   margin-bottom: 1rem;
   font-weight: 800;
 }
+.gallerySection .mainGallerySection .categories .mainCategories ul li label {
+  font-size: 1.2rem;
+}
 .gallerySection .mainGallerySection .categories .mainCategories ul li:hover {
   color: #e1a03a;
   cursor: pointer;
@@ -413,6 +416,25 @@
 .gallerySection .mainGallerySection .categories .mainCategories ul .spanFilter {
   cursor: default !important;
   color: #44322c !important;
+}
+.gallerySection .mainGallerySection .categories .mainCategories .btnSubmitFilterPara {
+  height: 4rem;
+  background-color: #d57f2c;
+  text-align: center;
+  line-height: 4rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f4e8ce;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+.gallerySection .mainGallerySection .categories .mainCategories .btnSubmitFilterPara:hover {
+  background-color: #cc6626;
+  cursor: pointer;
 }
 .gallerySection .mainGallerySection .gallery {
   padding-bottom: 8.5rem;
@@ -653,7 +675,7 @@
   appearance: none;
   height: 1.5rem;
   width: 1.5rem;
-  background-color: red;
+  background-color: #D57F2C;
   cursor: pointer;
   pointer-events: auto;
   border-radius: 1rem;

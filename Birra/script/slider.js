@@ -10,7 +10,6 @@ let minGap = 1;
 
 let slideOne = ()=>{
     if(parseInt(sliderTwo.value)-parseInt(sliderOne.value) <=minGap){
-        console.log(minGap)
         sliderOne.value = parseInt(sliderTwo.value) - minGap;
     }
     displayValOne.textContent = sliderOne.value;
@@ -19,8 +18,7 @@ let slideOne = ()=>{
 let slideTwo = ()=>{
     if(parseInt(sliderTwo.value)-parseInt(sliderOne.value) <=minGap){
         sliderTwo.value = parseInt(sliderOne.value) + minGap;
-    }
-    console.log(sliderTwo.value);    
+    } 
     displayValTwo.textContent = sliderTwo.value;
 }
 
