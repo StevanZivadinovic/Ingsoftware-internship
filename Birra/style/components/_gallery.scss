@@ -13,7 +13,7 @@
     gap: 2.5%;
     .categories {
       background-color: #e3cfab; 
-      height: 72rem;
+      height: 84rem;
       .mainCategories {
         margin: 5vh 0;
         h3 {
@@ -176,11 +176,6 @@
           }
         }
 
-        // .galleryListGallery{
-        //   display: flex;
-        //   height: 15rem;
-         
-        // }
       }
       .listGallery {
         grid-template-columns: 1fr;
@@ -272,6 +267,60 @@
             margin-left: 1.26rem;
           }
         }
+      }
+    }
+  }
+}
+
+#wrapper{
+
+  .wrapperRange{
+    // position: relative;
+    margin: 1rem 0;
+    .containerRange{
+      
+      position: relative;
+      height: 5rem;
+
+      input{
+        appearance: none;
+        width: 100%;
+        outline: none;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+        pointer-events: none;
+
+        &::-webkit-slider-runnable-track, &::-moz-range-track, &::-ms-track{
+          appearance: none;
+          height: .5rem;
+        }
+        &::-webkit-slider-thumb{
+          appearance: none;
+          height: 1.5rem;
+          width: 1.5rem;
+          background-color: red;
+          cursor: pointer;
+          pointer-events: auto;
+          border-radius: 1rem;
+
+        }
+        &:active::-webkit-slider-thumb{
+          background-color: #793319;
+          
+        }
+      }
+      .slider-track{
+        width: 100%;
+        height: .5rem;
+        background-color: #BF431F;
+        position: absolute;
+        margin: auto 0;
+        top: 0;
+        bottom: 0;
+        border-radius: .5rem;
       }
     }
   }

@@ -1,3 +1,4 @@
+
 import { addToCart } from "./addToCart.js";
 
 let beers = [];
@@ -219,4 +220,8 @@ Array.from(document.querySelector('.bottomNavGallery').children).forEach((a,i)=>
   })
 
 })
+
+
+
+
 

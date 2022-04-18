@@ -380,7 +380,7 @@
 }
 .gallerySection .mainGallerySection .categories {
   background-color: #e3cfab;
-  height: 72rem;
+  height: 84rem;
 }
 .gallerySection .mainGallerySection .categories .mainCategories {
   margin: 5vh 0;
@@ -625,6 +625,51 @@
 }
 .gallerySection .mainGallerySection .gallery .bottomNavGallery div:nth-child(5) {
   margin-left: 1.26rem;
+}
+
+#wrapper .wrapperRange {
+  margin: 1rem 0;
+}
+#wrapper .wrapperRange .containerRange {
+  position: relative;
+  height: 5rem;
+}
+#wrapper .wrapperRange .containerRange input {
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+#wrapper .wrapperRange .containerRange input::-webkit-slider-runnable-track, #wrapper .wrapperRange .containerRange input::-moz-range-track, #wrapper .wrapperRange .containerRange input::-ms-track {
+  appearance: none;
+  height: 0.5rem;
+}
+#wrapper .wrapperRange .containerRange input::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: red;
+  cursor: pointer;
+  pointer-events: auto;
+  border-radius: 1rem;
+}
+#wrapper .wrapperRange .containerRange input:active::-webkit-slider-thumb {
+  background-color: #793319;
+}
+#wrapper .wrapperRange .containerRange .slider-track {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #BF431F;
+  position: absolute;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
 }
 
 footer {
