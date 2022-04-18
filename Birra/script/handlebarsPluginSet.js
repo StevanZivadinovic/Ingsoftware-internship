@@ -39,7 +39,7 @@ let toggleStyle = ()=>{
 
 
 //mainCodeInFetch
-let mainCodeFetch=(main)=>{
+export let mainCodeFetch=(main)=>{
   fetch(main).then((data) => {
     document.querySelector('.waitDivMain').style.display='flex';
     return data.json();

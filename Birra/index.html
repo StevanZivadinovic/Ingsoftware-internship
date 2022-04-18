@@ -254,10 +254,10 @@
       <aside class="categories">
         <div class="mainCategories w-75 mx-auto row">
           <h3>Filter beers</h3>
-          <form action="">
+          <form method='get' validate> 
           <ul class="listCategories px-0">
-            <li class="spanFilter"><label for="searchInputName" class="brokenBrackets">Search by beers name:</label> <input type="search" name="searchInputName" id="searchInputName"
-               placeholder="Beer name.." class="w-100"></li>
+            <li class="spanFilter"><label for="searchInputName" class="brokenBrackets">Search by beers name:</label><input type="search" name="searchInputName" id="searchInputName"
+               placeholder="Beer name.." class="w-100" ></li>
             <li class="spanFilter" id="wrapper"><label for="rangeInput" class="brokenBrackets">ABV greater than and less than:</label>
               
               <div class="wrapperRange">
@@ -274,20 +274,20 @@
               </div>
 
             </li>
-            <li class="spanFilter"><label for="dateInputBefore" class="brokenBrackets">Brewed before:</label> <input class="w-100" type="date" name="dateInputBefore" id="dateInputBefore"></li>
-            <li class="spanFilter"><label for="dateInputAfter" class="brokenBrackets">Brewed after:</label> <input class="w-100" type="date" name="dateInputAfter" id="dateInputAfter"> </li>
+            <li class="spanFilter"><label for="dateInputBefore" class="brokenBrackets">Brewed before:</label> <input  class="w-100" type="date" name="dateInputBefore" id="dateInputBefore"></li>
+            <li class="spanFilter"><label for="dateInputAfter" class="brokenBrackets">Brewed after:</label> <input  class="w-100" type="date" name="dateInputAfter" id="dateInputAfter"> </li>
 
             <li class="spanFilter"><label for="foodInputGroup">Pick food:</label>
             <ul class="px-0 my-1">
-              <li class="spanFilter d-flex justify-content-between w-100"><label for="chicken">chicken</label><input type="radio" name="chicken" id="chicken"></li>
-              <li class="spanFilter d-flex justify-content-between w-100"><label for="chicken">cake</label><input type="radio" name="chicken" id="chicken"></li>
-              <li class="spanFilter d-flex justify-content-between w-100"><label for="chicken">cheese</label><input type="radio" name="chicken" id="chicken"></li> 
-              <li class="spanFilter d-flex justify-content-between w-100"><label for="chicken">salad</label><input type="radio" name="chicken" id="chicken"></li> 
+              <li class="spanFilter d-flex justify-content-between w-100"><label for="chicken">chicken</label><input    type="radio" value="chicken" name="chicken" id="chicken"></li>
+              <li class="spanFilter d-flex justify-content-between w-100"><label  for="cake">cake</label><input  type="radio" value="cake" name="chicken" id="cake"></li>
+              <li class="spanFilter d-flex justify-content-between w-100"><label  for="cheese">cheese</label><input  type="radio" value="cheese" name="chicken" id="cheese"></li> 
+              <li class="spanFilter d-flex justify-content-between w-100"><label  for="salad">salad</label><input   type="radio" value="salad" name="chicken" id="salad"></li> 
             </ul>
             </li>
               
           </ul>
-          <button type="submit" class="btnSubmitFilterPara">Filter beers</button>
+          <button class="btnSubmitFilterPara">Filter beers</button>
         </form>
         </div>
 
@@ -403,13 +403,13 @@
 
 
   <script src="./script/paginationGallery.js"></script>
+  <script src="./script/addToCart.js" type="module"></script>
   <script src="./script/handlebarsPluginSet.js" type="module"></script>
   <script src="./script/pageUpButton.js"></script>
   <script src="./script/gallerySortingDisplayStyle.js"></script>
-  <script src="./script/addToCart.js" type="module"></script>
+  <script src="./script/filteringBeers.js" type="module"></script>
   <script src="./script/slider.js"></script>
   <script src="https://kit.fontawesome.com/8203228926.js" crossorigin="anonymous"></script>
-  <script src="./script/filteringBeers.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
