@@ -46,6 +46,7 @@ let mainCodeFetch=(main)=>{
   .then((data) => {
     beers = [...data];
     beers.forEach((a) => {
+      console.log(a);
       context.list.push({
         buttonText: "Add to Cart",
         galleryItemPrice: `$${a.attenuation_level}`,

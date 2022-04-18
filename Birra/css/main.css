@@ -380,7 +380,7 @@
 }
 .gallerySection .mainGallerySection .categories {
   background-color: #e3cfab;
-  height: 36rem;
+  height: 72rem;
 }
 .gallerySection .mainGallerySection .categories .mainCategories {
   margin: 5vh 0;
@@ -409,6 +409,10 @@
 }
 .gallerySection .mainGallerySection .categories .mainCategories ul li span i {
   color: #e1a03a;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul .spanFilter {
+  cursor: default !important;
+  color: #44322c !important;
 }
 .gallerySection .mainGallerySection .gallery {
   padding-bottom: 8.5rem;

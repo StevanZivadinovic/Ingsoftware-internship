@@ -12,8 +12,8 @@
     grid-template-columns: 1fr 3fr;
     gap: 2.5%;
     .categories {
-      background-color: #e3cfab;
-      height: 36rem;
+      background-color: #e3cfab; 
+      height: 72rem;
       .mainCategories {
         margin: 5vh 0;
         h3 {
@@ -33,11 +33,16 @@
               color: #e1a03a;
               cursor: pointer;
             }
+            
             span {
               i {
                 color: #e1a03a;
               }
             }
+          }
+          .spanFilter{      
+            cursor: default !important;
+            color: #44322c !important; 
           }
         }
       }

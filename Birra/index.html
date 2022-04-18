@@ -253,6 +253,29 @@
 
       <aside class="categories">
         <div class="mainCategories w-75 mx-auto row">
+          <h3>Filter beers</h3>
+          <ul class="listCategories">
+            <li class="spanFilter"><label for="searchInputName" class="brokenBrackets">Search by beers name:</label> <input type="search" name="searchInputName" id="searchInputName"
+               placeholder="Beer name.."></li>
+            <li class="spanFilter"><label for="rangeInput" class="brokenBrackets">ABV greater than and less than:</label>
+             <input type="range" name="rangeInput" id="rangeInput" value="5" min="0" max="15"></li>
+            <li class="spanFilter"><label for="dateInputBefore" class="brokenBrackets">brewed before:</label> <input type="date" name="dateInputBefore" id="dateInputBefore"></li>
+            <li class="spanFilter"><label for="dateInputAfter" class="brokenBrackets">brewed after:</label> <input type="date" name="dateInputAfter" id="dateInputAfter"> </li>
+
+            <li class="spanFilter"><label for="foodInputGroup">Pick food</label>
+            <ul>
+              <li class="spanFilter d-flex justify-content-between w-50"><label for="chicken">chicken</label><input type="radio" name="chicken" id="chicken"></li>
+              <li class="spanFilter d-flex justify-content-between w-50"><label for="chicken">cake</label><input type="radio" name="chicken" id="chicken"></li>
+              <li class="spanFilter d-flex justify-content-between w-50"><label for="chicken">cheese</label><input type="radio" name="chicken" id="chicken"></li> 
+              <li class="spanFilter d-flex justify-content-between w-50"><label for="chicken">salad</label><input type="radio" name="chicken" id="chicken"></li> 
+            </ul>
+            </li>
+              
+          </ul>
+        </div>
+
+
+        <div class="mainCategories w-75 mx-auto row">
           <h3>Categories</h3>
           <ul class="listCategories">
             <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Ale</li>
