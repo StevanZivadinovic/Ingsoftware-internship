@@ -136,11 +136,12 @@
               transition: all 0.3s ease;
               //  position: relative;
               display: flex;
-              justify-content: end;
-              flex-direction: column; 
-              text-align: center;
-
-              &:hover i {
+              align-items: end;
+              div{
+                height: 5rem;
+                text-align: center;
+              }
+              &:hover i { 
                 transition: all 0.5s ease;
                 opacity: 1;
                 transform: translateY(-20rem);
@@ -150,11 +151,13 @@
                 font-size: 3rem;
                 color: #ffffff;
                 opacity: 0;
+                
               }
               &:hover {
                 background-color: transparent;
                 cursor: pointer;
               }
+            
             }
             .galleryItemPriceFirst {
               text-align: center;

@@ -47,7 +47,7 @@ export let mainCodeFetch=(main)=>{
   .then((data) => {
     beers = [...data];
     beers.forEach((a) => {
-      console.log(a);
+      // console.log(a);
       context.list.push({
         buttonText: "Add to Cart",
         galleryItemPrice: `$${a.attenuation_level}`,
@@ -90,7 +90,19 @@ let noDataError = () => {
 
 export let fetchingForSorting = (dataPerPage)=>{
   context.list = [];
+  setTimeout(()=>{
+    console.log(document.querySelector('.linkTagToIndividualShop'));
+    document.querySelectorAll('.linkTagToIndividualShop').forEach(a=>{
 
+        a.addEventListener('click',e=>{
+         let idBeer = parseInt(e.target.getAttribute('data-id').slice(2));
+         localStorage.setItem('idBeer', idBeer);
+
+         window.location.href = 'http://127.0.0.1:5500/indexIndividualShop.html'
+        })
+    })
+    
+},1000)
 
 mainCodeFetch(`https://api.punkapi.com/v2/beers?&per_page=${dataPerPage}`);
 
@@ -101,6 +113,19 @@ mainCodeFetch(`https://api.punkapi.com/v2/beers?&per_page=${dataPerPage}`);
 let paginationFetching = (pageNumber, dataPerPage) =>{
   context.list = [];
 mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${dataPerPage}`);
+setTimeout(()=>{
+  console.log(document.querySelector('.linkTagToIndividualShop'));
+  document.querySelectorAll('.linkTagToIndividualShop').forEach(a=>{
+
+      a.addEventListener('click',e=>{
+       let idBeer = parseInt(e.target.getAttribute('data-id').slice(2));
+       localStorage.setItem('idBeer', idBeer);
+
+       window.location.href = 'http://127.0.0.1:5500/indexIndividualShop.html'
+      })
+  })
+  
+},1000)
 
 }
 

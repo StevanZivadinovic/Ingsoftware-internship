@@ -163,7 +163,9 @@
     <div class="row">
       <div class="mainContainMidlleHeader col-12 d-flex justify-content-between">
         <div class="birraLogo">
-          <img src="./assets/logo.png" alt="" srcset="">
+          <a href="http://127.0.0.1:5500/index.html">
+            <img src="./assets/logo.png" alt="" srcset="">
+          </a>
         </div>
         <nav>
           <ul class="d-flex mainUl">
@@ -232,110 +234,10 @@
     </div>
   </div>
 
-  <section class="bigImageSection container-fluid d-flex justify-content-center">
-    <div class="mainContentBigImageSection row d-flex justify-content-center flex-column">
-      <div class="contentBigImageSection d-flex justify-content-center flex-column">
-        <h2 class="text-center">Good Beer Brings People Together</h2>
-        <p>That's why every one of our beers is crafted with the simple
-          purpose of helping people spend meaningful time with each other.
-        </p>
-        <div class="buttonDivBigImage">
-          <button class="buttonBigImage">
-            Shop Now
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="gallerySection d-flex">
-    <div class="mainGallerySection">
-
-      <aside class="categories">
-        <div class="mainCategories w-75 mx-auto row">
-          <h3>Filter beers</h3>
-          <form method='get' validate> 
-          <ul class="listCategories px-0">
-            <li class="spanFilter"><label for="searchInputName" class="brokenBrackets">Search by beers name:</label><input type="search" name="searchInputName" id="searchInputName"
-               placeholder="Beer name.." class="w-100" ></li>
-            <li class="spanFilter" id="wrapper"><label for="rangeInput" class="brokenBrackets">ABV greater than and less than:</label>
-              
-              <div class="wrapperRange">
-                <div class="values text-center">
-                  <span id="range1" class="h5">5</span>
-                  <span>-</span>
-                  <span id="range2" class="h5">15</span>
-                </div>
-                <div class="containerRange">
-                  <div class="slider-track"></div>
-                  <input type="range" name="" min="0" max="20" value="5" id="slider-1" oninput="slideOne()">
-                  <input type="range" name="" min="0" max="20" value="15" id="slider-2" oninput="slideTwo()">
-                </div>
-              </div>
-
-            </li>
-            <li class="spanFilter"><label for="dateInputBefore" class="brokenBrackets">Brewed before:</label> <input  class="w-100" type="date" name="dateInputBefore" id="dateInputBefore"></li>
-            <li class="spanFilter"><label for="dateInputAfter" class="brokenBrackets">Brewed after:</label> <input  class="w-100" type="date" name="dateInputAfter" id="dateInputAfter"> </li>
-
-            <li class="spanFilter"><label for="foodInputGroup">Pick food:</label>
-            <ul class="px-0 my-1">
-              <li class="spanFilter d-flex justify-content-between w-100"><label for="chicken">chicken</label><input    type="radio" value="chicken" name="chicken" id="chicken"></li>
-              <li class="spanFilter d-flex justify-content-between w-100"><label  for="cake">cake</label><input  type="radio" value="cake" name="chicken" id="cake"></li>
-              <li class="spanFilter d-flex justify-content-between w-100"><label  for="cheese">cheese</label><input  type="radio" value="cheese" name="chicken" id="cheese"></li> 
-              <li class="spanFilter d-flex justify-content-between w-100"><label  for="salad">salad</label><input   type="radio" value="salad" name="chicken" id="salad"></li> 
-            </ul>
-            </li>
-              
-          </ul>
-          <button class="btnSubmitFilterPara">Filter beers</button>
-        </form>
-        </div>
-
-
-        <div class="mainCategories w-75 mx-auto row">
-          <h3>Categories</h3>
-          <ul class="listCategories">
-            <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Ale</li>
-            <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Blonde </li>
-            <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Cider </li>
-            <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Dark Beer </li>
-            <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Light Beer </li>
-            <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Uncategorized</li>
-            <li><span class="brokenBrackets"><i class="fa-solid fa-chevron-right"></i></span> Wheat Beer</li>
-          </ul>
-        </div>
-      </aside>
-
       <div class="gallery">
-        <div class="navGallery d-flex justify-content-between">
-          <div class="navGalleryLeft d-flex">
-            <div class="grid"><i class="fa-solid fa-grip"></i></div>
-            <div class="list"><i class="fa-solid fa-list"></i></div>
-            <div>Showing 1-9 of 10 results</div>
-          </div>
-          <div class="navGalleryRight">
-            <select class="sorting">
-              <option value="Show 10">Show 10</option>
-              <option value="Show 20">Show 20</option>
-              <option value="Show all">Show all</option>
-            </select>
-
-
-          </div>
-        </div>
         <div class="galleryGallery">
-
         </div>
-        <div class="bottomNavGallery d-flex py-5 justify-content-center" onclick="addClassNameToPaginationButton()">
-          <div class="mx-1"><a class="paginationLink currentlyClicked link1">1</a></div>
-          <div><a class="paginationLink mx-1 link2">2</a></div>
-          <div><a class="paginationLink mx-1 link3" style="display: none;">3</a></div>
-          <div><a class="paginationLink mx-1 link4" style="display: none;">4</a></div>
-          <div><i class="fa-solid fa-chevron-right firstChevronRight"></i><i style="display: none;"
-              class="fa-solid fa-chevron-left firstChevron firstChevronLeft"></i></div>
-          <div><i class="fa-solid fa-chevron-right secondChevronRight"></i><i style="display: none;"
-              class="fa-solid fa-chevron-left firstChevron secondChevronLeft"></i></div>
-        </div>
+       
       </div>
     </div>
   </section>
