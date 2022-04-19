@@ -74,13 +74,25 @@ export let mainCodeFetch=(main)=>{
   });
 }
 
+let noDataError = () => {
+  setTimeout(() => {
+      console.log(context.list.length)
+      if (context.list.length == 0) {
+          confirm('There is no results for your search!');
+          fetchingForSorting(10, -1, 10);
+      }
+  }, 1000);
+}
+
 
 
 //default fetch function for sorting data
 
 export let fetchingForSorting = (dataPerPage)=>{
   context.list = [];
-mainCodeFetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`);
+
+
+mainCodeFetch(`https://api.punkapi.com/v2/beers?&per_page=${dataPerPage}`);
 
 }
 
@@ -94,12 +106,10 @@ mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${da
 
 
 
-
-
 //default api call
 
 fetchingForSorting(10);
-// addToCart();
+
 
 //sorting api
 document.querySelector(".sorting").addEventListener("change", (e) => {
@@ -108,7 +118,7 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
   
   if (selectValue == "Show 10") {
     fetchingForSorting(10);
-    // addToCart();
+ 
   
    document.querySelectorAll('.link1, .link2, .firstChevronRight, .secondChevronRight').forEach(a=>{
     a.style.display = 'inline';
@@ -117,18 +127,21 @@ document.querySelector(".sorting").addEventListener("change", (e) => {
 
   if (selectValue == "Show 20") {
     fetchingForSorting(20);
-    // addToCart();
+   
     document.querySelectorAll('.link3, .link4, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
       a.style.display = 'none';
     });
-      document.querySelector('.link1, .link2').style.display = 'inline';
+      document.querySelectorAll('.link1, .link2')
+      .forEach(a=>{
+        a.style.display = 'inline';
+      });
    
 
   }
 
   if (selectValue == "Show all") {
     fetchingForSorting(35);
-    // addToCart();
+    
    document.querySelectorAll('.link2, .link3, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
      a.style.display = 'none';
    })
