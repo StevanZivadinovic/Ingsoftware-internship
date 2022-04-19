@@ -12,7 +12,7 @@ var context = {
 
 //toggle style
 
-let toggleStyle = ()=>{
+export let toggleStyle = ()=>{
   setTimeout(()=>{
     if(document.querySelector('.galleryGallery').classList.contains('listGallery')){
      
@@ -78,7 +78,7 @@ export let mainCodeFetch=(main)=>{
 
 //default fetch function for sorting data
 
-let fetchingForSorting = (dataPerPage)=>{
+export let fetchingForSorting = (dataPerPage)=>{
   context.list = [];
 mainCodeFetch(`https://api.punkapi.com/v2/beers?per_page=${dataPerPage}`);
 
