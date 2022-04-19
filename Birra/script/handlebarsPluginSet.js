@@ -98,7 +98,7 @@ mainCodeFetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=${da
 
 //default api call
 
-fetchingForSorting(10, -1, 10);
+fetchingForSorting(10);
 // addToCart();
 
 //sorting api

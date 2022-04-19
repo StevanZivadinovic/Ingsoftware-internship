@@ -69,37 +69,13 @@ document.querySelector('form').addEventListener('submit',e=>{
         },1000);
     }
 
-    if(nameSearchInput.length<=0 && !dateBefore && !dateAfter && !food){
-        mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?abv_gt=${sliderLeft}&abv_lt=${sliderRight}`);  
+
+    dateAfter  && (dateAfter = dateAfter.substr(0,7).split("-").reverse().join("-"));
+    dateBefore  &&   (dateBefore = dateBefore.substr(0,7).split("-").reverse().join("-"));
+   
+        mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?${nameSearchInput &&'beer_name='+nameSearchInput}${sliderLeft && '&abv_gt='+ sliderLeft}${sliderRight && '&abv_lt='+sliderRight}${dateAfter && '&brewed_after='+dateAfter}${dateBefore && '&brewed_before='+dateBefore}`);
         noDataError()
-    }
-
-    if(nameSearchInput.length>0 && !dateBefore && !dateAfter && !food){
-         
-            mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?beer_name=${nameSearchInput}&abv_gt=${sliderLeft}&abv_lt=${sliderRight}`);       
-            noDataError()
-    }
-
     
-    if(nameSearchInput.length<=0 && dateBefore && dateAfter && !food){
-        dateAfter = dateAfter.substr(0,7).split("-").reverse().join("-");
-        dateBefore = dateBefore.substr(0,7).split("-").reverse().join("-");
-        console.log(dateAfter)
-       mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?abv_gt=${sliderLeft}&abv_lt=${sliderRight}&brewed_after=${dateAfter}&brewed_before=${dateBefore}`);       
-       noDataError()
-    }
-    else  if(nameSearchInput.length<=0 && !dateBefore && dateAfter && !food){
-        dateAfter = dateAfter.substr(0,7).split("-").reverse().join("-");
-        
-       mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?abv_gt=${sliderLeft}&abv_lt=${sliderRight}&brewed_after=${dateAfter}`);       
-       noDataError()
-    }
-    else if(nameSearchInput.length<=0 && dateBefore && !dateAfter && !food){
-        dateBefore = dateBefore.substr(0,7).split("-").reverse().join("-");
-       
-        mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?abv_gt=${sliderLeft}&abv_lt=${sliderRight}&brewed_before=${dateBefore}`);       
-        noDataError()
-    }
 
 
    
