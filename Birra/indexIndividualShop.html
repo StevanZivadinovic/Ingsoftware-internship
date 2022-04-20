@@ -15,8 +15,6 @@
   <link rel="stylesheet" href="./css/main.css">
   <title>Products - Brewery & pub - Shop</title>
 
-
-
 </head>
 
 <div class="waitDivMain" style="display: none;">
@@ -36,7 +34,13 @@
     {{#each list}}
   <div class="galleryItem">
     <div class="imgAndPrice">
-      <div class="img" style="background-image: url({{imgLink}});">
+      <div id="img" class="img" style="background-image: url({{imgLink}});">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+          <div id="preview" onmousemove="zoomIn(event)"></div>
+        </div>
+        <div class="zoom">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
       </div>
     </div>
 
@@ -46,14 +50,16 @@
       <p class="cardText">{{textAboutBeer}}</p>
       <div class="buttonAndInputQuantity">
         <div id="quantityOfBeerInputDiv">
-          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><</button>
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><i class="fa-solid fa-chevron-down"></i></button>
           <input type="number" name="" class="quantityOfBeerInput" value="1">
-          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><</button>
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i class="fa-solid fa-chevron-up"></i></button>
         </div>
         <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#{{id1}}">
          {{buttonText}}
         </button>
       </div>
+      <p id="categories" class="categories">Categories:</p> 
+      <p>Product ID: {{id}}</p>
     </div>
     
   </div>
@@ -177,7 +183,7 @@
               <ul class="ulHome px-3 py-4 sub">
                 <li class="subLi">Home1</li>
                 <li class="subLi">Home2 boxed</li>
-                <li class="subLi">Home3</lmainLii>
+                <li class="subLi">Home3</li>
               </ul>
 
             </li>
@@ -196,7 +202,7 @@
                   <ul class="px-3 py-4 subSub">
                     <li class="subLi">Home1</li>
                     <li class="subLi">Home2 boxed</li>
-                    <li class="subLi">Home3</lmainLii>
+                    <li class="subLi">Home3</li>
                   </ul>
                 </li>
                 <li class="subLi d-flex justify-content-between">Pages <span><i
@@ -204,7 +210,7 @@
                   <ul class="px-3 py-4 subSub">
                     <li class="subLi">Home1</li>
                     <li class="subLi">Home2 boxed</li>
-                    <li class="subLi">Home3</lmainLii>
+                    <li class="subLi">Home3</li>
                   </ul>
                 </li>
               </ul>
@@ -224,17 +230,8 @@
     </div>
   </div>
 
-  <div class="bottomHeader container-fluid">
-    <div class="row">
-      <div class="mainContainBottomHeader col-12 d-flex justify-content-between">
-        <div class="col shop">
-          <h2 class="h2">Shop</h2>
-        </div>
-        <div class=" col localNavigation">
-          Home
-        </div>
-      </div>
-    </div>
+  <div class="bottomHeaderContainerForHandlebars">
+    
   </div>
 
       <div class="gallery">
@@ -243,7 +240,29 @@
        
       </div>
     </div>
-  </section>
+  
+
+  <script id="header-template" type="text/x-handlebars-template">
+    {{#each list}}
+  <div class="bottomHeader container-fluid">
+    <div class="row">
+      <div class="mainContainBottomHeader col-12 d-flex justify-content-between">
+        <div class="col shop">
+          <h2 class="h2">Shop</h2>
+        </div>
+        <div class="col localNavigation d-flex">
+          <div class="localNavigation flex-row justify-content-end">
+             Home <span style="margin: 0 .5rem;" class="d-flex flex-column justify-content-center"> <i class="fa-solid fa-chevron-right"></i></span>
+             {{name}}
+          </div>
+           
+      </div>
+    </div>
+  </div>
+ 
+
+  {{/each}}
+</script>
 
   <footer>
     <div class="top d-flex justify-content-between">
@@ -319,7 +338,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+<script>
+  // setTimeout(()=>{
 
+  //   document.querySelector('#img').addEventListener('onmousemove',e=>{
+  //    console.log('onin')
+  //    var pre = document.getElementById("preview");
+  //    pre.style.visibility = "visible";
+  //    if (document.querySelector('#img').matches(':hover')) {
+  //      console.log('haj')
+  //          var img = document.getElementById("img");
+  //        pre.style.backgroundImage = "url('pic1.jpg')";
+  //      }
+  // })
+  
+  // document.querySelector('.img').addEventListener('onmouseout',e=>{
+  //    console.log('onout')
+  //    var pre = document.getElementById("preview");
+  //    pre.style.visibility = "hidden";
+  // },1000)
+  //  })
+</script>
 </body>
 
 </html>
