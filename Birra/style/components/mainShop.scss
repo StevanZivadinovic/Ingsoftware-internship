@@ -2,19 +2,27 @@
 @use "./../mixins";
 @use "./../variables";
 
+.bottomHeader {
+    background-color: #E3CFAB;
+}
+
     .listGallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1, 36.5rem);
+        background-color: #F4E8CE;
+        height: 80vh;
+        display: flex;
+        align-items: center;
         .galleryItem{
           display: flex;
-          background-color: #E3CFAB;
           align-items: center;
           justify-content: space-between;
+          width: 80%;
+          margin: 0 auto;
+          
           .imgAndPrice{
             max-height: 36.5rem;
             width: 30%;
             height: 100%;
-            background-color: #E3CFAB;
+            // background-color: #E3CFAB;
             margin: 1.4rem 2.1rem 1.4rem 1.4rem;
            
             .img {
@@ -25,7 +33,7 @@
                       width: 100%;
                  
                       &:hover {
-                        background-color: transparent;
+                        background-color: #ffffff;
                         cursor: pointer;
                       }
                     
@@ -50,7 +58,7 @@
             }
             .galleryItemPriceSecond{
               text-align: left;
-              @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
+              @include mixins.setTextPara(variables.$fira, 1.8rem, #44322c);
               font-weight: 700;
               margin-bottom: 1rem;
             }
@@ -69,6 +77,72 @@
               
               
             }
+          }
+          .buttonAndInputQuantity{
+              width: 70%;
+            #quantityOfBeerInputDiv{
+                display: inline-block;
+                position: relative;
+                width: 18rem;
+                margin-right: .5rem;
+                height: 4.5rem !important;
+                button{
+                    position: absolute;
+                    border: none;
+                    width: 2rem;
+                    height: 2.2rem;
+                    background-color: #d57f2c;    
+                    &:first-child{
+                        bottom: 0;
+                        right: 0;
+                    }       
+                }
+                .plus{
+                    top: 0;
+                    right: 0;
+                }
+
+                .quantityOfBeerInput{
+                    height: 4.5rem;
+                    text-align: center;
+                    @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
+                    font-weight: 600;
+                    border: .1rem solid #E5D2AF;
+                    border-radius: .3rem;
+                    width: 100%;
+                    background-color: transparent;
+                    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+                        -webkit-appearance: none;
+                
+                    }
+                    &:hover{
+                        transition: all .3s ease;
+                        border: .1rem solid #d57f2c;
+                        outline: none;
+                    }
+                    &:focus{
+                        border: .1rem solid #D3792F;
+                        outline: none;
+                    }
+
+                }
+            }
+              .galleryItemContent {
+                height: 4.5rem;
+                background-color: #d57f2c;
+                text-align: center;
+                @include mixins.setTextPara(variables.$alegria, 1.7rem, #f4e8ce);
+                text-transform: uppercase;
+                font-weight: 700;
+                transition: all 0.3s ease;
+                outline: none;
+                border: none;
+            
+                &:hover {
+                  background-color: #cc6626;
+                  cursor: pointer;
+                }
+              }
           }
         }
       }

@@ -44,9 +44,16 @@
       <h3 class="cardName">{{name}}</h3>
       <div class="galleryItemPriceSecond">{{galleryItemPrice}}</div>
       <p class="cardText">{{textAboutBeer}}</p>
-      <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#{{id1}}">
-       {{buttonText}}
-      </button>
+      <div class="buttonAndInputQuantity">
+        <div id="quantityOfBeerInputDiv">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><</button>
+          <input type="number" name="" class="quantityOfBeerInput" value="1">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><</button>
+        </div>
+        <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#{{id1}}">
+         {{buttonText}}
+        </button>
+      </div>
     </div>
     
   </div>

@@ -915,21 +915,27 @@ footer .bottom span {
   width: 13%;
 }
 
+.bottomHeader {
+  background-color: #E3CFAB;
+}
+
 .listGallery {
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(1, 36.5rem);
+  background-color: #F4E8CE;
+  height: 80vh;
+  display: flex;
+  align-items: center;
 }
 .listGallery .galleryItem {
   display: flex;
-  background-color: #E3CFAB;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 }
 .listGallery .galleryItem .imgAndPrice {
   max-height: 36.5rem;
   width: 30%;
   height: 100%;
-  background-color: #E3CFAB;
   margin: 1.4rem 2.1rem 1.4rem 1.4rem;
 }
 .listGallery .galleryItem .imgAndPrice .img {
@@ -940,7 +946,7 @@ footer .bottom span {
   width: 100%;
 }
 .listGallery .galleryItem .imgAndPrice .img:hover {
-  background-color: transparent;
+  background-color: #ffffff;
   cursor: pointer;
 }
 .listGallery .galleryItem .galleryCardSecondColumn {
@@ -964,7 +970,7 @@ footer .bottom span {
 .listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
   text-align: left;
   font-family: "Fira Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #44322c;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -980,6 +986,72 @@ footer .bottom span {
 }
 .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent:hover {
   background-color: #BF431F;
+}
+.listGallery .galleryItem .buttonAndInputQuantity {
+  width: 70%;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv {
+  display: inline-block;
+  position: relative;
+  width: 18rem;
+  margin-right: 0.5rem;
+  height: 4.5rem !important;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv button {
+  position: absolute;
+  border: none;
+  width: 2rem;
+  height: 2.2rem;
+  background-color: #d57f2c;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv button:first-child {
+  bottom: 0;
+  right: 0;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .plus {
+  top: 0;
+  right: 0;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput {
+  height: 4.5rem;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 600;
+  border: 0.1rem solid #E5D2AF;
+  border-radius: 0.3rem;
+  width: 100%;
+  background-color: transparent;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput::-webkit-inner-spin-button, .listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput:hover {
+  transition: all 0.3s ease;
+  border: 0.1rem solid #d57f2c;
+  outline: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput:focus {
+  border: 0.1rem solid #D3792F;
+  outline: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity .galleryItemContent {
+  height: 4.5rem;
+  background-color: #d57f2c;
+  text-align: center;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #f4e8ce;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity .galleryItemContent:hover {
+  background-color: #cc6626;
+  cursor: pointer;
 }
 
 * {
