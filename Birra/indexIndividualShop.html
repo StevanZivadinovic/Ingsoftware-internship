@@ -50,9 +50,9 @@
       <p class="cardText">{{textAboutBeer}}</p>
       <div class="buttonAndInputQuantity">
         <div id="quantityOfBeerInputDiv">
-          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><i class="fa-solid fa-chevron-down"></i></button>
-          <input type="number" name="" class="quantityOfBeerInput" value="1">
-          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i class="fa-solid fa-chevron-up"></i></button>
+          <button class="inputNumberBtn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><i class="fa-solid fa-chevron-down"></i></button>
+          <input type="number" name="" class="quantityOfBeerInput" min="0" value="1">
+          <button  onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus inputNumberBtn"><i class="fa-solid fa-chevron-up"></i></button>
         </div>
         <button type="button" class="galleryItemContent" data-bs-toggle="modal" data-bs-target="#{{id1}}">
          {{buttonText}}
@@ -75,7 +75,7 @@
        </div>
        <div class="modal-body text-center mx-auto">
          <h3>{{name}}</h3>
-         <span>Quantity: </span><input type="number" oninput="validity.valid||(value='');" min="0" class="border-bottom border-0 border-dark w-25 smallModalInput">
+         <span>Quantity: </span><input type="number" value="1" oninput="validity.valid||(value='');" min="0" class="border-bottom border-0 border-dark w-25 smallModalInput">
        </div>
        <div class="modal-footer border-0">
          <button type="button" class="btn text-center mx-auto smallModalBtn rounded-0"

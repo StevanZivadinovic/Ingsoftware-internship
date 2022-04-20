@@ -18,12 +18,15 @@ var context = {
 
 
 
+
+
 let mainCodeFetch=(main)=>{
    fetch(main).then((data) => {
      document.querySelector('.waitDivMain').style.display='flex';
      return data.json();
    })
    .then((data) => {
+      
      beers = [...data];
      beers.forEach((a) => {
         console.log(a);
@@ -35,6 +38,7 @@ let mainCodeFetch=(main)=>{
             }
            })
        console.log(tagline);
+
        context.list.push({
          buttonText: "Add to Cart",
          galleryItemPrice: `$${a.attenuation_level}`,
@@ -56,7 +60,10 @@ let mainCodeFetch=(main)=>{
        document.querySelector(".bottomHeaderContainerForHandlebars").innerHTML = htmlHeader;
        document.querySelector(".galleryGallery").innerHTML = html;
        document.querySelector('.waitDivMain').style.display='none';
-     });
+
+      });
+
+     
      addToCart();
    
      return context.list;
@@ -70,7 +77,19 @@ let mainCodeFetch=(main)=>{
          }else{
             document.querySelector('.categories').innerHTML+=` <a class='categoriesLink'>${d}</a> `;
          }
-      })
+      });
+
+
+      setTimeout(()=>{
+         document.querySelectorAll('.inputNumberBtn').forEach(a=>{
+            a.addEventListener('click',e=>{
+               console.log('haj')
+               let quantityFromBigInput = document.querySelector('.quantityOfBeerInput').value;
+                 console.log(quantityFromBigInput);
+                 document.querySelector('.smallModalInput').value =quantityFromBigInput;
+            })
+         })
+       },2000)
    })
    .catch((err) => {
      console.log(err);
@@ -84,6 +103,6 @@ mainCodeFetch(`https://api.punkapi.com/v2/beers/${idOfBeer}`)
 
 
     
-    
+   
 
 
