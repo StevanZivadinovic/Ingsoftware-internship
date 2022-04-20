@@ -1,0 +1,74 @@
+
+@use "./../mixins";
+@use "./../variables";
+
+    .listGallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 36.5rem);
+        .galleryItem{
+          display: flex;
+          background-color: #E3CFAB;
+          align-items: center;
+          justify-content: space-between;
+          .imgAndPrice{
+            max-height: 36.5rem;
+            width: 30%;
+            height: 100%;
+            background-color: #E3CFAB;
+            margin: 1.4rem 2.1rem 1.4rem 1.4rem;
+           
+            .img {
+                      background-position: center;
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      height: 38rem;
+                      width: 100%;
+                 
+                      &:hover {
+                        background-color: transparent;
+                        cursor: pointer;
+                      }
+                    
+         
+            }
+          }
+    
+          .galleryCardSecondColumn{
+            width: 65%;
+           
+            .cardName{
+              @include mixins.setTextPara(variables.$alegria, 3.4rem, #44322C);
+              font-weight: 700;
+              margin: 2.7rem 0 1.3rem 0;
+              
+            }
+            p{
+              @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
+              font-weight: 700;
+              padding-right: 2.8rem;
+              margin-bottom: 1rem;
+            }
+            .galleryItemPriceSecond{
+              text-align: left;
+              @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
+              font-weight: 700;
+              margin-bottom: 1rem;
+            }
+            .galleryItemContent{
+              margin-bottom: 8rem;
+              display: inline-block;
+              min-width: 35%;
+              max-width:20rem;
+              height: 5rem;
+              padding: 1rem .9rem;
+              line-height: 100%;
+    
+              &:hover{
+                background-color: #BF431F;
+              }
+              
+              
+            }
+          }
+        }
+      }

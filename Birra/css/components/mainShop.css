@@ -1,0 +1,66 @@
+.listGallery {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, 36.5rem);
+}
+.listGallery .galleryItem {
+  display: flex;
+  background-color: #E3CFAB;
+  align-items: center;
+  justify-content: space-between;
+}
+.listGallery .galleryItem .imgAndPrice {
+  max-height: 36.5rem;
+  width: 30%;
+  height: 100%;
+  background-color: #E3CFAB;
+  margin: 1.4rem 2.1rem 1.4rem 1.4rem;
+}
+.listGallery .galleryItem .imgAndPrice .img {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 38rem;
+  width: 100%;
+}
+.listGallery .galleryItem .imgAndPrice .img:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.listGallery .galleryItem .galleryCardSecondColumn {
+  width: 65%;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .cardName {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 3.4rem;
+  color: #44322C;
+  font-weight: 700;
+  margin: 2.7rem 0 1.3rem 0;
+}
+.listGallery .galleryItem .galleryCardSecondColumn p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 700;
+  padding-right: 2.8rem;
+  margin-bottom: 1rem;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
+  text-align: left;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent {
+  margin-bottom: 8rem;
+  display: inline-block;
+  min-width: 35%;
+  max-width: 20rem;
+  height: 5rem;
+  padding: 1rem 0.9rem;
+  line-height: 100%;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent:hover {
+  background-color: #BF431F;
+}
