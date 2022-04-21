@@ -54,6 +54,7 @@ export let mainCodeFetch=(main)=>{
         imgLink: a.image_url,
         name:a.name,
         textAboutBeer:a.description,
+        id:a.id,
         id1:`id${a.id}`,
         id2:`id2${a.id}`,
         food:a.food_pairing,

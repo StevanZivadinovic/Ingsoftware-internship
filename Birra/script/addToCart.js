@@ -1,23 +1,23 @@
 
-let getLocalStorageItems = ()=>{
-  for (var i = 0; i < localStorage.length; i++){
-    document.querySelector('.cartListMain').innerHTML+=localStorage.getItem(localStorage.key(i));
+let getLocalStorageItems = () => {
+  for (var i = 0; i < localStorage.length; i++) {
+    document.querySelector('.cartListMain').innerHTML += localStorage.getItem(localStorage.key(i));
   }
   let sum = 0;
-  Array.from(document.querySelector('.cartListMain').children).forEach(a=>{
-   let quantityLiLocalStorage = parseInt(a.children[0].children[0].children[1].children[0].innerHTML);
-  sum+=quantityLiLocalStorage;
+  Array.from(document.querySelector('.cartListMain').children).forEach(a => {
+    let quantityLiLocalStorage = parseInt(a.children[0].children[0].children[1].children[0].innerHTML);
+    sum += quantityLiLocalStorage;
 
- })
- document.querySelector(".spanCart").innerHTML =sum;
+  })
+  document.querySelector(".spanCart").innerHTML = sum;
 }
 
 getLocalStorageItems();
 
 
-let getNumberOfBeers = (e) => {
+let getNumberOfBeers = (e, c) => {
+  console.log(c, e.currentTarget)
   inputValue = 0;
-  console.log('pozdrav');
   let cartValue = parseInt(document.querySelector(".spanCart").innerHTML);
   var inputValue = parseInt(
     e.target.parentElement.parentElement.children[1].children[2].value
@@ -30,12 +30,18 @@ let getNumberOfBeers = (e) => {
 
 
 
-let getBeersDetails = (e)=>{
- let beer =  e.target.parentElement.parentElement.parentElement.parentElement.previousElementSibling;
-  let imgURL = beer.children[0].children[0].style.backgroundImage.replace(/(url\(|\)|")/g, '');
- let name = beer.children[1].children[0].innerHTML;
- let quantity = e.target.parentElement.parentElement.children[1].children[2].value;
- let liTag = `<li>
+let getBeersDetails = (e, c) => {
+  console.log(c, document.querySelector('.smallModalInput').value);
+  let id = e.currentTarget.getAttribute('data-id');
+  fetch(`https://api.punkapi.com/v2/beers/${id}`)
+    .then(data => {
+      return data.json()
+    })
+    .then((data) => {
+      let imgURL = data[0].image_url;
+      let name = data[0].name;
+      let quantity = e.target.parentElement.parentElement.children[1].children[2].value;
+      let liTag = `<li>
  <div class="listCart">
    <div class="nameList">
      <h4>${name}</h4>
@@ -47,25 +53,29 @@ let getBeersDetails = (e)=>{
    </div>
  </div>
  </li>`;
-  document.querySelector('.cartListMain').innerHTML+=liTag;
-  let arrayOfLocalStorageItems = [];
-  localStorage.setItem(`${name}`, liTag);
+      document.querySelector('.cartListMain').innerHTML += liTag;
+      let arrayOfLocalStorageItems = [];
+      localStorage.setItem(`${name}`, liTag);
 
-  console.log('dodatno')
+      console.log('dodatno')
+    })
+
+
 }
-let removeBeer = (e)=>{
 
-    if(e.target.classList.contains('listBtnRemove')){
-      let numOfBeersToDelete = parseInt(e.target.parentElement.parentElement.children[0].children[1].children[0].innerHTML);
-      let cartValue = parseInt(document.querySelector(".spanCart").innerHTML);
-      cartValue = cartValue - numOfBeersToDelete;
-      document.querySelector(".spanCart").innerHTML = cartValue;
-      e.target.parentElement.parentElement.parentElement.remove();
-      let nameOfLi = e.target.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML;
-      console.log(nameOfLi);
-      localStorage.removeItem(`${nameOfLi}`);
-     
-    }
+
+let removeBeer = (e, c) => {
+  console.log(c, e.currentTarget);
+  if (e.target.classList.contains('listBtnRemove')) {
+    let numOfBeersToDelete = parseInt(e.target.parentElement.parentElement.children[0].children[1].children[0].innerHTML);
+    let cartValue = parseInt(document.querySelector(".spanCart").innerHTML);
+    cartValue = cartValue - numOfBeersToDelete;
+    document.querySelector(".spanCart").innerHTML = cartValue;
+    e.target.parentElement.parentElement.parentElement.remove();
+    let nameOfLi = e.target.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML;
+    localStorage.removeItem(`${nameOfLi}`);
+
+  }
 }
 
 document.querySelector('.cartListMain').addEventListener('click', removeBeer)
@@ -73,8 +83,9 @@ document.querySelector('.cartListMain').addEventListener('click', removeBeer)
 export let addToCart = () => {
   setTimeout(() => {
     document.querySelectorAll(".smallModalBtn").forEach((a) => {
-      a.addEventListener("click", getBeersDetails, false);
-      a.addEventListener("click", getNumberOfBeers), false;
+      let c = 'hello';
+      a.addEventListener("click", function (e) { getBeersDetails(e, c) });
+      a.addEventListener("click", function (e) { getNumberOfBeers(e, c) });
     });
   }, 100);
 };

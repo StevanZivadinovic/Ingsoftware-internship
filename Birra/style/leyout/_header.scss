@@ -346,3 +346,110 @@
 #myFirstModal{
     z-index: 999999;
 }
+
+
+@media screen and (max-width: 768px) {
+
+    .primaryHeader{
+        .row{
+            height: 10vh;
+            
+            .headerPrimaryImg{
+                line-height: 10vh !important;
+                display:flex !important;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                .leftNavbar{
+                    background-color: transparent;
+                    color: #E3CFAB;
+                    border: none;
+                    box-shadow: none;
+                    &:hover{
+                        color: #D57F2C;
+                    }
+
+                    i{
+                        font-size: 1.8rem;
+                        cursor: pointer;
+                    }
+                }
+                img{
+                    height: 5vh;
+                }
+            }
+            
+            .mainContent{
+                display: none !important;
+            }
+        }
+    }
+
+
+    .middleHeader{
+        display: none;
+    }
+    .offcanvas{
+        // position: relative;
+        .offcanvas-header{
+            display: flex;
+            justify-content: start;
+            background-color: #bf431f;
+            button{
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 1.5rem;
+            }
+            
+        }
+    
+        .offcanvas-body{
+            background-color: #bf431f;
+            padding: 0;
+           
+        }
+    }
+
+   
+}
+
+
+
+   
+    .accordion-item{
+       border: none;
+       border-bottom: .15rem solid rgba($color: #44322C, $alpha: .1);
+        .accordion-header{
+            .accordion-button{
+
+                background-color: #bf431f;
+                @include mixins.setTextPara(variables.$fira, 1.2rem, #ffffff);
+                text-transform: uppercase;
+                padding: 2rem 2rem;
+            }
+            #contactsButton, #reservationButton, #eventsButton, #breweryButton, button.ButtonSubLINK{
+                
+                    &::after{
+                        display: none !important;
+                    }
+
+    
+                }
+        }
+        .collapse, .show{
+            background-color: #bf431f;
+            .accordion-body{
+                background-color: #bf431f;
+                padding: 0rem;
+                ul{
+                  
+                background-color: #bf431f;
+
+                    list-style-type: none;
+                }
+            }
+        }
+    
+}
+

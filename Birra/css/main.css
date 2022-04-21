@@ -315,6 +315,84 @@
   z-index: 999999;
 }
 
+@media screen and (max-width: 768px) {
+  .primaryHeader .row {
+    height: 10vh;
+  }
+  .primaryHeader .row .headerPrimaryImg {
+    line-height: 10vh !important;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  .primaryHeader .row .headerPrimaryImg .leftNavbar {
+    background-color: transparent;
+    color: #E3CFAB;
+    border: none;
+    box-shadow: none;
+  }
+  .primaryHeader .row .headerPrimaryImg .leftNavbar:hover {
+    color: #D57F2C;
+  }
+  .primaryHeader .row .headerPrimaryImg .leftNavbar i {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .primaryHeader .row .headerPrimaryImg img {
+    height: 5vh;
+  }
+  .primaryHeader .row .mainContent {
+    display: none !important;
+  }
+
+  .middleHeader {
+    display: none;
+  }
+
+  .offcanvas .offcanvas-header {
+    display: flex;
+    justify-content: start;
+    background-color: #bf431f;
+  }
+  .offcanvas .offcanvas-header button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+  }
+  .offcanvas .offcanvas-body {
+    background-color: #bf431f;
+    padding: 0;
+  }
+}
+.accordion-item {
+  border: none;
+  border-bottom: 0.15rem solid rgba(68, 50, 44, 0.1);
+}
+.accordion-item .accordion-header .accordion-button {
+  background-color: #bf431f;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 2rem 2rem;
+}
+.accordion-item .accordion-header #contactsButton::after, .accordion-item .accordion-header #reservationButton::after, .accordion-item .accordion-header #eventsButton::after, .accordion-item .accordion-header #breweryButton::after, .accordion-item .accordion-header button.ButtonSubLINK::after {
+  display: none !important;
+}
+.accordion-item .collapse, .accordion-item .show {
+  background-color: #bf431f;
+}
+.accordion-item .collapse .accordion-body, .accordion-item .show .accordion-body {
+  background-color: #bf431f;
+  padding: 0rem;
+}
+.accordion-item .collapse .accordion-body ul, .accordion-item .show .accordion-body ul {
+  background-color: #bf431f;
+  list-style-type: none;
+}
+
 .bigImageSection {
   background-color: #F4E8CE;
   z-index: 2;

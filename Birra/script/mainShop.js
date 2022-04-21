@@ -1,4 +1,4 @@
-import { addToCart } from "../script/addToCart.js";
+import { addToCart } from "./addToCart.js";
 
 
 let idOfBeer = parseInt(localStorage.getItem('idBeer'));
