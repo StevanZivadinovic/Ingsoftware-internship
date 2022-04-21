@@ -348,6 +348,42 @@
 }
 
 
+.accordion-item{
+    border: none;
+    border-bottom: .15rem solid rgba($color: #44322C, $alpha: .1);
+     .accordion-header{
+         .accordion-button{
+
+             background-color: #bf431f;
+             @include mixins.setTextPara(variables.$fira, 1.2rem, #ffffff);
+             text-transform: uppercase;
+             padding: 2rem 2rem;
+         }
+         #contactsButton, #reservationButton, #eventsButton, #breweryButton, button.ButtonSubLINK{
+             
+                 &::after{
+                     display: none !important;
+                 }
+
+ 
+             }
+     }
+     .collapse, .show{
+         background-color: #bf431f;
+         .accordion-body{
+             background-color: #bf431f;
+             padding: 0rem;
+             ul{
+               
+             background-color: #bf431f;
+
+                 list-style-type: none;
+             }
+         }
+     }
+ 
+}
+
 @media screen and (max-width: 768px) {
 
     .primaryHeader{
@@ -417,39 +453,5 @@
 
 
    
-    .accordion-item{
-       border: none;
-       border-bottom: .15rem solid rgba($color: #44322C, $alpha: .1);
-        .accordion-header{
-            .accordion-button{
-
-                background-color: #bf431f;
-                @include mixins.setTextPara(variables.$fira, 1.2rem, #ffffff);
-                text-transform: uppercase;
-                padding: 2rem 2rem;
-            }
-            #contactsButton, #reservationButton, #eventsButton, #breweryButton, button.ButtonSubLINK{
-                
-                    &::after{
-                        display: none !important;
-                    }
-
-    
-                }
-        }
-        .collapse, .show{
-            background-color: #bf431f;
-            .accordion-body{
-                background-color: #bf431f;
-                padding: 0rem;
-                ul{
-                  
-                background-color: #bf431f;
-
-                    list-style-type: none;
-                }
-            }
-        }
-    
-}
+  
 
