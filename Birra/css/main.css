@@ -584,6 +584,10 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: repeat(1, 48rem);
+  height: auto;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem {
+  width: 100%;
 }
 .gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice {
   background-color: #e3cfab;

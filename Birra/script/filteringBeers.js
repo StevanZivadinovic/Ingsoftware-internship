@@ -87,39 +87,39 @@ document.querySelector('form').addEventListener('submit', e => {
     dateAfter && (dateAfter = dateAfter.substr(0, 7).split("-").reverse().join("-"));
     dateBefore && (dateBefore = dateBefore.substr(0, 7).split("-").reverse().join("-"));
 
-    let sortingFilteredBeers=(pageNumber, dataPerPage)=>{
+    let sortingFilteredBeers=()=>{
 
-        mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?${pageNumber &&'page='+pageNumber}${dataPerPage && 'per_page='+dataPerPage}${nameSearchInput && 'beer_name=' + nameSearchInput}${sliderLeft && '&abv_gt=' + sliderLeft}${sliderRight && '&abv_lt=' + sliderRight}${(dateAfter.length>0 ? '&brewed_after=' + dateAfter:'')}${dateBefore.length>0 ? '&brewed_before=' + dateBefore :''}${food ? '&food=' + food :''}`);
+        mainCodeFetchFiltering(`https://api.punkapi.com/v2/beers?${nameSearchInput && 'beer_name=' + nameSearchInput}${sliderLeft && '&abv_gt=' + sliderLeft}${sliderRight && '&abv_lt=' + sliderRight}${(dateAfter.length>0 ? '&brewed_after=' + dateAfter:'')}${dateBefore.length>0 ? '&brewed_before=' + dateBefore :''}${food ? '&food=' + food :''}`);
         noDataError()
     }
 
-
+    sortingFilteredBeers()
     //sorting api
 
-    let selectValue = document.querySelector(".sorting").value;
-    if (selectValue == "Show 10") {
-    sortingFilteredBeers('',10)
-     document.querySelectorAll('.link1, .link2, .firstChevronRight, .secondChevronRight').forEach(a=>{
-      a.style.display = 'inline';
-    });
-    }
-    if (selectValue == "Show 20") {
-        sortingFilteredBeers('',20);
-      document.querySelectorAll('.link3, .link4, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
-        a.style.display = 'none';
-      });
-      document.querySelectorAll('.link1, .link2')
-      .forEach(a=>{
-        a.style.display = 'inline';
-      });
-    }
+    // let selectValue = document.querySelector(".sorting").value;
+    // if (selectValue == "Show 10") {
+    // sortingFilteredBeers('',10)
+    //  document.querySelectorAll('.link1, .link2, .firstChevronRight, .secondChevronRight').forEach(a=>{
+    //   a.style.display = 'inline';
+    // });
+    // }
+    // if (selectValue == "Show 20") {
+    //     sortingFilteredBeers('',20);
+    //   document.querySelectorAll('.link3, .link4, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
+    //     a.style.display = 'none';
+    //   });
+    //   document.querySelectorAll('.link1, .link2')
+    //   .forEach(a=>{
+    //     a.style.display = 'inline';
+    //   });
+    // }
   
-    if (selectValue == "Show all") {
-        sortingFilteredBeers('',35);
-     document.querySelectorAll('.link2, .link3, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
-       a.style.display = 'none';
-     })
-    }
+    // if (selectValue == "Show all") {
+    //     sortingFilteredBeers('',35);
+    //  document.querySelectorAll('.link2, .link3, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
+    //    a.style.display = 'none';
+    //  })
+    // }
 
 
 

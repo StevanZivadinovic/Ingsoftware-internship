@@ -120,7 +120,9 @@
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: repeat(1, 48rem);
+        height: auto;
         .galleryItem {
+          width: 100%;
           .imgAndPrice {
             background-color: #e3cfab;
             &:hover {
