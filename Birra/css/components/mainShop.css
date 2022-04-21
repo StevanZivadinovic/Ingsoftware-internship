@@ -168,3 +168,56 @@
   transition: all 0.3s ease;
   color: #44322c;
 }
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    height: auto;
+  }
+  .gallery .navGallery {
+    height: 20vh;
+  }
+  .gallery .galleryGallery {
+    height: auto;
+    flex-direction: column !important;
+  }
+  .gallery .listGallery {
+    flex-direction: column !important;
+  }
+  .gallery .listGallery .galleryItem {
+    margin-top: 2vh;
+    flex-direction: column !important;
+  }
+  .gallery .listGallery .galleryItem .imgAndPrice {
+    width: 50%;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent {
+    width: 100%;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent:hover {
+    background-color: #BF431F;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardName {
+    text-align: center;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardText {
+    text-align: center;
+    padding: 0;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .buttonAndInputQuantity {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .buttonAndInputQuantity .galleryItemContent {
+    margin: 1rem 0;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn #categories, .gallery .listGallery .galleryItem .galleryCardSecondColumn #productID {
+    text-align: center;
+    padding: 0;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
+    text-align: center;
+  }
+}

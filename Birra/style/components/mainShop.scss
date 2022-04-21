@@ -199,3 +199,71 @@
         }
     }
 }
+  
+  @media screen and (max-width: 768px) {
+  
+        .gallery {
+            height: auto;
+          .navGallery {
+            height: 20vh;
+          }
+          .galleryGallery{
+            height: auto;
+            flex-direction: column !important;
+  
+          }
+          .listGallery {
+        
+            flex-direction: column !important;
+            .galleryItem{
+                margin-top: 2vh;
+              flex-direction: column !important;
+
+              .imgAndPrice{
+                  width: 50%;
+              }
+              .galleryCardSecondColumn{
+
+                .galleryItemContent {
+                  
+                    width: 100%;
+                   
+                    &:hover {
+                        background-color: #BF431F;
+                    }
+    
+    
+                }
+              
+                .cardName{
+                    text-align: center;
+                }
+                .cardText{
+                    text-align: center;
+                    padding: 0;
+                }
+                .buttonAndInputQuantity{
+                    margin: 3rem auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+                    .galleryItemContent{
+                        margin: 1rem 0;
+                    }
+                    
+                }
+                #categories, #productID{
+                    text-align: center;
+                    padding: 0;
+                }
+                .galleryItemPriceSecond{
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+    
+  }

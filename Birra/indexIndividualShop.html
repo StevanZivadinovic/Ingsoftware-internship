@@ -59,7 +59,7 @@
         </button>
       </div>
       <p id="categories" class="categories">Categories:</p> 
-      <p>Product ID: {{id}}</p>
+      <p id="productID">Product ID: {{id}}</p>
     </div>
     
   </div>
@@ -136,7 +136,12 @@
   <header>
     <div class="container-fluid primaryHeader">
       <div class="row">
-
+        <div class="headerPrimaryImg mx-auto d-none">
+          <button class="btn btn-primary leftNavbar" type="button" data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+          
+          <img src="./assets/logo.png" alt="logo">
+        </div>
         <div class="mainContent col-12 d-flex justify-content-end">
 
           <div class=" workTime">
@@ -167,6 +172,176 @@
     </div>
 
   </header>
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <img src="./assets/logo.png" alt="logo">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Home
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    Home1
+                  </button>
+                </h2>
+              </div>
+
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK"  type="button" >
+                    Home2 boxed
+                  </button>
+                </h2>
+              </div>
+
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK"  type="button" >
+                    Home3
+                  </button>
+                </h2>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" id="breweryButton" type="button">
+              Brewery
+            </button>
+          </h2>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="Events">
+            <button class="accordion-button collapsed" id="eventsButton" type="button"  >
+              Events
+            </button>
+          </h2>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="Reservation">
+            <button class="accordion-button collapsed" id="reservationButton" type="button" >
+              Reservation
+            </button>
+          </h2>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="Features">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeatures" aria-expanded="false" aria-controls="collapseThree">
+              Features
+            </button>
+          </h2>
+          <div id="collapseFeatures" class="accordion-collapse collapse" aria-labelledby="Features" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK"  type="button" >
+                    Team
+                  </button>
+                </h2>
+              </div>
+              
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    About
+                  </button>
+                </h2>
+              </div>
+            
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    About-2
+                  </button>
+                </h2>
+              </div>
+
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    Shop
+                  </button>
+                </h2>
+              </div>
+
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    Gallery
+                  </button>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="Blog">
+            <button id="blogButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog" aria-expanded="false" aria-controls="collapseThree">
+              Blog
+            </button>
+          </h2>
+          <div id="collapseBlog" class="accordion-collapse collapse" aria-labelledby="Blog" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    Classic
+                  </button>
+                </h2>
+              </div>
+
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    Masonry
+                  </button>
+                </h2>
+              </div>
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    Portfolio
+                  </button>
+                </h2>
+              </div>
+              <div class="accordion-item border-bottom-0">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed ButtonSubLINK" type="button" >
+                    Post formats
+                  </button>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="contacts">
+            <button class="accordion-button collapsed" id="contactsButton" type="button">
+              Contacts
+            </button>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container-fluid middleHeader">
     <div class="row">
