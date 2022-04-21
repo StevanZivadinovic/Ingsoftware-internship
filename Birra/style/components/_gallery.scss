@@ -4,6 +4,7 @@
 .gallerySection {
   background-color: #f4e8ce;
   z-index: -1;
+  
   .mainGallerySection {
     position: relative;
     width: 80%;
@@ -345,6 +346,81 @@
         top: 0;
         bottom: 0;
         border-radius: .5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallerySection {
+
+    .mainGallerySection {
+
+      display: flex;
+      flex-direction: column-reverse;
+
+      .gallery {
+        .galleryGallery{
+          gap: 2rem;
+          display: grid;
+          grid-template-columns: auto auto;
+          grid-template-rows: repeat(1, 48rem);
+          height: auto;
+
+        }
+        .listGallery {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(1, 36.5rem);
+        }
+      }
+
+      .categories {
+        margin-bottom: 5vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallerySection {
+    height: auto;
+    .mainGallerySection {
+      .gallery {
+        .navGallery {
+          height: 20vh;
+        }
+        .galleryGallery{
+          grid-template-columns: auto;
+          
+
+        }
+        .listGallery {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(1, 36.5rem);
+          
+          .galleryItem{
+            flex-direction: column;
+            .imgAndPrice{
+              #imgL{
+                height: 15vh;
+              }
+            }
+            .galleryCardSecondColumn{
+              .cardName{
+                text-align: center;
+                font-size: 3rem;
+              }
+              .cardText{
+                text-align: center;
+                padding: 0rem;
+              }
+
+              .galleryItemPriceSecond{
+                text-align: center;
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
 
 
 footer{
-    height: 85vh;
+    // height: auto;
     background-image: url('./../../assets/footer.jpg');
 
     .top{
@@ -126,6 +126,17 @@ footer{
         }
         span{
             color: #f4e8ce;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer{
+        .top{
+            flex-wrap: wrap;
+            .topFirst, .topLinks, .topBlog, .topContacts{
+                width: auto;
+            }
         }
     }
 }
