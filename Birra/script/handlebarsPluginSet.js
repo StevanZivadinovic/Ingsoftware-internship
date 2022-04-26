@@ -74,18 +74,6 @@ export let mainCodeFetch = (main) => {
     });
 }
 
-let noDataError = () => {
-  setTimeout(() => {
-    console.log(context.list.length)
-    if (context.list.length == 0) {
-      confirm('There is no results for your search!');
-      fetchingForSorting(10, -1, 10);
-    }
-  }, 1000);
-}
-
-
-
 //default fetch function for sorting data
 
 export let fetchingForSorting = (dataPerPage) => {

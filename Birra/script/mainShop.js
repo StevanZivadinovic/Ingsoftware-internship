@@ -1,23 +1,15 @@
 import { addToCart } from "./addToCart.js";
 
-
 let idOfBeer = parseInt(localStorage.getItem('idBeer'));
 let beers = [];
 var source = document.getElementById("entry-template").innerHTML;
 var headerSource = document.getElementById("header-template").innerHTML;
-
-
 var template = Handlebars.compile(source);
 var headerTemplate = Handlebars.compile(headerSource);
 
 var context = {
   list: [],
 };
-
-
-
-
-
 
 
 let mainCodeFetch=(main)=>{
@@ -37,7 +29,6 @@ let mainCodeFetch=(main)=>{
               tagline.push(c.name);
             }
            })
-       console.log(tagline);
 
        context.list.push({
          buttonText: "Add to Cart",
@@ -54,13 +45,11 @@ let mainCodeFetch=(main)=>{
          abv:a.abv,
          tagline:tagline
        });
-      //  toggleStyle();
        var html = template(context);
        var htmlHeader = headerTemplate(context);
        document.querySelector(".bottomHeaderContainerForHandlebars").innerHTML = htmlHeader;
        document.querySelector(".galleryGallery").innerHTML = html;
        document.querySelector('.waitDivMain').style.display='none';
-
       });
 
      
@@ -98,7 +87,7 @@ let mainCodeFetch=(main)=>{
  }
 
 mainCodeFetch(`https://api.punkapi.com/v2/beers/${idOfBeer}`)
-// }, false);
+
 
 
 
