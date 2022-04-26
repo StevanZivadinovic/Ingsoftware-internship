@@ -73,7 +73,6 @@ let getBeersDetails = (e, c) => {
     </div>
  </li>`;
       document.querySelector('.cartListMain').innerHTML += liTag;
-      // localStorage.removeItem(`${name}`);
       localStorage.setItem(`${name}`, liTag);
       getLocalStorageItems()
 
