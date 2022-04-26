@@ -418,9 +418,14 @@ body{
                     height: 5vh;
                 }
             }
-            
             .mainContent{
-                display: none !important;
+                
+                .cart{
+                    margin: 0 auto;
+                }
+                .workTime, .social{ 
+                    display: none !important;
+                }
             }
         }
     }

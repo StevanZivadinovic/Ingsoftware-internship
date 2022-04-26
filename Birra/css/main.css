@@ -378,7 +378,10 @@ body {
   .primaryHeader .row .headerPrimaryImg img {
     height: 5vh;
   }
-  .primaryHeader .row .mainContent {
+  .primaryHeader .row .mainContent .cart {
+    margin: 0 auto;
+  }
+  .primaryHeader .row .mainContent .workTime, .primaryHeader .row .mainContent .social {
     display: none !important;
   }
 
@@ -906,21 +909,29 @@ footer .top .topFirst .social .mainSocial .aweosmeIcon:hover i {
 footer .top .topFirst .social .mainSocial .aweosmeIcon i {
   font-size: 1.5rem;
 }
-footer .top .topLinks, footer .top .topBlog, footer .top .topContacts {
+footer .top .topLinks,
+footer .top .topBlog,
+footer .top .topContacts {
   width: 25%;
   margin-bottom: 2.1rem;
 }
-footer .top .topLinks h3, footer .top .topBlog h3, footer .top .topContacts h3 {
+footer .top .topLinks h3,
+footer .top .topBlog h3,
+footer .top .topContacts h3 {
   margin: 2.1rem auto 4.2rem auto;
   text-transform: uppercase;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 2.1rem;
   color: #e1a03a;
 }
-footer .top .topLinks ul, footer .top .topBlog ul, footer .top .topContacts ul {
+footer .top .topLinks ul,
+footer .top .topBlog ul,
+footer .top .topContacts ul {
   list-style-type: none;
 }
-footer .top .topLinks ul li a, footer .top .topBlog ul li a, footer .top .topContacts ul li a {
+footer .top .topLinks ul li a,
+footer .top .topBlog ul li a,
+footer .top .topContacts ul li a {
   text-transform: uppercase;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
@@ -964,7 +975,8 @@ footer .bottom {
   padding-top: 3.5rem;
   padding-bottom: 12.6rem;
 }
-footer .bottom p, footer .bottom span {
+footer .bottom p,
+footer .bottom span {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
   color: rgba(244, 232, 206, 0.6);
@@ -976,8 +988,13 @@ footer .bottom span {
 @media screen and (max-width: 768px) {
   footer .top {
     flex-wrap: wrap;
+    padding-top: 10.4rem;
+    padding-bottom: 0rem;
   }
-  footer .top .topFirst, footer .top .topLinks, footer .top .topBlog, footer .top .topContacts {
+  footer .top .topFirst,
+footer .top .topLinks,
+footer .top .topBlog,
+footer .top .topContacts {
     width: auto;
   }
 }
@@ -1026,7 +1043,8 @@ footer .bottom span {
   color: #e3cfab;
   font-weight: 400;
 }
-.modal-dialog .btn-close, .modal-dialog .buttonClose {
+.modal-dialog .btn-close,
+.modal-dialog .buttonClose {
   color: white;
   opacity: 1;
   padding-left: 5rem;
@@ -1050,12 +1068,14 @@ footer .bottom span {
   font-style: italic;
   margin: 0;
 }
-.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p, .myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p {
+.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p,
+.myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.2rem;
   color: "";
 }
-.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p span, .myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p span {
+.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p span,
+.myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p span {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   color: #bf431f;
@@ -1064,19 +1084,22 @@ footer .bottom span {
   display: flex;
   justify-content: space-between;
 }
-.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p, .myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p {
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p,
+.myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.2rem;
   color: "";
   margin: 0;
 }
-.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p span, .myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p span {
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p span,
+.myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p span {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   color: #bf431f;
   font-weight: 900;
 }
-.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter .firstFooter, .myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter .firstFooter {
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter .firstFooter,
+.myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter .firstFooter {
   width: 13%;
 }
 

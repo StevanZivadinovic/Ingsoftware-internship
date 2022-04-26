@@ -22,7 +22,6 @@
             max-height: 38rem;
             width: 25%;
             height: 100%;
-            // overflow: hidden;
             
             .img {
                 position: relative;
@@ -35,8 +34,6 @@
               
                 &:hover {
                     background-color: #ffffff;
-                    // transform: scale(1.3);
-                    // transition: all .5s ease;
                 }
 
                 .zoom {
@@ -163,7 +160,6 @@
                 }
             }
 
-
             .galleryItemContent {
                 height: 4.5rem;
                 background-color: #d57f2c;
@@ -186,7 +182,6 @@
 
 
 #categories {
-
     a.categoriesLink {
         @include mixins.setTextPara(variables.$fira, 1.4rem, #BF431F);
         text-decoration: none;
@@ -201,7 +196,6 @@
 }
   
   @media screen and (max-width: 768px) {
-  
         .gallery {
             height: auto;
           .navGallery {
@@ -225,14 +219,10 @@
               .galleryCardSecondColumn{
 
                 .galleryItemContent {
-                  
                     width: 100%;
-                   
                     &:hover {
                         background-color: #BF431F;
                     }
-    
-    
                 }
               
                 .cardName{

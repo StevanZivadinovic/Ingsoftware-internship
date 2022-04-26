@@ -1,4 +1,5 @@
 
+
 let getLocalStorageItems = () => {
   for (var i = 0; i < localStorage.length; i++) {
     document.querySelector('.cartListMain').innerHTML += localStorage.getItem(localStorage.key(i));
@@ -11,12 +12,10 @@ let getLocalStorageItems = () => {
   })
   document.querySelector(".spanCart").innerHTML = sum;
 }
-
 getLocalStorageItems();
 
 
 let getNumberOfBeers = (e, c) => {
-  console.log(c, e.currentTarget)
   inputValue = 0;
   let cartValue = parseInt(document.querySelector(".spanCart").innerHTML);
   var inputValue = parseInt(
@@ -41,23 +40,22 @@ let getBeersDetails = (e, c) => {
       let imgURL = data[0].image_url;
       let name = data[0].name;
       let quantity = e.target.parentElement.parentElement.children[1].children[2].value;
+
       let liTag = `<li>
- <div class="listCart">
-   <div class="nameList">
+    <div class="listCart">
+    <div class="nameList">
      <h4>${name}</h4>
      <p>Quantity: <span class="spanList">${quantity}</span> </p>
-   </div>
-   <div class="contentList">
+    </div>
+     <div class="contentList">
      <img src="${imgURL}" alt="" srcset="" style="width: 2rem;">
      <button class='listBtnRemove'>X</button>
-   </div>
- </div>
+     </div>
+    </div>
  </li>`;
       document.querySelector('.cartListMain').innerHTML += liTag;
-      let arrayOfLocalStorageItems = [];
       localStorage.setItem(`${name}`, liTag);
 
-      console.log('dodatno')
     })
 
 
@@ -65,7 +63,6 @@ let getBeersDetails = (e, c) => {
 
 
 let removeBeer = (e, c) => {
-  console.log(c, e.currentTarget);
   if (e.target.classList.contains('listBtnRemove')) {
     let numOfBeersToDelete = parseInt(e.target.parentElement.parentElement.children[0].children[1].children[0].innerHTML);
     let cartValue = parseInt(document.querySelector(".spanCart").innerHTML);

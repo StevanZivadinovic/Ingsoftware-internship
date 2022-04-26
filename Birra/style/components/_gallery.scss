@@ -4,7 +4,7 @@
 .gallerySection {
   background-color: #f4e8ce;
   z-index: -1;
-  
+
   .mainGallerySection {
     position: relative;
     width: 80%;
@@ -12,79 +12,94 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 2.5%;
+
     .categories {
-      background-color: #e3cfab; 
+      background-color: #e3cfab;
       height: 95rem;
+
       .mainCategories {
         margin: 5vh 0;
+
         h3 {
           @include mixins.setTextPara(variables.$alegria, 1.8rem, #bf431f);
           text-transform: uppercase;
           margin-top: 2.4rem;
           margin-bottom: 2.6rem;
         }
+
         ul {
           list-style-type: none;
+
           li {
             @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
             margin-bottom: 1rem;
             font-weight: 800;
-            label{
+
+            label {
               font-size: 1.2rem;
             }
+
             &:hover {
               color: #e1a03a;
               cursor: pointer;
             }
-            
+
             span {
               i {
                 color: #e1a03a;
               }
             }
           }
-          .spanFilter{      
+
+          .spanFilter {
             cursor: default !important;
-            color: #44322c !important; 
+            color: #44322c !important;
           }
         }
-        .btnSubmitFilterPara{
-            height: 4rem;
-            background-color: #d57f2c;
-            text-align: center;
-            line-height: 4rem;
-            @include mixins.setTextPara(variables.$alegria, 1.4rem, #f4e8ce);
-            text-transform: uppercase;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            width: 100%;
-            outline: none;
-            border: none;
-            &:hover {
-              background-color: #cc6626;
-              cursor: pointer;
-            }
+
+        .btnSubmitFilterPara {
+          height: 4rem;
+          background-color: #d57f2c;
+          text-align: center;
+          line-height: 4rem;
+          @include mixins.setTextPara(variables.$alegria, 1.4rem, #f4e8ce);
+          text-transform: uppercase;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          width: 100%;
+          outline: none;
+          border: none;
+
+          &:hover {
+            background-color: #cc6626;
+            cursor: pointer;
+          }
         }
       }
     }
 
     .gallery {
       padding-bottom: 8.5rem;
+
       .navGallery {
         .navGalleryLeft {
+
           .list,
           .grid {
             margin-left: 0.5rem;
             max-height: 2.4rem;
+
             i {
               color: #bf431f;
               font-size: 2.4rem;
               cursor: pointer;
+
               &:hover {
                 color: #793319;
               }
             }
           }
+
           div {
             max-height: 2.4rem;
             @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
@@ -94,6 +109,7 @@
             line-height: 2.4rem;
           }
         }
+
         .navGalleryRight {
           select {
             @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
@@ -102,12 +118,15 @@
             padding: 1.3rem 2.6rem;
             border-radius: 0.3rem;
             margin-bottom: 5.6rem;
+
             &:hover {
               border: 0.1rem solid #cf6f2c;
             }
+
             &:focus {
               outline: none;
             }
+
             option {
               @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
               background-color: #f4e8ce;
@@ -122,29 +141,33 @@
         grid-template-columns: auto auto auto;
         grid-template-rows: repeat(1, 48rem);
         height: auto;
+
         .galleryItem {
           width: 100%;
+
           .imgAndPrice {
             background-color: #e3cfab;
+
             &:hover {
               background-color: transparent;
               cursor: pointer;
             }
+
             .img {
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
-              //  background-image: url('./../../assets/beer.png');
               height: 38rem;
               transition: all 0.3s ease;
-              //  position: relative;
               display: flex;
               align-items: end;
-              div{
+
+              div {
                 height: 5rem;
                 text-align: center;
               }
-              &:hover i { 
+
+              &:hover i {
                 transition: all 0.5s ease;
                 opacity: 1;
                 transform: translateY(-20rem);
@@ -154,14 +177,16 @@
                 font-size: 3rem;
                 color: #ffffff;
                 opacity: 0;
-                
+
               }
+
               &:hover {
                 background-color: transparent;
                 cursor: pointer;
               }
-            
+
             }
+
             .galleryItemPriceFirst {
               text-align: center;
               @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
@@ -170,10 +195,9 @@
             }
           }
 
-          .galleryCardSecondColumn{
-            
-            .galleryItemPriceSecond{
-              
+          .galleryCardSecondColumn {
+            .galleryItemPriceSecond {
+
               text-align: center;
               @include mixins.setTextPara(variables.$fira, 1.3rem, #bf431f);
               font-weight: 800;
@@ -202,70 +226,76 @@
         }
 
       }
+
       .listGallery {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(1, 36.5rem);
-        .galleryItem{
+
+        .galleryItem {
           display: flex;
           background-color: #E3CFAB;
           align-items: center;
           justify-content: space-between;
-          .imgAndPrice{
+
+          .imgAndPrice {
             max-height: 36.5rem;
             width: 30%;
             background-color: #E3CFAB;
             margin: 1.4rem 2.1rem 1.4rem 1.4rem;
-           
-            .img{
+
+            .img {
               max-height: 32rem;
               background-size: contain;
-              
+
             }
           }
 
-          .galleryCardSecondColumn{
+          .galleryCardSecondColumn {
             width: 65%;
-           
-            .cardName{
+
+            .cardName {
               @include mixins.setTextPara(variables.$alegria, 3.4rem, #44322C);
               font-weight: 700;
               margin: 2.7rem 0 1.3rem 0;
-              
+
             }
-            p{
+
+            p {
               @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
               font-weight: 700;
               padding-right: 2.8rem;
               margin-bottom: 1rem;
             }
-            .galleryItemPriceSecond{
+
+            .galleryItemPriceSecond {
               text-align: left;
               @include mixins.setTextPara(variables.$fira, 1.4rem, #44322c);
               font-weight: 700;
               margin-bottom: 1rem;
             }
-            .galleryItemContent{
+
+            .galleryItemContent {
               margin-bottom: 8rem;
               display: inline-block;
               min-width: 35%;
-              max-width:20rem;
+              max-width: 20rem;
               height: 5rem;
               padding: 1rem .9rem;
               line-height: 100%;
 
-              &:hover{
+              &:hover {
                 background-color: #BF431F;
               }
-              
-              
             }
           }
         }
       }
+
       .bottomNavGallery {
         div {
           @include mixins.setTextPara(variables.$alegria, 2.1rem, #bf431f);
           cursor: pointer;
+
           a {
             @include mixins.setTextPara(variables.$alegria, 2.1rem, #bf431f);
             text-decoration: none;
@@ -276,10 +306,12 @@
               color: #f4e8ce;
             }
           }
+
           .currentlyClicked {
             background-color: #bf431f;
             color: #f4e8ce;
           }
+
           i {
             padding: 0.735rem 1.26rem;
             font-size: 1.5rem;
@@ -288,6 +320,7 @@
               color: #793319;
             }
           }
+
           &:nth-child(5) {
             margin-left: 1.26rem;
           }
@@ -297,17 +330,16 @@
   }
 }
 
-#wrapper{
-
-  .wrapperRange{
-    // position: relative;
+#wrapper {
+  .wrapperRange {
     margin: 1rem 0;
-    .containerRange{
-      
+
+    .containerRange {
+
       position: relative;
       height: 5rem;
 
-      input{
+      input {
         appearance: none;
         width: 100%;
         outline: none;
@@ -318,11 +350,14 @@
         background-color: transparent;
         pointer-events: none;
 
-        &::-webkit-slider-runnable-track, &::-moz-range-track, &::-ms-track{
+        &::-webkit-slider-runnable-track,
+        &::-moz-range-track,
+        &::-ms-track {
           appearance: none;
           height: .5rem;
         }
-        &::-webkit-slider-thumb{
+
+        &::-webkit-slider-thumb {
           appearance: none;
           height: 1.5rem;
           width: 1.5rem;
@@ -332,12 +367,14 @@
           border-radius: 1rem;
 
         }
-        &:active::-webkit-slider-thumb{
+
+        &:active::-webkit-slider-thumb {
           background-color: #793319;
-          
+
         }
       }
-      .slider-track{
+
+      .slider-track {
         width: 100%;
         height: .5rem;
         background-color: #BF431F;
@@ -360,7 +397,7 @@
       flex-direction: column-reverse;
 
       .gallery {
-        .galleryGallery{
+        .galleryGallery {
           gap: 2rem;
           display: grid;
           grid-template-columns: auto auto;
@@ -368,6 +405,7 @@
           height: auto;
 
         }
+
         .listGallery {
           grid-template-columns: 1fr;
           grid-template-rows: repeat(1, 36.5rem);
@@ -384,38 +422,43 @@
 @media screen and (max-width: 480px) {
   .gallerySection {
     height: auto;
+
     .mainGallerySection {
       .gallery {
         .navGallery {
           height: 20vh;
         }
-        .galleryGallery{
+
+        .galleryGallery {
           grid-template-columns: auto;
-          
 
         }
+
         .listGallery {
           grid-template-columns: 1fr;
           grid-template-rows: repeat(1, 36.5rem);
-          
-          .galleryItem{
+
+          .galleryItem {
             flex-direction: column;
-            .imgAndPrice{
-              #imgL{
+
+            .imgAndPrice {
+              #imgL {
                 height: 15vh;
               }
             }
-            .galleryCardSecondColumn{
-              .cardName{
+
+            .galleryCardSecondColumn {
+              .cardName {
                 text-align: center;
                 font-size: 3rem;
               }
-              .cardText{
+
+              .cardText {
                 text-align: center;
                 padding: 0rem;
               }
 
-              .galleryItemPriceSecond{
+              .galleryItemPriceSecond {
                 text-align: center;
               }
             }

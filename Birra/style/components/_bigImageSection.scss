@@ -47,14 +47,9 @@
                     &:hover {
                         background-color: #793319;
                     }
-
-
-
                 }
             }
-
         }
-
     }
 }
 
@@ -67,21 +62,17 @@
                     @include mixins.setTextPara(variables.$alegria, 4rem, #ffffff);
 
                 }
-
                 p {
                     @include mixins.setTextPara(variables.$fira, 1.5rem, #eee2c8);
 
                 }
 
-                .buttonDivBigImage{
-                    .buttonBigImage{
+                .buttonDivBigImage {
+                    .buttonBigImage {
                         padding: 1rem 0;
                     }
                 }
-            
+            }
         }
-
     }
-}
-
 }

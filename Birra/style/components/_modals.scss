@@ -1,57 +1,58 @@
 @use './../mixins';
 @use './../variables';
 
-// @include mixins.setTextPara(variables.$alegria, 2.1rem, #e1a03a);
-//D57F2C
-
-.modal{
-
-    &-dialog{
+.modal {
+    &-dialog {
         background-color: transparent;
-        padding: 2rem 3rem;   
-        
+        padding: 2rem 3rem;
 
-        .modal-content{
+        .modal-content {
             background-color: #e3cfab;
 
-            .modal-header{
-                h5{
+            .modal-header {
+                h5 {
                     @include mixins.setTextPara(variables.$fira, 2.2rem, '');
                 }
             }
 
-            .modal-body{
+            .modal-body {
                 width: 70%;
-                h3{
+
+                h3 {
                     @include mixins.setTextPara(variables.$fira, 1.6rem, #bf431f);
                     text-transform: uppercase;
                     font-weight: 700;
                     width: 100%;
                 }
-                span{
+
+                span {
                     @include mixins.setTextPara(variables.$fira, 1.4rem, #bf431f);
                     font-weight: 700;
                 }
-                input{
+
+                input {
                     background-color: transparent;
-                    
+
                     transition: all .3s ease;
-                    &:focus{
+
+                    &:focus {
                         outline: none;
                         border: none;
                         border-bottom: solid .2rem #bf431f !important;
                     }
                 }
             }
-            .smallModalBtn{
+
+            .smallModalBtn {
                 background-color: #d57f2c;
                 @include mixins.setTextPara(variables.$alegria, 1.4rem, #e3cfab);
                 font-weight: 400;
-                
+
             }
         }
 
-        .btn-close, .buttonClose{
+        .btn-close,
+        .buttonClose {
             color: white;
             opacity: 1;
             padding-left: 5rem;
@@ -59,76 +60,64 @@
             font-weight: 900;
 
         }
-}
+    }
 }
 
-.myBiggerModal{
-    .modal-dialog{
-        .modal-content{
-            .modal-header{
-                h3{
+.myBiggerModal {
+    .modal-dialog {
+        .modal-content {
+            .modal-header {
+                h3 {
                     @include mixins.setTextPara(variables.$rail, 2rem, #bf431f);
                     text-transform: uppercase;
                     font-weight: 900;
                 }
-                p{
+
+                p {
                     @include mixins.setTextPara(variables.$fira, 1.2rem, #bf431f);
                     font-style: italic;
-                    // font-weight: 900;
                     margin: 0;
-                    
+
                 }
             }
 
-            .modal-body{
-                .firstBody, .secondBody{
-                    p{
-                        @include mixins.setTextPara(variables.$fira, 1.2rem, '');                     
+            .modal-body {
 
-                        span{
+                .firstBody,
+                .secondBody {
+                    p {
+                        @include mixins.setTextPara(variables.$fira, 1.2rem, '');
+
+                        span {
                             @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
-        
-                            }
+
+                        }
                     }
                 }
             }
 
-            .modal-footer{
+            .modal-footer {
                 display: flex;
-                justify-content: space-between;  
-               .firstFooter, .secondFooter{
-                
-                   p{
-                    @include mixins.setTextPara(variables.$fira, 1.2rem, '');
-                    margin: 0;
-                    span{
-                        @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
-                        font-weight: 900;
+                justify-content: space-between;
+
+                .firstFooter,
+                .secondFooter {
+
+                    p {
+                        @include mixins.setTextPara(variables.$fira, 1.2rem, '');
+                        margin: 0;
+
+                        span {
+                            @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
+                            font-weight: 900;
+                        }
+                    }
+
+                    .firstFooter {
+                        width: 13%;
                     }
                 }
-                .firstFooter{
-                    width: 13%;
-                }
-                // #secondFooter{
-                //     width: 80%;
-                // }
-                // .secondFooter{   
-                //     width: 80%;
-                //     display: flex;
-                //     p{
-                //     width: 80%;
-
-                //         @include mixins.setTextPara(variables.$fira, 1.2rem, '');
-                //         margin: 0;
-                //         span{
-                //             @include mixins.setTextPara(variables.$rail, 1.2rem, #bf431f);
-                //             font-weight: 900;
-                //         }
-                //     }
-                   
-                // }
             }
-        }
         }
     }
 }

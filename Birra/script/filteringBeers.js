@@ -37,7 +37,6 @@ document.querySelector('form').addEventListener('submit', e => {
         }
     });
 
-
     let mainCodeFetchFiltering = (main) => {
         fetch(main).then((data) => {
             document.querySelector('.waitDivMain').style.display = 'flex';
@@ -93,76 +92,7 @@ document.querySelector('form').addEventListener('submit', e => {
         noDataError()
     }
 
-    sortingFilteredBeers()
-    //sorting api
-
-    // let selectValue = document.querySelector(".sorting").value;
-    // if (selectValue == "Show 10") {
-    // sortingFilteredBeers('',10)
-    //  document.querySelectorAll('.link1, .link2, .firstChevronRight, .secondChevronRight').forEach(a=>{
-    //   a.style.display = 'inline';
-    // });
-    // }
-    // if (selectValue == "Show 20") {
-    //     sortingFilteredBeers('',20);
-    //   document.querySelectorAll('.link3, .link4, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
-    //     a.style.display = 'none';
-    //   });
-    //   document.querySelectorAll('.link1, .link2')
-    //   .forEach(a=>{
-    //     a.style.display = 'inline';
-    //   });
-    // }
-  
-    // if (selectValue == "Show all") {
-    //     sortingFilteredBeers('',35);
-    //  document.querySelectorAll('.link2, .link3, .firstChevronLeft, .secondChevronLeft, .firstChevronRight, .secondChevronRight').forEach(a=>{
-    //    a.style.display = 'none';
-    //  })
-    // }
-
-
-
-    //pagination fetch 
-// document.querySelectorAll('.paginationLink').forEach((a,i)=>{
-//     a.addEventListener('click',e=>{
-//       toggleStyle();
-//       addToCart();
-//       let selectValue = document.querySelector(".sorting").value;
-//     //  console.log(selectValue);
-     
-//     if(selectValue=='Show 10'){
-//       console.log('okinuto 10');
-//       toggleStyle();
-        
-//         if(i+1 == 4){
-//           sortingFilteredBeers(i+1,5)
-//         }else{
-//           sortingFilteredBeers(i+1,10)
-//         }
-    
-//     }
-//     if(selectValue=='Show 20'){
-//       console.log('okinuto 20');
-//       document.querySelector('.link1, .link2').style.display = 'inline';
-//       toggleStyle();
-//       if(i+1 == 2){ 
-//         sortingFilteredBeers(i+1,15)
-//       }else{
-//         sortingFilteredBeers(i+1,20);
-//       }
-//     }
-//    if(selectValue=='Show all'){
-//     console.log('okinuto all');
-//     toggleStyle();
-//     sortingFilteredBeers(i+1,35);
-//     }
-//    })
-//   });
-
-
-
-
+    sortingFilteredBeers();
 
     console.log(nameSearchInput, `Left slider:${sliderLeft}`, `Right slider:${sliderRight}`);
     console.log(`${dateBefore}`, `${dateAfter}`, `${food}`);
