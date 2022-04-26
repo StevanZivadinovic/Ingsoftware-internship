@@ -1,8 +1,12 @@
 
 
+
 let getLocalStorageItems = () => {
-  for (var i = 0; i < localStorage.length; i++) {
-    document.querySelector('.cartListMain').innerHTML += localStorage.getItem(localStorage.key(i));
+  document.querySelector('.cartListMain').innerHTML='';
+  for (const [key, value] of Object.entries(localStorage)) {
+    if(key!=='idBeer'){
+      document.querySelector('.cartListMain').innerHTML += value;
+    }
   }
   let sum = 0;
   Array.from(document.querySelector('.cartListMain').children).forEach(a => {
@@ -12,6 +16,7 @@ let getLocalStorageItems = () => {
   })
   document.querySelector(".spanCart").innerHTML = sum;
 }
+
 getLocalStorageItems();
 
 
@@ -37,10 +42,24 @@ let getBeersDetails = (e, c) => {
       return data.json()
     })
     .then((data) => {
+
+  
       let imgURL = data[0].image_url;
       let name = data[0].name;
-      let quantity = e.target.parentElement.parentElement.children[1].children[2].value;
+      let quantity = parseInt(e.target.parentElement.parentElement.children[1].children[2].value);
+      let quantity2=0;
+      let arrayOfLocalStorageItems = [];
 
+      Array.from(document.querySelectorAll('.spanList')).forEach(a=>{
+        let name1 = a.parentElement.previousElementSibling.innerHTML;
+        if(name==name1){
+          localStorage.removeItem(`${name}`);
+          quantity2+=parseInt(a.outerText)
+        }
+      
+      })
+      
+      quantity+=quantity2;
       let liTag = `<li>
     <div class="listCart">
     <div class="nameList">
@@ -54,7 +73,9 @@ let getBeersDetails = (e, c) => {
     </div>
  </li>`;
       document.querySelector('.cartListMain').innerHTML += liTag;
+      localStorage.removeItem(`${name}`);
       localStorage.setItem(`${name}`, liTag);
+      getLocalStorageItems()
 
     })
 
