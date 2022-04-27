@@ -1,0 +1,1334 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.waitDivMain {
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(121, 51, 25, 0.8);
+}
+.waitDivMain .waitDiv {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.waitDivMain .waitDiv .content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.waitDivMain .waitDiv .content i {
+  font-size: 30rem;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  color: #e1a03a;
+}
+.waitDivMain .waitDiv .content p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 4rem;
+  color: #f0c175;
+  width: 100%;
+}
+
+@keyframes changewidth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pageUpButton {
+  position: fixed;
+  bottom: -3.5rem;
+  right: 2.5rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: #BF431F;
+  text-align: center;
+  line-height: 4rem;
+  color: #E3CFAB;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.primaryHeader {
+  background-color: rgb(68, 50, 44);
+}
+.primaryHeader .row .mainContent {
+  width: 80%;
+  margin: 0 auto;
+}
+.primaryHeader .row .mainContent .workTime, .primaryHeader .row .mainContent .cart {
+  text-transform: uppercase;
+  margin: 0 1.5em;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #e1a03a;
+}
+.primaryHeader .row .mainContent .cart {
+  text-transform: none;
+  color: #E3CFAB;
+  position: relative;
+  cursor: pointer;
+}
+.primaryHeader .row .mainContent .cart span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #E3CFAB;
+  margin: 0 0.4rem;
+}
+.primaryHeader .row .mainContent .cart .spanTextCart {
+  font-weight: bold;
+}
+.primaryHeader .row .mainContent .cart .cartListMain {
+  display: none;
+  position: absolute;
+  top: 4.5rem;
+  left: -30%;
+  list-style-type: none;
+  background-color: #F4E8CE;
+  z-index: 100;
+  width: 180%;
+  padding: 0rem 2rem 0rem 2rem;
+  border-radius: 1rem;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li {
+  border-bottom: solid 0.1rem #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart {
+  text-align: center;
+  margin: 1rem 0;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .nameList h4 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .nameList p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .nameList p span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #bf431f;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .contentList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li .listCart .contentList button {
+  border: none;
+  outline: none;
+  background-color: #D57F2C;
+  padding: 1rem 1rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #E3CFAB;
+  font-weight: bolder;
+  margin: 0 2rem;
+}
+.primaryHeader .row .mainContent .cart .cartListMain li:last-child {
+  margin: 1rem;
+}
+.primaryHeader .row .mainContent .cart:hover .cartListMain {
+  display: block;
+}
+.primaryHeader .row .mainContent .social {
+  font-size: 1.2rem;
+  color: #e1a03a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.85em 1.4em;
+}
+.primaryHeader .row .mainContent .social .mainSocial {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 4rem;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon {
+  line-height: 4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #30211B;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon:hover {
+  background-color: #e1a03a;
+  cursor: pointer;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon:hover i {
+  color: #30211B;
+}
+.primaryHeader .row .mainContent .social .mainSocial .aweosmeIcon i {
+  font-size: 0.9rem;
+}
+
+.middleHeader {
+  background-color: #BF431F;
+  height: 8.25rem;
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+}
+.middleHeader .row {
+  max-width: 100vw;
+  margin: 0;
+}
+.middleHeader .row .mainContainMidlleHeader {
+  width: 80%;
+  margin: 0 auto;
+}
+.middleHeader .row .mainContainMidlleHeader .birraLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.middleHeader .row .mainContainMidlleHeader nav {
+  max-width: 67rem;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: none;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi {
+  width: 100%;
+  height: 100%;
+  height: 8.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #F1E8CE;
+  padding: 0 1.2rem;
+  position: relative;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi:hover {
+  background-color: #793319;
+  cursor: pointer;
+  color: #e1a03a;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi:hover ul.sub {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  top: 83px;
+  transition: all 0.5s ease;
+  pointer-events: auto;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi:hover ul.sub li {
+  pointer-events: auto;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul {
+  background-color: #793319;
+  position: absolute;
+  width: 25rem;
+  top: 163px;
+  opacity: 0;
+  left: 0px;
+  pointer-events: none;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi {
+  list-style-type: none;
+  height: auto;
+  text-align: left;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #F1E8CE;
+  font-weight: 800;
+  position: relative;
+  pointer-events: none;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi:hover {
+  background-color: #793319;
+  cursor: pointer;
+  color: #e1a03a;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi:hover .subSub {
+  opacity: 1;
+  pointer-events: auto;
+}
+.middleHeader .row .mainContainMidlleHeader nav ul.mainUl li.mainLi ul li.subLi .subSub {
+  position: absolute;
+  top: 0;
+  left: -112%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bottomHeader {
+  height: 7rem;
+  background-color: #E3CFAB;
+}
+.bottomHeader .mainContainBottomHeader {
+  width: 80%;
+  margin: 0 auto;
+  height: 7rem;
+}
+.bottomHeader .mainContainBottomHeader .shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bottomHeader .mainContainBottomHeader .shop h2 {
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.4rem;
+  color: #d57f2c;
+}
+.bottomHeader .mainContainBottomHeader .localNavigation {
+  text-align: end;
+  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.5rem;
+  color: #44322C;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bottomHeader .mainContainBottomHeader .localNavigation:hover {
+  color: #BF431F;
+  cursor: pointer;
+}
+
+#myFirstModal {
+  z-index: 999999;
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 0.15rem solid rgba(68, 50, 44, 0.1);
+}
+.accordion-item .accordion-header .accordion-button {
+  background-color: #bf431f;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 2rem 2rem;
+}
+.accordion-item .accordion-header #contactsButton::after, .accordion-item .accordion-header #reservationButton::after, .accordion-item .accordion-header #eventsButton::after, .accordion-item .accordion-header #breweryButton::after, .accordion-item .accordion-header button.ButtonSubLINK::after {
+  display: none !important;
+}
+.accordion-item .collapse, .accordion-item .show {
+  background-color: #bf431f;
+}
+.accordion-item .collapse .accordion-body, .accordion-item .show .accordion-body {
+  background-color: #bf431f;
+  padding: 0rem;
+}
+.accordion-item .collapse .accordion-body ul, .accordion-item .show .accordion-body ul {
+  background-color: #bf431f;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+  .primaryHeader .row {
+    height: 10vh;
+  }
+  .primaryHeader .row .headerPrimaryImg {
+    line-height: 10vh !important;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  .primaryHeader .row .headerPrimaryImg .leftNavbar {
+    background-color: transparent;
+    color: #E3CFAB;
+    border: none;
+    box-shadow: none;
+  }
+  .primaryHeader .row .headerPrimaryImg .leftNavbar:hover {
+    color: #D57F2C;
+  }
+  .primaryHeader .row .headerPrimaryImg .leftNavbar i {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .primaryHeader .row .headerPrimaryImg img {
+    height: 5vh;
+  }
+  .primaryHeader .row .mainContent .cart {
+    margin: 0 auto;
+  }
+  .primaryHeader .row .mainContent .workTime, .primaryHeader .row .mainContent .social {
+    display: none !important;
+  }
+
+  .middleHeader {
+    display: none;
+  }
+
+  .offcanvas .offcanvas-header {
+    display: flex;
+    justify-content: start;
+    background-color: #bf431f;
+  }
+  .offcanvas .offcanvas-header button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+  }
+  .offcanvas .offcanvas-body {
+    background-color: #bf431f;
+    padding: 0;
+  }
+}
+.bigImageSection {
+  background-color: #F4E8CE;
+  z-index: 2;
+}
+.bigImageSection .mainContentBigImageSection {
+  height: 80vh;
+  background-image: url("./../../assets/jumbo.jpg");
+  background-size: cover;
+  margin: 8.75rem 0;
+  width: 80%;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection {
+  width: 85%;
+  align-self: center;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection h2 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 6.4rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.2rem;
+  color: #eee2c8;
+  text-align: center;
+  margin-top: 1.1rem;
+  padding-bottom: 0.2rem;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection .buttonDivBigImage {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection .buttonDivBigImage .buttonBigImage {
+  width: 100%;
+  margin: 4.7rem auto 1.6rem auto;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #f4e8ce;
+  padding: 1.35rem 6.15rem;
+  background-color: #BF431F;
+  border: none;
+  outline: none;
+  transition: all 0.4s ease;
+}
+.bigImageSection .mainContentBigImageSection .contentBigImageSection .buttonDivBigImage .buttonBigImage:hover {
+  background-color: #793319;
+}
+
+@media screen and (max-width: 768px) {
+  .bigImageSection .mainContentBigImageSection .contentBigImageSection h2 {
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 4rem;
+    color: #ffffff;
+  }
+  .bigImageSection .mainContentBigImageSection .contentBigImageSection p {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.5rem;
+    color: #eee2c8;
+  }
+  .bigImageSection .mainContentBigImageSection .contentBigImageSection .buttonDivBigImage .buttonBigImage {
+    padding: 1rem 0;
+  }
+}
+.gallerySection {
+  background-color: #f4e8ce;
+  z-index: -1;
+}
+.gallerySection .mainGallerySection {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2.5%;
+}
+.gallerySection .mainGallerySection .categories {
+  background-color: #e3cfab;
+  height: 95rem;
+}
+.gallerySection .mainGallerySection .categories .mainCategories {
+  margin: 5vh 0;
+}
+.gallerySection .mainGallerySection .categories .mainCategories h3 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #bf431f;
+  text-transform: uppercase;
+  margin-top: 2.4rem;
+  margin-bottom: 2.6rem;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul {
+  list-style-type: none;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul li {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul li label {
+  font-size: 1.2rem;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul li:hover {
+  color: #e1a03a;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul li span i {
+  color: #e1a03a;
+}
+.gallerySection .mainGallerySection .categories .mainCategories ul .spanFilter {
+  cursor: default !important;
+  color: #44322c !important;
+}
+.gallerySection .mainGallerySection .categories .mainCategories .btnSubmitFilterPara {
+  height: 4rem;
+  background-color: #d57f2c;
+  text-align: center;
+  line-height: 4rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f4e8ce;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+.gallerySection .mainGallerySection .categories .mainCategories .btnSubmitFilterPara:hover {
+  background-color: #cc6626;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery {
+  padding-bottom: 8.5rem;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list,
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid {
+  margin-left: 0.5rem;
+  max-height: 2.4rem;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list i,
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid i {
+  color: #bf431f;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .list i:hover,
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft .grid i:hover {
+  color: #793319;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryLeft div {
+  max-height: 2.4rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 800;
+  margin-bottom: 1.3rem;
+  margin-left: 1rem;
+  line-height: 2.4rem;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  border: 0.1rem solid #e5d2af;
+  background-color: transparent;
+  padding: 1.3rem 2.6rem;
+  border-radius: 0.3rem;
+  margin-bottom: 5.6rem;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select:hover {
+  border: 0.1rem solid #cf6f2c;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select:focus {
+  outline: none;
+}
+.gallerySection .mainGallerySection .gallery .navGallery .navGalleryRight select option {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  background-color: #f4e8ce;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: repeat(1, 48rem);
+  height: auto;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem {
+  width: 100%;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice {
+  background-color: #e3cfab;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 38rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: end;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img div {
+  height: 5rem;
+  text-align: center;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img:hover i {
+  transition: all 0.5s ease;
+  opacity: 1;
+  transform: translateY(-20rem);
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img i {
+  font-size: 3rem;
+  color: #ffffff;
+  opacity: 0;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .img:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .imgAndPrice .galleryItemPriceFirst {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #bf431f;
+  font-weight: 800;
+  padding: 1rem 0;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #bf431f;
+  font-weight: 800;
+  padding: 1rem 0;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItemContent {
+  height: 6rem;
+  background-color: #d57f2c;
+  text-align: center;
+  line-height: 6rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #f4e8ce;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+.gallerySection .mainGallerySection .gallery .galleryGallery .galleryItemContent:hover {
+  background-color: #cc6626;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .listGallery {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, 36.5rem);
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem {
+  display: flex;
+  background-color: #E3CFAB;
+  align-items: center;
+  justify-content: space-between;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .imgAndPrice {
+  max-height: 36.5rem;
+  width: 30%;
+  background-color: #E3CFAB;
+  margin: 1.4rem 2.1rem 1.4rem 1.4rem;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .imgAndPrice .img {
+  max-height: 32rem;
+  background-size: contain;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn {
+  width: 65%;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardName {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 3.4rem;
+  color: #44322C;
+  font-weight: 700;
+  margin: 2.7rem 0 1.3rem 0;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 700;
+  padding-right: 2.8rem;
+  margin-bottom: 1rem;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
+  text-align: left;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent {
+  margin-bottom: 8rem;
+  display: inline-block;
+  min-width: 35%;
+  max-width: 20rem;
+  height: 5rem;
+  padding: 1rem 0.9rem;
+  line-height: 100%;
+}
+.gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent:hover {
+  background-color: #BF431F;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.1rem;
+  color: #bf431f;
+  cursor: pointer;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div a {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.1rem;
+  color: #bf431f;
+  text-decoration: none;
+  padding: 0.735rem 1.26rem;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div a:hover {
+  background-color: #bf431f;
+  color: #f4e8ce;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div .currentlyClicked {
+  background-color: #bf431f;
+  color: #f4e8ce;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div i {
+  padding: 0.735rem 1.26rem;
+  font-size: 1.5rem;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div i:hover {
+  color: #793319;
+}
+.gallerySection .mainGallerySection .gallery .bottomNavGallery div:nth-child(5) {
+  margin-left: 1.26rem;
+}
+
+#wrapper .wrapperRange {
+  margin: 1rem 0;
+}
+#wrapper .wrapperRange .containerRange {
+  position: relative;
+  height: 5rem;
+}
+#wrapper .wrapperRange .containerRange input {
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+#wrapper .wrapperRange .containerRange input::-webkit-slider-runnable-track, #wrapper .wrapperRange .containerRange input::-moz-range-track, #wrapper .wrapperRange .containerRange input::-ms-track {
+  appearance: none;
+  height: 0.5rem;
+}
+#wrapper .wrapperRange .containerRange input::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #D57F2C;
+  cursor: pointer;
+  pointer-events: auto;
+  border-radius: 1rem;
+}
+#wrapper .wrapperRange .containerRange input:active::-webkit-slider-thumb {
+  background-color: #793319;
+}
+#wrapper .wrapperRange .containerRange .slider-track {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #BF431F;
+  position: absolute;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .gallerySection .mainGallerySection {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .gallerySection .mainGallerySection .gallery .galleryGallery {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(1, 48rem);
+    height: auto;
+  }
+  .gallerySection .mainGallerySection .gallery .listGallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 36.5rem);
+  }
+  .gallerySection .mainGallerySection .categories {
+    margin-bottom: 5vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .gallerySection {
+    height: auto;
+  }
+  .gallerySection .mainGallerySection .gallery .navGallery {
+    height: 20vh;
+  }
+  .gallerySection .mainGallerySection .gallery .galleryGallery {
+    grid-template-columns: auto;
+  }
+  .gallerySection .mainGallerySection .gallery .listGallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 36.5rem);
+  }
+  .gallerySection .mainGallerySection .gallery .listGallery .galleryItem {
+    flex-direction: column;
+  }
+  .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .imgAndPrice #imgL {
+    height: 15vh;
+  }
+  .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardName {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardText {
+    text-align: center;
+    padding: 0rem;
+  }
+  .gallerySection .mainGallerySection .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
+    text-align: center;
+  }
+}
+footer {
+  background-image: url("./../../assets/footer.jpg");
+}
+footer .top {
+  width: 80%;
+  padding-top: 10.4rem;
+  padding-bottom: 5.6rem;
+  margin: 0 auto;
+}
+footer .top .topFirst {
+  width: 25%;
+}
+footer .top .topFirst .logoTopFirst {
+  margin-bottom: 2.24rem;
+}
+footer .top .topFirst p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f4e8ce;
+  margin-bottom: 3.64rem;
+}
+footer .top .topFirst .social {
+  font-size: 1.2rem;
+  color: #e1a03a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.4em 0;
+}
+footer .top .topFirst .social .mainSocial {
+  display: flex;
+  line-height: 4rem;
+}
+footer .top .topFirst .social .mainSocial .aweosmeIcon {
+  line-height: 4rem;
+  width: 3.7rem;
+  height: 3.7rem;
+  background-color: #30211B;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+footer .top .topFirst .social .mainSocial .aweosmeIcon:hover {
+  background-color: #e1a03a;
+  cursor: pointer;
+}
+footer .top .topFirst .social .mainSocial .aweosmeIcon:hover i {
+  color: #30211B;
+}
+footer .top .topFirst .social .mainSocial .aweosmeIcon i {
+  font-size: 1.5rem;
+}
+footer .top .topLinks,
+footer .top .topBlog,
+footer .top .topContacts {
+  width: 25%;
+  margin-bottom: 2.1rem;
+}
+footer .top .topLinks h3,
+footer .top .topBlog h3,
+footer .top .topContacts h3 {
+  margin: 2.1rem auto 4.2rem auto;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.1rem;
+  color: #e1a03a;
+}
+footer .top .topLinks ul,
+footer .top .topBlog ul,
+footer .top .topContacts ul {
+  list-style-type: none;
+}
+footer .top .topLinks ul li a,
+footer .top .topBlog ul li a,
+footer .top .topContacts ul li a {
+  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f4e8ce;
+  text-decoration: none;
+}
+footer .top .topBlog {
+  padding-right: 3rem;
+}
+footer .top .topBlog ul {
+  padding: 0;
+}
+footer .top .topBlog ul li:nth-child(1) {
+  margin-bottom: 1em;
+}
+footer .top .topBlog ul li:nth-child(1) a {
+  text-transform: none;
+}
+footer .top .topBlog ul li:nth-child(2) {
+  margin-bottom: 1em;
+  margin-top: 3.2rem;
+}
+footer .top .topBlog ul li:nth-child(2) a {
+  text-transform: none;
+}
+footer .top .topContacts p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f4e8ce;
+  margin-bottom: 2.1rem;
+}
+footer .top .topContacts p span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #d19f45;
+  font-weight: 700;
+}
+footer .bottom {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 3.5rem;
+  padding-bottom: 12.6rem;
+}
+footer .bottom p,
+footer .bottom span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: rgba(244, 232, 206, 0.6);
+}
+footer .bottom span {
+  color: #f4e8ce;
+}
+
+@media screen and (max-width: 768px) {
+  footer .top {
+    flex-wrap: wrap;
+    padding-top: 10.4rem;
+    padding-bottom: 0rem;
+  }
+  footer .top .topFirst,
+footer .top .topLinks,
+footer .top .topBlog,
+footer .top .topContacts {
+    width: auto;
+  }
+}
+.modal-dialog {
+  background-color: transparent;
+  padding: 2rem 3rem;
+}
+.modal-dialog .modal-content {
+  background-color: #e3cfab;
+}
+.modal-dialog .modal-content .modal-header h5 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.2rem;
+  color: "";
+}
+.modal-dialog .modal-content .modal-body {
+  width: 70%;
+}
+.modal-dialog .modal-content .modal-body h3 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #bf431f;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+}
+.modal-dialog .modal-content .modal-body span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #bf431f;
+  font-weight: 700;
+}
+.modal-dialog .modal-content .modal-body input {
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.modal-dialog .modal-content .modal-body input:focus {
+  outline: none;
+  border: none;
+  border-bottom: solid 0.2rem #bf431f !important;
+}
+.modal-dialog .modal-content .smallModalBtn {
+  background-color: #d57f2c;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #e3cfab;
+  font-weight: 400;
+}
+.modal-dialog .btn-close,
+.modal-dialog .buttonClose {
+  color: white;
+  opacity: 1;
+  padding-left: 5rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1rem;
+  color: #e3cfab;
+  font-weight: 900;
+}
+
+.myBiggerModal .modal-dialog .modal-content .modal-header h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  color: #bf431f;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.myBiggerModal .modal-dialog .modal-content .modal-header p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #bf431f;
+  font-style: italic;
+  margin: 0;
+}
+.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p,
+.myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: "";
+}
+.myBiggerModal .modal-dialog .modal-content .modal-body .firstBody p span,
+.myBiggerModal .modal-dialog .modal-content .modal-body .secondBody p span {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  color: #bf431f;
+}
+.myBiggerModal .modal-dialog .modal-content .modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p,
+.myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: "";
+  margin: 0;
+}
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter p span,
+.myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter p span {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  color: #bf431f;
+  font-weight: 900;
+}
+.myBiggerModal .modal-dialog .modal-content .modal-footer .firstFooter .firstFooter,
+.myBiggerModal .modal-dialog .modal-content .modal-footer .secondFooter .firstFooter {
+  width: 13%;
+}
+
+.bottomHeader {
+  background-color: #E3CFAB;
+}
+
+.listGallery {
+  background-color: #F4E8CE;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.listGallery .galleryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.listGallery .galleryItem .imgAndPrice {
+  max-height: 38rem;
+  width: 25%;
+  height: 100%;
+}
+.listGallery .galleryItem .imgAndPrice .img {
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40rem;
+  width: 100%;
+}
+.listGallery .galleryItem .imgAndPrice .img:hover {
+  background-color: #ffffff;
+}
+.listGallery .galleryItem .imgAndPrice .img .zoom {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5rem 0.5rem;
+  float: right;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 3.5rem;
+  cursor: pointer;
+}
+.listGallery .galleryItem .imgAndPrice .img .zoom i {
+  font-size: 1.5rem;
+}
+.listGallery .galleryItem .galleryCardSecondColumn {
+  width: 65%;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .cardName {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 3.4rem;
+  color: #44322C;
+  font-weight: 700;
+  margin: 2.7rem 0 1.3rem 0;
+}
+.listGallery .galleryItem .galleryCardSecondColumn p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 700;
+  padding-right: 2.8rem;
+  margin-bottom: 1rem;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
+  text-align: left;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #44322c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent {
+  margin-bottom: 8rem;
+  display: inline-block;
+  min-width: 35%;
+  max-width: 20rem;
+  height: 5rem;
+  padding: 1rem 0.9rem;
+  line-height: 100%;
+}
+.listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent:hover {
+  background-color: #BF431F;
+}
+.listGallery .galleryItem .buttonAndInputQuantity {
+  width: 70%;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv {
+  display: inline-block;
+  position: relative;
+  width: 18rem;
+  margin-right: 0.5rem;
+  height: 4.5rem !important;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv button {
+  position: absolute;
+  border: none;
+  width: 2rem;
+  height: 2.2rem;
+  background-color: #d57f2c;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv button:first-child {
+  bottom: 0;
+  right: 0;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv button i {
+  color: #ffffff;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .plus {
+  top: 0;
+  right: 0;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput {
+  height: 4.5rem;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #44322c;
+  font-weight: 600;
+  border: 0.1rem solid #E5D2AF;
+  border-radius: 0.3rem;
+  width: 100%;
+  background-color: transparent;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput::-webkit-inner-spin-button, .listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput:hover {
+  transition: all 0.3s ease;
+  border: 0.1rem solid #d57f2c;
+  outline: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity #quantityOfBeerInputDiv .quantityOfBeerInput:focus {
+  border: 0.1rem solid #D3792F;
+  outline: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity .galleryItemContent {
+  height: 4.5rem;
+  background-color: #d57f2c;
+  text-align: center;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #f4e8ce;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+}
+.listGallery .galleryItem .buttonAndInputQuantity .galleryItemContent:hover {
+  background-color: #cc6626;
+  cursor: pointer;
+}
+
+#categories a.categoriesLink {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #BF431F;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 100 !important;
+}
+#categories a.categoriesLink:hover {
+  transition: all 0.3s ease;
+  color: #44322c;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    height: auto;
+  }
+  .gallery .navGallery {
+    height: 20vh;
+  }
+  .gallery .galleryGallery {
+    height: auto;
+    flex-direction: column !important;
+  }
+  .gallery .listGallery {
+    flex-direction: column !important;
+  }
+  .gallery .listGallery .galleryItem {
+    margin-top: 2vh;
+    flex-direction: column !important;
+  }
+  .gallery .listGallery .galleryItem .imgAndPrice {
+    width: 50%;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent {
+    width: 100%;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemContent:hover {
+    background-color: #BF431F;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardName {
+    text-align: center;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .cardText {
+    text-align: center;
+    padding: 0;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .buttonAndInputQuantity {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .buttonAndInputQuantity .galleryItemContent {
+    margin: 1rem 0;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn #categories, .gallery .listGallery .galleryItem .galleryCardSecondColumn #productID {
+    text-align: center;
+    padding: 0;
+  }
+  .gallery .listGallery .galleryItem .galleryCardSecondColumn .galleryItemPriceSecond {
+    text-align: center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}

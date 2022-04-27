@@ -1,0 +1,167 @@
+@use "./../mixins";
+@use "./../variables";
+
+
+footer {
+    background-image: url('./../../assets/footer.jpg');
+
+    .top {
+        width: 80%;
+        padding-top: 10.4rem;
+        padding-bottom: 5.6rem;
+        margin: 0 auto;
+
+        .topFirst {
+            width: 25%;
+
+            .logoTopFirst {
+                margin-bottom: 2.24rem;
+            }
+
+            p {
+                @include mixins.setTextPara(variables.$fira, 1.4rem, #f4e8ce);
+                margin-bottom: 3.64rem;
+            }
+
+            .social {
+                font-size: 1.2rem;
+                color: #e1a03a;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 1.4em 0;
+
+
+                .mainSocial {
+                    display: flex;
+                    line-height: 4rem;
+
+                    .aweosmeIcon {
+                        line-height: 4rem;
+                        width: 3.7rem;
+                        height: 3.7rem;
+                        background-color: #30211B;
+                        align-items: center;
+                        border-radius: 50%;
+                        margin-right: .5rem;
+
+                        &:hover {
+                            background-color: #e1a03a;
+                            cursor: pointer;
+                        }
+
+                        &:hover i {
+                            color: #30211B;
+                        }
+
+                        i {
+                            font-size: 1.5rem;
+                        }
+
+                    }
+                }
+
+
+            }
+        }
+
+        .topLinks,
+        .topBlog,
+        .topContacts {
+            width: 25%;
+            margin-bottom: 2.1rem;
+
+            h3 {
+                margin: 2.1rem auto 4.2rem auto;
+                text-transform: uppercase;
+                @include mixins.setTextPara(variables.$alegria, 2.1rem, #e1a03a);
+            }
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    a {
+
+                        text-transform: uppercase;
+                        @include mixins.setTextPara(variables.$fira, 1.4rem, #f4e8ce);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .topBlog {
+            padding-right: 3rem;
+
+            ul {
+                padding: 0;
+
+                li:nth-child(1) {
+                    margin-bottom: 1em;
+
+                    a {
+                        text-transform: none;
+
+                    }
+                }
+
+                li:nth-child(2) {
+
+                    margin-bottom: 1em;
+                    margin-top: 3.2rem;
+
+                    a {
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+
+        .topContacts {
+            p {
+                @include mixins.setTextPara(variables.$fira, 1.4rem, #f4e8ce);
+                margin-bottom: 2.1rem;
+
+                span {
+                    @include mixins.setTextPara(variables.$fira, 1.4rem, #d19f45);
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
+    .bottom {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 3.5rem;
+        padding-bottom: 12.6rem;
+
+        p,
+        span {
+            @include mixins.setTextPara(variables.$fira, 1.4rem, rgba(244, 232, 206, 0.6));
+        }
+
+        span {
+            color: #f4e8ce;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        .top {
+            flex-wrap: wrap;
+            padding-top: 10.4rem;
+            padding-bottom: 0rem;
+
+            .topFirst,
+            .topLinks,
+            .topBlog,
+            .topContacts {
+                width: auto;
+            }
+        }
+    }
+}

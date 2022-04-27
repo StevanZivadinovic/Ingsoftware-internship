@@ -1,0 +1,78 @@
+@use './../mixins';
+@use './../variables';
+
+.bigImageSection {
+    background-color: #F4E8CE;
+    z-index: 2;
+
+    .mainContentBigImageSection {
+        height: 80vh;
+        background-image: url('./../../assets/jumbo.jpg');
+        background-size: cover;
+        margin: 8.75rem 0;
+        width: 80%;
+
+        .contentBigImageSection {
+            width: 85%;
+            align-self: center;
+
+            h2 {
+                @include mixins.setTextPara(variables.$alegria, 6.4rem, #ffffff);
+                font-weight: 700;
+            }
+
+            p {
+                @include mixins.setTextPara(variables.$fira, 2.2rem, #eee2c8);
+                text-align: center;
+                margin-top: 1.1rem;
+                padding-bottom: .2rem;
+            }
+
+            .buttonDivBigImage {
+                text-align: center;
+                width: 30%;
+                margin: 0 auto;
+
+                .buttonBigImage {
+                    width: 100%;
+                    margin: 4.7rem auto 1.6rem auto;
+                    text-transform: uppercase;
+                    @include mixins.setTextPara(variables.$alegria, 1.7rem, #f4e8ce);
+                    padding: 1.35rem 6.15rem;
+                    background-color: #BF431F;
+                    border: none;
+                    outline: none;
+                    transition: all .4s ease;
+
+                    &:hover {
+                        background-color: #793319;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .bigImageSection {
+        .mainContentBigImageSection {
+            .contentBigImageSection {
+                h2 {
+                    @include mixins.setTextPara(variables.$alegria, 4rem, #ffffff);
+
+                }
+                p {
+                    @include mixins.setTextPara(variables.$fira, 1.5rem, #eee2c8);
+
+                }
+
+                .buttonDivBigImage {
+                    .buttonBigImage {
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
