@@ -14,7 +14,6 @@ export const GetData = () => {
 
         if (isMounted.current) {
             data.forEach(a => {
-                // console.log(a);
              setData(dataPrimary => [...dataPrimary, a] );
             });
             isMounted.current = false;
@@ -23,12 +22,11 @@ export const GetData = () => {
         
     })
     }, [])
-        console.log(dataPrimary)
+
   return (
     <div className='mainCardContainers'>
-        dd
         { dataPrimary.map(a=>{
             return <p>{a.name}</p>
-    })}</div>
+    }) }</div>
   )
 }
