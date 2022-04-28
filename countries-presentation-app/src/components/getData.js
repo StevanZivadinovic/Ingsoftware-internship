@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 export const GetData = () => {
 
-    const [dataPrimary, setData] = useState([])
+    const [dataPrimary, setData] = useState([]);
+    const isMounted = useRef(true);
 
     useEffect(() => {
     fetch('https://restcountries.com/v2/all')
@@ -10,18 +11,24 @@ export const GetData = () => {
         return data.json()
     })
     .then(data=>{
-        data.forEach(a => {
-            // console.log(a);
-         setData(dataPrimary => [...dataPrimary, a] );
-        });
+
+        if (isMounted.current) {
+            data.forEach(a => {
+                // console.log(a);
+             setData(dataPrimary => [...dataPrimary, a] );
+            });
+            isMounted.current = false;
+            return
+        }
+        
     })
     }, [])
         console.log(dataPrimary)
   return (
     <div className='mainCardContainers'>
-        
-        {dataPrimary ? dataPrimary.map(a=>{
-        <p>{a.name}</p>
-    }):''}</div>
+        dd
+        { dataPrimary.map(a=>{
+            return <p>{a.name}</p>
+    })}</div>
   )
 }
