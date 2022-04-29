@@ -1,0 +1,58 @@
+@use './../mixins';
+@use './../variables';
+
+.mainFilters{
+    background-color: variables.$veryDarkBlue;
+
+    .mainContent{
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        align-items: center;
+        padding: 3rem 0;
+        .searchInput{
+            background-color: variables.$darkBlue;
+            width: 30%;
+            padding: 1rem 2rem;
+            border-radius: .2rem;
+            
+            box-shadow: 0 0 1rem variables.$veryDarkBlue ;
+            span{
+                i{
+                    color: variables.$white;
+                }
+            }
+            input{
+                @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
+                background-color: transparent;
+                outline: none;
+                border: none;
+                margin-left: 1rem;
+                width: 85%;
+                font-weight: 500;
+                
+                &::placeholder{
+                    @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
+
+                }
+            }
+        }
+        .selectSearch{
+            p{
+                background-color: variables.$darkBlue;
+                padding: 1rem 2rem;
+                border-radius: .2rem;
+            }
+            .filterByRegion{
+                display: none;
+                padding: 1rem 2rem;
+                border-radius: .2rem;
+                list-style-type: none;
+                background-color: variables.$darkBlue;
+                margin-top: .2rem;
+            }
+        }
+    }
+}

@@ -1,12 +1,14 @@
 
-import { GetData } from './components/getData';
+import { CountriesData } from './components/countriesData';
+import { Filters } from './components/filters';
 import Header from './components/header';
 import './style/main.css'
 function App() {
   return (
     <div className="App">
       <Header />
-      <GetData />
+      <Filters/>
+      <CountriesData />
     </div>
   );
 }
