@@ -6,7 +6,7 @@ const Header = () => {
         <div className="mainDivHeader">
         <h3>Where in the world?</h3>
         <div className="rightSubmenu">
-            <p><span>moon</span> Dark  Mode</p>
+            <p><span><i class="fa-solid fa-moon"></i></span> Dark  Mode</p>
         </div>
         </div>
     </div>
