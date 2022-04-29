@@ -1,4 +1,12 @@
-body {
-  background-color: lightcoral;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@use './mixins';
+@use './variables';
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 /*# sourceMappingURL=main.css.map */
