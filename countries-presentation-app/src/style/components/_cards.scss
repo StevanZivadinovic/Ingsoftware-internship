@@ -10,8 +10,8 @@
         margin: 0 auto;
         height: auto;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 6rem;
+        grid-template-columns:repeat(4,1fr);
+        gap: 4rem;
         
         .card{
             border-radius: .5rem; 

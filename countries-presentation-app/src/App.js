@@ -1,14 +1,27 @@
 
 import { CountriesData } from './components/countriesData';
-import { Filters } from './components/filters';
 import Header from './components/header';
-import './style/main.css'
+import DetailsPage from './pages/detailsPage'
+import './style/main.css';
+
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+
 function App() {
   return (
     <div className="App">
       <Header />
-      <Filters/>
-      <CountriesData />
+      <BrowserRouter>
+      <Routes>
+      <Route path='/'   element={<CountriesData />} />
+      <Route path='/:id' element={<DetailsPage/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
