@@ -1,0 +1,58 @@
+@use './../mixins';
+@use './../variables';
+
+
+.mainCard{
+    background-color: variables.$veryDarkBlue;
+    padding: 4vh 0rem;
+    .mainCardContainers{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 6rem;
+        
+        .card{
+            border-radius: .5rem; 
+            background-color: variables.$darkBlue;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0rem 0rem .4rem .4rem  variables.$veryLightGray;
+            }
+            .img{
+                height: 18rem;
+                overflow: hidden;
+                border-top-left-radius: .5rem;
+                border-top-right-radius: .5rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                img{
+                    border-top-left-radius: .5rem;
+                    border-top-right-radius: .5rem;
+                
+    
+                }
+            }
+            .cardText{
+                padding: 1rem 2rem;
+                .cardName{
+                    @include mixins.setTextPara(variables.$nunito, 1.4rem, variables.$white);
+                }
+                .cardDetails{
+                    margin-top: 1.5rem;
+                    p{
+                        @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
+                        font-weight: 600;
+                        margin-top: .5rem;
+                        span{
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
