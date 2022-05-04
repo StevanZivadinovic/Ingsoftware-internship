@@ -40,18 +40,30 @@
             }
         }
         .selectSearch{
+            @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
+            width: 20%;
+            position: relative;
             p{
                 background-color: variables.$darkBlue;
                 padding: 1rem 2rem;
                 border-radius: .2rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
             }
             .filterByRegion{
-                display: none;
+                position: absolute;
                 padding: 1rem 2rem;
                 border-radius: .2rem;
                 list-style-type: none;
                 background-color: variables.$darkBlue;
                 margin-top: .2rem;
+                width: 100%;
+
+                li{
+                    padding: .3rem 0;
+                    
+                }
             }
         }
     }

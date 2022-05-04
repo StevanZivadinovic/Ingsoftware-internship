@@ -1,0 +1,6 @@
+@use './../mixins';
+@use './../variables';
+
+.mainCardContainers{
+    background-color: variables.$veryDarkBlue;
+}

@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './../style/components/_filters.scss';
 
 export const Filters = () => {
+const [displayRegion, setdisplayRegion] = useState(false);
+
   return (
     <div className='mainFilters'>
         <div className="mainContent">
@@ -11,14 +14,14 @@ export const Filters = () => {
 
             <div className="selectSearch">
 
-                <p>Filter by Region <span><i className="fa-solid fa-chevron-down"></i></span></p>
-                <ul className='filterByRegion'>
+                <p className='toggleUl' onClick={()=>setdisplayRegion(!displayRegion)}><span>Filter by Region</span> <span><i className="fa-solid fa-chevron-down"></i></span></p>
+               {displayRegion && <ul className='filterByRegion'>
                     <li>Africa</li>
                     <li>America</li>
                     <li>Asia</li>
                     <li>Europe</li>
                     <li>Oceania</li>
-                </ul>
+                </ul> }
             </div>
         </div>
     </div>

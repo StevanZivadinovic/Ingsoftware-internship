@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import  getData   from './getData';
-
+import './../style/components/cards.scss'
 export const CountriesData = () => {
 
     const [dataPrimary, setData] = useState([]);
@@ -17,10 +17,15 @@ export const CountriesData = () => {
             
         })
     }, []); 
-
+    console.log(dataPrimary)
   return (
     <div className='mainCardContainers'>
-        { dataPrimary.map(a=> <p key={a.alpha3Code}>{a.name}</p>) }
+        { dataPrimary.map(a=> <div className='card' key={a.alpha3Code}>
+            <img src={a.flag} alt="flag" width={'100px'}/>
+            <div className="cardText">
+            {a.name}
+            </div>
+        </div>) }
         </div>
   )
 }
