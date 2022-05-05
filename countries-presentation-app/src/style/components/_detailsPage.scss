@@ -1,0 +1,39 @@
+@use './../mixins';
+@use './../variables';
+
+.mainDetailsPage{
+    background-color: variables.$veryDarkBlue;
+
+    .backButtonMenu{
+        height: 14vh;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .backButton{
+            width: 9rem;
+            padding: .6rem 0;
+            border-radius: .3rem;
+            border: none;
+            background-color: variables.$darkBlue;
+            box-shadow: 0rem 0rem .3rem .3rem variables.$roundColor;
+            @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
+            span{
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .mainContent{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .bigFlag{
+            img{
+                width: 20rem;
+            }
+        }
+    }
+}

@@ -3,6 +3,9 @@ const getData = () => {
     return fetch('https://restcountries.com/v2/all')
 }
 
-export default getData;
 
+const specificCountry = (name) =>{
+    return fetch(`https://restcountries.com/v2/name/${name}`)
+}
 
+export {getData, specificCountry};

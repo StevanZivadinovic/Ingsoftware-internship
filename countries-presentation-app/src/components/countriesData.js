@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import getData from './getData';
+import {getData} from './getData';
 import './../style/components/_cards.scss'
 import { Filters } from './filters';
 import {
@@ -26,7 +26,7 @@ export const CountriesData = () => {
 
             })
     }, []);
-    console.log(dataPrimary)
+    // console.log(dataPrimary)
     return (
         <div className="mainFiltersAndCard">
             <Filters></Filters>
