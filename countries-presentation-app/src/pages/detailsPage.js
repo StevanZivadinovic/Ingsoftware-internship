@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {useParams, useNavigate } from "react-router-dom";
-import {specificCountry, getBorderCountries} from './../components/getData';
+import {specificCountry, getBorderCountries} from '../helperFunctions/getData';
 import './../style/components/_detailsPage.scss'
 
 

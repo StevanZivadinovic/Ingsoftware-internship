@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import {getData} from './getData';
+import {getData} from '../helperFunctions/getData';
 import './../style/components/_cards.scss'
 import { Filters } from './filters';
 import {
