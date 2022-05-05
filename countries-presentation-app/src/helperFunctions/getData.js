@@ -1,9 +1,10 @@
 
-const getData = () => fetch('https://restcountries.com/v2/all')
+const getDataURL = 'https://restcountries.com/v2/'
 
+const getData = () => fetch(`${getDataURL}all`)
 
-const specificCountry = (name) =>  fetch(`https://restcountries.com/v2/name/${name}`);
+const specificCountry = (name) =>  fetch(`${getDataURL}name/${name}`);
 
-const getBorderCountries = (attr)=> fetch(`https://restcountries.com/v2/alpha/${attr}`);
+const getBorderCountries = (attr)=> fetch(`${getDataURL}alpha/${attr}`);
 
 export {getData, specificCountry, getBorderCountries} ;
