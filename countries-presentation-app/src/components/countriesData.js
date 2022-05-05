@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import {getData} from '../helperFunctions/getData';
 import './../style/components/_cards.scss'
-import { Filters } from './filters';
+import { Filters } from './Filters';
 import {
     BrowserRouter,
     Routes,
@@ -30,6 +30,7 @@ export const CountriesData = () => {
     return (
         <div className="mainFiltersAndCard">
             <Filters></Filters>
+           
             <div className='mainCard'>
                 <div className="mainCardContainers">
                     {dataPrimary.map(a => 
