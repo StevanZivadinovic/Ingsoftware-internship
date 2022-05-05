@@ -3,7 +3,7 @@
 
 .mainDetailsPage{
     background-color: variables.$veryDarkBlue;
-
+    height: 92vh;
     .backButtonMenu{
         height: 14vh;
         width: 90%;
@@ -31,8 +31,48 @@
         margin: 0 auto;
         justify-content: space-between;
         .bigFlag{
-            img{
-                width: 20rem;
+                width: 45%;
+                height: 40rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                // overflow: hidden;
+            
+        }
+        .detailsOfCountry{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: center;
+            h2{
+                @include mixins.setTextPara(variables.$nunito, 2.5rem, variables.$white);
+                text-transform: capitalize;
+                margin-bottom: 3vh;
+            }
+            .details{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 3vh;
+
+                .detailsLeft, .detailsRight{
+                    ul{
+                        
+                        list-style-type: none;
+                        li{
+
+                            @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
+                            font-weight: 600;
+                            span{
+                                font-weight: 300;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .borderCountry{
+                @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
+                font-weight: 600;
             }
         }
     }

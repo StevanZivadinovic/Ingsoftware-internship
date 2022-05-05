@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Routes, Route, useParams } from "react-router-dom";
-import {specificCountry} from './../components/getData';
+import {specificCountry, getBorderCountries} from './../components/getData';
 import './../style/components/_detailsPage.scss'
-
-
 
 
 
 const DetailsPage = () => {
     let param = useParams();
     const isMounted = useRef(true);
-    const [country, setCountry] = useState({})
+    const [country, setCountry] = useState({});
+    const [borderCountries, setBorderCountries] = useState([]);
+    const [fullNameBorderCountries, setFullNameBorderCountries] = useState([])
+    const [countries, setCountries] = useState(0)
 
     useEffect(() => {
       specificCountry(param.id).then(res=>{
@@ -18,47 +19,64 @@ const DetailsPage = () => {
       }).then(data=>{
         if (isMounted.current) {
           setCountry(data);
+          setBorderCountries(data[0].borders);
         }
       })
-     
     }, [])
-    
-   console.log(country)
+  
+
+  useEffect(() => {
+    borderCountries && borderCountries.forEach(a => {
+      getBorderCountries(a)
+        .then(res => {
+          return res.json()
+        })
+        .then((data) => {
+            setFullNameBorderCountries((fullNameBorderCountries) => [...fullNameBorderCountries, data.name])
+        })
+    });
+  }, [borderCountries]);
+              
+            
+
   return (
     <div className='mainDetailsPage'>
       <div className="backButtonMenu">
         <button className="backButton"> <span><i className="fa-solid fa-arrow-left"></i> </span> Back</button>
       </div>
-     {country ? <div className="mainContent">
-        <div className="bigFlag">
-          <img src={country[0].flag} alt='big flag'  />
+     {country[0] && <div className="mainContent">
+        <div className="bigFlag" style={{backgroundImage:`url(${country[0]?.flag}`}}>
+          {/* <img src={country[0]?.flag} alt='big flag'  /> */}
         </div>
         <div className="detailsOfCountry">
           <h2 className="nameCountry">{param.id}</h2>
           <div className="details">
             <div className="detailsLeft">
               <ul>
-                <li>Native Name: <span></span></li>
-                <li>Population: <span></span></li>
-                <li>Region: <span></span></li>
-                <li>Sub Region: <span></span></li>
-                <li>Capital: <span></span></li>
+                <li>Native Name: <span>{country[0]?.nativeName}</span></li>
+                <li>Population: <span>{country[0]?.population}</span></li>
+                <li>Region: <span>{country[0]?.region}</span></li>
+                <li>Sub Region: <span>{country[0]?.subregion}</span></li>
+                <li>Capital: <span>{country[0]?.capital}</span></li>
               </ul>
             </div>
             <div className="detailsRight">
               <ul>
-                <li>Top Level Domain <span></span></li>
-                <li>Currencies: <span></span></li>
-                <li>Languages: <span></span></li>
+                <li>Top Level Domain: <span>{country[0]?.topLevelDomain[0]}</span></li>
+                <li>Currencies: <span>{country[0]?.currencies[0].code}</span></li>
+                <li>Languages: <span>{country[0]?.languages[0].name}</span></li>
               </ul>
             </div>
           </div>
           <div className="borderCountry">
-            Border Countries: <span>Zemlje..</span>
+            Border Countries: {fullNameBorderCountries && fullNameBorderCountries.map((a,i)=>{
+              // console.log(a)
+            return i<= fullNameBorderCountries.length/2-1 && <span key={i}> {a}</span>
+            })}
           </div>
         </div>
       </div>
-     :''}
+      }
       </div>
   )
 }
