@@ -19,8 +19,13 @@
             background-color: variables.$darkBlue;
             box-shadow: 0rem 0rem .3rem .3rem variables.$roundColor;
             @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0rem 0rem .3rem .3rem variables.$veryLightGray;
+            }
             span{
                 margin-right: .5rem;
+               
             }
         }
     }
@@ -73,6 +78,12 @@
             .borderCountry{
                 @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
                 font-weight: 600;
+                span{
+                    padding: .5rem 1rem;
+                    background-color: variables.$darkBlue;
+                    box-shadow: 0rem 0rem .3rem .3rem variables.$roundColor;
+                    margin-left: .1rem;
+                }
             }
         }
     }
