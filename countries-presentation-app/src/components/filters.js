@@ -4,6 +4,12 @@ import './../style/components/_filters.scss';
 export const Filters = () => {
 const [displayRegion, setdisplayRegion] = useState(false);
 
+window.addEventListener('click',e=>{
+  if(e.target.className  !=='toggleUl' && e.target.className  !=='filterByRegion'){
+    setdisplayRegion(false);
+  }
+})
+
   return (
     <div className='mainFilters'>
         <div className="mainContent">
