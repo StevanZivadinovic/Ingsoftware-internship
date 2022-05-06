@@ -1,16 +1,36 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getRegion } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
-export const Filters = () => {
+export const Filters = ({handleDataPrimary}) => {
 const [displayRegion, setdisplayRegion] = useState(false);
+const [selectedCountry, setCountry] = useState('')
 
 window.addEventListener('click',e=>{
   if(e.target.className  !=='toggleUl' && e.target.className  !=='filterByRegion'){
     setdisplayRegion(false);
   }
 })
-// getRegion()
+const handleCountry = (e)=>{
+  if(e.target.classList=='countryLI'){
+    localStorage.setItem('country', e.target.innerText);
+    setCountry((e.target.innerText).toLowerCase())
+  }
+}
+
+useEffect(() => {
+  if(selectedCountry.length>0){
+
+    getRegion(selectedCountry)
+    .then(res=>{
+      return res.json()
+    })
+    .then(data=>{
+      handleDataPrimary(data);
+    })
+  }
+}, [selectedCountry])
+
   return (
     <div className='mainFilters'>
         <div className="mainContent">
@@ -19,15 +39,15 @@ window.addEventListener('click',e=>{
             <input type="search" name="search" id="searchInput" placeholder='Search for a country...' />
             </div>
 
-            <div className="selectSearch">
+            <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>
 
                 <p className='toggleUl' onClick={()=>setdisplayRegion(!displayRegion)}><span>Filter by Region</span> <span>{!displayRegion ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}</span></p>
                {displayRegion && <ul className='filterByRegion'>
-                    <li onClick={()=>{setdisplayRegion(false)}}>Africa</li>
-                    <li onClick={()=>{setdisplayRegion(false)}}>America</li>
-                    <li onClick={()=>{setdisplayRegion(false)}}>Asia</li>
-                    <li onClick={()=>{setdisplayRegion(false)}}>Europe</li>
-                    <li onClick={()=>{setdisplayRegion(false)}}>Oceania</li>
+                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Africa</li>
+                    <li className='countryLI'  onClick={()=>{setdisplayRegion(false)}}>Americas</li>
+                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Asia</li>
+                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Europe</li>
+                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Oceania</li>
                 </ul> }
             </div>
         </div>

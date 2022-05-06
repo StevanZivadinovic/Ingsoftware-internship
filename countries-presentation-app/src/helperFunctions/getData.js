@@ -7,6 +7,6 @@ const specificCountry = (name) =>  fetch(`${getDataURL}/name/${name}`);
 
 const getBorderCountries = (attr)=> fetch(`${getDataURL}/alpha/${attr}`);
 
-const getRegion = (region)=>fetch(`getDataURL/continent/${region}`);
+const getRegion = (region)=>fetch(`${getDataURL}/region/${region}`);
 
 export {getData, specificCountry, getBorderCountries, getRegion} ;

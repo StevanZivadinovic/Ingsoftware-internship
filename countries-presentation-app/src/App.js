@@ -17,7 +17,7 @@ function App() {
       <Header />
       <BrowserRouter>
       <Routes>
-      <Route path='/'   element={<CountriesData /> ?<CountriesData /> : <WaitComponent/> } />
+      <Route path='/'  element={<CountriesData /> ?<CountriesData /> : <WaitComponent/> } />
       <Route path='/:id' element={<DetailsPage/>} />
       </Routes>
       </BrowserRouter>
