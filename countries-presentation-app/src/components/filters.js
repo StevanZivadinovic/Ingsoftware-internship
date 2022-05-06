@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { getRegion } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
 export const Filters = () => {
@@ -9,7 +10,7 @@ window.addEventListener('click',e=>{
     setdisplayRegion(false);
   }
 })
-
+// getRegion()
   return (
     <div className='mainFilters'>
         <div className="mainContent">
@@ -22,11 +23,11 @@ window.addEventListener('click',e=>{
 
                 <p className='toggleUl' onClick={()=>setdisplayRegion(!displayRegion)}><span>Filter by Region</span> <span>{!displayRegion ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}</span></p>
                {displayRegion && <ul className='filterByRegion'>
-                    <li>Africa</li>
-                    <li>America</li>
-                    <li>Asia</li>
-                    <li>Europe</li>
-                    <li>Oceania</li>
+                    <li onClick={()=>{setdisplayRegion(false)}}>Africa</li>
+                    <li onClick={()=>{setdisplayRegion(false)}}>America</li>
+                    <li onClick={()=>{setdisplayRegion(false)}}>Asia</li>
+                    <li onClick={()=>{setdisplayRegion(false)}}>Europe</li>
+                    <li onClick={()=>{setdisplayRegion(false)}}>Oceania</li>
                 </ul> }
             </div>
         </div>

@@ -19,10 +19,10 @@ const DetailsPage = () => {
       specificCountry(param.id).then(res=>{
         return res.json()
       }).then(data=>{
-        if (isMounted.current) {
+        // if (isMounted.current) {
           setCountry(data);
           setBorderCountries(data[0].borders);
-        }
+        // }
       })
     }, [])
   
@@ -72,7 +72,7 @@ const DetailsPage = () => {
           <div className="borderCountry">
             Border Countries: {fullNameBorderCountries.length>0 ? fullNameBorderCountries.map((a,i)=>{
               // console.log(a)
-            return i<= fullNameBorderCountries.length/2-1 && <span key={i}> {a}</span>
+            return <span key={i}> {a}</span>
             }) : <span>This country has no neighbors</span>}
           </div>
         </div>
