@@ -6,7 +6,9 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode> //must comment this beacuse useEffect render twice when strict mode is active
-    <App />
+
+  <App/>
+
   // </React.StrictMode>
 );
 

@@ -14,8 +14,8 @@ import './style/main.css';
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+      <Header />
       <Routes>
       <Route path='/'  element={<CountriesData /> ?<CountriesData /> : <WaitComponent/> } />
       <Route path='/:id' element={<DetailsPage/>} />
