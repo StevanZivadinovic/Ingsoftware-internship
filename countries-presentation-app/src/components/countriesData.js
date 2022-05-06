@@ -3,9 +3,6 @@ import {getData} from '../helperFunctions/getData';
 import './../style/components/_cards.scss'
 import { Filters } from './Filters';
 import {
-    BrowserRouter,
-    Routes,
-    Route,
     Link
 } from "react-router-dom";
 
