@@ -20,7 +20,7 @@ window.addEventListener('click',e=>{
 
             <div className="selectSearch">
 
-                <p className='toggleUl' onClick={()=>setdisplayRegion(!displayRegion)}><span>Filter by Region</span> <span><i className="fa-solid fa-chevron-down"></i></span></p>
+                <p className='toggleUl' onClick={()=>setdisplayRegion(!displayRegion)}><span>Filter by Region</span> <span>{!displayRegion ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}</span></p>
                {displayRegion && <ul className='filterByRegion'>
                     <li>Africa</li>
                     <li>America</li>
