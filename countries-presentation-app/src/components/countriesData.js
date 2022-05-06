@@ -23,16 +23,6 @@ export const CountriesData = () => {
             })
     }, []);
 
-    // window.addEventListener('storage', () => {
-    //     console.log("change to local storage!");
-    //     getRegion(`${localStorage.getItem('country')}`)
-    //     .then(res=>{
-    //         return res.json()
-    //     }).then(data=>{
-    //         document.querySelector('.mainCardContainers').innerHTML = '';
-    //         console.log(data)
-    //     })
-    // })
     const handleDataPrimary = (count)=>{
         setDataFiltered(count);
         setData([])

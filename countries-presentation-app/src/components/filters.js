@@ -13,7 +13,6 @@ window.addEventListener('click',e=>{
 })
 const handleCountry = (e)=>{
   if(e.target.classList=='countryLI'){
-    localStorage.setItem('country', e.target.innerText);
     setCountry((e.target.innerText).toLowerCase())
   }
 }
