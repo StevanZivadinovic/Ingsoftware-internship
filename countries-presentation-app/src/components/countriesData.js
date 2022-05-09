@@ -13,6 +13,7 @@ export const CountriesData = () => {
     const [dataFiltered,setDataFiltered ] = useState([]);
     const isMounted = useRef(true);
     const [countrySearched, setCountrySearched]=useState([]);
+    const [filteredAndSerached, setFilteredAndSearched] = useState([]);
     let a = [];
     
     useEffect(() => {
@@ -33,17 +34,20 @@ export const CountriesData = () => {
     const handleSearchCountry = (searchedCountry, inputValue)=>{
         // console.log(searchedCountry);
        
-        if(dataFiltered.length>0){
-          a =   dataFiltered.filter(a=>{
-                return a.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1))
+        if(dataFiltered.length>0 && inputValue.length>0){
+            a=[...dataFiltered];
+         a.filter(c=>{
+                return c.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1))
             })
           
-            setDataFiltered([])
-            setCountrySearched(a);
+            setDataFiltered([]);
+            setData([]);
+            setFilteredAndSearched(a)
         }else{
 
             setCountrySearched(searchedCountry);
         }
+       
      
     }
 
@@ -119,7 +123,27 @@ export const CountriesData = () => {
                             
                             )
                             :
-                            ''
+                            setFilteredAndSearched.length>0
+                            ?
+                            filteredAndSerached.map(a => 
+                                <Link to={a.name} key={a.alpha3Code}>
+                                <div className='card' id='card' key={a.alpha3Code}>
+                                    <div className="img" style={{ backgroundImage: `url(${a.flag})` }}>
+                                    </div>
+                                    <div className="cardText">
+                                        <h3 className='cardName'>{a.name}</h3>
+                                        <div className="cardDetails">
+                                            <p>Population: <span>{a.population}</span></p>
+                                            <p>Region: <span>{a.region}</span></p>
+                                            <p>Capital: <span>{a.capital}</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </Link>
+                                
+                                )
+                                :
+                                ''
                         
                      
                     }
