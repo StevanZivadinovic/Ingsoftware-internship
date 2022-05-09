@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { getCountyByName, getRegion } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
@@ -6,7 +6,7 @@ export const Filters = ({handleDataPrimary, handleSearchCountry}) => {
 const [displayRegion, setdisplayRegion] = useState(false);
 const [selectedCountry, setCountry] = useState('');
 const [searchedCountry, setSearchedCountry]= useState('');
-
+const inputElement = useRef();
 window.addEventListener('click',e=>{
   if(e.target.className  !=='toggleUl' && e.target.className  !=='filterByRegion'){
     setdisplayRegion(false);
@@ -39,8 +39,13 @@ useEffect(()=>{
      })
      .then(data=>{
    
-       handleSearchCountry(data);
+       handleSearchCountry(data, searchedCountry);
      })
+     .catch(err=>{
+       console.log(err);
+     })
+
+  
 }, [searchedCountry])
 
 

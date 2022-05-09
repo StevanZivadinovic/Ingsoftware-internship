@@ -30,12 +30,12 @@ export const CountriesData = () => {
         setDataFiltered(count);
     }
     
-    const handleSearchCountry = (searchedCountry)=>{
+    const handleSearchCountry = (searchedCountry, inputValue)=>{
         // console.log(searchedCountry);
        
         if(dataFiltered.length>0){
           a =   dataFiltered.filter(a=>{
-                return a.name.includes(('serbia').charAt(0).toUpperCase() + ('serbia').slice(1))
+                return a.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1))
             })
           
             setDataFiltered([])
@@ -49,7 +49,7 @@ export const CountriesData = () => {
 
     return (
         <div className="mainFiltersAndCard">
-            <Filters handleDataPrimary={(count)=>handleDataPrimary(count)} handleSearchCountry={(searchedCountry)=>handleSearchCountry(searchedCountry)}></Filters>
+            <Filters handleDataPrimary={(count)=>handleDataPrimary(count)} handleSearchCountry={(searchedCountry, inputValue)=>handleSearchCountry(searchedCountry, inputValue)}></Filters>
            
             <div className='mainCard'>
                 <div className="mainCardContainers">
@@ -97,7 +97,7 @@ export const CountriesData = () => {
                         
                         )
 
-                        : countrySearched
+                        : countrySearched.length>0
                         ?
                         
                        
