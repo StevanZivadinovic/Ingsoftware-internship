@@ -28,9 +28,13 @@ export const CountriesData = () => {
         setData([])
     }
 
+    const handleSearchCountry = (searchedCountry)=>{
+        console.log(searchedCountry);
+    }
+
     return (
         <div className="mainFiltersAndCard">
-            <Filters handleDataPrimary={(count)=>handleDataPrimary(count)}></Filters>
+            <Filters handleDataPrimary={(count)=>handleDataPrimary(count)} handleSearchCountry={(searchedCountry)=>handleSearchCountry(searchedCountry)}></Filters>
            
             <div className='mainCard'>
                 <div className="mainCardContainers">

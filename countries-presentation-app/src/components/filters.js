@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { getRegion } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
-export const Filters = ({handleDataPrimary}) => {
+export const Filters = ({handleDataPrimary, handleSearchCountry}) => {
 const [displayRegion, setdisplayRegion] = useState(false);
-const [selectedCountry, setCountry] = useState('')
+const [selectedCountry, setCountry] = useState('');
+const [searchedCountry, setSearchedCountry]= useState('');
 
 window.addEventListener('click',e=>{
   if(e.target.className  !=='toggleUl' && e.target.className  !=='filterByRegion'){
@@ -30,12 +31,16 @@ useEffect(() => {
   }
 }, [selectedCountry])
 
+const handleSearchCountryFilter = (data) =>{
+
+  handleSearchCountry(data)
+}
   return (
     <div className='mainFilters'>
         <div className="mainContent">
             <div className="searchInput">
             <span><i className="fa-solid fa-magnifying-glass"></i></span>
-            <input type="search" name="search" id="searchInput" placeholder='Search for a country...' />
+            <input type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={(e)=>handleSearchCountryFilter(e.target.value)} />
             </div>
 
             <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>
