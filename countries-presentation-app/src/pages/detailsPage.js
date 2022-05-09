@@ -7,11 +7,9 @@ import './../style/components/_detailsPage.scss'
 
 const DetailsPage = () => {
     let param = useParams();
-    const isMounted = useRef(true);
     const [country, setCountry] = useState({});
     const [borderCountries, setBorderCountries] = useState([]);
     const [fullNameBorderCountries, setFullNameBorderCountries] = useState([])
-    const [countries, setCountries] = useState(0)
 
     const navigate = useNavigate()
 
@@ -19,10 +17,10 @@ const DetailsPage = () => {
       specificCountry(param.id).then(res=>{
         return res.json()
       }).then(data=>{
-        // if (isMounted.current) {
+      
           setCountry(data);
           setBorderCountries(data[0].borders);
-        // }
+     
       })
     }, [])
   
@@ -38,7 +36,6 @@ const DetailsPage = () => {
         })
     });
   }, [borderCountries]);
-  console.log(fullNameBorderCountries);
             
 
   return (

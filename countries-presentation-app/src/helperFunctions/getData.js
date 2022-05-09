@@ -9,4 +9,8 @@ const getBorderCountries = (attr)=> fetch(`${getDataURL}/alpha/${attr}`);
 
 const getRegion = (region)=>fetch(`${getDataURL}/region/${region}`);
 
-export {getData, specificCountry, getBorderCountries, getRegion} ;
+const getCountyByName = (name)=>fetch(`${`${getDataURL}/name/${name}`}`);
+
+
+
+export {getData, specificCountry, getBorderCountries, getRegion, getCountyByName} ;

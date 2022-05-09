@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { getRegion } from '../helperFunctions/getData';
+import { useEffect, useMemo, useState } from 'react';
+import { getCountyByName, getRegion } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
 export const Filters = ({handleDataPrimary, handleSearchCountry}) => {
@@ -31,16 +31,27 @@ useEffect(() => {
   }
 }, [selectedCountry])
 
-const handleSearchCountryFilter = (data) =>{
+useEffect(()=>{
 
-  handleSearchCountry(data)
-}
+  searchedCountry && getCountyByName(searchedCountry)
+     .then(res=>{
+       return res.json()
+     })
+     .then(data=>{
+   
+       handleSearchCountry(data);
+     })
+}, [searchedCountry])
+
+
+
+
   return (
     <div className='mainFilters'>
         <div className="mainContent">
             <div className="searchInput">
             <span><i className="fa-solid fa-magnifying-glass"></i></span>
-            <input type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={(e)=>handleSearchCountryFilter(e.target.value)} />
+            <input type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={(e)=>setSearchedCountry(e.target.value)} />
             </div>
 
             <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>
