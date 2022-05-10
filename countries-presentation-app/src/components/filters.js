@@ -3,7 +3,7 @@ import { debounce } from '../helperFunctions/debounce';
 import { getCountyByName, getRegion } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
-export const Filters = ({handleDataPrimary, handleSearchCountry}) => {
+export const Filters = ({handleDataPrimary, handleSearchCountry, catchContinent}) => {
 const [displayRegion, setdisplayRegion] = useState(false);
 const [selectedCountry, setCountry] = useState('');
 const [searchedCountry, setSearchedCountry]= useState('');
@@ -15,6 +15,7 @@ window.addEventListener('click',e=>{
 })
 const handleCountry = (e)=>{
   if(e.target.classList=='countryLI'){
+    catchContinent(e.target.innerText)
     setCountry((e.target.innerText).toLowerCase())
   }
 }

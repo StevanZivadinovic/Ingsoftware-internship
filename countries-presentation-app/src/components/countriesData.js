@@ -13,8 +13,11 @@ export const CountriesData = () => {
     const [dataFiltered,setDataFiltered ] = useState([]);
     const [countrySearched, setCountrySearched]=useState([]);
     const [filteredAndSerached, setFilteredAndSearched] = useState([]);
+    const [continent, setContinent] = useState('');
+    const [displaNoData, setDisplayNoData] = useState(false);
     
     let a = [];
+    let filteredSearched = useRef()
     
     useEffect(() => {
         getData().then(res => {
@@ -22,41 +25,82 @@ export const CountriesData = () => {
         })
             .then(data => {
                     setData(data);
+                    filteredSearched.current = data;
 
             })
     }, []);
 
+
     const handleDataPrimary = (count)=>{
         setData([]);
+        
         setDataFiltered(count);
     }
+
+
+    const catchContinent =(continent1)=>{
+        setContinent(continent1);
+        }
     
+
     const handleSearchCountry = (searchedCountry, inputValue)=>{
 
         if(dataFiltered.length>0 && inputValue.length>0){
-            a=[...dataFiltered];
-         a.filter(c=>{
-                return c.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1))
-            })
-          
-            setDataFiltered([]);
-            setData([]);
-            setFilteredAndSearched(a)
-        }else{
+        
+            a= [...filteredSearched.current];
+            let b = []
+            let d = [];
+            //  a.forEach(c=>{
+            //     if(c.region==continent){
+            //     }
+                
+            // })
+            a.forEach(c=>{
+                
+                if(c.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1)) && c.region==continent){
+                    b.push(c);
+                    console.log(c);
+                        }
+                    })
+                
+                if(b.length>0){
+                    setDisplayNoData(false);
+                    setFilteredAndSearched(b);
+                }
+                else{
+                    setDisplayNoData(true);
+                    setFilteredAndSearched([]);
+                }
 
+        }
+        
+        else if(inputValue.length==0){
+
+             setFilteredAndSearched([]);
+             if(filteredAndSerached){
+
+                 setFilteredAndSearched(searchedCountry);
+             }else{
+                setCountrySearched(searchedCountry);
+             }
+            }
+        else{
             setCountrySearched(searchedCountry);
+
         }
        
      
     }
 
+ 
+
     return (
         <div className="mainFiltersAndCard">
-            <Filters handleDataPrimary={(count)=>handleDataPrimary(count)} handleSearchCountry={(searchedCountry, inputValue)=>handleSearchCountry(searchedCountry, inputValue)}></Filters>
+            <Filters catchContinent={(continent1)=>catchContinent(continent1)} handleDataPrimary={(count)=>handleDataPrimary(count)} handleSearchCountry={(searchedCountry, inputValue, continent)=>handleSearchCountry(searchedCountry, inputValue, continent)}></Filters>
            
             <div className='mainCard'>
                 <div className="mainCardContainers">
-                    
+                {displaNoData && <div>No data</div>}
                     {dataFiltered.length<=0 && countrySearched.length <=0
 
                      ?
@@ -78,7 +122,7 @@ export const CountriesData = () => {
                     </Link>
                     )
                     
-                    : dataFiltered.length> 0
+                    : dataFiltered.length> 0 && filteredAndSerached.length==0 && countrySearched.length==0 && !displaNoData
 
                     ?
                     
@@ -122,7 +166,7 @@ export const CountriesData = () => {
                             
                             )
                             :
-                            setFilteredAndSearched.length>0
+                            filteredAndSerached.length>0
                             ?
                             filteredAndSerached.map(a => 
                                 <Link to={a.name} key={a.alpha3Code}>
