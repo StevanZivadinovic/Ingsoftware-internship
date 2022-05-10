@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { debounce } from '../helperFunctions/debounce';
-import { getCountyByName, getRegion } from '../helperFunctions/getData';
+import { getCountyByName, getRegion, getData } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
 export const Filters = ({handleDataPrimary, handleSearchCountry, catchContinent}) => {
@@ -22,14 +22,24 @@ const handleCountry = (e)=>{
 
 useEffect(() => {
   if(selectedCountry.length>0){
+    if(selectedCountry!=='all'){
 
-    getRegion(selectedCountry)
-    .then(res=>{
-      return res.json()
-    })
-    .then(data=>{
-      handleDataPrimary(data);
-    })
+      getRegion(selectedCountry)
+      .then(res=>{
+        return res.json()
+      })
+      .then(data=>{
+        handleDataPrimary(data);
+      })
+    }else{
+      getData()
+      .then(res=>{
+        return res.json()
+      })
+      .then(data=>{
+        handleDataPrimary(data);
+      })
+    }
   }
 }, [selectedCountry]);
 
@@ -71,6 +81,7 @@ useEffect(()=>{
 
                 <p className='toggleUl' onClick={()=>setdisplayRegion(!displayRegion)}><span>Filter by Region</span> <span>{!displayRegion ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}</span></p>
                {displayRegion && <ul className='filterByRegion'>
+                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>All</li>
                     <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Africa</li>
                     <li className='countryLI'  onClick={()=>{setdisplayRegion(false)}}>Americas</li>
                     <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Asia</li>

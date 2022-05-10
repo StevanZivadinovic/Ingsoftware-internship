@@ -50,11 +50,7 @@ export const CountriesData = () => {
             a= [...filteredSearched.current];
             let b = []
             let d = [];
-            //  a.forEach(c=>{
-            //     if(c.region==continent){
-            //     }
-                
-            // })
+
             a.forEach(c=>{
                 
                 if(c.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1)) && c.region==continent){
@@ -62,15 +58,35 @@ export const CountriesData = () => {
                     console.log(c);
                         }
                     })
+
+                    if(continent=='All'){
+                     
+                        a.forEach(s=>{
+                            if(s.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1))){
+                                d.push(s)
+                                console.log(d, inputValue);
+                            }
+                        })
+                        if(d.length>0){
+                            setDisplayNoData(false);
+                            setFilteredAndSearched(d);
+                        }
+                        else{
+                            setDisplayNoData(true);
+                            setFilteredAndSearched([]);
+                        }
+                    }else{
+
+                        if(b.length>0){
+                            setDisplayNoData(false);
+                            setFilteredAndSearched(b);
+                        }
+                        else{
+                            setDisplayNoData(true);
+                            setFilteredAndSearched([]);
+                        }
+                    }
                 
-                if(b.length>0){
-                    setDisplayNoData(false);
-                    setFilteredAndSearched(b);
-                }
-                else{
-                    setDisplayNoData(true);
-                    setFilteredAndSearched([]);
-                }
 
         }
         
