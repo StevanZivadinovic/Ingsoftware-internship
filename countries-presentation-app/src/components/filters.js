@@ -1,13 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 import { debounce } from '../helperFunctions/debounce';
 import { getCountyByName, getRegion, getData } from '../helperFunctions/getData';
+
 import './../style/components/_filters.scss';
 
-export const Filters = ({handleDataPrimary, handleSearchCountry, catchContinent}) => {
+export const Filters = ({handleDataPrimary, handleSearchCountry, catchContinent, handleWait}) => {
+
 const [displayRegion, setdisplayRegion] = useState(false);
 const [selectedCountry, setCountry] = useState('');
 const [searchedCountry, setSearchedCountry]= useState('');
 const inputelement = useRef(null);
+
+
+
+
 window.addEventListener('click',e=>{
   if(e.target.className  !=='toggleUl' && e.target.className  !=='filterByRegion'){
     setdisplayRegion(false);
@@ -16,7 +22,8 @@ window.addEventListener('click',e=>{
 const handleCountry = (e)=>{
   if(e.target.classList=='countryLI'){
     catchContinent(e.target.innerText)
-    setCountry((e.target.innerText).toLowerCase())
+    setCountry((e.target.innerText).toLowerCase());
+    handleWait(false);
   }
 }
 
@@ -30,6 +37,7 @@ useEffect(() => {
       })
       .then(data=>{
         handleDataPrimary(data);
+        handleWait(true);
       })
     }else{
       getData()
@@ -38,13 +46,14 @@ useEffect(() => {
       })
       .then(data=>{
         handleDataPrimary(data);
+        handleWait(true)
       })
     }
   }
 }, [selectedCountry]);
 
 useEffect(()=>{
-  
+  handleWait(false);
   searchedCountry && getCountyByName(searchedCountry)
          .then(res=>{
            return res.json()
@@ -52,11 +61,13 @@ useEffect(()=>{
          .then(data=>{
        
            handleSearchCountry(data, searchedCountry);
+           handleWait(true);
          })
          .catch(err=>{
            console.log(err);
          })
   if(!searchedCountry){
+    handleWait(true);
     handleSearchCountry('', '');
   }
   

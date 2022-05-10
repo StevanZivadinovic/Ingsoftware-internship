@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -7,17 +8,18 @@ import {
 import { CountriesData } from './components/CountriesData';
 import Header from './components/Header';
 import DetailsPage from './pages/detailsPage'
-import WaitComponent from './components/WaitComponent';
+
 import './style/main.css';
 
 
 function App() {
+ 
   return (
     <div className="App">
       <BrowserRouter>
       <Header />
       <Routes>
-      <Route path='/'  element={<CountriesData /> ? <CountriesData /> : <WaitComponent/> } />
+      <Route path='/'  element={ <CountriesData/> } />
       <Route path='/:id' element={<DetailsPage/>} />
       </Routes>
       </BrowserRouter>

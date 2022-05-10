@@ -5,6 +5,7 @@ import { Filters } from './Filters';
 import {
     Link
 } from "react-router-dom";
+import {WaitComponent} from './../components/WaitComponent'
 
 
 export const CountriesData = () => {
@@ -15,6 +16,7 @@ export const CountriesData = () => {
     const [filteredAndSerached, setFilteredAndSearched] = useState([]);
     const [continent, setContinent] = useState('');
     const [displaNoData, setDisplayNoData] = useState(false);
+    const [wait, setWait] = useState(false);
     
     let a = [];
     let filteredSearched = useRef()
@@ -22,13 +24,14 @@ export const CountriesData = () => {
     useEffect(() => {
         getData().then(res => {
             return res.json()
-        })
-            .then(data => {
+        }).then(data => {
                     setData(data);
                     filteredSearched.current = data;
-
-            })
-    }, []);
+                    setWait(true);
+                    
+                })
+            }, []);
+            
 
 
     const handleDataPrimary = (count)=>{
@@ -106,14 +109,18 @@ export const CountriesData = () => {
      
     }
 
+    const handleWait =(value)=>{
+        setWait(value)
+    }
+
  
 
     return (
         <div className="mainFiltersAndCard">
-            <Filters catchContinent={(continent1)=>catchContinent(continent1)} handleDataPrimary={(count)=>handleDataPrimary(count)} handleSearchCountry={(searchedCountry, inputValue, continent)=>handleSearchCountry(searchedCountry, inputValue, continent)}></Filters>
+            <Filters handleWait={(value)=>handleWait(value)} catchContinent={(continent1)=>catchContinent(continent1)} handleDataPrimary={(count)=>handleDataPrimary(count)} handleSearchCountry={(searchedCountry, inputValue, continent)=>handleSearchCountry(searchedCountry, inputValue, continent)}></Filters>
            
             <div className='mainCard'>
-                <div className="mainCardContainers">
+            {wait ?  <div className="mainCardContainers">
                 {displaNoData && <div>No data</div>}
                     {dataFiltered.length<=0 && countrySearched.length <=0
 
@@ -202,9 +209,9 @@ export const CountriesData = () => {
                                 :
                                 ''
                         
-                     
-                    }
+                            }) 
                 </div>
+                    :<WaitComponent/>}
             </div>
         </div>
     )
