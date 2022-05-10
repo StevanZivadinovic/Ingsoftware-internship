@@ -55,7 +55,6 @@ export const CountriesData = () => {
                 
                 if(c.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1)) && c.region==continent){
                     b.push(c);
-                    console.log(c);
                         }
                     })
 
@@ -64,7 +63,6 @@ export const CountriesData = () => {
                         a.forEach(s=>{
                             if(s.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1))){
                                 d.push(s)
-                                console.log(d, inputValue);
                             }
                         })
                         if(d.length>0){

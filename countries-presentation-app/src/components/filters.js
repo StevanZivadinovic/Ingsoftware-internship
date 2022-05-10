@@ -62,9 +62,6 @@ useEffect(()=>{
   
 }, [searchedCountry]);
 
-useEffect(()=>{
-  console.log(inputelement.current.value);
-},[])
 
 
 
