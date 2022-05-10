@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import {getData, getRegion} from '../helperFunctions/getData';
+import {getData} from '../helperFunctions/getData';
 import './../style/components/_cards.scss'
 import { Filters } from './Filters';
 import {
@@ -11,9 +11,9 @@ export const CountriesData = () => {
 
     const [dataPrimary, setData] = useState([]);
     const [dataFiltered,setDataFiltered ] = useState([]);
-    const isMounted = useRef(true);
     const [countrySearched, setCountrySearched]=useState([]);
     const [filteredAndSerached, setFilteredAndSearched] = useState([]);
+    
     let a = [];
     
     useEffect(() => {
@@ -32,7 +32,7 @@ export const CountriesData = () => {
     }
     
     const handleSearchCountry = (searchedCountry, inputValue)=>{
-       
+
         if(dataFiltered.length>0 && inputValue.length>0){
             a=[...dataFiltered];
          a.filter(c=>{

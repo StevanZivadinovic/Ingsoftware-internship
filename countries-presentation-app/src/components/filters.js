@@ -7,7 +7,7 @@ export const Filters = ({handleDataPrimary, handleSearchCountry}) => {
 const [displayRegion, setdisplayRegion] = useState(false);
 const [selectedCountry, setCountry] = useState('');
 const [searchedCountry, setSearchedCountry]= useState('');
-const inputElement = useRef();
+const inputelement = useRef(null);
 window.addEventListener('click',e=>{
   if(e.target.className  !=='toggleUl' && e.target.className  !=='filterByRegion'){
     setdisplayRegion(false);
@@ -45,9 +45,15 @@ useEffect(()=>{
          .catch(err=>{
            console.log(err);
          })
+  if(!searchedCountry){
+    handleSearchCountry('', '');
+  }
   
-  
-}, [searchedCountry])
+}, [searchedCountry]);
+
+useEffect(()=>{
+  console.log(inputelement.current.value);
+},[])
 
 
 
@@ -57,7 +63,7 @@ useEffect(()=>{
         <div className="mainContent">
             <div className="searchInput">
             <span><i className="fa-solid fa-magnifying-glass"></i></span>
-            <input type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e)=>setSearchedCountry(e.target.value), 1000)} />
+            <input ref={inputelement}  type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e)=>setSearchedCountry(e.target.value), 500)} />
             </div>
 
             <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>
