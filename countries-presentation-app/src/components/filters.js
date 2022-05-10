@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { debounce } from '../helperFunctions/debounce';
 import { getCountyByName, getRegion } from '../helperFunctions/getData';
 import './../style/components/_filters.scss';
 
@@ -29,22 +30,22 @@ useEffect(() => {
       handleDataPrimary(data);
     })
   }
-}, [selectedCountry])
+}, [selectedCountry]);
 
 useEffect(()=>{
-
+  
   searchedCountry && getCountyByName(searchedCountry)
-     .then(res=>{
-       return res.json()
-     })
-     .then(data=>{
-   
-       handleSearchCountry(data, searchedCountry);
-     })
-     .catch(err=>{
-       console.log(err);
-     })
-
+         .then(res=>{
+           return res.json()
+         })
+         .then(data=>{
+       
+           handleSearchCountry(data, searchedCountry);
+         })
+         .catch(err=>{
+           console.log(err);
+         })
+  
   
 }, [searchedCountry])
 
@@ -56,7 +57,7 @@ useEffect(()=>{
         <div className="mainContent">
             <div className="searchInput">
             <span><i className="fa-solid fa-magnifying-glass"></i></span>
-            <input type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={(e)=>setSearchedCountry(e.target.value)} />
+            <input type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e)=>setSearchedCountry(e.target.value), 1000)} />
             </div>
 
             <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>

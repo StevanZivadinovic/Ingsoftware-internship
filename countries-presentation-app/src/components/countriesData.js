@@ -32,7 +32,6 @@ export const CountriesData = () => {
     }
     
     const handleSearchCountry = (searchedCountry, inputValue)=>{
-        // console.log(searchedCountry);
        
         if(dataFiltered.length>0 && inputValue.length>0){
             a=[...dataFiltered];
