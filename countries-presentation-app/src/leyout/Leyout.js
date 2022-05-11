@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     BrowserRouter,
     Routes,
@@ -10,8 +10,11 @@ import Header from '../components/Header';
 
 const Layout =({children}) =>{
 
+    const [mainTheme, setMainTheme] = useState('light')
+
     const getTheme = (theme) =>{
         console.log(theme)
+        setMainTheme(theme)
     }   
 
     return(
@@ -21,7 +24,7 @@ const Layout =({children}) =>{
         <Header getTheme={(theme)=>getTheme(theme)} />
         </BrowserRouter>
         </div>
-        <main>{children}</main>
+        <main className={mainTheme}>{children}</main>
         </>
     )
 }
