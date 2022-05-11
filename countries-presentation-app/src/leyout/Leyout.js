@@ -19,11 +19,11 @@ const Layout =({children}) =>{
 
     return(
         <>
-        <div>
+      
         <BrowserRouter>
         <Header getTheme={(theme)=>getTheme(theme)} />
         </BrowserRouter>
-        </div>
+      
         <main className={mainTheme}>{children}</main>
         </>
     )
