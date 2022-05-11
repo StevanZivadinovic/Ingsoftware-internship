@@ -51,7 +51,7 @@ const DetailsPage = () => {
           <div className="details">
             <div className="detailsLeft">
               <ul>
-                <li>Native Name: <span>{country[0]?.nativeName}</span></li>
+                <li className='detailsLI'>Native Name: <span>{country[0]?.nativeName}</span></li>
                 <li>Population: <span>{country[0]?.population}</span></li>
                 <li>Region: <span>{country[0]?.region}</span></li>
                 <li>Sub Region: <span>{country[0]?.subregion}</span></li>

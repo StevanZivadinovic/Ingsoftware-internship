@@ -1,30 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
-    BrowserRouter,
-    Routes,
-    Route,
+    BrowserRouter
   } from "react-router-dom";
 import Header from '../components/Header';
 
 
 
-const Layout =({children}) =>{
 
-    const [mainTheme, setMainTheme] = useState('light')
+const Layout =({children, getMainThemeApp}) =>{
+
+    const [mainTheme, setMainTheme] = useState('dark')
 
     const getTheme = (theme) =>{
-        console.log(theme)
         setMainTheme(theme)
+       
     }   
+
+    useEffect(()=>{
+
+        if(mainTheme=='dark'){
+    
+            getMainThemeApp(true)
+        }else{
+            getMainThemeApp(false)
+        }
+    }, [mainTheme])
 
     return(
         <>
-      
+        <React.Suspense>
         <BrowserRouter>
         <Header getTheme={(theme)=>getTheme(theme)} />
         </BrowserRouter>
-      
         <main className={mainTheme}>{children}</main>
+        </React.Suspense>
         </>
     )
 }

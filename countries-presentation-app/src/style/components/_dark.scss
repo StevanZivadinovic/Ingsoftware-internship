@@ -1,0 +1,21 @@
+@use './../variables';
+
+
+.headerMain{
+    background-color: variables.$darkBlue;
+}
+
+.dark{
+
+    .mainFiltersAndCard{    
+        .mainFilters, .mainCard{
+
+            background-color: variables.$veryDarkBlue;
+        }
+    }
+
+    .mainDetailsPage{
+        background-color: variables.$veryDarkBlue;
+    }
+}
+

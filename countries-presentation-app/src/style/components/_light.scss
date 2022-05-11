@@ -1,0 +1,111 @@
+@use './../variables';
+
+.headerMain.light {
+    background-color: variables.$darkGrey;
+}
+
+.light {
+    .mainFiltersAndCard {
+        .mainFilters,
+        .mainCard {
+            background-color: variables.$veryLightGray;
+
+            .mainCardContainers{
+                a{
+                   
+                    .card{
+                        &:hover{
+                            box-shadow: 0rem 0rem .4rem .4rem  variables.$darkGrey;
+                        }
+                        .cardText{
+                            background-color:variables.$darkGrey;
+                        }
+                    }
+                }
+            }
+        }
+        .mainFilters {
+            .mainContent {
+                .searchInput{
+                    background-color:variables.$darkGrey;
+
+                    &:hover{
+                        box-shadow: none;
+                        box-shadow: 0rem 0rem 0.1rem 0.1rem rgb(177, 169, 169);
+                      
+                    }
+                    
+                }
+                .selectSearch{
+                    &:hover{
+                        box-shadow: none;
+                        box-shadow: 0rem 0rem 0.1rem 0.1rem rgb(177, 169, 169);
+                      
+                    }
+                    .toggleUl {
+                        background-color:variables.$darkGrey;
+
+                        
+
+                    }
+                    .filterByRegion{
+                        background-color:variables.$darkGrey;
+                        li{
+                            &:hover{
+                                background-color:variables.$veryLightGray;
+                                color: variables.$darkGrey;
+                                }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainDetailsPage {
+        background-color: variables.$veryLightGray;
+        .backButtonMenu {
+            .backButton {
+
+                background-color: variables.$darkGrey;
+                box-shadow: none;
+                box-shadow: 0rem 0rem 0.2rem 0.2rem rgb(177, 169, 169);
+
+                &:hover {
+                    box-shadow: 0rem 0rem 0.3rem 0.3rem rgb(177, 169, 169);
+                }
+
+
+            }
+        }
+
+        .mainContent {
+            .detailsOfCountry .nameCountry {
+                color: variables.$darkGrey;
+            }
+
+            .detailsOfCountry .details .detailsLeft ul li,
+            .detailsOfCountry .details .detailsRight ul li {
+
+                color: variables.$darkGrey;
+
+
+            }
+
+            .borderCountry {
+                color: variables.$darkGrey;
+
+                span {
+                    background-color: variables.$darkGrey;
+                    color: variables.$veryLightGray;
+                    box-shadow: 0rem 0rem 0.2rem 0.2rem rgb(177, 169, 169);
+
+
+                    &:hover {
+                        box-shadow: 0rem 0rem 0.3rem 0.3rem rgb(177, 169, 169);
+                    }
+                }
+            }
+        }
+    }
+}

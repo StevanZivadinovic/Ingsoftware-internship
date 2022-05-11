@@ -3,6 +3,7 @@
 
 @use './mixins';
 @use './variables';
+
 // @include mixins.setTextPara(variables.$alegria, 6.4rem, #ffffff);
 
 
@@ -14,4 +15,6 @@
     box-sizing: border-box;
     font-size: 10px;
     font-family: 'Nunito Sans', sans-serif;
+
+
 }

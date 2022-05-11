@@ -5,7 +5,7 @@ import './../style/components/_header.scss'
 const Header = ({getTheme}) => {
 
   const navigate = useNavigate();
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(false);
 
   useEffect(() => {
   
@@ -27,7 +27,7 @@ const Header = ({getTheme}) => {
       <h3 onClick={()=>{navigate('/')}}>Where in the world?</h3>
     
         <div className="rightSubmenu" onClick={()=>setTheme(!theme)}>
-            <p><span><i className="fa-solid fa-moon"></i></span> Dark  Mode</p>
+            <p>{theme ? <span><i className="fa-solid fa-moon"></i> Dark  Mode</span> : <span><i className="fa-solid fa-sun"></i> Light  Mode</span>}</p>
         </div>
         </div>
     </div>

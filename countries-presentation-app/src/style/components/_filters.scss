@@ -17,8 +17,11 @@
             width: 30%;
             padding: 1rem 2rem;
             border-radius: .2rem;
-            
-            box-shadow: 0 0 1rem variables.$veryDarkBlue ;
+
+            &:hover{
+
+                box-shadow: 0 0 .3rem .3rem variables.$white;
+            }
             span{
                 i{
                     color: variables.$white;
@@ -43,6 +46,10 @@
             @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
             width: 20%;
             position: relative;
+            &:hover{
+
+                box-shadow: 0 0 .3rem .3rem variables.$white;
+            }
             p{
                 background-color: variables.$darkBlue;
                 padding: 1rem 2rem;
