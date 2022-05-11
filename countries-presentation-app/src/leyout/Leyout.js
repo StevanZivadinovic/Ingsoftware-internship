@@ -9,11 +9,16 @@ import Header from '../components/Header';
 
 
 const Layout =({children}) =>{
+
+    const getTheme = (theme) =>{
+        console.log(theme)
+    }   
+
     return(
         <>
         <div>
         <BrowserRouter>
-        <Header />
+        <Header getTheme={(theme)=>getTheme(theme)} />
         </BrowserRouter>
         </div>
         <main>{children}</main>
