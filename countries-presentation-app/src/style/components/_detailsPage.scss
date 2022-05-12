@@ -7,6 +7,7 @@
     .backButtonMenu{
         height: 14vh;
         width: 90%;
+        max-width: 144rem;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -33,6 +34,7 @@
     .mainContent{
         display: flex;
         width: 90%;
+        max-width: 144rem;
         margin: 0 auto;
         justify-content: space-between;
         .bigFlag{
@@ -50,7 +52,7 @@
             width: 50%;
             justify-content: center;
             h2{
-                @include mixins.setTextPara(variables.$nunito, 2.5rem, variables.$white);
+                @include mixins.setTextPara(variables.$nunito, 3rem, variables.$white);
                 text-transform: capitalize;
                 margin-bottom: 3vh;
             }
@@ -68,8 +70,10 @@
 
                             @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
                             font-weight: 600;
+                            margin-top: 1rem;
                             span{
                                 font-weight: 300;
+                                @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
                             }
                         }
                         
@@ -79,8 +83,10 @@
             .borderCountry{
                 @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
                 font-weight: 600;
+                
                 a{
                     text-decoration: none;
+                  
                     @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
                     &:active{
                         text-decoration: none;
@@ -91,6 +97,8 @@
                         box-shadow: 0rem 0rem .3rem .3rem variables.$roundColor;
                         margin-left: .5rem;
                         cursor: pointer;
+                        @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
+                        
                     }
                 }
             }
