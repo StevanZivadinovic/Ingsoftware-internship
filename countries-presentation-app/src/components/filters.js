@@ -9,6 +9,7 @@ export const Filters = ({handleDataPrimary, handleSearchCountry, catchContinent,
 const [displayRegion, setdisplayRegion] = useState(false);
 const [selectedCountry, setCountry] = useState('');
 const [searchedCountry, setSearchedCountry]= useState('');
+const [arrayOfFilterContinents, setArrayOfFilterContinents] = useState(['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'])
 const inputelement = useRef(null);
 
 
@@ -89,12 +90,11 @@ useEffect(()=>{
 
                 <p className='toggleUl' onClick={()=>setdisplayRegion(!displayRegion)}><span>Filter by Region</span> <span>{!displayRegion ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}</span></p>
                {displayRegion && <ul className='filterByRegion'>
-                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>All</li>
-                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Africa</li>
-                    <li className='countryLI'  onClick={()=>{setdisplayRegion(false)}}>Americas</li>
-                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Asia</li>
-                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Europe</li>
-                    <li className='countryLI' onClick={()=>{setdisplayRegion(false)}}>Oceania</li>
+               {arrayOfFilterContinents.map(a=>{
+
+                  return   <li className='countryLI' key={a} onClick={()=>{setdisplayRegion(false)}}>{a}</li>
+               })}
+               
                 </ul> }
             </div>
         </div>
