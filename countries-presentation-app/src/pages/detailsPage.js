@@ -42,7 +42,7 @@ const DetailsPage = () => {
   return (
     <div className='mainDetailsPage'>
       <div className="backButtonMenu">
-        <button onClick={()=>{navigate('/')}} className="backButton"> <span><i className="fa-solid fa-arrow-left"></i> </span> Back</button>
+        <button onClick={()=>{navigate(-1)}} className="backButton"> <span><i className="fa-solid fa-arrow-left"></i> </span> Back</button>
       </div>
      {country[0] && <div className="mainContent">
         <div className="bigFlag" style={{backgroundImage:`url(${country[0].flag}`}}>
