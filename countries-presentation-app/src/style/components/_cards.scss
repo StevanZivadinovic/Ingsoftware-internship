@@ -7,13 +7,14 @@
     background-color: variables.$veryDarkBlue;
     padding: 4vh 0rem;
     .mainCardContainers{
+        
         width: 90%;
         margin: 0 auto;
         height: auto;
         min-height: 72vh;
         display: grid;
-        grid-template-columns:repeat(4,1fr);
-        gap: 4rem;
+        grid-template-columns:repeat(4 ,1fr);
+        gap: 8rem;
         a{
             text-decoration: none;
             .card{
@@ -39,18 +40,20 @@
                     }
                 }
                 .cardText{
-                    padding: 1rem 2rem;
+                    padding: 3rem 2rem;
+             
                     .cardName{
-                        @include mixins.setTextPara(variables.$nunito, 1.4rem, variables.$white);
+                        @include mixins.setTextPara(variables.$nunito, 2rem, variables.$white);
                     }
                     .cardDetails{
                         margin-top: 1.5rem;
                         p{
-                            @include mixins.setTextPara(variables.$nunito, 1rem, variables.$white);
+                            @include mixins.setTextPara(variables.$nunito, 1.4rem, variables.$white);
                             font-weight: 600;
                             margin-top: .5rem;
                             span{
                                 font-weight: 300;
+                                 @include mixins.setTextPara(variables.$nunito, 1.4rem, variables.$white);
                             }
                         }
                     }

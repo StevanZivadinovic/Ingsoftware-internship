@@ -3,7 +3,8 @@ import {getData} from '../helperFunctions/getData';
 import './../style/components/_cards.scss'
 import { Filters } from './Filters';
 import {
-    Link
+    useNavigate,
+    useLocation
 } from "react-router-dom";
 import {WaitComponent} from './../components/WaitComponent'
 import Cards from './Cards';
@@ -18,6 +19,10 @@ export const CountriesData = () => {
     const [continent, setContinent] = useState('');
     const [displaNoData, setDisplayNoData] = useState(false);
     const [wait, setWait] = useState(false);
+ 
+    const navigate = useNavigate();
+    const location = useLocation();
+
     
     let a = [];
     let filteredSearched = useRef()
@@ -26,9 +31,10 @@ export const CountriesData = () => {
         getData().then(res => {
             return res.json()
         }).then(data => {
-                    setData(data);
-                    filteredSearched.current = data;
-                    setWait(true);
+            setData(data);
+            filteredSearched.current = data;
+            setWait(true);
+            console.log(location)
                     
                 })
             }, []);

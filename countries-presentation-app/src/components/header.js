@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './../style/components/_header.scss'
 
 const Header = ({getTheme}) => {
 
   const navigate = useNavigate();
+  
   const [theme, setTheme] = useState(false);
 
   useEffect(() => {
