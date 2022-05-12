@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import {useParams, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import {useParams, useNavigate, Link, Routes, Route, BrowserRouter  } from "react-router-dom";
 import {specificCountry, getBorderCountries} from '../helperFunctions/getData';
 import './../style/components/_detailsPage.scss'
 
@@ -17,24 +17,25 @@ const DetailsPage = () => {
       specificCountry(param.id).then(res=>{
         return res.json()
       }).then(data=>{
-      
-          setCountry(data);
+   
+          setCountry(data); 
           setBorderCountries(data[0].borders);
      
       })
-    }, [])
+    }, [param.id])
   
 
   useEffect(() => {
+    setFullNameBorderCountries([])
     borderCountries && borderCountries.forEach(a => {
       getBorderCountries(a)
         .then(res => {
           return res.json()
         })
-        .then((data) => {
+        .then((data) => {   
             setFullNameBorderCountries((fullNameBorderCountries) => [...fullNameBorderCountries, data.name])
         })
-    });
+    }); 
   }, [borderCountries]);
             
 
@@ -44,7 +45,7 @@ const DetailsPage = () => {
         <button onClick={()=>{navigate('/')}} className="backButton"> <span><i className="fa-solid fa-arrow-left"></i> </span> Back</button>
       </div>
      {country[0] && <div className="mainContent">
-        <div className="bigFlag" style={{backgroundImage:`url(${country[0]?.flag}`}}>
+        <div className="bigFlag" style={{backgroundImage:`url(${country[0].flag}`}}>
         </div>
         <div className="detailsOfCountry">
           <h2 className="nameCountry">{param.id}</h2>
@@ -68,12 +69,13 @@ const DetailsPage = () => {
           </div>
           <div className="borderCountry">
             Border Countries: {fullNameBorderCountries.length>0 ? fullNameBorderCountries.map((a,i)=>{
-            return <span key={i}> {a}</span>
+            return  <Link to={`/${a}`} key={i}><span> {a}</span></Link>
             }) : <span>This country has no neighbors</span>}
           </div>
         </div>
       </div>
       }
+     
       </div>
   )
 }
