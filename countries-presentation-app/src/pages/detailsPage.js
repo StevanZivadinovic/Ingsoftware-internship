@@ -68,7 +68,6 @@ const DetailsPage = () => {
           </div>
           <div className="borderCountry">
             Border Countries: {fullNameBorderCountries.length>0 ? fullNameBorderCountries.map((a,i)=>{
-              // console.log(a)
             return <span key={i}> {a}</span>
             }) : <span>This country has no neighbors</span>}
           </div>

@@ -22,7 +22,6 @@ function App() {
   const [themeToggler, setThemeToggler] = useState(true);
 
   const getMainThemeApp = (toggler) =>{
-    console.log(toggler)
     setThemeToggler(toggler);
   }
 
