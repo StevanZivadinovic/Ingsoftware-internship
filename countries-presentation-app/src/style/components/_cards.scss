@@ -64,3 +64,16 @@
        
     }
 }
+
+@media screen and (max-width: 376px) {
+
+    .mainCard{
+        background-color: variables.$veryDarkBlue;
+        padding: 4vh 0rem;
+        .mainCardContainers{
+            // max-width: 330px;
+            grid-template-columns:repeat(1 ,minmax(200px, 80%));
+            justify-content: center;
+        }
+    }
+}

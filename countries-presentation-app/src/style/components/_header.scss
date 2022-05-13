@@ -35,3 +35,15 @@
 
     }
 }
+
+@media screen and (max-width: 376px) {
+    .headerMain{
+        
+        .mainDivHeader{
+       
+            h3{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

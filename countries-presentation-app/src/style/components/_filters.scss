@@ -81,3 +81,28 @@
         }
     }
 }
+
+
+@media screen and (max-width: 376px) {
+.mainFilters{
+    
+    .mainContent{
+        
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .searchInput{
+            margin-bottom: 5vh;
+            width: 100%;
+            
+        }
+        .selectSearch{
+            width: 60%;
+            float: left;
+            
+        }
+
+    }
+}
+
+}
