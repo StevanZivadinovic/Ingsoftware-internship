@@ -145,12 +145,14 @@
 
                     a{
                         padding: .2rem .6rem !important;
-                        box-shadow: 0rem 0rem .2rem .2rem variables.$roundColor !important;
+                        box-shadow: 0rem 0rem .2rem .2rem rgb(177, 169, 169) !important;
                         margin-top: 1vh !important;
                         @include mixins.setTextPara(variables.$nunito, 1rem,variables.$white !important);
                         font-weight: 300 !important;
                         
-                        
+                        &:hover {
+                            box-shadow: 0rem 0rem 0.3rem 0.3rem rgb(177, 169, 169);
+                        }
                     }
                 }
                 }
