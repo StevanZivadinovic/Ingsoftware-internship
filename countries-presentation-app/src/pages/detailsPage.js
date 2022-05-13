@@ -65,12 +65,12 @@ const DetailsPage = () => {
                 <li>Currencies: <span>{country[0]?.currencies[0].code}</span></li>
                 <li>Languages: <span>{country[0]?.languages[0].name}</span></li>
               </ul>
-            </div>
+            </div> 
           </div>
           <div className="borderCountry">
-            Border Countries: {fullNameBorderCountries.length>0 ? fullNameBorderCountries.map((a,i)=>{
-            return  <Link to={`/${a}`} key={i}><span> {a}</span></Link>
-            }) : <span>This country has no neighbors</span>}
+            <span>Border Countries: </span><div className='linksBorderCountry'>{fullNameBorderCountries.length>0 ? fullNameBorderCountries.map((a,i)=>{
+            return  <Link to={`/${a}`} key={i}> {a}</Link>
+            }) : <span>This country has no neighbors</span>}</div>
           </div>
         </div>
       </div>

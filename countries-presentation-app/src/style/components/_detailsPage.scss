@@ -81,27 +81,81 @@
                 }
             }
             .borderCountry{
-                @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
                 font-weight: 600;
-                
-                a{
-                    text-decoration: none;
-                  
+                display: flex;
+                span{
+                    width: 12rem;
+                    font-weight: 600;
                     @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
-                    &:active{
+                }
+                .linksBorderCountry{
+                    display: flex;
+                    height: auto ;
+                    flex-wrap: wrap;
+                    gap: .5rem;
+
+                    a{
+                        height: auto;
                         text-decoration: none;
-                    }
-                    span{
                         padding: .5rem 1rem;
-                        background-color: variables.$darkBlue;
                         box-shadow: 0rem 0rem .3rem .3rem variables.$roundColor;
-                        margin-left: .5rem;
+                        background-color: variables.$darkBlue;
                         cursor: pointer;
                         @include mixins.setTextPara(variables.$nunito, 1.2rem, variables.$white);
-                        
+                        font-weight: 300;
+                        &:active{
+                            text-decoration: none;
+                        }
+                     
                     }
                 }
             }
         }
     }
+}
+
+
+@media screen and (max-width: 376px) {
+
+    .mainDetailsPage{
+        height: auto;
+        .mainContent{
+            flex-direction: column;
+            .bigFlag{
+                width: 100% !important;
+                height: 25rem !important;
+            }
+            .detailsOfCountry{
+                height: auto;
+                width: 100% !important;
+               
+                .details{
+                    flex-direction: column;
+                    width: 100% !important;
+                }
+            }
+            .borderCountry{
+                flex-direction: column;
+                height: auto !important;
+                padding: 3vh 0 !important;
+
+                .linksBorderCountry{
+                    display: flex !important;
+                    flex-wrap: wrap;
+
+                    a{
+                        padding: .2rem .6rem !important;
+                        box-shadow: 0rem 0rem .2rem .2rem variables.$roundColor !important;
+                        margin-top: 1vh !important;
+                        @include mixins.setTextPara(variables.$nunito, 1rem,variables.$white !important);
+                        font-weight: 300 !important;
+                        
+                        
+                    }
+                }
+                }
+
+        }
+    }
+  
 }
