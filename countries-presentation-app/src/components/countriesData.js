@@ -20,9 +20,6 @@ export const CountriesData = () => {
     const [displaNoData, setDisplayNoData] = useState(false);
     const [wait, setWait] = useState(false);
  
-    const navigate = useNavigate();
-    const location = useLocation();
-
     
     let a = [];
     let filteredSearched = useRef()
@@ -34,7 +31,7 @@ export const CountriesData = () => {
             setData(data);
             filteredSearched.current = data;
             setWait(true);
-            console.log(location)
+       
                     
                 })
             }, []);
@@ -43,7 +40,6 @@ export const CountriesData = () => {
 
     const handleDataPrimary = (count)=>{
         setData([]);
-        
         setDataFiltered(count);
     }
 
