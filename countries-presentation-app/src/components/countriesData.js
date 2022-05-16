@@ -7,18 +7,19 @@ import {
     useLocation
 } from "react-router-dom";
 import {WaitComponent} from './../components/WaitComponent'
+
 import Cards from './Cards';
+import { NoData } from './NoDataComponent';
 
 
 export const CountriesData = () => {
 
     const [dataPrimary, setData] = useState([]);
     const [dataFiltered,setDataFiltered ] = useState([]);
-    const [countrySearched, setCountrySearched]=useState([]);
-    const [filteredAndSerached, setFilteredAndSearched] = useState([]);
     const [continent, setContinent] = useState('');
+    const [inputValue, setInputValue]=useState('');
     const [displaNoData, setDisplayNoData] = useState(false);
-    const [wait, setWait] = useState(false);
+    const [wait, setWait] = useState(true);
  
     
     let a = [];
@@ -29,8 +30,8 @@ export const CountriesData = () => {
             return res.json()
         }).then(data => {
             setData(data);
-            filteredSearched.current = data;
-            setWait(true);
+           
+            setWait(false);
        
                     
                 })
@@ -38,8 +39,7 @@ export const CountriesData = () => {
             
 
 
-    const handleDataPrimary = (count)=>{
-        setData([]);
+    const handleDataFiltered = (count)=>{
         setDataFiltered(count);
     }
 
@@ -49,83 +49,21 @@ export const CountriesData = () => {
         }
     
 
-    const handleSearchCountry = (searchedCountry, inputValue) => {
-
-        if (dataFiltered.length > 0 && inputValue.length > 0) {
-
-            a = [...filteredSearched.current];
-            let b = []
-            let d = [];
-
-            a.forEach(c => {
-
-                if (c.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1)) && c.region == continent) {
-                    b.push(c);
-                }
-            })
-
-            if (continent == 'All') {
-
-                a.forEach(s => {
-                    if (s.name.includes((inputValue).charAt(0).toUpperCase() + (inputValue).slice(1))) {
-                        d.push(s)
-                    }
-                })
-                if (d.length > 0) {
-                    setDisplayNoData(false);
-                    setFilteredAndSearched(d);
-                }
-                else {
-                    setDisplayNoData(true);
-                    setFilteredAndSearched([]);
-                }
-            } else {
-
-                if (b.length > 0) {
-                    setDisplayNoData(false);
-                    setFilteredAndSearched(b);
-                }
-                else {
-                    setDisplayNoData(true);
-                    setFilteredAndSearched([]);
-                }
-            }
-
-
-        }
-
-        else if (inputValue.length == 0) {
-
-            setFilteredAndSearched([]);
-            if (filteredAndSerached) {
-
-                setFilteredAndSearched(searchedCountry);
-            } else {
-                setCountrySearched(searchedCountry);
-            }
-        }
-        else {
-            setCountrySearched(searchedCountry);
-
-        }
-
-
-    }
-
     const handleWait = (value) => {
         setWait(value)
     }
 
-
-
+   const  handleInputValue =(inputV)=>{
+    setInputValue(inputV);
+   }
     return (
         <div className="mainFiltersAndCard">
-            <Filters handleWait={(value) => handleWait(value)} catchContinent={(continent1) => catchContinent(continent1)} handleDataPrimary={(count) => handleDataPrimary(count)} handleSearchCountry={(searchedCountry, inputValue, continent) => handleSearchCountry(searchedCountry, inputValue, continent)}></Filters>
+            <Filters handleInputValue = {(inputValue)=>{handleInputValue(inputValue)}} dataPrimary={dataPrimary} handleWait={(value) => handleWait(value)} catchContinent={(continent1) => catchContinent(continent1)} handleDataFiltered={(countries)=>{handleDataFiltered(countries)}}></Filters>
 
             <div className='mainCard'>
-                {wait ? <div className="mainCardContainers">
+                {!wait ? <div className="mainCardContainers">
                     {displaNoData && <div>No data</div>}
-                    {dataFiltered.length <= 0 && countrySearched.length <= 0
+                    {dataPrimary.length >0 && dataFiltered.length==0 && inputValue.length==0
 
                         ?
 
@@ -133,7 +71,7 @@ export const CountriesData = () => {
                             <Cards a={a} key={a.alpha3Code} />
                         )
 
-                        : dataFiltered.length > 0 && filteredAndSerached.length == 0 && countrySearched.length == 0 && !displaNoData
+                        : dataFiltered.length > 0 
 
                             ?
 
@@ -142,26 +80,13 @@ export const CountriesData = () => {
 
                             )
 
-                            : countrySearched.length > 0
-                                ?
-
-                                countrySearched.map(a =>
-                                    <Cards a={a} key={a.alpha3Code} />
-
-                                )
-                                :
-                                filteredAndSerached.length > 0
-                                    ?
-                                    filteredAndSerached.map(a =>
-                                        <Cards a={a} key={a.alpha3Code} />
-
-                                    )
-                                    :
-                                    ''
+                            :
+                            <NoData></NoData>
+                            
 
                     })
                 </div>
-                    : <WaitComponent />}
+                        :<WaitComponent />}
             </div>
         </div>
     )

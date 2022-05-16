@@ -4,7 +4,7 @@ import { getCountyByName, getRegion, getData } from '../helperFunctions/getData'
 
 import './../style/components/_filters.scss';
 
-export const Filters = ({handleDataPrimary, handleSearchCountry, catchContinent, handleWait}) => {
+export const Filters = ({dataPrimary, handleDataFiltered, handleInputValue, catchContinent, handleWait}) => {
 
 const [displayRegion, setdisplayRegion] = useState(false);
 const [selectedCountry, setCountry] = useState('');
@@ -12,7 +12,14 @@ const [searchedCountry, setSearchedCountry]= useState('');
 const [arrayOfFilterContinents, setArrayOfFilterContinents] = useState(['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'])
 const inputelement = useRef(null);
 
+let a = [];
+let b = [];
+let filteredSearched = useRef()
 
+useEffect(()=>{
+  filteredSearched.current = dataPrimary;
+
+},[dataPrimary])
 
 
 window.addEventListener('click',e=>{
@@ -27,52 +34,40 @@ const handleCountry = (e)=>{
     handleWait(false);
   }
 }
-
-useEffect(() => {
+useEffect(()=>{
+  handleInputValue(searchedCountry)
+  if(filteredSearched.current) a=[...filteredSearched.current];
   if(selectedCountry.length>0){
-    if(selectedCountry!=='all'){
 
-      getRegion(selectedCountry)
-      .then(res=>{
-        return res.json()
-      })
-      .then(data=>{
-        handleDataPrimary(data);
-        handleWait(true);
+    if(selectedCountry!=='all'){
+      b=  a.filter(c=>{
+        
+        return c.name.includes((searchedCountry).charAt(0).toUpperCase() + (searchedCountry).slice(1)) && (c.region).charAt(0).toLowerCase() + (c.region).slice(1) == selectedCountry;
       })
     }else{
-      getData()
-      .then(res=>{
-        return res.json()
-      })
-      .then(data=>{
-        handleDataPrimary(data);
-        handleWait(true)
+      b=  a.filter(c=>{
+        
+        return c.name.includes((searchedCountry).charAt(0).toUpperCase() + (searchedCountry).slice(1))
       })
     }
-  }
-}, [selectedCountry]);
+      
+    handleDataFiltered(b);
+    console.log(selectedCountry, searchedCountry, b);
 
-useEffect(()=>{
-  handleWait(false);
-  searchedCountry && getCountyByName(searchedCountry)
-         .then(res=>{
-           return res.json()
-         })
-         .then(data=>{
-       
-           handleSearchCountry(data, searchedCountry);
-           handleWait(true);
-         })
-         .catch(err=>{
-           console.log(err);
-         })
-  if(!searchedCountry){
-    handleWait(true);
-    handleSearchCountry('', '');
+  }else{
+   b= a.filter(c=>{
+      return c.name.includes((searchedCountry).charAt(0).toUpperCase() + (searchedCountry).slice(1));
+    })
+    handleDataFiltered(b);
+    console.log(b, a, filteredSearched.current);
+
   }
-  
-}, [searchedCountry]);
+
+
+
+},[selectedCountry, searchedCountry])
+
+
 
 
 
@@ -83,7 +78,7 @@ useEffect(()=>{
         <div className="mainContent">
             <div className="searchInput">
             <span><i className="fa-solid fa-magnifying-glass"></i></span>
-            <input ref={inputelement}  type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e)=>setSearchedCountry(e.target.value), 500)} />
+            <input ref={inputelement}  type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e)=>setSearchedCountry(e.target.value), 500)}/>
             </div>
 
             <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>
