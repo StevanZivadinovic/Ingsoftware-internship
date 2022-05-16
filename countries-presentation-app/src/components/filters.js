@@ -52,14 +52,14 @@ useEffect(()=>{
     }
       
     handleDataFiltered(b);
-    console.log(selectedCountry, searchedCountry, b);
+
 
   }else{
    b= a.filter(c=>{
       return c.name.includes((searchedCountry).charAt(0).toUpperCase() + (searchedCountry).slice(1));
     })
     handleDataFiltered(b);
-    console.log(b, a, filteredSearched.current);
+ 
 
   }
 
