@@ -1,10 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { debounce } from '../helperFunctions/debounce';
 import { getCountyByName, getRegion, getData } from '../helperFunctions/getData';
 
 import './../style/components/_filters.scss';
 
-export const Filters = ({dataPrimary, handleDataFiltered, handleInputValue, catchContinent, handleWait}) => {
+type FiltersProps ={
+  dataPrimary:{}[],
+  handleDataFiltered:(countries:string[])=>void,
+  handleInputValue:(searchedCountry:string) => void,
+  catchContinent:(continent:string)=>void,
+  handleWait:(wait:boolean)=>void
+}
+
+export const Filters:FC<FiltersProps> = ({dataPrimary, handleDataFiltered, handleInputValue, catchContinent, handleWait}) => {
 
 const [displayRegion, setdisplayRegion] = useState(false);
 const [selectedCountry, setCountry] = useState('');
@@ -13,9 +21,9 @@ const [arrayOfFilterContinents, setArrayOfFilterContinents] = useState(['All', '
 const [LiName, setLiName]=useState('');
 const inputelement = useRef(null);
 
-let a = [];
-let b = [];
-let filteredSearched = useRef()
+let a :any[] = [];
+let b :any[]= [];
+let filteredSearched = useRef([{}])
 
 useEffect(()=>{
   filteredSearched.current = dataPrimary;
@@ -24,11 +32,14 @@ useEffect(()=>{
 
 
 window.addEventListener('click',e=>{
-  if(e.target.className  !=='toggleUl' && e.target.className  !=='filterByRegion'){
+  const target = e.target as HTMLTextAreaElement;
+  if(target.className  !=='toggleUl' && target.className  !=='filterByRegion'){
     setdisplayRegion(false);
   }
 })
-const handleCountry = (e)=>{
+//:React.MouseEvent
+const handleCountry = (e:any)=>{
+  const target = e.target as HTMLTextAreaElement;
   if(e.target.classList=='countryLI'){
     catchContinent(e.target.innerText)
     setCountry((e.target.innerText).toLowerCase());
@@ -67,7 +78,7 @@ useEffect(()=>{
 
 },[selectedCountry, searchedCountry])
 
-const displayRegionFunc = (e)=>{
+const displayRegionFunc = (e:any)=>{
   setdisplayRegion(false);
   setLiName(e.target.innerText)
 }
@@ -77,7 +88,7 @@ const displayRegionFunc = (e)=>{
         <div className="mainContent">
             <div className="searchInput">
             <span><i className="fa-solid fa-magnifying-glass"></i></span>
-            <input ref={inputelement}  type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e)=>setSearchedCountry(e.target.value), 500)}/>
+            <input ref={inputelement}  type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e:any)=>setSearchedCountry(e.target.value), 500)}/>
             </div>
 
             <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>

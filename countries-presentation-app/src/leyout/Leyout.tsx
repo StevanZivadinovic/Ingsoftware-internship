@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import {
     BrowserRouter
   } from "react-router-dom";
 import Header from '../components/Header';
 
+interface typeLayout{
+    children:any,
+    getMainThemeApp:(mainThemeApp:boolean)=>void
+}
 
 
-
-const Layout =({children, getMainThemeApp}) =>{
+const Layout:FC<typeLayout> =({children, getMainThemeApp}) =>{
 
     const [mainTheme, setMainTheme] = useState('dark')
 
-    const getTheme = (theme) =>{
+    const getTheme = (theme:string) =>{
         setMainTheme(theme)
        
     }   

@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './../style/components/_header.scss'
 
-const Header = ({getTheme}) => {
+interface HeaderType{
+  getTheme:(theme:string)=>void
+}
+
+const Header:FC<HeaderType> = ({getTheme}) => {
 
   const navigate = useNavigate();
   

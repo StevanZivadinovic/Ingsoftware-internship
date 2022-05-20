@@ -6,16 +6,26 @@ import {
     useNavigate,
     useLocation
 } from "react-router-dom";
-import {WaitComponent} from './../components/WaitComponent'
+import {WaitComponent} from './WaitComponent'
 
 import Cards from './Cards';
 import { NoData } from './NoDataComponent';
 
 
-export const CountriesData = () => {
+export  const CountriesData = () => {
 
-    const [dataPrimary, setData] = useState([]);
-    const [dataFiltered,setDataFiltered ] = useState([]);
+    type cardsTypes = {
+        name:string,
+        alpha3Code:number,
+        flag:string,
+        population:number, 
+        region:string,
+        capital:string,
+      
+    }
+
+    const [dataPrimary, setData] = useState<Array<cardsTypes>>([]);
+    const [dataFiltered,setDataFiltered ] = useState<Array<cardsTypes>>([]);
     const [continent, setContinent] = useState('');
     const [inputValue, setInputValue]=useState('');
     const [displaNoData, setDisplayNoData] = useState(false);
@@ -39,26 +49,26 @@ export const CountriesData = () => {
             
 
 
-    const handleDataFiltered = (count)=>{
+    const handleDataFiltered = (count:any)=>{
         setDataFiltered(count);
     }
 
 
-    const catchContinent =(continent1)=>{
+    const catchContinent =(continent1:string)=>{
         setContinent(continent1);
         }
     
 
-    const handleWait = (value) => {
+    const handleWait = (value:boolean) => {
         setWait(value)
     }
 
-   const  handleInputValue =(inputV)=>{
+   const  handleInputValue =(inputV:string)=>{
     setInputValue(inputV);
    }
     return (
         <div className="mainFiltersAndCard">
-            <Filters handleInputValue = {(inputValue)=>{handleInputValue(inputValue)}} dataPrimary={dataPrimary} handleWait={(value) => handleWait(value)} catchContinent={(continent1) => catchContinent(continent1)} handleDataFiltered={(countries)=>{handleDataFiltered(countries)}}></Filters>
+            <Filters handleInputValue= {(inputValue)=>{handleInputValue(inputValue)}} dataPrimary={dataPrimary} handleWait={(value) => handleWait(value)} catchContinent={(continent1) => catchContinent(continent1)} handleDataFiltered={(countries)=>{handleDataFiltered(countries)}}></Filters>
 
             <div className='mainCard'>
                 {!wait ? <div className="mainCardContainers">
@@ -67,8 +77,9 @@ export const CountriesData = () => {
 
                         ?
 
+                        
                         dataPrimary.map(a =>
-                            <Cards a={a} key={a.alpha3Code} />
+                            <Cards a={a} key={a.alpha3Code} name={a.name} alpha3Code={a.alpha3Code} flag={a.flag} population={a.population} region={a.region} capital={a.capital} />
                         )
 
                         : dataFiltered.length > 0 
@@ -76,7 +87,7 @@ export const CountriesData = () => {
                             ?
 
                             dataFiltered.map(a =>
-                                <Cards a={a} key={a.alpha3Code} />
+                                <Cards a={a} key={a.alpha3Code} name={a.name} alpha3Code={a.alpha3Code} flag={a.flag} population={a.population} region={a.region} capital={a.capital} />
 
                             )
 

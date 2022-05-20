@@ -1,8 +1,8 @@
 
 
-    const debounce = (fn, delay)=>{
-        let timeoutID;
-        return function (...args){
+    const debounce = (fn:any, delay:number)=>{
+        let timeoutID:any;
+        return function (...args:[]){
             if(timeoutID){
                 clearTimeout(timeoutID)
             }

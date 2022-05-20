@@ -1,8 +1,21 @@
+import { FC } from "react";
 import {
     Link
 } from "react-router-dom";
 
-const Cards = ({a}) => {
+export type cardsTypes = {
+    name:string,
+    alpha3Code:number,
+    flag:string,
+    population:number, 
+    region:string,
+    capital:string,
+    a:{
+    alpha3Code:number,
+    }
+}
+
+const Cards:FC<cardsTypes> = (a) => {
   return (
   
     <Link to={a.name}>

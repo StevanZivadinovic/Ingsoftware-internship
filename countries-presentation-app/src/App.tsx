@@ -21,7 +21,7 @@ function App() {
   const [mainThemeApp, setMainThemeApp] = useState('dark');
   const [themeToggler, setThemeToggler] = useState(true);
 
-  const getMainThemeApp = (toggler) =>{
+  const getMainThemeApp = (toggler:boolean) =>{
     setThemeToggler(toggler);
   }
 
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <Layout getMainThemeApp={(toggler)=>getMainThemeApp(toggler)}>
+      <Layout getMainThemeApp={(toggler:boolean)=>getMainThemeApp(toggler)}>
    
       <BrowserRouter>
     <React.Suspense fallback={<WaitComponent></WaitComponent>}>
