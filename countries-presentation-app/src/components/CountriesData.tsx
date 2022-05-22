@@ -2,10 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import {getData} from '../helperFunctions/getData';
 import './../style/components/_cards.scss'
 import { Filters } from './Filters';
-import {
-    useNavigate,
-    useLocation
-} from "react-router-dom";
 import {WaitComponent} from './WaitComponent'
 
 import Cards from './Cards';
@@ -50,7 +46,6 @@ export  const CountriesData = () => {
 
 
     const handleDataFiltered = (count:cardsTypes[])=>{
-        console.log(count);
         setDataFiltered(count);
     }
 

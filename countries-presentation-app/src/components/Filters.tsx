@@ -3,15 +3,8 @@ import { debounce } from '../helperFunctions/debounce';
 import { getCountyByName, getRegion, getData } from '../helperFunctions/getData';
 
 import './../style/components/_filters.scss';
-type cardsTypes = {
-  name:string,
-  alpha3Code:number,
-  flag:string,
-  population:number, 
-  region:string,
-  capital:string,
+import { cardsTypes } from './CountriesData';
 
-}
 type FiltersProps ={
   dataPrimary:{}[],
   handleDataFiltered:(countries:cardsTypes[])=>void,
