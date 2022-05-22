@@ -36,7 +36,7 @@ const DetailsPage = () => {
     let param = useParams();
     const [country, setCountry] = useState<User>();
     const [borderCountries, setBorderCountries] = useState([]);
-    const [fullNameBorderCountries, setFullNameBorderCountries] = useState([{}]);
+    const [fullNameBorderCountries, setFullNameBorderCountries] = useState<Array<string>>([]);
 
     const navigate = useNavigate()
 
@@ -96,8 +96,9 @@ const DetailsPage = () => {
             </div> 
           </div>
           <div className="borderCountry">
-            <span>Border Countries: </span><div className='linksBorderCountry'>{fullNameBorderCountries.length>0 ? fullNameBorderCountries.map((a:any,i)=>{
-            return  <Link  to={`/${a}`} key={i}>{a}</Link>
+            <span>Border Countries: </span><div className='linksBorderCountry'>{fullNameBorderCountries.length>0 ? fullNameBorderCountries.map((a:string,i)=>{
+           console.log(a);
+           return  <Link  to={`/${a}`} key={i}>{a}</Link>
             }) : <span>This country has no neighbors</span>}</div>
           </div>
         </div>
