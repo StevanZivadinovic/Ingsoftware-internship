@@ -3,10 +3,18 @@ import { debounce } from '../helperFunctions/debounce';
 import { getCountyByName, getRegion, getData } from '../helperFunctions/getData';
 
 import './../style/components/_filters.scss';
+type cardsTypes = {
+  name:string,
+  alpha3Code:number,
+  flag:string,
+  population:number, 
+  region:string,
+  capital:string,
 
+}
 type FiltersProps ={
   dataPrimary:{}[],
-  handleDataFiltered:(countries:string[])=>void,
+  handleDataFiltered:(countries:cardsTypes[])=>void,
   handleInputValue:(searchedCountry:string) => void,
   catchContinent:(continent:string)=>void,
   handleWait:(wait:boolean)=>void

@@ -12,17 +12,17 @@ import Cards from './Cards';
 import { NoData } from './NoDataComponent';
 
 
+export type cardsTypes = {
+    name:string,
+    alpha3Code:number,
+    flag:string,
+    population:number, 
+    region:string,
+    capital:string,
+  
+}
 export  const CountriesData = () => {
 
-    type cardsTypes = {
-        name:string,
-        alpha3Code:number,
-        flag:string,
-        population:number, 
-        region:string,
-        capital:string,
-      
-    }
 
     const [dataPrimary, setData] = useState<Array<cardsTypes>>([]);
     const [dataFiltered,setDataFiltered ] = useState<Array<cardsTypes>>([]);
@@ -49,7 +49,8 @@ export  const CountriesData = () => {
             
 
 
-    const handleDataFiltered = (count:any)=>{
+    const handleDataFiltered = (count:cardsTypes[])=>{
+        console.log(count);
         setDataFiltered(count);
     }
 
