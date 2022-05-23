@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
 import { debounce } from '../helperFunctions/debounce';
 import { getCountyByName, getRegion, getData } from '../helperFunctions/getData';
 
@@ -40,8 +40,8 @@ window.addEventListener('click',e=>{
 })
 //:React.MouseEvent
 const handleCountry = (e:any)=>{
-  const target = e.target as HTMLTextAreaElement;
-  if(e.target.classList=='countryLI'){
+
+  if(e.target.classList==='countryLI'){
     catchContinent(e.target.innerText)
     setCountry((e.target.innerText).toLowerCase());
     handleWait(false);
@@ -89,7 +89,7 @@ const displayRegionFunc = (e:any)=>{
         <div className="mainContent">
             <div className="searchInput">
             <span><i className="fa-solid fa-magnifying-glass"></i></span>
-            <input ref={inputelement}  type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e:any)=>setSearchedCountry(e.target.value), 500)}/>
+            <input ref={inputelement}  type="search" name="search" id="searchInput" placeholder='Search for a country...' onChange={debounce((e:ChangeEvent<HTMLInputElement>)=>setSearchedCountry(e.target.value), 500)}/>
             </div>
 
             <div className="selectSearch" onClick={(e)=>{handleCountry(e)}}>
