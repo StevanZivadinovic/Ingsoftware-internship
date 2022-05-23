@@ -1,11 +1,11 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, ReactElement, ReactNode, useEffect, useState } from 'react';
 import {
     BrowserRouter
   } from "react-router-dom";
 import Header from '../components/Header';
 
 interface typeLayout{
-    children:any,
+    children:ReactElement,
     getMainThemeApp:(mainThemeApp:boolean)=>void
 }
 
