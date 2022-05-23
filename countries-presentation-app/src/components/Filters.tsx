@@ -33,7 +33,7 @@ useEffect(()=>{
 
 
 window.addEventListener('click',e=>{
-  const target = e.target as HTMLTextAreaElement;
+  const target = e.target as HTMLElement;
   if(target.className  !=='toggleUl' && target.className  !=='filterByRegion'){
     setdisplayRegion(false);
   }
