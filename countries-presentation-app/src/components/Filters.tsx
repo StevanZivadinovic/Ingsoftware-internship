@@ -89,9 +89,10 @@ useEffect(()=>{
 
 },[selectedCountry, searchedCountry])
 
-const displayRegionFunc = (e:any)=>{
+const displayRegionFunc = (e:React.MouseEvent)=>{
+  const target = e.target as HTMLElement;
   setdisplayRegion(false);
-  setLiName(e.target.innerText)
+  setLiName(target.innerText)
 }
 
   return (
