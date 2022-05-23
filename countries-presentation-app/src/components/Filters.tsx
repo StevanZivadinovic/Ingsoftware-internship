@@ -1,7 +1,5 @@
 import React, { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
 import { debounce } from '../helperFunctions/debounce';
-import { getCountyByName, getRegion, getData } from '../helperFunctions/getData';
-
 import './../style/components/_filters.scss';
 import { cardsTypes } from './CountriesData';
 
