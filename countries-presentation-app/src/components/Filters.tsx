@@ -39,11 +39,11 @@ window.addEventListener('click',e=>{
   }
 })
 //:React.MouseEvent
-const handleCountry = (e:any)=>{
-
-  if(e.target.classList==='countryLI'){
-    catchContinent(e.target.innerText)
-    setCountry((e.target.innerText).toLowerCase());
+const handleCountry = (e:React.MouseEvent)=>{
+  const target = e.target as HTMLElement;
+  if(target.classList.value=='countryLI'){
+    catchContinent(target.innerText)
+    setCountry((target.innerText).toLowerCase());
     handleWait(false);
   }
 }
