@@ -1,14 +1,16 @@
 
 
-    const debounce = (fn:any, delay:number)=>{
-        let timeoutID:any;
+    const debounce = (fn:Function, delay:number)=>{
+        let timeoutID:number
         return function (...args:[]){
+            
             if(timeoutID){
                 clearTimeout(timeoutID)
             }
-            timeoutID = setTimeout(()=>{
-                fn(...args)
-            },delay);
+                timeoutID = window.setTimeout(()=>{
+                    fn(...args)
+                },delay);
+           
         }
     }
 
