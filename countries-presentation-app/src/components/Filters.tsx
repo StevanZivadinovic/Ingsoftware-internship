@@ -6,11 +6,21 @@ import './../style/components/_filters.scss';
 import { cardsTypes } from './CountriesData';
 
 type FiltersProps ={
-  dataPrimary:{}[],
+  dataPrimary:FilterArray[],
   handleDataFiltered:(countries:cardsTypes[])=>void,
   handleInputValue:(searchedCountry:string) => void,
   catchContinent:(continent:string)=>void,
   handleWait:(wait:boolean)=>void
+}
+
+type FilterArray ={
+  
+    name:string,
+    alpha3Code:number,
+    flag:string,
+    population:number, 
+    region:string,
+    capital:string
 }
 
 export const Filters:FC<FiltersProps> = ({dataPrimary, handleDataFiltered, handleInputValue, catchContinent, handleWait}) => {
@@ -22,9 +32,9 @@ const [arrayOfFilterContinents, setArrayOfFilterContinents] = useState(['All', '
 const [LiName, setLiName]=useState('');
 const inputelement = useRef(null);
 
-let a :any[] = [];
-let b :any[]= [];
-let filteredSearched = useRef([{}])
+let a :FilterArray[] = [];
+let b :FilterArray[]= [];
+let filteredSearched = useRef<Array<FilterArray>>([])
 
 useEffect(()=>{
   filteredSearched.current = dataPrimary;
