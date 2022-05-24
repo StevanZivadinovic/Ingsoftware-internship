@@ -65,7 +65,6 @@ const DetailsPage = () => {
     }); 
   }, [borderCountries]);
   
-// let curr:MyObjLayout  = country?.currencies[0]
 
   return (
     <div className='mainDetailsPage'>
