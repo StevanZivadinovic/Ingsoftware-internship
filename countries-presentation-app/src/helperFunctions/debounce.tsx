@@ -1,14 +1,14 @@
 
 
-    const debounce = (fn:Function, delay:number)=>{
+    const debounce = (fn: (val: React.ChangeEvent<HTMLInputElement>) => void, delay:number)=>{
         let timeoutID:number
-        return function (...args:[]){
+        return function (val: React.ChangeEvent<HTMLInputElement>){
             
             if(timeoutID){
                 clearTimeout(timeoutID)
             }
                 timeoutID = window.setTimeout(()=>{
-                    fn(...args)
+                    fn(val)
                 },delay);
            
         }
