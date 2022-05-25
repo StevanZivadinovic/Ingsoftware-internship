@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {useParams, useNavigate, Link, Routes, Route, BrowserRouter  } from "react-router-dom";
+import {useParams, useNavigate, Link } from "react-router-dom";
 import {specificCountry, getBorderCountries} from '../helperFunctions/getData';
 import './../style/components/_detailsPage.scss'
 

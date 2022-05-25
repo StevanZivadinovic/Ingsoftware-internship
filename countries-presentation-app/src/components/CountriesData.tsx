@@ -3,7 +3,6 @@ import {getData} from '../helperFunctions/getData';
 import './../style/components/_cards.scss'
 import { Filters } from './Filters';
 import {WaitComponent} from './WaitComponent'
-
 import Cards from './Cards';
 import { NoData } from './NoDataComponent';
 
