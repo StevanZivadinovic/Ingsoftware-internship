@@ -46,7 +46,7 @@ window.addEventListener('click',e=>{
     setdisplayRegion(false);
   }
 })
-//:React.MouseEvent
+
 const handleCountry = (e:React.MouseEvent)=>{
   const target = e.target as HTMLElement;
   if(target.classList.value=='countryLI'){
